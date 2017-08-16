@@ -1,0 +1,23 @@
+.floatleft{
+	float: left;
+}
+.container{
+	margin:-55px auto;
+	width:1000px;
+	height:700px;
+	border: 1px solid black;
+}
+
+.container select{
+	margin-top: 23px;
+	margin-left: 17px;
+}
+.title{
+	margin-left: 17px;
+}
+.isbn{
+	margin-left: 17px;
+}
+.book{
+	margin-left: 17px;
+}

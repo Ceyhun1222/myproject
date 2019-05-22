@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Converters.ConverterGeom", "D:\AirNavRepo\Aran\Aran_Aim_Test\ConverterGeom\Aran.Converters.ConverterGeom.csproj", "{9524BF09-DD69-4A72-A213-D6A69701144D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Converters.ConverterGeom", "D:\Aran_Aim_Test\Aran\Aran.csproj", "{9524BF09-DD69-4A72-A213-D6A69701144D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran", "D:\AirNavRepo\Aran\Aran_Aim_Test\Aran\Aran.csproj", "{21A653C3-8EC0-433F-B876-7CC588AC9A8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran", "C:\Users\JeyhunHasanov\source\repos\DevOps\Aran_Aim_test\Aran\Aran.csproj", "{21A653C3-8EC0-433F-B876-7CC588AC9A8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Geometries", "D:\AirNavRepo\Aran\Aran_Aim_Test\Geometries\Aran.Geometries.csproj", "{4BA3D2B3-B3ED-414E-896C-B233152C5860}"
 EndProject

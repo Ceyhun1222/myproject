@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran", "D:\AirNavRepo\Aran\Base\trunk\Aran.csproj", "{21A653C3-8EC0-433F-B876-7CC588AC9A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Package", "D:\AirNavRepo\Aran\Package\trunk\Aran.Package.csproj", "{C796C154-348A-4F4F-8843-807FBFA0456C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Converters.ConverterGeom", "D:\AirNavRepo\Aran\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj", "{9524BF09-DD69-4A72-A213-D6A69701144D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Geometries", "D:\AirNavRepo\Aran\Geometries\Base\trunk\Aran.Geometries.csproj", "{4BA3D2B3-B3ED-414E-896C-B233152C5860}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		ComSoft|Any CPU = ComSoft|Any CPU
+		ComSoft|x86 = ComSoft|x86
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		Riga|Any CPU = Riga|Any CPU
+		Riga|x86 = Riga|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.ComSoft|Any CPU.ActiveCfg = ComSoft|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.ComSoft|Any CPU.Build.0 = ComSoft|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.ComSoft|x86.ActiveCfg = ComSoft|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.ComSoft|x86.Build.0 = ComSoft|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Debug|x86.ActiveCfg = Debug|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Debug|x86.Build.0 = Debug|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Release|x86.ActiveCfg = Release|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Release|x86.Build.0 = Release|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Riga|Any CPU.ActiveCfg = Release|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Riga|Any CPU.Build.0 = Release|Any CPU
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Riga|x86.ActiveCfg = Release|x86
+		{21A653C3-8EC0-433F-B876-7CC588AC9A8B}.Riga|x86.Build.0 = Release|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.ComSoft|Any CPU.ActiveCfg = ComSoft|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.ComSoft|Any CPU.Build.0 = ComSoft|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.ComSoft|x86.ActiveCfg = ComSoft|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.ComSoft|x86.Build.0 = ComSoft|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Debug|x86.ActiveCfg = Debug|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Debug|x86.Build.0 = Debug|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Release|x86.ActiveCfg = Release|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Release|x86.Build.0 = Release|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Riga|Any CPU.ActiveCfg = Release|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Riga|Any CPU.Build.0 = Release|Any CPU
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Riga|x86.ActiveCfg = Release|x86
+		{C796C154-348A-4F4F-8843-807FBFA0456C}.Riga|x86.Build.0 = Release|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|Any CPU.ActiveCfg = ComSoft|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|Any CPU.Build.0 = ComSoft|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|x86.ActiveCfg = ComSoft|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|x86.Build.0 = ComSoft|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|x86.ActiveCfg = Debug|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|x86.Build.0 = Debug|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|x86.ActiveCfg = Release|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|x86.Build.0 = Release|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|Any CPU.ActiveCfg = Riga|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|Any CPU.Build.0 = Riga|Any CPU
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|x86.ActiveCfg = Riga|x86
+		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|x86.Build.0 = Riga|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.ComSoft|Any CPU.ActiveCfg = ComSoft|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.ComSoft|Any CPU.Build.0 = ComSoft|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.ComSoft|x86.ActiveCfg = ComSoft|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.ComSoft|x86.Build.0 = ComSoft|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Debug|x86.ActiveCfg = Debug|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Debug|x86.Build.0 = Debug|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Release|x86.ActiveCfg = Release|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Release|x86.Build.0 = Release|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|Any CPU.ActiveCfg = Release|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|Any CPU.Build.0 = Release|Any CPU
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|x86.ActiveCfg = Release|x86
+		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1A26658-4908-4621-8AC9-682E587896CC}
+	EndGlobalSection
+EndGlobal

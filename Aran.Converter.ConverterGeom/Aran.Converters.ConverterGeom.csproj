@@ -153,9 +153,6 @@
     <Content Include="PANDA.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Aran.Geometries\Aran.Geometries.csproj">
       <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
       <Name>Aran.Geometries</Name>
@@ -164,6 +161,9 @@
       <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
       <Name>Aran</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

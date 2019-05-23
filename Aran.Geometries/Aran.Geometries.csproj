@@ -139,9 +139,6 @@
     <Content Include="PANDA.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Aran.Package\Aran.Package.csproj">
       <Project>{c796c154-348a-4f4f-8843-807fbfa0456c}</Project>
       <Name>Aran.Package</Name>

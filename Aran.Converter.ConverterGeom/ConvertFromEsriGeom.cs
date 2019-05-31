@@ -6,7 +6,7 @@ using System;
 namespace Aran.Converters
 {
 	public static class ConvertFromEsriGeom
-	{
+	{ 
 		public static Aran.Geometries.Point ToPoint(ESRI.ArcGIS.Geometry.IPoint esriPnt)
 		{
 			if (esriPnt == null)

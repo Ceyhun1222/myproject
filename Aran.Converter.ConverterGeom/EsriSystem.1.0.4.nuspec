@@ -14,7 +14,7 @@
       <group targetFramework=".NETFramework4.5.2" />
     </dependencies>
     <frameworkAssemblies>
-      <frameworkAssembly assemblyName="ESRI.ArcGIS.System" targetFramework="" />
+      <frameworkAssembly assemblyName="ESRI.ArcGIS.System" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
   <files>

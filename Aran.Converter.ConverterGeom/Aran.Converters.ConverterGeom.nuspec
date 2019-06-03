@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ConverterGeom</id>
-    <version>1.0.2</version>
+    <version>$version$</version>
     <title>title</title>
     <authors>JeyhunHasanov</authors>
     <owners>JeyhunHasanov</owners>

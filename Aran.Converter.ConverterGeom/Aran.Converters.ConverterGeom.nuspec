@@ -23,11 +23,6 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\db.lock" target=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\db.lock" />
-    <file src=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide" target=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide" />
-    <file src=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide-shm" target=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide-shm" />
-    <file src=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide-wal" target=".vs\Aran.Converters.ConverterGeom\v15\Server\sqlite3\storage.ide-wal" />
-    <file src=".vs\Aran.Converters.ConverterGeom\v15\.suo" target=".vs\Aran.Converters.ConverterGeom\v15\.suo" />
     <file src="obj\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
     <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" />
     <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />

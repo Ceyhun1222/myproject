@@ -21,51 +21,6 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src=".vs\Aran\v15\Server\sqlite3\db.lock" target=".vs\Aran\v15\Server\sqlite3\db.lock" />
-    <file src=".vs\Aran\v15\Server\sqlite3\storage.ide" target=".vs\Aran\v15\Server\sqlite3\storage.ide" />
-    <file src=".vs\Aran\v15\.suo" target=".vs\Aran\v15\.suo" />
-    <file src="obj\ComSoft\Aran.csproj.CoreCompileInputs.cache" target="obj\ComSoft\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="obj\ComSoft\Aran.csprojAssemblyReference.cache" target="obj\ComSoft\Aran.csprojAssemblyReference.cache" />
-    <file src="obj\Debug\Aran.csproj.CoreCompileInputs.cache" target="obj\Debug\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="obj\Debug\Aran.csproj.FileListAbsolute.txt" target="obj\Debug\Aran.csproj.FileListAbsolute.txt" />
-    <file src="obj\Debug\Aran.csprojAssemblyReference.cache" target="obj\Debug\Aran.csprojAssemblyReference.cache" />
-    <file src="obj\Debug\Aran.dll" target="obj\Debug\Aran.dll" />
-    <file src="obj\Debug\Aran.pdb" target="obj\Debug\Aran.pdb" />
-    <file src="obj\Debug\DesignTimeResolveAssemblyReferences.cache" target="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <file src="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\Release\Aran.csproj.CoreCompileInputs.cache" target="obj\Release\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="obj\Release\Aran.csproj.FileListAbsolute.txt" target="obj\Release\Aran.csproj.FileListAbsolute.txt" />
-    <file src="obj\Release\Aran.csprojAssemblyReference.cache" target="obj\Release\Aran.csprojAssemblyReference.cache" />
-    <file src="obj\Release\Aran.dll" target="obj\Release\Aran.dll" />
-    <file src="obj\Release\Aran.pdb" target="obj\Release\Aran.pdb" />
-    <file src="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\x86\ComSoft\Aran.csproj.CoreCompileInputs.cache" target="obj\x86\ComSoft\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="obj\x86\Debug\Aran.csproj.CoreCompileInputs.cache" target="obj\x86\Debug\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="obj\x86\Debug\Aran.csproj.FileListAbsolute.txt" target="obj\x86\Debug\Aran.csproj.FileListAbsolute.txt" />
-    <file src="obj\x86\Debug\Aran.csprojAssemblyReference.cache" target="obj\x86\Debug\Aran.csprojAssemblyReference.cache" />
-    <file src="obj\x86\Debug\Aran.dll" target="obj\x86\Debug\Aran.dll" />
-    <file src="obj\x86\Debug\Aran.pdb" target="obj\x86\Debug\Aran.pdb" />
-    <file src="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\x86\Release\Aran.csproj.CoreCompileInputs.cache" target="obj\x86\Release\Aran.csproj.CoreCompileInputs.cache" />
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.csproj" target="Aran.csproj" />
-    <file src="Aran.csproj.user" target="Aran.csproj.user" />
-    <file src="Aran.sln" target="Aran.sln" />
-    <file src="Aran.snk" target="Aran.snk" />
-    <file src="AranObject.cs" target="AranObject.cs" />
-    <file src="AranObjectList.cs" target="AranObjectList.cs" />
-    <file src="IAranCloneable.cs" target="IAranCloneable.cs" />
-    <file src="nuget.exe" target="nuget.exe" />
-    <file src="packages.config" target="packages.config" />
-    <file src="PANDA.ico" target="PANDA.ico" />
+    <file src="lib\net451\Aran.dll" target="lib\net451\Aran.dll" />
   </files>
 </package>

@@ -23,6 +23,6 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="lib\net451\Aran.Converters.ConverterGeom.dll" target="lib\net451\Aran.Converters.ConverterGeom.dll" />
+    <file src="Aran.Converters.ConverterGeom.dll" target="Aran.Converters.ConverterGeom.dll" />
   </files>
 </package>

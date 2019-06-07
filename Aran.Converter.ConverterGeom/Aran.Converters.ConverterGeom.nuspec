@@ -23,7 +23,6 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="obj\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
     <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" />
     <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
     <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" />

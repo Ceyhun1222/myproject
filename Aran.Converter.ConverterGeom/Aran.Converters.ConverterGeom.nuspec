@@ -23,45 +23,10 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" />
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" target="obj\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" />
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" target="obj\Debug\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" />
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.dll" target="obj\Debug\Aran.Converters.ConverterGeom.dll" />
-    <file src="obj\Debug\Aran.Converters.ConverterGeom.pdb" target="obj\Debug\Aran.Converters.ConverterGeom.pdb" />
-    <file src="obj\Debug\build.force" target="obj\Debug\build.force" />
-    <file src="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.csproj.CopyComplete" target="obj\Release\Aran.Converters.ConverterGeom.csproj.CopyComplete" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\Release\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" target="obj\Release\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" target="obj\Release\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.dll" target="obj\Release\Aran.Converters.ConverterGeom.dll" />
-    <file src="obj\Release\Aran.Converters.ConverterGeom.pdb" target="obj\Release\Aran.Converters.ConverterGeom.pdb" />
-    <file src="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\Riga\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\Riga\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\Riga\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" target="obj\Riga\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" />
-    <file src="obj\x86\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\x86\ComSoft\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" target="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.CopyComplete" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" target="obj\x86\Debug\Aran.Converters.ConverterGeom.csproj.FileListAbsolute.txt" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" target="obj\x86\Debug\Aran.Converters.ConverterGeom.csprojAssemblyReference.cache" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.dll" target="obj\x86\Debug\Aran.Converters.ConverterGeom.dll" />
-    <file src="obj\x86\Debug\Aran.Converters.ConverterGeom.pdb" target="obj\x86\Debug\Aran.Converters.ConverterGeom.pdb" />
-    <file src="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" target="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" target="obj\x86\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" target="obj\x86\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <file src="obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" target="obj\x86\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
-    <file src="obj\x86\Release\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\x86\Release\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
-    <file src="obj\x86\Riga\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" target="obj\x86\Riga\Aran.Converters.ConverterGeom.csproj.CoreCompileInputs.cache" />
     <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
     <file src="Aran.Converters.ConverterGeom.csproj" target="Aran.Converters.ConverterGeom.csproj" />
     <file src="Aran.Converters.ConverterGeom.csproj.user" target="Aran.Converters.ConverterGeom.csproj.user" />
+    <file src="Aran.Converters.ConverterGeom.dll" target="Aran.Converters.ConverterGeom.dll" />
     <file src="Aran.Converters.ConverterGeom.sln" target="Aran.Converters.ConverterGeom.sln" />
     <file src="Aran.Converters.ConverterGeom.snk" target="Aran.Converters.ConverterGeom.snk" />
     <file src="ConvertFromEsriGeom.cs" target="ConvertFromEsriGeom.cs" />

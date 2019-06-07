@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
   <metadata>
     <id>Aran.Converter.Geom</id>
     <version>1.0.1</version>
@@ -16,6 +16,11 @@
       </group>
       <group targetFramework=".NETFramework4.5.1" />
     </dependencies>
+    <references>
+      <group targetFramework=".NETFramework4.5.1">
+        <reference file="Aran.Converters.ConverterGeom.dll" />
+      </group>
+    </references>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />

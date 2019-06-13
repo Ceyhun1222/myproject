@@ -21,7 +21,5 @@
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="lib\net451\Aran.Converters.ConverterGeom.dll" target="lib\net451\Aran.Converters.ConverterGeom.dll" />
-  </files>
+  
 </package>

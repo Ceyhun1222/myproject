@@ -124,6 +124,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.1.0.6\lib\net451\Aran.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.Geometries.1.0.1\lib\net451\Aran.Geometries.dll</HintPath>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <HintPath>..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -138,11 +144,13 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertFromEsriGeom.cs" />
@@ -151,16 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PANDA.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Aran.Geometries\Aran.Geometries.csproj">
-      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
-      <Name>Aran.Geometries</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Aran\Aran.csproj">
-      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
-      <Name>Aran</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

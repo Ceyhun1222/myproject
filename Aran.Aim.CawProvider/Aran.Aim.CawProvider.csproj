@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E29AC94C-6AD0-4ACD-ABEB-CFCED544AF62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.Aim.CAWProvider</RootNamespace>
+    <AssemblyName>Aran.Aim.CawProvider</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;COMSOFT_NAMESPACE__; PANDA_NAMESPACE__;EUROCONTROL_NAMESPACE__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PANDA_NAMESPACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Debug\Aran.Aim.CawProvider.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;COMSOFT_NAMESPACE_; PANDA_NAMESPACE;EUROCONTROL_NAMESPACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Release\Aran.Aim.CawProvider.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;COMSOFT_NAMESPACE_; PANDA_NAMESPACE;EUROCONTROL_NAMESPACE_;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;COMSOFT_NAMESPACE;PANDA_NAMESPACE;_EUROCONTROL_NAMESPACE;_COMSOFT_NEWGEO_NAMESPACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\CodeFiles\Utils\CRC32.cs">
+      <Link>CRC32.cs</Link>
+    </Compile>
+    <Compile Include="AbstractGMLType.cs" />
+    <Compile Include="CadasNamespaces.cs" />
+    <Compile Include="CawDbProvider.cs" />
+    <Compile Include="CawException.cs" />
+    <Compile Include="CawFaultMessageException.cs" />
+    <Compile Include="CawFileService.cs" />
+    <Compile Include="CawService.cs" />
+    <Compile Include="Common\ReaderHelper.cs" />
+    <Compile Include="Configuration\Operation\AbstractOperationParameter.cs" />
+    <Compile Include="Configuration\Operation\BasicWorkPackageProperties.cs" />
+    <Compile Include="Configuration\Operation\CreateOperationParameter.cs" />
+    <Compile Include="Configuration\EAD\EADPublicSlotOutline.cs" />
+    <Compile Include="Configuration\Operation\Operation.cs" />
+    <Compile Include="Configuration\Operation\OperationResponse.cs" />
+    <Compile Include="Configuration\Operation\Outline.cs" />
+    <Compile Include="Configuration\Operation\OutlineFilter.cs" />
+    <Compile Include="Configuration\Operation\OutlineReference.cs" />
+    <Compile Include="Configuration\Operation\OutlineResponse.cs" />
+    <Compile Include="Configuration\Operation\WorkPackageAttachmentUpload.cs" />
+    <Compile Include="Configuration\Operation\WorkPackageOutline.cs" />
+    <Compile Include="Configuration\Operation\WorkPackageProperties.cs" />
+    <Compile Include="Configuration\TimeSliceOutline.cs" />
+    <Compile Include="Configuration\TimeSliceReference.cs" />
+    <Compile Include="Configuration\GetConfiguration.cs" />
+    <Compile Include="Configuration\GetConfigurationResponse.cs" />
+    <Compile Include="Configuration\GetWorkPackage.cs" />
+    <Compile Include="Configuration\GetWorkPackageResponse.cs" />
+    <Compile Include="Configuration\TimeSliceBasics.cs" />
+    <Compile Include="Configuration\WorkPackage.cs" />
+    <Compile Include="Configuration\WorkPackageAttachmentBasics.cs" />
+    <Compile Include="Configuration\WorkPackageBasics.cs" />
+    <Compile Include="Configuration\WorkPackageConfiguration.cs" />
+    <Compile Include="Configuration\WorkPackageLog.cs" />
+    <Compile Include="Configuration\WorkPackageLogMessage.cs" />
+    <Compile Include="ConnectionInfo.cs" />
+    <Compile Include="CsCawPortTypeService.cs" />
+    <Compile Include="Common\InvalidXmlException.cs" />
+    <Compile Include="Common\NotImplementedObject.cs" />
+    <Compile Include="GML\TimePeriod.cs" />
+    <Compile Include="ICawService.cs" />
+    <Compile Include="ResponseReaderHelper.cs" />
+    <Compile Include="Response\FaultMessage.cs" />
+    <Compile Include="Response\QueryResult.cs" />
+    <Compile Include="Response\QueryResultChoice.cs" />
+    <Compile Include="Common\AbstractAixmQuery.cs" />
+    <Compile Include="Common\AbstractRequest.cs" />
+    <Compile Include="Common\AbstractResponce.cs" />
+    <Compile Include="Filter\ComparisonOps.cs" />
+    <Compile Include="Filter\OperationChoice.cs" />
+    <Compile Include="Filter\LogicOps.cs" />
+    <Compile Include="Filter\SpatialOps.cs" />
+    <Compile Include="Response\BaseResponce.cs" />
+    <Compile Include="Response\GetFeatureResponce.cs" />
+    <Compile Include="Query\LinkQuery.cs" />
+    <Compile Include="Query\MultiQuery.cs" />
+    <Compile Include="BaseRequest.cs" />
+    <Compile Include="TemproalTimeslice.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Filter\Filter.cs" />
+    <Compile Include="GetFeature.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query\SimpleQuery.cs" />
+    <Compile Include="GML\TimeInstant.cs" />
+    <Compile Include="Transaction\Insert.cs" />
+    <Compile Include="Transaction\InsertAixmMessage.cs" />
+    <Compile Include="Transaction\InsertedFeature.cs" />
+    <Compile Include="Transaction\InsertResults.cs" />
+    <Compile Include="Transaction\Transaction.cs" />
+    <Compile Include="Transaction\TransactionResponse.cs" />
+    <Compile Include="Transaction\TransactionSummary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AixmMessage\trunk\Aran.Aim.AixmMessage.csproj">
+      <Project>{571dfcbb-8cc5-45a8-ae95-f5323db3b459}</Project>
+      <Name>Aran.Aim.AixmMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\trunk\Aran.Aim.csproj">
+      <Project>{32f3ce80-0590-4881-8614-1cddf8bd052e}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799ad2bf-bd65-4584-8b84-bffe4b5abcb0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

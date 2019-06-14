@@ -157,6 +157,10 @@
       <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
       <Name>Aran</Name>
     </ProjectReference>
+    <ProjectReference Include="D:\AirNavRepo\Aran\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

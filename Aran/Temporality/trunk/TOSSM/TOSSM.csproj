@@ -61,6 +61,12 @@
     <StartupObject>TOSSM.Common.EntryPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.1.0.6\lib\net451\Aran.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.Geometries.1.0.1\lib\net451\Aran.Geometries.dll</HintPath>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.93.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\RefFiles\ClosedXML.0.68.1\lib\net40-client\ClosedXML.dll</HintPath>
@@ -258,6 +264,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -273,6 +280,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Xml.Serialization" />
     <Reference Include="Telerik.Windows.Themes.Windows7, Version=2016.3.1024.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Telerik\UI for WPF R3 2016\Binaries.NoXaml\WPF45\Telerik.Windows.Themes.Windows7.dll</HintPath>
@@ -949,6 +957,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -990,18 +999,6 @@
     <ProjectReference Include="..\..\..\AIP\XHtml\XHTML_WPF\XHTML_WPF.csproj">
       <Project>{639ca3ef-a7a8-46ef-8af9-f0b648ba2157}</Project>
       <Name>XHTML_WPF</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
-      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
-      <Name>Aran</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
-      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
-      <Name>Aran.Converters.ConverterGeom</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
-      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
-      <Name>Aran.Geometries</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
       <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
@@ -1454,6 +1451,9 @@
     <Resource Include="AimUIModel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PANDA.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions />

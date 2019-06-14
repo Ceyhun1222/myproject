@@ -41,6 +41,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.1.0.6\lib\net451\Aran.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Aran.Geometries.1.0.1\lib\net451\Aran.Geometries.dll</HintPath>
+    </Reference>
     <Reference Include="DnsClient, Version=1.0.7.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\RefFiles\MongoDB\DnsClient.dll</HintPath>
@@ -113,6 +119,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
     <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\RefFiles\MongoDB\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
@@ -122,6 +129,8 @@
     <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
     <Reference Include="WCFMock, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\RefFiles\WCFMock.dll</HintPath>
@@ -489,6 +498,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -523,21 +533,9 @@
       <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
       <Name>Aran.Aim.Data.DbProvider</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
-      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
-      <Name>Aran</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
-      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
-      <Name>Aran.Converters.ConverterGeom</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
       <Project>{bcbbde4e-098d-45e9-9b72-0a2e6a7cae6a}</Project>
       <Name>Aran.Converters.ConverterSI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
-      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
-      <Name>Aran.Geometries</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
       <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
@@ -557,6 +555,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PANDA.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

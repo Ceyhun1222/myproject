@@ -107,9 +107,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Temporality\trunk\packages\Aran.1.0.6\lib\net451\Aran.dll</HintPath>
+    </Reference>
     <Reference Include="Aran.Converters.ConverterJtsGeom, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Converters\ConverterJtsGeom\Trunk\obj\Debug\Aran.Converters.ConverterJtsGeom.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Temporality\trunk\packages\Aran.Geometries.1.0.1\lib\net451\Aran.Geometries.dll</HintPath>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -136,11 +142,13 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArcGisInitializer.cs" />
@@ -151,22 +159,16 @@
     <Compile Include="SpatRefConverter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
-      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
-      <Name>Aran</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
-      <Project>{9524bf09-dd69-4a72-a213-d6a69701144d}</Project>
-      <Name>Aran.Converters.ConverterGeom</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
       <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
       <Name>Aran.Package</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Base\trunk\Aran.Geometries.csproj">
-      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
-      <Name>Aran.Geometries</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANDA.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

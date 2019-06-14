@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Package", "Aran.Packag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Converters.ConverterGeom", "Aran.Converter.ConverterGeom\Aran.Converters.ConverterGeom.csproj", "{9524BF09-DD69-4A72-A213-D6A69701144D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Geometries", "D:\AirNavRepo\Aran\Geometries\Base\trunk\Aran.Geometries.csproj", "{4BA3D2B3-B3ED-414E-896C-B233152C5860}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Geometries", "Aran.Geometries\Aran.Geometries.csproj", "{4BA3D2B3-B3ED-414E-896C-B233152C5860}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

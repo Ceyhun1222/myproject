@@ -142,11 +142,11 @@
     <Content Include="PANDA.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+    <ProjectReference Include="..\Aran\Aran.csproj">
       <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
       <Name>Aran</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+    <ProjectReference Include="..\Aran.Package\Aran.Package.csproj">
       <Project>{c796c154-348a-4f4f-8843-807fbfa0456c}</Project>
       <Name>Aran.Package</Name>
     </ProjectReference>

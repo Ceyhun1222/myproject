@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="DiagnosticTool.View.DiagView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModel="clr-namespace:DiagnosticTool.ViewModel"
+             xmlns:view="clr-namespace:Aran.Temporality.CommonUtil.View;assembly=Aran.Temporality.CommonUtil"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <viewModel:DiagWindowViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--<Button Grid.Row="0" Content="Connect" Command="{Binding Path=ConnectCommand}"/>-->
+            <TextBox TextWrapping="Wrap" Grid.Row="1" FontSize="18" Background="LightPink" Foreground="DarkRed" FontFamily="GenericMonospace" Text="{Binding Path=Message}" VerticalScrollBarVisibility="Auto"/>
+        </Grid>
+        <view:BlockerControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                             DataContext="{Binding Path=BlockerModel}">
+            <Grid >
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStopCollection>
+                                <GradientStop Color="Red" />
+                                <GradientStop Color="DarkRed" Offset="1.0" />
+                            </GradientStopCollection>
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Grid.Background>
+                <Label Content="Loading, please wait..." 
+                       Foreground="Pink" 
+                       FontSize="20" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Bottom"
+                       Margin="0,0,0,20"/>
+            </Grid>
+        </view:BlockerControl>
+    </Grid>
+</UserControl>

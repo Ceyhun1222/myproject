@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="clr-namespace:WpfEnvelope.WpfShell.UI.Controls">
+
+	<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfEnvelope;component/Resources/ShellResources.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	
+	<Style x:Key="{x:Type controls:HeadingContentView}"
+			TargetType="{x:Type controls:HeadingContentView}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type controls:HeadingContentView}">
+					<Grid>
+						<Rectangle Style="{StaticResource DefaultRectangleStyle}" x:Name="PART_MainBackgroundRectangle" Grid.Row="1" />
+						<Border BorderBrush="Black" BorderThickness="1" CornerRadius="5,5,0,0" x:Name="PART_MainBorder1">
+							<Border BorderBrush="Gray" BorderThickness="1" CornerRadius="5,5,0,0" x:Name="PART_MainBorder2">
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition Height="Auto" />
+										<RowDefinition />
+									</Grid.RowDefinitions>
+
+									<Border CornerRadius="5,5,0,0" x:Name="PART_HeaderBorder"
+											Background="{TemplateBinding HeaderBackground}">
+										<TextBlock HorizontalAlignment="Center"
+												Foreground="{TemplateBinding HeaderForeground}"
+												VerticalAlignment="Center" Margin="3" FontWeight="Bold"
+												Text="{TemplateBinding Header}" />
+									</Border>
+
+									<Rectangle Fill="{TemplateBinding ContentBackground}"
+											x:Name="PART_ContentBackgroundRectangle" Grid.Row="1" />
+									<ContentPresenter Grid.Row="1" />
+								</Grid>
+							</Border>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

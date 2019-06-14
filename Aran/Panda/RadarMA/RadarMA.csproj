@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24D482CA-7727-494D-91A3-F9FED796E795}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.Panda.RadarMA</RootNamespace>
+    <AssemblyName>Aran.Panda.RadarMA</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\Aran.Package.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.68.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.68.1\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DoddleReport.1.5.2.0\lib\net40\DoddleReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.iTextSharp, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DoddleReport.iTextSharp.1.5.2.0\lib\net40\DoddleReport.iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.OpenXml, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\DoddleReport.OpenXml.1.5.2.0\lib\net40\DoddleReport.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRasterUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.1.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PDM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ARENA\DesktopClassLibrary1\BIN\PDM.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Converter\DistanceDisplayConverter.cs" />
+    <Compile Include="Converter\HeightToDisplayConverter.cs" />
+    <Compile Include="ElevationCalculator\ElavationCalculatorFacade.cs" />
+    <Compile Include="ElevationCalculator\IElevationCalculator.cs" />
+    <Compile Include="ElevationCalculator\ObstacleElevationCalculator.cs" />
+    <Compile Include="ElevationCalculator\RasterObstacleReportCalculator.cs" />
+    <Compile Include="EsriExtension\EsriCommand.cs" />
+    <Compile Include="Models\ObstacleReport.cs" />
+    <Compile Include="Utils\EsriFunctions.cs" />
+    <Compile Include="Utils\GlobalParams.cs" />
+    <Compile Include="InitRadarMA.cs" />
+    <Compile Include="Models\DbModule.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\GridTools.cs" />
+    <Compile Include="Models\GeomOperators.cs" />
+    <Compile Include="Utils\Graphics.cs" />
+    <Compile Include="Models\MapToolItem.cs" />
+    <Compile Include="Models\Sector.cs" />
+    <Compile Include="Models\Snap.cs" />
+    <Compile Include="Models\State.cs" />
+    <Compile Include="Models\TerrainClass.cs" />
+    <Compile Include="Models\VerticalStructure.cs" />
+    <Compile Include="Models\Win32.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RadarSymbols.cs" />
+    <Compile Include="Utils\SpatialReferenceOperation.cs" />
+    <Compile Include="Tool1.cs" />
+    <Compile Include="ViewModels\MergeSectorViewModel.cs" />
+    <Compile Include="ViewModels\ObstacleReportViewModel.cs" />
+    <Compile Include="ViewModels\RadarAirspace.cs" />
+    <Compile Include="ViewModels\ReportViewModel.cs" />
+    <Compile Include="View\MainForm.xaml.cs">
+      <DependentUpon>MainForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\RadarPoint.cs" />
+    <Compile Include="Models\RadarPointClass.cs" />
+    <Compile Include="Models\RelayCommand.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="View\MergeSectorView.xaml.cs">
+      <DependentUpon>MergeSectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ObstacleReportView.xaml.cs">
+      <DependentUpon>ObstacleReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SaveForm.xaml.cs">
+      <DependentUpon>SaveForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win32Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EsriExtension\EsriCommand.bmp" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\MainForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MergeSectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ObstacleReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SaveForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32f3ce80-0590-4881-8614-1cddf8bd052e}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\trunk\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524bf09-dd69-4a72-a213-d6a69701144d}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38b5708a-8c3d-40ef-bf53-819b03e8e9f6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8e1ca34f-d479-4637-8a0a-3e8e1f23cc9d}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14c16238-324e-417a-92f9-684d5d2bb6e9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Conventional\Components\trunk\ChoosePoint.csproj">
+      <Project>{d2a34b35-8c60-43e0-ac1e-aa6072c9d36d}</Project>
+      <Name>ChoosePoint</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\chkByClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\DrawLineTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Models\DrawLineTool.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\apply.gif" />
+    <Resource Include="image\Backward.gif" />
+    <Resource Include="image\back_undo.png" />
+    <Resource Include="image\clear.jpg" />
+    <Resource Include="image\Forward.gif" />
+    <Resource Include="image\redo_forward.png" />
+    <Resource Include="image\trash-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DrawLineTool.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="DrawLineTool.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\documents.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  -->
+  <Target Name="BeforeClean" Condition="'$(RegisterForComInterop)' == 'true'">
+    <Exec WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop /u /s" Condition="Exists('$(TargetPath)')" />
+  </Target>
+  <Target Name="AfterBuild" Condition="'$(RegisterForComInterop)' == 'true'">
+    <Exec WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop /s" />
+  </Target>
+</Project>

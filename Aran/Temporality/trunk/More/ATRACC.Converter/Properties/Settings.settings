@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ATRACC.Converter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Start" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ATRACC_StartPointRelatedAerodromes</Value>
+    </Setting>
+    <Setting Name="End" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ATRACC_EndPointRelatedAerodromes</Value>
+    </Setting>
+    <Setting Name="Geo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ATRACC_GeoPoint</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

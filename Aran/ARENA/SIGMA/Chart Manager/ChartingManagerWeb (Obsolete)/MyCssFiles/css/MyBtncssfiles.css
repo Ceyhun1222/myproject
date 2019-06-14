@@ -1,0 +1,101 @@
+﻿.btns {
+    display: inline-block;
+    padding: 9px 12px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5e5e5e;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #d1dade;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-image: none !important;
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+    transition: all 0.12s linear 0s !important;
+    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn-conss {
+    margin-right: 5px;
+    min-width: 120px;
+    margin-bottom: 8px;
+}
+
+.btn-defaults {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.btn-primarys {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.btn-successs {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn-infos {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+
+.btn-warnings {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-dangers {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.btn-whites {
+    color: #5e5e5e;
+    background-color: #fff;
+    border: 1px solid #e5e9ec;
+}
+
+.btn-links, .btn-links:active, .btn-links[disabled], fieldset[disabled] .btn-links {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+    .btn-links, .btn-links:hover, .btn-links:focus, .btn-links:active {
+        border-color: transparent;
+    }
+
+.btn-links {
+    color: #5e5e5e;
+    background-color: transparent;
+    border: none;
+}
+
+    .btn-links, .btn-links:hover, .btn-links:focus, .btn-links:active {
+        border-color: transparent;
+    }
+
+.btn-defaults, .btn-primarys, .btn-successs, .btn-infos, .btn-warnings, .btn-dangers {
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.15),0 1px 1px rgba(0,0,0,0.075);
+}
+
+    .btn-successs:hover {
+        color: #fff;
+        background-color: #578f57;
+    }

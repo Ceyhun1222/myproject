@@ -1,0 +1,112 @@
+<span>
+  <p>The AlP forms part of the Integrated Aeronautical Information Package of which details are given in Section <a href="http://./LV-GEN-3.1-en-GB.html" target="_self"><u>GEN 3.1</u></a>.</p>
+  <p>
+    <br />
+  </p>
+  <p>The principal structure is shown in graphic form GEN 0.1-Figure 1..</p>
+  <p>The AlP is divided into three parts, General (GEN), En-route (ENR) and Aerodromes (AD), each divided into sections and subsections containing various types of information subjects.</p>
+  <p>
+    <br />
+  </p>
+  <p>Part 1 - General (GEN)</p>
+  <p>Part 1 consists of five sections containing information as briefly described hereafter.</p>
+  <p>
+    <br />
+  </p>
+  <p>GEN 0.</p>
+  <p>Preface; Record of AlP Amendments; Record of AlP Supplements; Checklist of AlP pages; List of hand amendments to the AlP; and the Table of Contents to Part 1.</p>
+  <p>
+    <br />
+  </p>
+  <p>GEN 1. <strong>National regulations and requirements</strong></p>
+  <p>Designated authorities; Entry, transit and departure of aircraft; Entry, transit and departure of passengers and crew; Entry, transit and departure of cargo; Aircraft instruments, equipment and flight documents; Summary of national regulations and international agreements/conventions; and Differences from the ICAO Standards, Recommended Practices and Procedures.</p>
+  <p>
+    <br />
+  </p>
+  <p>GEN 2. <strong>Tables and Codes</strong></p>
+  <p>Measuring system, aircraft markings, holidays; Abbreviations used in AIS publications; Chart symbols; Location indicators; List of radio navigation aids; Conversion of units of measurement; Sunrise/Sunset .</p>
+  <p>
+    <br />
+  </p>
+  <p>GEN 3. <strong>Services</strong></p>
+  <p>Aeronautical information services; Aeronautical charts; Air traffic services; Communication services; Meteorological services; and Search and rescue.</p>
+  <p>
+    <br />
+  </p>
+  <p>GEN 4. <strong>Charges for aerodromes/heliports and air navigation services</strong></p>
+  <p>Aerodromes/heliports charges; and Air navigation services charges.</p>
+  <p>
+    <br />
+  </p>
+  <p>
+    <strong>
+      <em>Test data</em>
+    </strong>
+  </p>
+  <p>
+    <strong>List1</strong>
+  </p>
+  <ul style="list-style-type:disc">
+    <li value="1">entry1</li>
+    <li value="2">entry2</li>
+    <li value="3">entry3</li>
+  </ul>
+  <p>
+    <br />
+  </p>
+  <p>
+    <em>List2</em>
+  </p>
+  <ol start="1" style="list-style-type:decimal">
+    <li value="1">
+      <em>entry1</em>
+    </li>
+    <li value="2">
+      <em>entry2</em>
+    </li>
+    <li value="3">
+      <em>entry3</em>
+    </li>
+  </ol>
+  <p>
+    <br />
+  </p>
+  <table style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;border-collapse: collapse;table-layout: auto;">
+    <tr>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>header1</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>header2</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>header3</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test1</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test2</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test3</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test1</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test2</p>
+      </td>
+      <td style="border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;padding: 0px 5px 0px 5px;width: 471px;vertical-align: top;" align="left" valign="top">
+        <p>test3</p>
+      </td>
+    </tr>
+  </table>
+  <p>
+    <br />
+  </p>
+</span>

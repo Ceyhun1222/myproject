@@ -1,0 +1,75 @@
+﻿@using System
+@using AIP.GUI
+
+<html>
+    <head>
+        <title>Latvijas Gaisa Satiksme - Aeronautical Information Publication [AIP]</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <style>
+            h4 {
+                margin-top: 12.0pt;
+                margin-right: 6.75pt;
+                margin-bottom: 1pt;
+                margin-left: 4pt;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            .left {
+                text-align: left;
+            }
+
+            span {
+                margin-left: 8pt;
+            }
+
+            .note {
+                font-size: 10pt;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div style="background:#eeeeee; margin:0 auto; width:100%">
+            <h1 align="center" style="margin-top:12.0pt;margin-right:3.75pt;margin-bottom:10.0pt;margin-left:3.75pt;text-align:center;">
+                <span style="font-family:Arial;color:navy;">@Raw(@Tpl.Text("Cover_1"))</span><br>
+                <span style="font-family:Arial;color:navy;text-transform:uppercase">@Raw(@Tpl.Text("Cover_2"))</span>
+            </h1>
+            <h4 align="center" class="center">
+                <span style="font-family:Arial;color:navy;text-transform:uppercase">@Raw(@Tpl.Text("Cover_3"))</span>
+            </h4>
+            <p align="center"><a href="http://www.lgs.lv/"><img src="logo.png" alt="" border="0"></a></p>
+            <h4 align="center" class="center">
+                <span style="font-family:Arial;color:navy;">@Raw(@Tpl.Text("Cover_4"))</span>
+            </h4>
+        </div>
+
+        <hr style="margin:0px 0 0 0;width:100%">
+
+        <div style="font-family:Arial; margin-top:16pt;">
+            <h4>@Raw(@Tpl.Text("Cover_5"))</h4>
+            <span><strong style="color:red;">@Raw(@Tpl.Text("Cover_6")) @Model.EffectiveDate</strong><br></span>
+            <span class="note">@Raw(@Tpl.Text("Cover_7")) @Model.PublicationDate</span>
+            <h4>@Raw(@Tpl.Text("Cover_8"))</h4>
+            <span class="note">@Raw(@Tpl.Text("Cover_9")) <strong>@Model.Amendment</strong></span>
+            <h4>@Raw(@Tpl.Text("Cover_10"))</h4>
+            <span class="note"><small>@Raw(@Tpl.Text("Cover_11"))</small></span><br>
+            <span class="note"><img src="images/amdt_tab.png" alt="AMDT tab"></span>
+            <h4 style="margin-top:26.0pt;">@Raw(@Tpl.Text("Cover_12"))</h4>
+            <span class="note">A0845/18</span>
+            <h4>@Raw(@Tpl.Text("Cover_13"))</h4>
+            <span class="note">006/2018 - TEMPORARY RESERVED AREA LIMBAZI</span>
+            <h4>@Raw(@Tpl.Text("Cover_14"))</h4>
+            <span class="note">004/2018 - PUBLICATION OF AERONAUTICAL CHART OF LATVIA - ICAO 1:500 000, THE NINTH EDITION</span><br>
+
+            <h4>@Raw(@Tpl.Text("Cover_15"))</h4>
+            <span class="note" style="display:inline">NIL</span><br>
+            <h4>@Raw(@Tpl.Text("Cover_16"))</h4>
+            <span class="note">006/2016 - PUBLICATION OF AERONAUTICAL CHART OF LATVIA - ICAO 1:500 000, THE EIGHTH EDITION</span><br>
+            <span class="note">003/2018 - PUBLICATION OF AERONAUTICAL CHART OF LATVIA - ICAO 1:500 000, THE NINTH EDITION</span>
+        </div>
+
+    </body>
+</html>

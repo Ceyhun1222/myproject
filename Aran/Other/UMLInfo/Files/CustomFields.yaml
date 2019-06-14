@@ -1,0 +1,321 @@
+﻿#- name: enum name
+#  fields: 
+#    - name: filed name
+#      description: field description
+
+
+
+- name: CodeVerticalDatum
+  fields: 
+    - name: OTHER_EGM_08
+      description:
+
+- name: CodeVerticalReference
+  fields: 
+    - name: OTHER_QFE
+      description:
+    - name: OTHER_QNH
+      description:
+
+- name: CodeDirectionReference
+  fields: 
+    - name: OTHER_CW
+      description:
+    - name: OTHER_CCW
+      description:
+
+- name: CodeServiceInformation
+  fields: 
+    - name: OTHER_CARTO_SERVICE
+      description: "Basis is: Eurocontrol specification AIPtoAIXM5.1Mapping.doc"
+
+- name: CodeReferenceRole
+  fields: 
+    - name: OTHER_OVERHEAD
+      description:
+
+- name: CodeATCReporting
+  fields: 
+    - name: OTHER_MET_COMPULSORY
+      description:
+
+- name: CodeProcedureFixRole
+  fields: 
+    - name: OTHER_WPT
+      description:
+
+- name: CodeNotePurpose
+  fields: 
+    - name: OTHER_CLASS
+      description: 
+    - name: OTHER_OBS_AREA1_ELIST_AVAILABILITY
+      description: "Require for AIXM 2 AIP mapping for section ENR 5.4, other sections below:"
+    - name: OTHER_PAX_FAC_FURTHER_DETAILS
+      description: "AD 2.5"
+    - name: OTHER_FIRE_SERVICE_DESC
+      description: "AD 2.6"
+    - name: OTHER_FIRE_EQPT_DESC
+      description: "AD 2.6"
+    - name: OTHER_RESCUE_SERVICE_DESC
+      description: "AD 2.6"
+    - name: OTHER_RESCUE_EQPT_DESC
+      description: "AD 2.6"
+    - name: OTHER_SEASONAL_AVAILABILITY
+      description: "AD 2.7"
+    - name: OTHER_OBS_AREA2_ELIST_AVAILABILITY
+      description: "AD 2.10"
+    - name: OTHER_OBS_AREA3_ELIST_AVAILABILITY
+      description: "AD 2.10"
+    - name: OTHER_BRIEFING_CONSULTATION_METHOD
+      description: "AD 2.11"
+    - name: OTHER_WING_BAR_DESC
+      description: "AD 2.14"
+    - name: OTHER_HELIPORT_TLOF_AREA_TYPE
+      description: "AD 3.12"
+    - name: OTHER_ICAO_DOC_BASIS
+      description: "GEN 3.2"
+    - name: OTHER_HOURS_OF_SERVICE
+      description: "GEN 3.4"
+    - name: OTHER_SIGMET_VALIDITY_PERIODS
+      description: "GEN 3.5"
+    - name: OTHER_AIRSPACE_ADIZ_ACTIVATION_PROCS
+      description: "ENR 5.2"
+    - name: OTHER_ADIZ_INTERCEPTION_RISK
+      description: "ENR 5.2"
+    - name: OTHER_AIRSPACE_ADVISORY_MEASURES
+      description: "ENR 5.3"
+
+- name: CodeOrganisation
+  fields: 
+    - name: OTHER_TELECOM_NAV_REGULATOR
+      description: "Basis is: Eurocontrol specification AIPtoAIXM5.1Mapping.doc"
+
+- name: CodeUnit
+  fields: 
+    - name: OTHER_CARTO
+      description: "Basis is: Eurocontrol specification AIPtoAIXM5.1Mapping.doc"
+    - name: OTHER_AERO_CHART_SALES_UNIT
+      description:
+    - name: OTHER_TOPO_CHART_SALES_UNIT
+      description:
+
+- name: CodeObstacleArea
+  fields: 
+    - name: OTHER_INNERHORIZONTAL
+      description:
+    - name: OTHER_CONICAL
+      description:
+    - name: OTHER_OUTERHORIZONTAL
+      description:
+    - name: OTHER_APPROACH
+      description:
+    - name: OTHER_INNERAPPROACH
+      description:
+    - name: OTHER_TAKEOFFCLIMB
+      description:
+    - name: OTHER_STRIP
+      description:
+    - name: OTHER_TRANSITIONAL
+      description:
+    - name: OTHER_INNERTRANSITIONAL
+      description:
+    - name: OTHER_BALKEDLANDING
+      description:
+    - name: OTHER_AREA2A
+      description:
+    - name: OTHER_TAKEOFFFLIGHTPATHAREA
+      description:
+    - name: OTHER_AREA2B
+      description:
+    - name: OTHER_AREA2C
+      description:
+    - name: OTHER_AREA2D
+      description:
+
+- name: CodeProcedureDistance
+  fields: 
+    - name: OTHER_SDF
+      description:
+
+- name: CodeRuleProcedureTitle
+  fields: 
+    - name: OTHER_PREFACE
+      description: "GEN 0.1, OTHER:PREFACE"
+    - name: OTHER_LIST_OF_HAND_AMENDMENTS_TO_THE_AIP
+      description: "GEN 0.5, OTHER:LIST_OF_HAND_AMENDMENTS_TO_THE_AIP"
+    - name: OTHER_ENTRY_TRANSIT_AND_DEPARTURE_OF_AIRCRAFT
+      description: "GEN 1.2, OTHER:ENTRY_TRANSIT_AND_DEPARTURE_OF_AIRCRAFT"
+    - name: OTHER_ENTRY_TRANSIT_AND_DEPARTURE_OF_PASSENGERS_AND_CREW
+      description: "GEN 1.3, OTHER:ENTRY_TRANSIT_AND_DEPARTURE_OF_PASSENGERS_AND_CREW"
+    - name: OTHER_ENTRY_TRANSIT_AND_DEPARTURE_OF_CARGO
+      description: "GEN 1.4, OTHER:ENTRY_TRANSIT_AND_DEPARTURE_OF_CARGO"
+    - name: OTHER_AIRCRAFT_INSTRUMENTS_EQUIPMENT_AND_FLIGHT_DOCUMENTS
+      description: "GEN 1.5, OTHER:AIRCRAFT_INSTRUMENTS_EQUIPMENT_AND_FLIGHT_DOCUMENTS"
+    - name: OTHER_SUMMARY_OF_NATIONAL_REGULATIONS_AND_INTERNATIONAL_AGREEMENTS_CONVENTIONS
+      description: "GEN 1.6, OTHER:SUMMARY_OF_NATIONAL_REGULATIONS_AND_INTERNATIONAL_AGREEMENTS_CONVENTIONS"
+    - name: OTHER_DIFFERENCES_FROM_ICAO_STANDARDS_RECOMMENDED_PRACTICES_AND_PROCEDURES
+      description: "GEN 1.7, OTHER:DIFFERENCES_FROM_ICAO_STANDARDS_RECOMMENDED_PRACTICES_AND_PROCEDURES"
+    - name: OTHER_UNITS_OF_MEASUREMENT
+      description: "GEN 2.1.1, OTHER:UNITS_OF_MEASUREMENT"
+    - name: OTHER_TEMPORAL_REFERENCE_SYSTEM
+      description: "GEN 2.1.2, OTHER:TEMPORAL_REFERENCE_SYSTEM"
+    - name: OTHER_HORIZONTAL_REFERENCE_SYSTEM
+      description: "GEN 2.1.3, OTHER:HORIZONTAL_REFERENCE_SYSTEM"
+    - name: OTHER_VERTICAL_REFERENCE_SYSTEM
+      description: "GEN 2.1.4, OTHER:VERTICAL_REFERENCE_SYSTEM"
+    - name: OTHER_AIRCRAFT_NATIONALITY_AND_REGISTRATION_MARKS
+      description: "GEN 2.1.5, OTHER:AIRCRAFT_NATIONALITY_AND_REGISTRATION_MARKS"
+    - name: OTHER_ABBREVIATIONS_USED_IN_AIS_PUBLICATIONS
+      description: "GEN 2.2, OTHER:ABBREVIATIONS_USED_IN_AIS_PUBLICATIONS"
+    - name: OTHER_CHART_SYMBOLS
+      description: "GEN 2.3, OTHER:CHART_SYMBOLS"
+    - name: OTHER_CONVERSION_OF_UNITS_OF_MEASUREMENT
+      description: "GEN 2.6, OTHER:CONVERSION_OF_UNITS_OF_MEASUREMENT"
+    - name: OTHER_SUNRISE_SUNSET
+      description: "GEN 2.7, OTHER:SUNRISE_SUNSET"
+    - name: OTHER_RESPONSIBLE_SERVICE
+      description: "GEN 3.1.1, OTHER:RESPONSIBLE_SERVICE"
+    - name: OTHER_GEN_3_1_2_AREA_OF_RESPONSIBILITY
+      description: "GEN 3.1.2, OTHER:AREA_OF_RESPONSIBILITY"
+    - name: OTHER_AERONAUTICAL_PUBLICATIONS
+      description: "GEN 3.1.3, OTHER:AERONAUTICAL_PUBLICATIONS"
+    - name: OTHER_AIRAC_SYSTEM
+      description: "GEN 3.1.4, OTHER:AIRAC_SYSTEM"
+    - name: OTHER_PRE_FLIGHT_INFORMATION_SERVICE_AT_AERODROMES_HELIPORTS
+      description: "GEN 3.1.5, OTHER:PRE_FLIGHT_INFORMATION_SERVICE_AT_AERODROMES_HELIPORTS"
+    - name: OTHER_MAINTENANCE_OF_CHARTS
+      description: "GEN 3.2.2, OTHER:MAINTENANCE_OF_CHARTS"
+    - name: OTHER_AERONAUTICAL_CHART_SERIES_AVAILABLE
+      description: "GEN 3.2.4, OTHER:AERONAUTICAL_CHART_SERIES_AVAILABLE"
+    - name: OTHER_LIST_OF_AERONAUTICAL_CHARTS_AVAILABLE
+      description: "GEN 3.2.5, OTHER:LIST_OF_AERONAUTICAL_CHARTS_AVAILABLE"
+    - name: OTHER_INDEX_TO_THE_WORLD_AERONAUTICAL_CHART_WAC
+      description: "GEN 3.2.6, OTHER:INDEX_TO_THE_WORLD_AERONAUTICAL_CHART_WAC"
+    - name: OTHER_CORRECTIONS_TO_CHARTS_NOT_CONTAINED_IN_THE_AIP
+      description: "GEN 3.2.8, OTHER:CORRECTIONS_TO_CHARTS_NOT_CONTAINED_IN_THE_AIP"
+    - name: OTHER_GEN_3_3_2_AREA_OF_RESPONSIBILITY
+      description: "GEN 3.3.2, OTHER:AREA_OF_RESPONSIBILITY"
+    - name: OTHER_GEN_3_3_3_TYPES_OF_SERVICES
+      description: "GEN 3.3.3, OTHER:TYPES_OF_SERVICES"
+    - name: OTHER_COORDINATION_BETWEEN_THE_OPERATOR_AND_ATS
+      description: "GEN 3.3.4, OTHER:COORDINATION_BETWEEN_THE_OPERATOR_AND_ATS"
+    - name: OTHER_MINIMUM_FLIGHT_ALTITUDE
+      description: "GEN 3.3.5, OTHER:MINIMUM_FLIGHT_ALTITUDE"
+    - name: OTHER_GEN_3_4_2_AREA_OF_RESPONSIBILITY
+      description: "GEN 3.4.2, OTHER:AREA_OF_RESPONSIBILITY"
+    - name: OTHER_GEN_3_4_3_TYPES_OF_SERVICES
+      description: "GEN 3.4.3, OTHER:TYPES_OF_SERVICES"
+    - name: OTHER_REQUIREMENTS_AND_CONDITIONS
+      description: "GEN 3.4.4, OTHER:REQUIREMENTS_AND_CONDITIONS"
+    - name: OTHER_MISCELLANEOUS
+      description: "GEN 3.4.5, OTHER:MISCELLANEOUS"
+    - name: OTHER_GEN_3_5_2_AREA_OF_RESPONSIBILITY
+      description: "GEN 3.5.2, OTHER:AREA_OF_RESPONSIBILITY"
+    - name: OTHER_METEOROLOGICAL_OBSERVATIONS_AND_REPORTS
+      description: "GEN 3.5.3, OTHER:METEOROLOGICAL_OBSERVATIONS_AND_REPORTS"
+    - name: OTHER_GEN_3_5_4_TYPES_OF_SERVICES
+      description: "GEN 3.5.4, OTHER:TYPES_OF_SERVICES"
+    - name: OTHER_NOTIFICATION_REQUIRED_FROM_OPERATORS
+      description: "GEN 3.5.5, OTHER:NOTIFICATION_REQUIRED_FROM_OPERATORS"
+    - name: OTHER_AIRCRAFT_REPORTS
+      description: "GEN 3.5.6, OTHER:AIRCRAFT_REPORTS"
+    - name: OTHER_SIGMET_AND_AIRMET_SERVICE
+      description: "GEN 3.5.8, OTHER_SIGMET_AND_AIRMET_SERVICE"
+    - name: OTHER_OTHER_AUTOMATED_METEOROLOGICAL_SERVICES
+      description: "GEN 3.5.9, OTHER:OTHER_AUTOMATED_METEOROLOGICAL_SERVICES"
+    - name: OTHER_GEN_3_6_2_AREA_OF_RESPONSIBILITY
+      description: "GEN 3.6.2, OTHER:AREA_OF_RESPONSIBILITY"
+    - name: OTHER_GEN_3_6_3_TYPES_OF_SERVICES
+      description: "GEN 3.6.3, OTHER:TYPES_OF_SERVICES"
+    - name: OTHER_SEARCH_AND_RESCUE_AGREEMENTS
+      description: "GEN 3.6.4, OTHER:SEARCH_AND_RESCUE_AGREEMENTS"
+    - name: OTHER_CONDITIONS_OF_AVAILABILITY
+      description: "GEN 3.6.5, OTHER:CONDITIONS_OF_AVAILABILITY"
+    - name: OTHER_PROCEDURES_AND_SIGNALS_USED
+      description: "GEN 3.6.6, OTHER:PROCEDURES_AND_SIGNALS_USED"
+    - name: OTHER_AERODROME_HELIPORT_CHARGES
+      description: "GEN 4.1, OTHER:AERODROME_HELIPORT_CHARGES"
+    - name: AIR_NAVIGATION_SERVICES_CHARGES
+      description: "GEN 4.2, AIR_NAVIGATION_SERVICES_CHARGES"
+    - name: OTHER_GENERAL_RULES
+      description: "ENR 1.1, OTHER:GENERAL_RULES"
+    - name: VISUAL_FLIGHT_RULES
+      description: "ENR 1.2, VISUAL_FLIGHT_RULES"
+    - name: INSTRUMENT_FLIGHT_RULES
+      description: "ENR 1.3, INSTRUMENT_FLIGHT_RULES"
+    - name: ATS_AIRSPACE_CLASSIFICATION
+      description: "ENR 1.4.1, ATS_AIRSPACE_CLASSIFICATION"
+    - name: OTHER_ATS_AIRSPACE_DESCRIPTION
+      description: "ENR 1.4.2, OTHER:ATS_AIRSPACE_DESCRIPTION"
+    - name: OTHER_GENERAL
+      description: "ENR 1.5.1, OTHER:GENERAL"
+    - name: OTHER_ARRIVING_FLIGHTS
+      description: "ENR 1.5.2, OTHER:ARRIVING_FLIGHTS"
+    - name: OTHER_DEPARTING_FLIGHTS
+      description: "ENR 1.5.3, OTHER:DEPARTING_FLIGHTS"
+    - name: OTHER_ENR_1_5_4_OTHER_RELEVANT_INFORMATION_AND_PROCEDURES
+      description: "ENR 1.5.4, OTHER:OTHER_RELEVANT_INFORMATION_AND_PROCEDURES"
+    - name: OTHER_PRIMARY_RADAR
+      description: "ENR 1.6.1, OTHER:PRIMARY_RADAR"
+    - name: OTHER_SECONDARY_SURVEILLANCE_RADAR_SSR
+      description: "ENR 1.6.2, OTHER:SECONDARY_SURVEILLANCE_RADAR_SSR"
+    - name: OTHER_AUTOMATIC_DEPENDENT_SURVEILLANCE_BROADCAST_ADS_B
+      description: "ENR 1.6.3, OTHER:AUTOMATIC_DEPENDENT_SURVEILLANCE_BROADCAST_ADS_B"
+    - name: OTHER_ENR_1_6_4_OTHER_RELEVANT_INFORMATION_AND_PROCEDURES
+      description: "ENR 1.6.4, OTHER:OTHER_RELEVANT_INFORMATION_AND_PROCEDURES"
+    - name: ALTIMETER_SETTING_PROCEDURES
+      description: "ENR 1.7, ALTIMETER_SETTING_PROCEDURES"
+    - name: REGIONAL_SUPPLEMENTARY_PROCEDURES
+      description: "ENR 1.8, REGIONAL_SUPPLEMENTARY_PROCEDURES"
+    - name: OTHER_AIR_TRAFFIC_FLOW_MANAGEMENT_AND_AIRSPACE_MANAGEMENT
+      description: "ENR 1.9, OTHER:AIR_TRAFFIC_FLOW_MANAGEMENT_AND_AIRSPACE_MANAGEMENT"
+    - name: FLIGHT_PLANNING
+      description: "ENR 1.10, FLIGHT_PLANNING"
+    - name: OTHER_ADRESSING_OF_FLIGHT_PLAN_MESSAGES
+      description: "ENR 1.11, OTHER:ADRESSING_OF_FLIGHT_PLAN_MESSAGES"
+    - name: OTHER_INTERCEPTION_OF_CIVIL_AIRCRAFT
+      description: "ENR 1.12, OTHER:INTERCEPTION_OF_CIVIL_AIRCRAFT"
+    - name: UNLAWFUL_INTERFERENCE
+      description: "ENR 1.13, UNLAWFUL_INTERFERENCE"
+    - name: AIR_TRAFFIC_INCIDENTS
+      description: "ENR 1.14, AIR_TRAFFIC_INCIDENTS"
+    - name: OTHER_OTHER_REGULATED_AIRSPACE
+      description: "ENR 2.2, OTHER:OTHER_REGULATED_AIRSPACE"
+    - name: OTHER_OTHER_ROUTES
+      description: "ENR 3.5, OTHER:OTHER_ROUTES"
+    - name: OTHER_GLOBAL_NAVIGATION_SATELLITE_SYSTEM_GNSS
+      description: "ENR 4.3, OTHER:GLOBAL_NAVIGATION_SATELLITE_SYSTEM_GNSS"
+    - name: OTHER_MILITARY_EXERCISE_AND_TRAINING_AREAS_AND_ADIZ
+      description: "ENR 5.2, OTHER:MILITARY_EXERCISE_AND_TRAINING_AREAS_AND_ADIZ"
+    - name: OTHER_OTHER_POTENTIAL_HAZARDS
+      description: "ENR 5.3.2, OTHER:OTHER_POTENTIAL_HAZARDS"
+    - name: OTHER_BIRD_MIGRATION_AND_AREAS_WITH_SENSITIVE_FAUNA
+      description: "ENR 5.6, OTHER:BIRD_MIGRATION_AND_AREAS_WITH_SENSITIVE_FAUNA"
+    - name: OTHER_GENERAL_CONDITIONS
+      description: "AD 1.1.1, OTHER:GENERAL_CONDITIONS"
+    - name: OTHER_USE_OF_MILITARY_AIR_BASES
+      description: "AD 1.1.2, OTHER:USE_OF_MILITARY_AIR_BASES"
+    - name: OTHER_LOW_VISIBILITY_PROCEDURES_LVP
+      description: "AD 1.1.3, OTHER:LOW_VISIBILITY_PROCEDURES_LVP"
+    - name: OTHER_AERODROME_OPERATING_MINIMA
+      description: "AD 1.1.4, OTHER:AERODROME_OPERATING_MINIMA"
+    - name: OTHER_OTHER_INFORMATION
+      description: "AD 1.1.5, OTHER:OTHER_INFORMATION"
+    - name: OTHER_RESCUE_AND_FIRE_FIGHTING_SERVICES
+      description: "AD 1.2.1, OTHER:RESCUE_AND_FIRE_FIGHTING_SERVICES"
+    - name: OTHER_SNOW_PLAN
+      description: "AD 1.2.2, OTHER:SNOW_PLAN"
+    - name: OTHER_GROUPING_OF_AERODROMES_HELIPORTS
+      description: "AD 1.4, OTHER:GROUPING_OF_AERODROMES_HELIPORTS"
+    - name: OTHER_LOCAL_AERODROME_REGULATIONS
+      description: "AD 2.20, OTHER:LOCAL_AERODROME_REGULATIONS"
+    - name: NOISE_ABATEMENT_PROCEDURES
+      description: "AD 2.21, AD 3.20, NOISE_ABATEMENT_PROCEDURES"
+    - name: OTHER_FLIGHT_PROCEDURES
+      description: "AD 2.22, AD 3.21, OTHER:FLIGHT_PROCEDURES"
+    - name: OTHER_ADDITIONAL_INFORMATION
+      description: "AD 2.23, AD 3.22, OTHER:ADDITIONAL_INFORMATION"
+    - name: OTHER_LOCAL_HELIPORT_REGULATIONS
+      description: "AD 3.19, OTHER:LOCAL_HELIPORT_REGULATIONS"
+    - name: OTHER_AERIAL_SPORTING_AND_RECREATIONAL_ACTIVITIES
+      description: "ENR 5.5, OTHER:AERIAL_SPORTING_AND_RECREATIONAL_ACTIVITIES"

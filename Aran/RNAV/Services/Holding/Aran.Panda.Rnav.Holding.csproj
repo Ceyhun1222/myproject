@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83CF5355-11D9-4DDF-8A73-DE8E36D8185C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.Panda.Rnav.Holding</RootNamespace>
+    <AssemblyName>Aran.Panda.Rnav.Holding</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RNAV</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RNAV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Debug\HoldingMain.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\HoldingMain.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RNAV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;RNAV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Debug\Aran.Package.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.68.1.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ClosedXML.0.68.1\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DoddleReport.1.5.2.0\lib\net40\DoddleReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.iTextSharp, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DoddleReport.iTextSharp.1.5.2.0\lib\net40\DoddleReport.iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.OpenXml, Version=1.5.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\DoddleReport.OpenXml.1.5.2.0\lib\net40\DoddleReport.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="dotMemory.Unit, Version=103.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\JetBrains.dotMemoryUnit.2.3.20160517.113140\lib\dotMemory.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.3.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\ExcelNumberFormat.1.0.3\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9e8f22703bef9a29, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FastMember.Signed.1.3.0\lib\net45\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\JTS\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\iTextSharp.5.1.1\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NetTopologySuite, Version=1.14.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\JTS\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2573bf8a1bdddcd5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\JTS\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.99.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\SQLite\System.Data.SQLite.Core.1.0.99.0\lib\net40\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\categories.cs" />
+    <Compile Include="CategoryClass.cs" />
+    <Compile Include="Events\Changed.cs" />
+    <Compile Include="Helper\ConvertToDistance.cs" />
+    <Compile Include="Helper\DecoderCode.cs" />
+    <Compile Include="Events\DMECoverageDrawChangedEventArgs.cs" />
+    <Compile Include="Events\DMECoverageDrawChangedEventHandler.cs" />
+    <Compile Include="Coverages\DmeCoverage\DmeCoverageOperation.cs" />
+    <Compile Include="Coverages\DmeCoverage\DmeCoverageParam.cs" />
+    <Compile Include="Enums\DmeCoverageType.cs" />
+    <Compile Include="Coverages\DmeCoverage\DMEData.cs" />
+    <Compile Include="Enums\eLoaderCommands.cs" />
+    <Compile Include="Enums\eNavaidTupes.cs" />
+    <Compile Include="Enums\EntryDirection.cs" />
+    <Compile Include="Enums\flightPhase.cs" />
+    <Compile Include="Enums\flightReciever.cs" />
+    <Compile Include="Forms\frmHoldingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHoldingReport.Designer.cs">
+      <DependentUpon>frmHoldingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeoMinMaxPoint.cs" />
+    <Compile Include="GNSSValues.cs" />
+    <Compile Include="Helper\NavaidGeoHelper.cs" />
+    <Compile Include="HoldingGeometry.cs" />
+    <Compile Include="HoldingNavaid.cs" />
+    <Compile Include="HoldingNavOperation.cs" />
+    <Compile Include="HoldingReport.cs" />
+    <Compile Include="Enums\LLZData.cs" />
+    <Compile Include="Enums\mocArea.cs" />
+    <Compile Include="Events\ModelChangedEventArgs.cs" />
+    <Compile Include="Events\ModelChangedEventHandler.cs" />
+    <Compile Include="Enums\ConditionType.cs" />
+    <Compile Include="Enums\DistanceType.cs" />
+    <Compile Include="Models\FlightRecieverChanged.cs" />
+    <Compile Include="Models\HoldingNavComparer.cs" />
+    <Compile Include="Models\FlightRecieverChangedEventArgs.cs" />
+    <Compile Include="Events\IChanged.cs" />
+    <Compile Include="Models\ModelAreaParams.cs" />
+    <Compile Include="BaseArea.cs" />
+    <Compile Include="Models\Bussines_Logic.cs" />
+    <Compile Include="Helper\ChainHullAlgorithm.cs" />
+    <Compile Include="Helper\Common.cs" />
+    <Compile Include="FlightCondition.cs" />
+    <Compile Include="GlobalParams.cs" />
+    <Compile Include="Coverages\DmeCoverage\DmeCoverage.cs" />
+    <Compile Include="Helper\FeatureConvert.cs" />
+    <Compile Include="Models\ModelProcedureType.cs" />
+    <Compile Include="Models\ModelPBN.cs" />
+    <Compile Include="Models\ModelPointChoise.cs" />
+    <Compile Include="Models\ModelWizardChange.cs" />
+    <Compile Include="Forms\frmPInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPInfo.Designer.cs">
+      <DependentUpon>frmPInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ProcedureType.cs" />
+    <Compile Include="Models\WayPointChoice.cs" />
+    <Compile Include="NavaidPntPrj.cs" />
+    <Compile Include="Enums\NavType.cs" />
+    <Compile Include="NDBData.cs" />
+    <Compile Include="Enums\ObstacleGeomType.cs" />
+    <Compile Include="Enums\ObstactleReportType.cs" />
+    <Compile Include="PBNCondition.cs" />
+    <Compile Include="PhaseRecieverCondition.cs" />
+    <Compile Include="Enums\PointChoice.cs" />
+    <Compile Include="Enums\PointType.cs" />
+    <Compile Include="Enums\ProcedureTypeConv.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\protectionSectorType.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="Enums\roundType.cs" />
+    <Compile Include="Save\HoldingSaveMain.cs" />
+    <Compile Include="DBModule.cs" />
+    <Compile Include="Forms\frmHoldingMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHoldingMain.Designer.cs">
+      <DependentUpon>frmHoldingMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\GeomFunctions.cs" />
+    <Compile Include="HoldingService.cs" />
+    <Compile Include="Shablons.cs" />
+    <Compile Include="InitHolding.cs" />
+    <Compile Include="Navaids_DataBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SpatialReferenceOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SpeedInterval.cs" />
+    <Compile Include="Helper\TransForm.cs" />
+    <Compile Include="TwoDMEParam.cs" />
+    <Compile Include="TypeConvert.cs" />
+    <Compile Include="ValidationClass.cs" />
+    <Compile Include="Coverages\VorDmeCoverage\VORData.cs" />
+    <Compile Include="Coverages\VorDmeCoverage\VORDMECoverage.cs" />
+    <Compile Include="Win32Windows.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Data Sources\Bussines_Logic.datasource" />
+    <None Include="Data Sources\Holding.HoldingSave.HoldingAssessmentModel.datasource" />
+    <None Include="Data Sources\Holding.HoldingSave.HoldingPatternModel.datasource" />
+    <None Include="Data Sources\Holding.HoldingSave.ObstacleAssesmentAreaModel.datasource" />
+    <None Include="Data Sources\Holding.HoldingSave.SegmentPointModel.datasource" />
+    <None Include="Data Sources\Holding.HoldingSave.WayPointModel.datasource" />
+    <None Include="Data Sources\HoldingNavOperation.datasource" />
+    <None Include="Data Sources\HoldingReport.datasource" />
+    <None Include="Data Sources\IChanged.datasource" />
+    <None Include="Data Sources\ModelAreaParams.datasource" />
+    <None Include="Data Sources\ModelPBN.datasource" />
+    <None Include="Data Sources\ModelPointChoise.datasource" />
+    <None Include="Data Sources\ModelProcedureType.datasource" />
+    <None Include="Data Sources\ModelWizardChange.datasource" />
+    <None Include="Data Sources\HoldingGeometry.datasource" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data Sources\ValidationClass.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoldingMain.resx">
+      <DependentUpon>frmHoldingMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHoldingReport.resx">
+      <DependentUpon>frmHoldingReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPInfo.resx">
+      <DependentUpon>frmPInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1386696309_product-sales-report.png" />
+    <Content Include="Resources\apply.gif" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\Arrow-turn-right-icon.png" />
+    <None Include="Resources\Arrow-turn-left-icon.png" />
+    <None Include="Resources\Backward.gif" />
+    <None Include="Resources\calculator.gif" />
+    <Content Include="Resources\cancel.gif" />
+    <None Include="Resources\documents.gif" />
+    <None Include="Resources\info_icon2.gif" />
+    <None Include="Resources\draw.gif" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\help.gif" />
+    <None Include="Resources\Forward.gif" />
+    <Content Include="Resources\left.gif" />
+    <Content Include="Resources\loader.gif" />
+    <Content Include="Resources\print.gif" />
+    <Content Include="Resources\right.gif" />
+    <Content Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32f3ce80-0590-4881-8614-1cddf8bd052e}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799ad2bf-bd65-4584-8b84-bffe4b5abcb0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\TerrainReader\trunk\Aran.Aim.Data.TerrainReader.csproj">
+      <Project>{b2c23ba7-4500-4b74-86b6-b4eed281f0c7}</Project>
+      <Name>Aran.Aim.Data.TerrainReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524bf09-dd69-4a72-a213-d6a69701144d}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{bcbbde4e-098d-45e9-9b72-0a2e6a7cae6a}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38b5708a-8c3d-40ef-bf53-819b03e8e9f6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Panda\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14c16238-324e-417a-92f9-684d5d2bb6e9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Panda\Constants\trunk\Aran.Panda.Constants.csproj">
+      <Project>{545b3bdc-7105-4681-85d3-8a77fa78efba}</Project>
+      <Name>Aran.Panda.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Panda\Conventional\Components\trunk\ChoosePoint.csproj">
+      <Project>{d2a34b35-8c60-43e0-ac1e-aa6072c9d36d}</Project>
+      <Name>ChoosePoint</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184e1f94-ed6f-481e-84ff-2efd1468ccc6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Rnav\trunk\Aran.Queries.Rnav.csproj">
+      <Project>{d5bb50ea-93dc-4c0c-86ab-0cae865189d6}</Project>
+      <Name>Aran.Queries.Rnav</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8e1ca34f-d479-4637-8a0a-3e8e1f23cc9d}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

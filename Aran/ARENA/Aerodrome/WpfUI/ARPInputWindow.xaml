@@ -1,0 +1,116 @@
+﻿<Window x:Class="WpfUI.ARPInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:s="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfUI"
+        mc:Ignorable="d"
+        Title="Aerodrome data" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="320" Width="300">
+    <Window.Resources>
+        <local:NullableToStringConverter x:Key="NullableToStringConverter" />
+    </Window.Resources>
+    <Grid Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Center" FontSize="16" Content="Organization:"/>
+        <Label Grid.Row="1" VerticalAlignment="Center" FontSize="16" Content="Name:"/>
+        <Label Grid.Row="2" VerticalAlignment="Center" FontSize="16" Content="ICAO code:"/>
+        <Label Grid.Row="3" VerticalAlignment="Center" FontSize="16" Content="IATA code:"/>
+        <Label Grid.Row="4" VerticalAlignment="Center" FontSize="16" Content="Longitude:"/>
+        <Label Grid.Row="5" VerticalAlignment="Center" FontSize="16" Content="Latitude:"/>
+        <Button  Margin="6" Style="{x:Null}" Grid.Row="6" Content="Cancel" IsCancel="True"/>
+
+        <TextBox VerticalContentAlignment="Center" Margin="5" Name="orgTbx" Height="30"  Grid.Row="0" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="Organization" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <local:StringValidationRule  Length="100" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox VerticalContentAlignment="Center" Margin="5" Name="nameTbx" Height="30"  Grid.Row="1" Grid.Column="1" >
+            <TextBox.Text>
+                <Binding Path="name" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <local:StringValidationRule Length="100" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox VerticalContentAlignment="Center" Margin="5" Name="idarptTbx" Height="30"  Grid.Row="2" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="idarpt" Converter="{StaticResource NullableToStringConverter}" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <local:StringValidationRule Length="4" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox VerticalContentAlignment="Center" Margin="5" Name="iataTbx" Height="30"  Grid.Row="3" Grid.Column="1">
+            <TextBox.Text>
+                <Binding Path="iata" Converter="{StaticResource NullableToStringConverter}" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
+                    <Binding.ValidationRules>
+                        <local:StringValidationRule Length="4" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+            <TextBox VerticalContentAlignment="Center" Name="longDegTbx" Margin="5 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="°"/>
+            <TextBox VerticalContentAlignment="Center" Name="longMinTbx" Margin="2 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="'"/>
+            <TextBox VerticalContentAlignment="Center" Name="longSecTbx" Margin="2 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="''"/>
+            <ComboBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="longCbx" Margin="2 5" Width="40" Height="26">
+                <ComboBoxItem IsSelected="True" Name="E">E</ComboBoxItem>
+                <ComboBoxItem Name="W">W</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+            <TextBox VerticalContentAlignment="Center" Name="latgDegTbx" Margin="5 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="°"/>
+            <TextBox VerticalContentAlignment="Center" Name="latMinTbx" Margin="2 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="'"/>
+            <TextBox VerticalContentAlignment="Center" Name="latSecTbx" Margin="2 5 0 5" Height="26" Width="29"/>
+            <Label Margin="-5 -5 0 0" Content="''"/>
+            <ComboBox HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="latCbx" Margin="2 5" Width="40" Height="26">
+                <ComboBoxItem IsSelected="True" Name="N">N</ComboBoxItem>
+                <ComboBoxItem Name="S">S</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+       
+        <Button Margin="5"  Grid.Row="6" Grid.Column="1" Content="Ok" Name="okBtn" Click="Button_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Style.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=orgTbx}" Value="false"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=nameTbx}" Value="false"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=idarptTbx}" Value="false"/>
+                                <Condition Binding="{Binding Path=(Validation.HasError), ElementName=iataTbx}" Value="false"/>
+
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="IsEnabled" Value="True"/>
+                        </MultiDataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <RegistryDir>D:\WorkFolder</RegistryDir>
+  <Conventional>
+    <Arrival>
+      <Acar>ABC</Acar>
+    </Arrival>
+    <Departure>
+      <Acar>ABC</Acar>
+    </Departure>
+  </Conventional>
+</Config>

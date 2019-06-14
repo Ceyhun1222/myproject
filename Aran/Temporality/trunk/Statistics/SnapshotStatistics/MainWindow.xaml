@@ -1,0 +1,10 @@
+﻿<Window x:Class="SnapshotStatistics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:SnapshotStatistics.View"
+        Icon="validation.ico"
+        Title="Statistics Harverster" Height="150" Width="525" SizeToContent="Height" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <view:MainView/>
+    </Grid>
+</Window>

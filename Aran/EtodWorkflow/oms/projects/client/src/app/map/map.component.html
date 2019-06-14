@@ -1,0 +1,62 @@
+<div id="map" class="map">
+    <div class="dropdown es-map-left-btn es-map-base es-stop-propagation">
+        <button title="Base maps" class="btn btn-default" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            <i class="icon-stack3 text-blue"></i>
+        </button>
+        <ul class="dropdown-menu p-2" aria-labelledby="dropdownMenu1">
+            <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.baseChange('sat')">
+                    <i *ngIf="mapService.selectedBaseName === 'sat'" class="icon-check2 mr-1"></i>Yandex satellite
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.baseChange('map')">
+                    <i *ngIf="mapService.selectedBaseName === 'map'" class="icon-check2 mr-1"></i>Yandex vector
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.baseChange('skl')">
+                    <i *ngIf="mapService.selectedBaseName === 'skl'" class="icon-check2 mr-1"></i>Yandex hybrid
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.baseChange('osm')">
+                    <i *ngIf="mapService.selectedBaseName === 'osm'" class="icon-check2 mr-1"></i>Open street map
+                </a>
+            </li>
+            <!-- <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.baseChange('gomap')">
+                    <i *ngIf="mapService.selectedBaseName === 'gomap'" class="icon-check2 mr-1"></i>GoMap
+                </a>
+            </li> -->
+        </ul>
+    </div>
+
+    <div class="dropdown es-map-left-btn es-map-measure es-stop-propagation">
+        <button title="Measure" class="btn btn-default" type="button" id="oms-map-measureLP" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            <i class="icon-rulers text-blue"></i>
+        </button>
+        <ul class="dropdown-menu p-2" aria-labelledby="oms-map-measureLP">
+            <li>
+                <a class="dropdown-item" href="javascript:void(0)" (click)="mapService.measureInit('LineString')"><i
+                        *ngIf="measureService.selectedType === 'LineString'" class="icon-check2 mr-1"></i>Line</a>
+            </li>
+            <li><a class="dropdown-item" href="javascript:void(0)" (click)="mapService.measureInit('Polygon')"><i *ngIf="measureService.selectedType === 'Polygon'"
+                        class="icon-check2 mr-1"></i>Polygon</a></li>
+        </ul>
+    </div>
+
+    <!-- <div class="dropdown es-map-left-btn es-map-obstacle">
+        <button title="Obstacle" class="btn btn-default" type="button" [routerLink]="['obstacle']">
+            <img src="src/assets/images/obstacle.png" alt="Obstacle">
+        </button>
+    </div> -->
+
+    <div class="es-map-right-btn es-map-proj text-blue-800" (click)="mapService.projectionChange()">
+        {{mapService.projection}} <span *ngIf="mapService.projection=='UTM'">- {{mapService.utmZone}}</span>
+    </div>
+    <router-outlet></router-outlet>
+
+</div>

@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ARENA.View.MainControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:ARENA="clr-namespace:ARENA"
+             xmlns:Controls="clr-namespace:ESRI.ArcGIS.Controls;assembly=ESRI.ArcGIS.AxControls"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:Collections="clr-namespace:System.Collections;assembly=mscorlib"
+             xmlns:Converter="clr-namespace:ARENA.CommonUtil.Converter" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Converter:CollectionDescriptionConverter x:Key="collectionDescriptionConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+
+        </Grid.ColumnDefinitions>
+        
+        <WindowsFormsHost Grid.Column="0">
+            <WindowsFormsHost.Child>
+                <Controls:AxMapControl/>
+            </WindowsFormsHost.Child>
+        </WindowsFormsHost>
+
+        <xctk:PropertyGrid Grid.Column="1" x:Name="_propertyGrid" Margin="10" AutoGenerateProperties="True">
+            <xctk:PropertyGrid.EditorDefinitions>
+
+                <xctk:EditorTemplateDefinition TargetProperties="{x:Type System:String}">
+                    <xctk:EditorTemplateDefinition.EditingTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Value}" TextAlignment="Right"/>
+                        </DataTemplate>
+                    </xctk:EditorTemplateDefinition.EditingTemplate>
+                </xctk:EditorTemplateDefinition>
+
+                <xctk:EditorTemplateDefinition TargetProperties="{x:Type Collections:ICollection}">
+                    <xctk:EditorTemplateDefinition.EditingTemplate>
+                        <DataTemplate>
+                            <xctk:DropDownButton HorizontalContentAlignment="Right" Content="{Binding Path=Value, Converter={StaticResource collectionDescriptionConverter}}">
+                                <xctk:DropDownButton.DropDownContent>
+                                    <DataGrid ItemsSource="{Binding Path=Value}" 
+                                              AutoGenerateColumns="False"  
+                                              HeadersVisibility="None"
+                                              
+                                              Background="White"
+                                              AlternatingRowBackground="WhiteSmoke"
+                        
+                                              VerticalGridLinesBrush="Lavender"
+                                              HorizontalGridLinesBrush="Lavender">
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Header="Description">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding}" TextAlignment="Right"/>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </xctk:DropDownButton.DropDownContent>
+                            </xctk:DropDownButton>
+                        </DataTemplate>
+                    </xctk:EditorTemplateDefinition.EditingTemplate>
+                </xctk:EditorTemplateDefinition>
+
+            </xctk:PropertyGrid.EditorDefinitions>
+        </xctk:PropertyGrid>
+    </Grid>
+</UserControl>

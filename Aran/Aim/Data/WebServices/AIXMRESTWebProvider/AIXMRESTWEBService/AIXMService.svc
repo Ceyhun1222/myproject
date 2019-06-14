@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Aran.Aim.Data.WebServices.AIXMRESTService.AIXMService" CodeBehind="AIXMService.svc.cs" %>

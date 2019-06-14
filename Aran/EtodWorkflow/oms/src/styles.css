@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+input[type=text], input[type=password], input[type=number], input[type=email]{
+    padding-left: 10px;
+}
+
+body {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2mPd_yigF-dC4AXZF0wljdeJk4TTuZ5ZlhlvOUXdBstCInloP");
+}
+
+.ol-mouse-position {
+    left: auto!important;
+    top: auto!important;
+    bottom: 10px!important;
+    right: 10px!important;
+    background: #ffffff;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+/* Map */
+  /*Measure*/
+.tooltip {
+    position: relative!important;
+    background: rgba(0, 0, 0, 0.5)!important;
+    border-radius: 4px!important;
+    color: white!important;
+    padding: 4px 8px!important;
+    opacity: 0.7!important;
+    white-space: nowrap!important;
+  }
+  .tooltip-measure {
+    opacity: 1;
+    font-weight: bold!important;
+  }
+  .tooltip-static {
+    background-color: #ffcc33!important;
+    color: black!important;
+    border: 1px solid white!important;
+  }
+  .tooltip-measure:before,
+  .tooltip-static:before {
+    border-top: 6px solid rgba(0, 0, 0, 0.5)!important;
+    border-right: 6px solid transparent!important;
+    border-left: 6px solid transparent!important;
+    content: ""!important;
+    position: absolute!important;
+    bottom: -6px!important;
+    margin-left: -7px!important;
+    left: 50%!important;
+  }
+  .tooltip-static:before {
+    border-top-color: #ffcc33!important;
+  }
+    /* Rotate */
+  .ol-rotate {
+    right: 50px!important;
+  }
+  /* popup */
+  .ol-popup {
+    white-space: nowrap;
+    -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+    min-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 100px;
+  }
+  .ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+  }
+  .ol-popup:before {
+    border-top-color: #cccccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+  }
+  /*Map*/
+
+  /* Map filter */
+.treeview-container .row-item .fa::before {
+    content: "\25bc"!important;
+}
+.treeview-container .row-item .fa-caret-right {
+  transform: rotate(28deg);
+}
+.treeview-container .row-item .fa-caret-down {
+  transform: rotate(122deg);
+}
+ /* Map filter */
+
+ .legitRipple-ripple{
+   /* component.min.css error */
+   display: none;
+ }
+
+ .select2-selection.select2-selection--single{
+  padding: .375rem .875rem!important;
+ }
+
+ .tooltip{
+   position: absolute!important;
+   white-space: normal!important;
+   padding: 0!important;
+   opacity: .9!important;
+ }
+ .tooltip .tooltip-inner{
+   padding: 5px!important;
+ }

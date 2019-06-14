@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="Aran.Panda.RNAV.RNPAR.UI.View.Procedure.InitializationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.View.Procedure"
+             xmlns:xt="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:converter="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converter:EnumDescriptionConverter x:Key="enumDescriptionConverter"/>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
+            <Style TargetType="Label" BasedOn="{StaticResource LabelStyle}"/>
+            <Style TargetType="ComboBox" BasedOn="{StaticResource ComboBoxStyle}"/>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label >RWY:</Label>
+            <ComboBox Grid.Column="1" ItemsSource="{Binding Runways}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedRunway}" SelectedIndex="0">
+            </ComboBox>
+
+            <Label Grid.Row="1">True bearing :</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" IsEnabled="False" Text="{Binding TrueBearing}"></TextBox>
+            <Label Grid.Row="1" Grid.Column="2">°</Label>
+
+            <Label Grid.Row="2">Aircraft category:</Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedAircraftCategory}">
+            </ComboBox>
+
+            <Label Grid.Row="3">IAS :</Label>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding IAS}"></TextBox>
+            <Label Grid.Row="3" Grid.Column="2" Content="{Binding SpeedUnit}"></Label>
+
+            <Label Grid.Row="4">VPA :</Label>
+            <xt:DecimalUpDown Grid.Row="4" Grid.Column="1" Increment=".1" Maximum="{Binding VPAMax}" Minimum="{Binding VPAMin}" Value="{Binding VPA}" Margin="5 5"></xt:DecimalUpDown>
+            <Label Grid.Row="4" Grid.Column="2">°</Label>
+
+            <Label Grid.Row="5">Missed approach gradient:</Label>
+            <xt:DecimalUpDown Grid.Row="5" Grid.Column="1" Value="{Binding MissedApproachGradient}" Increment=".1" Maximum="5" Minimum="2" Margin="5 5"></xt:DecimalUpDown>
+            <Label Grid.Row="5" Grid.Column="2">%</Label>
+
+            <Label Grid.Row="6">FApr track offset angle:</Label>
+            <xt:DecimalUpDown Grid.Row="6" Grid.Column="1" Value="{Binding FAOffsetAngle}" Increment=".1" Maximum="5" Minimum="-5" Margin="5 5"></xt:DecimalUpDown>
+            <Label Grid.Row="6" Grid.Column="2">°</Label>
+
+            <Label Grid.Row="7">FApr true bearing:</Label>
+            <TextBox Grid.Row="7" Grid.Column="1" IsEnabled="False" Text="{Binding FATrueBearing}"></TextBox>
+            <Label Grid.Row="7" Grid.Column="2">°</Label>
+
+            <Label Grid.Row="8">FAS RNP value:</Label>
+            <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding FASRNPValue}"></TextBox>
+            <Label Grid.Row="8" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+            <Label Grid.Row="9">Preliminary DH:</Label>
+            <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding DH}"></TextBox>
+            <Label Grid.Row="9" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label >THR elevation:</Label>
+            <TextBox Grid.Column="1" IsEnabled="False" Text="{Binding THR}"></TextBox>
+            <Label Grid.Row="0" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+
+            <Label Grid.Row="1">Reference datum height :</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding DatumHeight}"></TextBox>
+            <Label Grid.Row="1" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+
+            <Label Grid.Row="2">Type of altimeter margin:</Label>
+            <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding AltimeterMarginTypes}" SelectedItem="{Binding SelectedAltimeterMarginType}"  >
+                <!--<DataTemplate>
+                    <TextBlock Text="{Binding  Converter={StaticResource enumDescriptionConverter}}"> </TextBlock>
+                </DataTemplate>-->
+            </ComboBox>
+
+            <Label Grid.Row="3">TWC:</Label>
+            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding TWC}"></TextBox>
+            <Label Grid.Row="3" Grid.Column="2" Content="{Binding SpeedUnit}"></Label>
+
+            <Label Grid.Row="4">Min Aerodrome temperature :</Label>
+            <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding MinTemperature}"></TextBox>
+            <Label Grid.Row="4" Grid.Column="2">C°</Label>
+
+            <Label Grid.Row="5">Altimeter margin:</Label>
+            <TextBox Grid.Row="5" Grid.Column="1" IsEnabled="False" Text="{Binding AltimeterMargin}"></TextBox>
+            <Label Grid.Row="5" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+
+            <Label Grid.Row="6">Alignment Pt-THR distance:</Label>
+            <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding AltimeterTHR}"></TextBox>
+            <Label Grid.Row="6" Grid.Column="2" Content="{Binding HeightUnitM}"></Label>
+
+            <Label Grid.Row="7">FAS min OCH:</Label>
+            <TextBox Grid.Row="7" Grid.Column="1" IsEnabled="False" Text="{Binding MinOCH}"></TextBox>
+            <Label Grid.Row="7" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+
+            <Label Grid.Row="8">MA RNP value :</Label>
+            <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding MARNPValue}" IsEnabled="False"></TextBox>
+            <Label Grid.Row="8" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+            <Label Grid.Row="9">Max planned FAP ALT :</Label>
+            <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding MaxFAPAlt}"></TextBox>
+            <Label Grid.Row="9" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+        </Grid>
+
+    </Grid>
+</UserControl>

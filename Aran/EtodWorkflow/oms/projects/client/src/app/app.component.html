@@ -1,0 +1,17 @@
+
+<div [ngClass]="{'navbar-top':!hideLayout}">
+  <app-header *ngIf="!hideLayout"></app-header>
+  <!-- Page content -->
+  <div class="page-content pt-0">
+    <!-- Main content -->
+    <div class="content-wrapper">
+      <!-- Content area -->
+      <div class="content p-0 position-relative">
+          <router-outlet></router-outlet>
+      </div>
+      <!-- /content area -->
+    </div>
+    <!-- /main content -->
+  </div>
+  <!-- /page content -->
+</div>

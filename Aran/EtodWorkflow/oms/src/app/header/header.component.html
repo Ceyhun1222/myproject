@@ -1,0 +1,105 @@
+<!-- Main navbar -->
+<div class="navbar navbar-expand-md navbar-light fixed-top">
+
+  <!-- Header with logos -->
+  <div class="navbar-header navbar-dark d-none d-md-flex align-items-md-center">
+    <div class="navbar-brand navbar-brand-md">
+      <!-- <a href="../full/index.html" class="d-inline-block">
+        <img src="../../assets/limitless/global_assets/images/logo_light.png" alt="">
+      </a> -->
+    </div>
+
+    <div class="navbar-brand navbar-brand-xs">
+      <!-- <a href="../full/index.html" class="d-inline-block">
+        <img src="../../assets/limitless/global_assets/images/logo_icon_light.png" alt="">
+      </a> -->
+    </div>
+  </div>
+  <!-- /header with logos -->
+
+  <!-- Mobile controls -->
+  <div class="d-flex flex-1 d-md-none">
+    <div class="navbar-brand mr-auto">
+      <!-- <a href="../full/index.html" class="d-inline-block">
+        <img src="../../assets/limitless/global_assets/images/logo_dark.png" alt="">
+      </a> -->
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+      <i class="icon-tree5"></i>
+    </button>
+
+    <button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+      <i class="icon-paragraph-justify3"></i>
+    </button>
+  </div>
+  <!-- /mobile controls -->
+
+
+  <!-- Navbar content -->
+  <div class="collapse navbar-collapse" id="navbar-mobile">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block">
+          <i class="icon-paragraph-justify3"></i>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item dropdown">
+        <a href="#" class="navbar-nav-link dropdown-toggle caret-0 oms-notification" data-toggle="dropdown">
+          <i class="icon-bell3"></i>
+          <!-- <span *ngIf="userNotificationCount > 0 || requestNotificationCount > 0" class="badge badge-mark border-pink-400 ml-auto ml-md-0"></span> -->
+          <!-- <span *ngIf="userNotificationCount > 0 || requestNotificationCount > 0" class="badge bg-danger-400 badge-pill border-2 border-white">{{userNotificationCount+requestNotificationCount}}</span> -->
+          <span *ngIf="userNotificationCount > 0 || requestNotificationCount > 0"
+            class="badge bg-danger-400 rounded border-1 border-white">{{userNotificationCount+requestNotificationCount}}</span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right dropdown-content wmin-250 pl-2 pt-2 pb-2">
+          <div class="dropdown-content-header p-0">
+            <ul class="list list-unstyled">
+              <li>
+                <span class="font-weight-semibold pr-3">User notifications
+                  <span class="text-muted">({{userNotificationCount}})</span>
+                </span>
+                <a href="javascript:void(0)" (click)="nagiateTo('/users/Pending/')">
+                  <span class="font-weight-semibold float-right"> View</span>
+                </a>
+              </li>
+              <li>
+                <span class="font-weight-semibold pr-3">Request notifications
+                  <span class="text-muted">({{requestNotificationCount}})</span>
+                </span>
+                <a href="javascript:void(0)" (click)="nagiateTo('/requests/')">
+                  <span class="font-weight-semibold float-right"> View</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown dropdown-user">
+        <a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">
+          <img src="src/assets/images/avatar.jpg" class="rounded-circle" alt="">
+          <span>{{user.fullName}}</span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <a *ngIf="user && user.id > 0" [routerLink]="['myprofile']" class="dropdown-item"><i
+              class="icon-user-plus"></i> My profile</a>
+          <a [routerLink]="['/settings']" class="dropdown-item"><i class="icon-cog5"></i> Settings</a>
+          <a class="dropdown-item" (click)="logout()"><i class="icon-switch2"></i> Logout</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <!-- /navbar content -->
+
+</div>
+<!-- /main navbar -->

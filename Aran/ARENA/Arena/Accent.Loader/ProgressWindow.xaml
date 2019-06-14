@@ -1,0 +1,13 @@
+﻿<Window x:Class="Process.Loader.ProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        AllowsTransparency="True"
+        Title="ProgressWindow" Height="400" Width="400" WindowStyle="None" WindowStartupLocation="CenterScreen" Topmost="True" WindowState="Maximized" Background="#10060706" Loaded="Window_Loaded">
+<Border BorderBrush="Black" BorderThickness="1" CornerRadius="20" VerticalAlignment="Center" HorizontalAlignment="Center" Background="LightGray">
+        <Grid Height="360" Width="360" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Height="359" HorizontalAlignment="Center" Margin="0" Name="image1" Stretch="Fill" VerticalAlignment="Center" Width="363" Source="/Accent.Loader;component/Images/512x512.png" />
+            <ProgressBar Height="31" HorizontalAlignment="Center" Margin="51,270,43,60" Name="loadingProgress" VerticalAlignment="Center" Width="266" Foreground="#FF1D4E6D" Background="#FFF0EEEE" />
+            <Label Content="Loading..." Height="29" HorizontalAlignment="Center" Margin="51,0,43,25" Name="loadingStatus" VerticalAlignment="Bottom" Width="266" FontFamily="Times New Roman" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" Foreground="#FFF0EEEE" />
+        </Grid>
+    </Border>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:XHTML_WPF.View"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="XHTML_WPF.View.FileSelectDialog"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600" Loaded="FileSelectDialog_OnLoaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="24"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <telerik:RadGridView x:Name="rgv_File" telerik:StyleManager.Theme="Windows7" CanUserDeleteRows="False" CanUserFreezeColumns="False" CanUserInsertRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+            <telerik:RadGridView.Columns>
+                <telerik:GridViewDataColumn Header="File name" Width="120" DataMemberBinding="{Binding FileName}" UniqueName="FileName" />
+                <telerik:GridViewDataColumn Header="Title" Width="200" DataMemberBinding="{Binding Title}"  UniqueName="Title"/>
+                <telerik:GridViewDataColumn Header="Description" Width="200*" DataMemberBinding="{Binding Description}"  UniqueName="Description"/>
+            </telerik:RadGridView.Columns>
+        </telerik:RadGridView>
+        <Grid Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <telerik:RadButton x:Name="btn_Cancel" Width="200" Content="Cancel" Click="ButtonBase_OnClick"></telerik:RadButton>
+            <telerik:RadButton x:Name="btn_Preview" Grid.Column="1" Width="200" Content="Preview" Click="ButtonBase_OnClick"></telerik:RadButton>
+            <telerik:RadButton x:Name="btn_Insert" Grid.Column="2" Width="200" Content="Insert" Click="ButtonBase_OnClick"></telerik:RadButton>
+        </Grid>
+        
+    </Grid>
+</Window>

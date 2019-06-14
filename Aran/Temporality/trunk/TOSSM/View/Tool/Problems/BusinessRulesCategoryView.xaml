@@ -1,0 +1,225 @@
+﻿<UserControl x:Class="TOSSM.View.Tool.Problems.BusinessRulesCategoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View1="clr-namespace:Aran.Temporality.CommonUtil.View;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Control1="clr-namespace:Aran.Temporality.CommonUtil.Control;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Extender1="clr-namespace:Aran.Temporality.CommonUtil.Extender;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Menu="clr-namespace:TOSSM.ViewModel.Control.PropertySelector.Menu" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+
+        <Style TargetType="{x:Type MenuItem}">
+            <Style.Triggers>
+                <Trigger Property="Role" Value="SubmenuItem">
+                    <Setter Property="Template" Value="{StaticResource LeafMenuWrapperItemTemplate}"/>
+                </Trigger>
+                <Trigger Property="Role" Value="SubmenuHeader">
+                    <Setter Property="Template" Value="{StaticResource NodeMenuWrapperItemTemplate}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="MyMenu" TargetType="{x:Type Menu}">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Menu}">
+                        <Border BorderThickness="1" Background="WhiteSmoke">
+                            <Border.BorderBrush>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <LinearGradientBrush.GradientStops>
+                                        <GradientStopCollection>
+                                            <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
+                                            <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
+                                        </GradientStopCollection>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </Border.BorderBrush>
+                            <StackPanel ClipToBounds="True" Height="20" Orientation="Horizontal" IsItemsHost="True" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <HierarchicalDataTemplate DataType="{x:Type Menu:MenuItemViewModel}" 
+                                  ItemsSource="{Binding Path=ItemsSource}">
+            <Control1:MenuItemWrapper Header="{Binding Path=Header}" 
+                                      IsCheckable="{Binding Path=IsCheckable}"
+                                      StaysOpenOnClick="{Binding Path=StaysOpenOnClick}"
+                                      IsChecked="{Binding Path=IsChecked}" />
+        </HierarchicalDataTemplate>
+
+    </UserControl.Resources>
+
+
+    <Grid>
+
+        <Grid Background="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <DockPanel Grid.Row="0" Visibility="{Binding DockPanelVisible}">
+                <ToolBarTray DockPanel.Dock="Top">
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        <Label Content="Rule Operations:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                        <Button ToolTip="Activate Selected Rules" 
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    CommandParameter="{Binding ElementName=PresenterDataGrid, Path=SelectedItems}"
+                                    Command="{Binding Path=ActivateCommand}">
+                            <Image Source="{StaticResource ActivateBitmapImage}" Width="16" Height="16" />
+                        </Button>
+
+                        <Button ToolTip="Deactivate Selected Rules" 
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    CommandParameter="{Binding ElementName=PresenterDataGrid, Path=SelectedItems}"
+                                    Command="{Binding Path=DeactivateCommand}">
+                            <Image Source="{StaticResource DeactivateBitmapImage}" Width="16" Height="16" />
+                        </Button>
+                        
+                        <Separator/>
+
+                        <Button ToolTip="Save All Changes" 
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    CommandParameter="{Binding ElementName=PresenterDataGrid, Path=SelectedItems}"
+                                    Command="{Binding Path=SaveCommand}">
+                            <Image Source="{StaticResource SaveBitmapImage}" Width="16" Height="16" />
+                        </Button>
+
+                        <Button ToolTip="Cancel All Changes" 
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    CommandParameter="{Binding ElementName=PresenterDataGrid, Path=SelectedItems}"
+                                    Command="{Binding Path=CancelCommand}">
+                            <Image Source="{StaticResource CancelBitmapImage}" Width="16" Height="16" />
+                        </Button>
+                    </Control1:ExtendedToolBar>
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        <Label Content="Rule Filter:" VerticalAlignment="Center"/>
+
+                        <ComboBox IsEditable="True" 
+                                    IsTextSearchEnabled="False"
+                                    StaysOpenOnEdit="True"
+                                    MinWidth="250" 
+                                    VerticalAlignment="Center"
+                                    ItemsSource="{Binding Path=AutoCompleteList}"
+                                    Style="{StaticResource ToolBarComboboxStyle}"
+                                    Text="{Binding Path=PropertyFilter, UpdateSourceTrigger=PropertyChanged}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+
+                        </ComboBox>
+
+                        <Button Command="{Binding OnClearFilter}" 
+                                    Grid.Column="1" Width="25" Height="22"
+                                    VerticalAlignment="Center"
+                                    Visibility="{Binding Path=FilterEmptyButtonVisibility}"
+                                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Focusable="False" >
+                            <Image Source="{StaticResource DeleteBitmapImage}" Width="16" Height="16"/>
+                        </Button>
+
+                    </Control1:ExtendedToolBar>
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        <Label Content="Rule Columns:" VerticalAlignment="Center"/>
+                        <Menu Style="{StaticResource MyMenu}" VerticalAlignment="Center" VerticalContentAlignment="Center">
+                            <Control1:MenuItemWrapper ItemsSource="{Binding Path=MenuItemList}">
+                                <Control1:MenuItemWrapper.Header>
+
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <TextBlock Text="{Binding Path=SelectedColumnSetName}" VerticalAlignment="Center"/>
+
+                                        <Path Data="{StaticResource DownArrow}"
+                                                  Stretch="Fill"
+                                                  Width="5"
+                                                  Height="3"
+                                                  Margin="8,0,0,0"
+                                                  Fill="Black" 
+                                                  Stroke="Black" 
+                                                  VerticalAlignment="Center" 
+                                                  HorizontalAlignment="Center"/>
+                                    </StackPanel>
+
+                                </Control1:MenuItemWrapper.Header>
+                            </Control1:MenuItemWrapper>
+                        </Menu>
+
+                    </Control1:ExtendedToolBar>
+
+
+                </ToolBarTray>
+            </DockPanel>
+
+            <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  ItemsSource="{Binding Path=RulesFiltered, UpdateSourceTrigger=PropertyChanged}" 
+                                  SelectedItem="{Binding Path=SelectedRule, UpdateSourceTrigger=PropertyChanged}"
+                      
+                          
+                                  VirtualizingStackPanel.VirtualizationMode="Recycling"
+                                  VirtualizingStackPanel.IsVirtualizing="True"
+                        
+                                  ScrollViewer.IsDeferredScrollingEnabled="True"
+                        
+                                  EnableRowVirtualization="True"
+                                  EnableColumnVirtualization="False"
+                          
+                                  IsReadOnly="True" 
+                                  CanUserSortColumns="True"
+                                  Background="WhiteSmoke"
+                        
+                                  VerticalGridLinesBrush="Lavender"
+                                  HorizontalGridLinesBrush="Lavender"
+                      
+                                  Visibility="{Binding Path=DataGridVisibility, FallbackValue=Collapsed}"    
+                      
+                                  Extender1:DataGridExtender.BindableColumns="{Binding Path=RuleColumnList}"
+                      
+                                  HeadersVisibility="Column"
+                                  Name="PresenterDataGrid"
+                                  AlternatingRowBackground="WhiteSmoke"
+                                  RowStyle="{StaticResource AllwaysSelectedDataGrid}">
+
+                <DataGrid.GroupStyle>
+                    <GroupStyle ContainerStyle="{StaticResource EditorDataGridGroupStyle2}"/>
+                </DataGrid.GroupStyle>
+
+                <DataGrid.ContextMenu>
+                    <ContextMenu >
+                        <Control1:MenuItemWrapper ItemsSource="{Binding Path=MenuItemList}" Header="Show Columns"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+            </DataGrid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Background="Lavender">
+                <TextBlock VerticalAlignment="Center" Margin="5,0,5,2" Foreground="SteelBlue" Text="{Binding Path=Status}"/>
+            </StackPanel>
+        </Grid>
+
+        <View1:BlockerControl   DataContext="{Binding Path=BlockerModel}" 
+                                            Grid.Row="0" Grid.Column="0" 
+                                            HorizontalAlignment="Stretch" 
+                                            VerticalAlignment="Stretch"/>
+
+    </Grid>
+</UserControl>

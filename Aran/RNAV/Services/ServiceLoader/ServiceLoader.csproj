@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DEE6214-DCE4-4B32-9A70-D54E22BAA611}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ServiceLoader</RootNamespace>
+    <AssemblyName>ServiceLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Program</StartAction>
+    <StartProgram>..\..\..\..\bin\Debug\MapEnv.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeometryConvert.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceLoaderPlugin.cs" />
+    <Compile Include="SRPackable.cs" />
+    <Compile Include="UIService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8E1CA34F-D479-4637-8A0A-3E8E1F23CC9D}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\Interfaces\trunk\Aran.Interfaces.csproj">
+      <Project>{FA1B9FAF-896F-43B8-A58A-D7D98514E897}</Project>
+      <Name>Aran.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\Panda\Common\C#\Common.csproj">
+      <Project>{34799FBF-1F2C-4ED3-A173-F2B88DE0FD4B}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\Panda\GeometryOperatorsContract\C#\GeometryOperatorsContract.csproj">
+      <Project>{D372A87B-6768-4596-95E0-963AB160699B}</Project>
+      <Name>GeometryOperatorsContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\Panda\Geometry\C#\Geometry.csproj">
+      <Project>{F387AF51-3ACD-487A-9346-F8E900B84BAA}</Project>
+      <Name>Geometry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\Panda\Registry\C#\Registry.csproj">
+      <Project>{4FB74261-8F23-421C-AF6B-0C1397D83138}</Project>
+      <Name>Registry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\Panda\UIContract\C#\UIContract.csproj">
+      <Project>{421C30ED-3B6D-430A-99CF-EDA69CF6DC2F}</Project>
+      <Name>UIContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

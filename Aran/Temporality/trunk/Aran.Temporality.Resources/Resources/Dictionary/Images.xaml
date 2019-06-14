@@ -1,0 +1,198 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="FolderAddBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\plus.png"/>
+    <BitmapImage x:Key="FolderDeleteBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\delete_red.png"/>
+    <BitmapImage x:Key="FolderErrorBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\warning.png"/>
+    <BitmapImage x:Key="FolderInformationBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\folder_information.png"/>
+    <BitmapImage x:Key="FolderEditBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\edit.png"/>
+
+    <BitmapImage x:Key="ShopAddBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\shop_add.png"/>
+
+    <BitmapImage x:Key="ShopRemoveBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\shop_remove.png"/>
+
+    <BitmapImage x:Key="SmallErrorBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\small_error.png"/>
+
+    <BitmapImage x:Key="LogBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\log.png"/>
+    <BitmapImage x:Key="InfoBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\info.png"/>
+
+    <BitmapImage x:Key="FirstBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\first.png"/>
+    <BitmapImage x:Key="PrevBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\prev.png"/>
+    <BitmapImage x:Key="NextBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\next.png"/>
+    <BitmapImage x:Key="LastBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\last.png"/>
+
+    <BitmapImage x:Key="CheckAllBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\check_all.png"/>
+    <BitmapImage x:Key="UncheckAllBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\uncheck_all.png"/>
+
+    <BitmapImage x:Key="ReportBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\report.png"/>
+
+
+    <BitmapImage x:Key="DataGrayBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\database_gray.png"/>
+    <BitmapImage x:Key="DataBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\database.png"/>
+    <BitmapImage x:Key="DataTableBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\database_table.png"/>
+    <BitmapImage x:Key="DataYellowBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\database_yellow.png"/>
+    <BitmapImage x:Key="DrawingTemplateBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\drawing_template.png"/>
+    <BitmapImage x:Key="FolderOkBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\folder_accept.png"/>
+    <BitmapImage x:Key="FolderCancelBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\folder_cancel.png"/>
+    <BitmapImage x:Key="Xml2BitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\xml2.png"/>
+
+    <BitmapImage x:Key="DataBlueBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\data_blue.png"/>
+
+    <BitmapImage x:Key="ConvertkBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\convert.png"/>
+
+    <BitmapImage x:Key="FilterBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\filter.png"/>
+
+    <BitmapImage x:Key="LinkBreakBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\link_break.png"/>
+
+
+    <BitmapImage x:Key="XmlBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\xml.png"/>
+    <BitmapImage x:Key="CharacterBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\character.png"/>
+
+
+    <BitmapImage x:Key="StatusBusyBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\status_busy.png"/>
+    <BitmapImage x:Key="LabelBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\label.png"/>
+    <BitmapImage x:Key="Label2BitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\label2.png"/>
+    <BitmapImage x:Key="ClusterBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\cluster.png"/>
+    <BitmapImage x:Key="Relation" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\relation.png"/>
+
+
+    <BitmapImage x:Key="PluginBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\plugin.png"/>
+
+    <BitmapImage x:Key="SmallCloseImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\small_close.png"/>
+
+    <BitmapImage x:Key="TodayBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\today.png"/>
+
+    <BitmapImage x:Key="DependencyBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\dependency.png"/>
+
+    <BitmapImage x:Key="ApplyBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\lightning.png"/>
+
+
+    <BitmapImage x:Key="ImportBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\import.png"/>
+    <BitmapImage x:Key="ExportBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\export.png"/>
+
+
+    <BitmapImage x:Key="ErrorBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\error.png"/>
+
+    <BitmapImage x:Key="InBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\in.png"/>
+    <BitmapImage x:Key="OutBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\out.png"/>
+
+    <BitmapImage x:Key="FolderBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\folder.png"/>
+
+    <BitmapImage x:Key="FolderGoBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\folder_go.png"/>
+
+    <BitmapImage x:Key="FileAddBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_add.png"/>
+    <BitmapImage x:Key="FileDeleteBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_delete.png"/>
+    <BitmapImage x:Key="FileErrorBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_error.png"/>
+    <BitmapImage x:Key="FileInformationBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_information.png"/>
+    <BitmapImage x:Key="FileEditBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_edit.png"/>
+
+    <!-- Images -->
+    <BitmapImage x:Key="WarningBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\warning.png"/>
+
+    <BitmapImage x:Key="UnlinkBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\remove_link.png"/>
+
+    <BitmapImage x:Key="GeoIntersectionBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\ungroup.png"/>
+
+    <BitmapImage x:Key="ValidatePrivateSlotBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\link_file.png"/>
+    <BitmapImage x:Key="ValidatePublicSlotBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\link_db.png"/>
+
+    <BitmapImage x:Key="UnlockBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\unlock.png"/>
+
+
+    <BitmapImage x:Key="GoodBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\good.png"/>
+    <BitmapImage x:Key="BadBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\bad.png"/>
+
+    <BitmapImage x:Key="LockedBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\locked_black.png"/>
+    <BitmapImage x:Key="DeleteBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\delete.png"/>
+    <BitmapImage x:Key="UpBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\up.png"/>
+    <BitmapImage x:Key="DownBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\down.png"/>
+    <BitmapImage x:Key="AddBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\add.png"/>
+
+    <BitmapImage x:Key="ToolTipBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\right_arrow.png"/>
+
+    <BitmapImage x:Key="TrashCanBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\trash_green.png"/>
+    <BitmapImage x:Key="CheckBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\check.png"/>
+    <BitmapImage x:Key="AddedBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\new.png"/>
+
+
+    <BitmapImage x:Key="PublishBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\publish.png"/>
+
+    <BitmapImage x:Key="SimpleBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\bullet.png"/>
+    <BitmapImage x:Key="ComplexBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\more.png"/>
+    <BitmapImage x:Key="CustomBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\gear.png"/>
+
+
+    <BitmapImage x:Key="NewBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\plus.png"/>
+    <BitmapImage x:Key="OpenBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\open.png"/>
+    <BitmapImage x:Key="DeleteRedBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\delete_red.png"/>
+    <BitmapImage x:Key="CopyBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\copy.png"/>
+    <BitmapImage x:Key="DetailsBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\detail.png"/>
+    <BitmapImage x:Key="OnMapBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\on_map.png"/>
+    <BitmapImage x:Key="LinkBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\file_link.png"/>
+
+    <BitmapImage x:Key="SearchBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\view.png"/>
+    <BitmapImage x:Key="CommitBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\commit.png"/>
+
+    <BitmapImage x:Key="ActivateBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\lamp_on.png"/>
+    <BitmapImage x:Key="DeactivateBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\lamp_off.png"/>
+
+
+    <BitmapImage x:Key="TransferBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\move_folder.png"/>
+
+    <BitmapImage x:Key="CancelBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\cancel.png"/>
+    <BitmapImage x:Key="SaveBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\save.png"/>
+    <BitmapImage x:Key="EditBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\edit.png"/>
+
+    <BitmapImage x:Key="EvolutionBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\evolution.png"/>
+    <BitmapImage x:Key="PropertyEvolutionBitmapImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component/Resources\Images\chart_green.png"/>
+
+    <BitmapImage x:Key="syncImage" UriSource="pack://application:,,,/Aran.Temporality.Resources;component\Resources\Images\sync.png"/>
+
+
+    <DrawingBrush x:Key="SpliterBrush"  Stretch="UniformToFill" ViewportUnits="Absolute" Viewport="0,0,3,3" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing Brush="SteelBlue">
+                        <GeometryDrawing.Geometry>
+                            <GeometryGroup FillRule="Nonzero">
+                                <PathGeometry>
+                                    <PathFigure StartPoint="0,0">
+                                        <LineSegment  Point="100,0"/>
+                                        <LineSegment  Point="100,100"/>
+                                        <LineSegment  Point="0,100"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </GeometryGroup>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="LightSteelBlue">
+                        <GeometryDrawing.Geometry>
+                            <GeometryGroup FillRule="Nonzero">
+                                <PathGeometry>
+                                    <PathFigure StartPoint="0,0">
+                                        <LineSegment  Point="25,0"/>
+                                        <LineSegment  Point="100,75"/>
+                                        <LineSegment  Point="100,100"/>
+                                        <LineSegment  Point="75,100"/>
+                                        <LineSegment  Point="0,25"/>
+                                        <LineSegment  Point="0,0"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="75,0">
+                                        <LineSegment  Point="100,25"/>
+                                        <LineSegment  Point="100,0"/>
+                                    </PathFigure>
+                                    <PathFigure StartPoint="0,75">
+                                        <LineSegment  Point="25,100"/>
+                                        <LineSegment  Point="0,100"/>
+                                    </PathFigure>
+                                </PathGeometry>
+                            </GeometryGroup>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+</ResourceDictionary>

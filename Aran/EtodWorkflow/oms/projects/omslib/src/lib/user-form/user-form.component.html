@@ -1,0 +1,252 @@
+<div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1 p-3">
+  <div *ngIf="action == 'signup' && successed" class="alert alert-success mt-xl-5 mt-lg-5 mt-md-4" role="alert">
+    <div class="text-center mb-3">
+      <i class="icon-checkmark2 icon-3x text-success border-success border-3 rounded-round p-3 mb-3 mt-1"></i>
+      <h5 class="mb-0"><strong>{{lang.get('Account successfully created')}}</strong></h5>
+      {{lang.get('You will soon receive an email')}}
+      <p><a href="javascript:void(0)" (click)="navigateTo('/login')">{{lang.get('Return to login!')}}</a></p>
+    </div>
+  </div>
+  <div [hidden]="action == 'signup' && successed" class="card mb-0">
+    <div class="card-body">
+      <div class="text-center">
+        <h5 class="mb-0"><span class="font-weight-semibold">{{action == 'signup' ? lang.get('Create account') : action ==
+            'user' && registerForm?.id > 0 ? lang.get('User Details') : action=='myprofile'? lang.get('My profile') : lang.get('Create new user')}}</span></h5>
+        <span *ngIf="requestFailed" class="text-danger">{{lang.get("Operation wasn't completed due to an error.")}}</span>
+      </div>
+
+      <form class="p-3" novalidate (ngSubmit)="onSubmit(form_)" #form_="ngForm">
+        <fieldset>
+          <legend class="font-weight-semibold"><i class="icon-office mr-2"></i>{{lang.get('Company details')}}</legend>
+          <div class="row">
+            <input [hidden]="true" [readonly]="true" type="text" [(ngModel)]="registerForm.id" name="id">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Company name')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || companyName.touched) && companyName.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.company.name" name="companyName"
+                  #companyName="ngModel">
+                <div *ngIf="submitted || companyName.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="companyName.invalid">
+                    <span *ngIf="companyName.errors?.required">{{lang.get('Company name is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Airport')}}</label>
+                <select class="form-control" (change)="airportOnChange($event.target.value)" [ngClass]="{'border-danger' : (submitted || airportId.touched) && airportId.invalid}"
+                  required [(ngModel)]="registerForm.company.airportId" name="airportId" #airportId="ngModel">
+                  <option selected value="">{{lang.get('Airport')}}</option>
+                  <option *ngFor="let airport of airportList" [value]="airport.identifier">{{airport.name}}</option>
+                </select>
+                <div *ngIf="submitted || airportId.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="airportId.invalid">
+                    <span *ngIf="airportId.errors?.required">{{lang.get('Select airport')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Address')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || address.touched) && address.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.company.address" name="address"
+                  #address="ngModel">
+                <div *ngIf="submitted || address.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="address.invalid">
+                    <span *ngIf="address.errors?.required">{{lang.get('Address is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Zip code')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || zip.touched) && zip.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.company.zip" name="zip" #zip="ngModel">
+                <div *ngIf="submitted || zip.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="zip.invalid">
+                    <span *ngIf="zip.errors?.required">{{lang.get('Zip code is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Telephone')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || telephone.touched) && telephone.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.company.telephone" name="telephone"
+                  prefix="{{phoneConfig.prefix}}" mask="{{phoneConfig.mask}}" [dropSpecialCharacters]="false" #telephone="ngModel">
+                <div *ngIf="submitted || telephone.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="telephone.invalid">
+                    <span *ngIf="telephone.errors?.required">{{lang.get('Telephone is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Fax')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || fax.touched) && fax.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.company.fax" name="fax"
+                  prefix="{{phoneConfig.prefix}}" mask="{{phoneConfig.mask}}" [dropSpecialCharacters]="false" #fax="ngModel">
+                <div *ngIf="submitted || fax.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="fax.invalid">
+                    <span *ngIf="fax.errors?.required">{{lang.get('Fax is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="font-weight-semibold"><i class="icon-user-check mr-2"></i>{{lang.get('User details')}}</legend>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('User name')}}</label>
+                <input type="text" [ngClass]="{'border-danger' : (submitted || userName.touched) && (userName.invalid ||duplicateUser)}"
+                  class="form-control" [readonly]="registerForm?.id > 0" required minlength="5"
+                  maxlength="20" [(ngModel)]="registerForm.userName" name="userName" (blur)="!userName.invalid && userDuplicateCheck(userName.value)"
+                  #userName="ngModel">
+                <div *ngIf="submitted || userName.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="userName.invalid; else userNameValidationElse">
+                    <span *ngIf="userName.errors?.required">{{lang.get('Username is required')}}</span>
+                    <span *ngIf="userName.errors?.minlength">{{lang.get('Username must be at least 5 characters')}}</span>
+                    <span *ngIf="userName.errors?.maxlength">{{lang.get('Username must be maximum 15 characters')}}</span>
+                  </div>
+                  <ng-template #userNameValidationElse>
+                    <span *ngIf="duplicateUser">{{lang.get('This username is already taken')}}</span>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Email')}}</label>
+                <input type="email" autocomplete="auto" required [ngClass]="{'border-danger' : (submitted || email.touched) && (email.invalid || duplicateEmail)}"
+                  class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  [(ngModel)]="registerForm.email" [readonly]="registerForm?.id > 0" (blur)="!email.invalid && emailDuplicateCheck(email.value)" name="email"
+                  #email="ngModel">
+                <div *ngIf="submitted || email.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="email.invalid; else userNameValidationElse">
+                    <span *ngIf="email.errors?.required">{{lang.get('Email is required')}}</span>
+                    <span *ngIf="email.errors?.pattern">{{lang.get('Email must be a valid email address')}}</span>
+                  </div>
+                  <ng-template #userNameValidationElse>
+                    <span *ngIf="duplicateEmail">{{lang.get('This email is already taken')}}</span>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('First name')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || firstName.touched) && firstName.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.firstName" name="firstName"
+                  #firstName="ngModel">
+                <div *ngIf="submitted || firstName.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="firstName.invalid">
+                    <span *ngIf="firstName.errors?.required">{{lang.get('First name is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Last name')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || lastName.touched) && lastName.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.lastName" name="lastName"
+                  #lastName="ngModel">
+                <div *ngIf="submitted || lastName.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="lastName.invalid">
+                    <span *ngIf="lastName.errors?.required">{{lang.get('Last name is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="registerForm.id == 0">
+            <div class="col-md-6">
+              <div class="form-group form-group-feedback form-group-feedback-right">
+                <label class="m-0 d-block text-blue" translate>{{lang.get('Password')}}</label>
+                <input [type]="passwordShow ? 'text' : 'password'" [ngClass]="{'border-danger' : (submitted || password.touched) && password.invalid}"
+                  class="form-control" required minlength="6" maxlength="20" pattern="^(?=.*?[A-Za-z])(?=.*?[0-9]).{0,100}$" [(ngModel)]="registerForm.password" name="password" (blur)="passwordMatchValidator()" #password="ngModel">
+                <div class="form-control-feedback mt-3" (click)="passwordShow = !passwordShow">
+                  <a href="javascript:void(0)"><i class="icon-eye" [class.text-muted]="!passwordShow"></i></a>
+                </div>
+                <div *ngIf="submitted || password.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="password.invalid">
+                    <span *ngIf="password.errors?.pattern; else passwordValidationElse">{{lang.get('Password must be letter and at least one digit')}}</span>
+
+                    <ng-template #passwordValidationElse>
+                        <span *ngIf="password.errors?.required" translate>{{lang.get('Password is required')}}</span>
+                        <span *ngIf="password.errors?.minlength || password.errors?.maxlength">{{lang.get('Password must be minimum 6 maximum 20 characters')}}</span>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group form-group-feedback form-group-feedback-right">
+                <label class="m-0 d-block text-blue">{{lang.get('Confirm password')}}</label>
+                <input [type]="confirmPasswordShow ? 'text' : 'password'" [ngClass]="{'border-danger' : (submitted || confirmPassword.touched) && confirmPassword.invalid}"
+                  class="form-control" required [(ngModel)]="registerForm.confirmPassword"
+                  name="confirmPassword" (blur)="passwordMatchValidator()" #confirmPassword="ngModel">
+                <div class="form-control-feedback mt-3" (click)="confirmPasswordShow =  !confirmPasswordShow">
+                  <a href="javascript:void(0)"><i class="icon-eye" [class.text-muted]="!confirmPasswordShow"></i></a>
+                </div>
+                <div *ngIf="submitted || confirmPassword.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="confirmPassword.invalid; else confirmPasswordValidationElse">
+                    <span *ngIf="confirmPassword.errors?.required">{{lang.get('Confirm password is required')}}</span>
+                  </div>
+                  <ng-template #confirmPasswordValidationElse>
+                    <span *ngIf="passwordMatchError">{{lang.get('Confirm password does not match')}}</span>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="m-0 d-block text-blue">{{lang.get('Mobile number')}}</label>
+                <input type="text" required [ngClass]="{'border-danger' : (submitted || phoneNumber.touched) && phoneNumber.invalid}"
+                  class="form-control" [(ngModel)]="registerForm.phoneNumber" name="phoneNumber"
+                  prefix="{{phoneConfig.prefix}}" mask="{{phoneConfig.mask}}" [dropSpecialCharacters]="false" #phoneNumber="ngModel">
+                <div *ngIf="submitted || phoneNumber.touched" class="form-text text-danger m-0 pl-2">
+                  <div *ngIf="phoneNumber.invalid">
+                    <span *ngIf="phoneNumber.errors?.required">{{lang.get('Mobile number is required')}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="text-right">
+          <button [disabled]="loading" type="button" class="btn btn-outline-success px-5" (click)="onSubmit(form_)">{{lang.get('Save')}}</button>
+          <button type="button" class="btn bg-transparent text-danger border-danger ml-1"
+            (click)="goBack()">{{lang.get('Cancel')}}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

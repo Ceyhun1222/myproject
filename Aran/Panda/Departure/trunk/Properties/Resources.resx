@@ -1,0 +1,3365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bmpCIRCLEVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk2+AQAAAAAAAL4AAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAACIAAAAiAAAAAAAA////
+        //+plkX/ppNE/7OfSv+smEf/qpdG/6iURf+0oEv/sJxJ/62ZSP/QuFj/yrNW/8iyVf/Gr1T/wKpR/9e/
+        XP/UvFv/zrdY/8u1V//q0GX/581k/+XMY//kymL/2sFe/9jAXf/12mv/89lq//HWaf/s0mf/4sli//LX
+        av/BrFH//wD//wMDAwMFDhgWFhAPAgMDAwMDAwMMHBoaGhoaGh0PAwMDAwMZGhoaGhoaGhoaGgwDAwMS
+        GhoaGhoaGhoaGhoaDwMJGxoaGhoaGhoaGhoaGh0CCxoaGhoaGhoaGhoaGhoaIBUaGhoaGhoaGhoaGhoa
+        GhkcGhoaGhoaGhoaGhoaGhoeHxoaGhoaGhoaGhoaGhoaFxQaGhoaGhoaGhoaGhoaGhgRGhoaGhoaGhoa
+        GhoaGhoOCBoaGhoaGhoaGhoaGhocBgMQGhoaGhoaGhoaGhoaDQMDAh4aGhoaGhoaGhoaEAMDAwMHExsa
+        GhoaGhocIAMDAyEDAwMEERYaHxcLCgMDAwM=
+</value>
+  </data>
+  <data name="bmpCLVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1GBQAAAAAAADYEAAAoAAAAEAAAABEAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zo6
+        Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6+To6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6
+        Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ojo6+To6
+        Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ojo6+To6Ojo6Ojo6Ojo6Ojo6
+        Ovk6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6Ojo6+To6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6
+        Ojo6Ojr5Ojo6Ojo6Ojr9/f39/f39/f39/f39/f39
+</value>
+  </data>
+  <data name="bmpFIXVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////319
+        Ojo6Ojo6Ojo6Ojo6fX19fX06Ojo6Ojo6Ojo6fX19On19fTo6Ojo6Ojo6fX19Ojp9fX19Ojo6Ojp9fX19
+        Ojo6On19fX06Ojp9fX19fTo6Ojp9fX19fTp9fX19fTo6Ojo6On19fX3HfX19fX06Ojo6Ojp9fX3Hx8d9
+        fX06Ojo6Ojo6OsfHx8fHx306Ojo6Ojo6On3Hx8fHx8fHOjo6Ojo6On19fcfHx8fHfX06Ojo6On19fX3H
+        x8d9fX19fTo6On19fX19fcd9fX19fX19Ojp9fX19fX06fX19fX19fX06fX19fX19Ojp9fX19fX19ff19
+        fX19Ojo6fX19fX19fX0=
+</value>
+  </data>
+  <data name="bmpSHOW_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV161qp2cQ4cuvyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUtn0l+e/Y+tiftn0luYU++e/YyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUuYIp+eW//92O/9+d161qqWgEy6V0yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+eW/9cR4
+        /8Fm/8Fm/8+MuYU+tn0l59a/yNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+tif/7dT/69D/69D/6w+/7dT
+        9cR4qWgEw5hgyNDUyNDUyNDUyNDUyNDUyNDUtn0l/8+M/6w+/6w+/6w+/6w+/69D9cR4uYIpuYU+yNDU
+        yNDUyNDUyNDUyNDUyNDUuYIp/9ST/6w+/6w+/6w+/8FmzZhFqWgE28GfyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUtn0l/8+M/6w+/8Fm2qZWqWgEy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUtn0l/9+d/8Fm
+        tn0luYU++eW/yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV2qZWp2cQ28GfyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="bmpKKVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zo6
+        +vr6+vr6+vr6+vr6Ojo6+vr6+vr6+vr6+vr6+vo6Ovr6+vr6+vr6+vr6+vr6Ovr6+vr6+vr6+vr6+vr6
+        +vr6+vr6+vr6+vr6+vr6+vr6BwcHBwcHBwcHBwcHBwcHBwA6ADo6OgA6Ojo6ADoAOjoAADo6OgAAADo6
+        OgAAOjo6ADoAOjo6ADo6OjoAOgA6Ojo6Ojo6AAAAOjo6Ojo6Ojo6Ojo6OjoAOjo6Ojo6Ojo6BwcHBwcH
+        BwcHBwcHBwcHBwA6ADo6Ojo6Ojo6ADoAOjoAADo6Ojo6Ojo6OgAAOjo6ADoAOjo6Ojo6OjoAOgA6Ov06
+        OjoAOjo6Ojo6Ojo6OgA=
+</value>
+  </data>
+  <data name="bmpNOMTRACKVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zo6
+        Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ojo6+To6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ovk6
+        Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ovn5
+        Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6+fk6Ojo6Ojo6Ojo6Ojo6+To6
+        Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ovk6Ojo6Ojo6Ojo6Ojo6Ojr5Ojo6Ojo6Ojo6Ojo6Ov06
+        +To6Ojo6Ojo6Ojo6Ojo=
+</value>
+  </data>
+  <data name="bmpSECONDARYVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zon
+        Jyf7+/v7+/v7JycnOjo6OicnJ/v7+/v7JycnOjo6OjonJyf7+/v7+ycnJzo6Ojo6OicnJ/v7+ycnJzo6
+        Ojo6OjonJyf7+/snJyc6Ojo6Ojo6OicnJ/snJyc6Ojo6Ojo6OjonJyf7JycnOjo6Ojo6Ojo6OgAA+QAA
+        Ojo6Ojo6Ojo6OjoAAPkAADo6Ojo6Ojo6OjonJyf7JycnOjo6Ojo6Ojo6Jycn+ycnJzo6Ojo6Ojo6Jycn
+        +/v7JycnOjo6Ojo6OicnJ/v7+ycnJzo6Ojo6OicnJ/v7+/v7JycnOjo6OjonJyf7+/v7+ycnJzo6Ov0n
+        Jyf7+/v7+/v7JycnOjo=
+</value>
+  </data>
+  <data name="bmpHIDE_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        +fXvy6V0n1oAyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU4cuvp2cQ161qsncVyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+e/YuYU+tn0l+tif+e/Ytn0lyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUy6V0qWgE161q/9+d/92O+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUyNDU59a/tn0l
+        uYU+/8+M/8Fm/8Fm9cR4+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUw5hgqWgE9cR4/7dT/6w+/69D/69D
+        /7dT+tifuYIpyNDUyNDUyNDUyNDUyNDUyNDUuYU+uYIp9cR4/69D/6w+/6w+/6w+/6w+/8+Mtn0lyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDU28GfqWgEzZhF/8Fm/6w+/6w+/6w+/9STuYIpyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDU+fXvy6V0qWgE2qZW/8Fm/6w+/8+Mtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDU+eW/uYU+tn0l/8Fm/9+dtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU28Gf
+        p2cQ2qZWsncVyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+fXvy6V0n1oAyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="bmpSTRAIGHTVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1GBQAAAAAAADYEAAAoAAAAEAAAABEAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zo6
+        Ojo6Ojr6Ojo6Ojo6Ojo6Ojo6Ojr6+fo6Ojo6Ojo6Ojo6Ojo6+vn6Ojo6Ojo6Ojo6Ojo6+vr6+vo6Ojo6
+        Ojo6Ojo6Ovr6+vr6Ojo6Ojo6Ojo6Ovr6+vr6+vo6Ojo6Ojo6Ojr6+vr6+vr6Ojo6Ojo6Ojr6+vr6+vr6
+        +vo6Ojo6Ojo6+vr6+vr6+vr6Ojo6Ojo6+vr6+vr6+vr6+vo6Ojo6Ovr6+vr6+vr6+vr6Ojo6Ovr6+vr6
+        +vr6+vr6+vo6Ojr6+vr6+vr6+vr6+vr6Ojr6+vr6+vr6+vr6+vr6+vo6+vr6+vr6+vr6+vr6+vr6Ovr6
+        +vr6+vr6+vr6+vr6+jr9/f39/f39/f39/f39/f39
+</value>
+  </data>
+  <data name="bmpTURNAREAVTOOL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk1GBQAAAAAAADYEAAAoAAAAEAAAABEAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/A3MD/8Mqm/6o/Kv//Pyr/AF8q/1VfKv+qXyr//18q/wB/
+        Kv9Vfyr/qn8q//9/Kv8Anyr/VZ8q/6qfKv//nyr/AL8q/1W/Kv+qvyr//78q/wDfKv9V3yr/qt8q///f
+        Kv8A/yr/Vf8q/6r/Kv///yr/AABV/1UAVf+qAFX//wBV/wAfVf9VH1X/qh9V//8fVf8AP1X/VT9V/6o/
+        Vf//P1X/AF9V/1VfVf+qX1X//19V/wB/Vf9Vf1X/qn9V//9/Vf8An1X/VZ9V/6qfVf//n1X/AL9V/1W/
+        Vf+qv1X//79V/wDfVf9V31X/qt9V///fVf8A/1X/Vf9V/6r/Vf///1X/AAB//1UAf/+qAH///wB//wAf
+        f/9VH3//qh9///8ff/8AP3//VT9//6o/f///P3//AF9//1Vff/+qX3///19//wB/f/9Vf3//qn9///9/
+        f/8An3//VZ9//6qff///n3//AL9//1W/f/+qv3///79//wDff/9V33//qt9////ff/8A/3//Vf9//6r/
+        f////3//AACq/1UAqv+qAKr//wCq/wAfqv9VH6r/qh+q//8fqv8AP6r/VT+q/6o/qv//P6r/AF+q/1Vf
+        qv+qX6r//1+q/wB/qv9Vf6r/qn+q//9/qv8An6r/VZ+q/6qfqv//n6r/AL+q/1W/qv+qv6r//7+q/wDf
+        qv9V36r/qt+q///fqv8A/6r/Vf+q/6r/qv///6r/AADU/1UA1P+qANT//wDU/wAf1P9VH9T/qh/U//8f
+        1P8AP9T/VT/U/6o/1P//P9T/AF/U/1Vf1P+qX9T//1/U/wB/1P9Vf9T/qn/U//9/1P8An9T/VZ/U/6qf
+        1P//n9T/AL/U/1W/1P+qv9T//7/U/wDf1P9V39T/qt/U///f1P8A/9T/Vf/U/6r/1P///9T/VQD//6oA
+        //8AH///VR///6of////H///AD///1U///+qP////z///wBf//9VX///ql////9f//8Af///VX///6p/
+        ////f///AJ///1Wf//+qn////5///wC///9Vv///qr////+///8A3///Vd///6rf////3///Vf///6r/
+        ////zMz//8z/////M////2b///+Z////zP8AfwD/VX8A/6p/AP//fwD/AJ8A/1WfAP+qnwD//58A/wC/
+        AP9VvwD/qr8A//+/AP8A3wD/Vd8A/6rfAP//3wD/Vf8A/6r/AP8AACr/VQAq/6oAKv//ACr/AB8q/1Uf
+        Kv+qHyr//x8q/wA/Kv9VPyr/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////zo6
+        Ojo6Ovr6APr6Ojo6Ojo6Ojo6Ovr6+gD6+vo6Ojo6Ojo6+vr6+voA+vr6+jo6Ovr6+vr6+vr6APr6+vr6
+        Ojr6+vr6+vr6+gD6+vr6+jo6+vr6+vr6+voA+vr6+vr6Ovr6+vr6+voA+vr6+vr6+jr6+vr6+voA+vr6
+        +vr6+jo6+vr6+voA+vr6+vr6+vo6Ovr6AAAA+vr6+vr6+vo6OjoAAPr6+vr6+vr6+jo6Ojo6+vr6+vr6
+        +vr6Ojo6Ojo6Ovr6+vr6+vr6Ojo6Ojo6Ojr6+vr6+vo6Ojo6Ojo6Ojo6+vr6+jo6Ojo6Ojo6Ojo6Ovr6
+        Ojo6Ojo6Ojo6Ojo6Ojr9/f39/f39/f39/f39/f39
+</value>
+  </data>
+  <data name="str00000" xml:space="preserve">
+    <value>You have finished construction of the straight departure procedure.
+To save results press OK.</value>
+  </data>
+  <data name="str00001" xml:space="preserve">
+    <value>You have finished construction of the procedure.
+To save results press OK.</value>
+  </data>
+  <data name="str00002" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="str00003" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="str00004" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="str00005" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="str00006" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="str00007" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="str00008" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="str00011" xml:space="preserve">
+    <value>Omnidirectional Departure</value>
+  </data>
+  <data name="str00022" xml:space="preserve">
+    <value>Departure With Track Guidance</value>
+  </data>
+  <data name="str00033" xml:space="preserve">
+    <value>Departure Without Track Guidance</value>
+  </data>
+  <data name="str00051" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="str00052" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="str00053" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="str00054" xml:space="preserve">
+    <value>NM</value>
+  </data>
+  <data name="str00055" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="str00056" xml:space="preserve">
+    <value>knot</value>
+  </data>
+  <data name="str00057" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="str00058" xml:space="preserve">
+    <value>°/sec</value>
+  </data>
+  <data name="str00070" xml:space="preserve">
+    <value>'PANDA' application is not accessable.</value>
+  </data>
+  <data name="str00071" xml:space="preserve">
+    <value>Internal ERROR. Please, send current 'log' file to the R.I.S.K. Co.</value>
+  </data>
+  <data name="str00072" xml:space="preserve">
+    <value>: Out of licensed area.</value>
+  </data>
+  <data name="str00073" xml:space="preserve">
+    <value>Aerodrome:</value>
+  </data>
+  <data name="str00080" xml:space="preserve">
+    <value>PANDA  -  Departure</value>
+  </data>
+  <data name="str00090" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="str00100" xml:space="preserve">
+    <value>Runway and Obstacles</value>
+  </data>
+  <data name="str00106" xml:space="preserve">
+    <value>over facility</value>
+  </data>
+  <data name="str00110" xml:space="preserve">
+    <value>Calculation of PDG in PAA</value>
+  </data>
+  <data name="str00120" xml:space="preserve">
+    <value>TNA/H Calculation</value>
+  </data>
+  <data name="str00130" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="str00140" xml:space="preserve">
+    <value>Parameters of Construction</value>
+  </data>
+  <data name="str00150" xml:space="preserve">
+    <value>Route Construction</value>
+  </data>
+  <data name="str00151" xml:space="preserve">
+    <value>Maximum of en-route segments is reached</value>
+  </data>
+  <data name="str00152" xml:space="preserve">
+    <value>Textbox of necessary for departure distance contains incorrect value.</value>
+  </data>
+  <data name="str00153" xml:space="preserve">
+    <value>Initial segment</value>
+  </data>
+  <data name="str00154" xml:space="preserve">
+    <value>Straight segment</value>
+  </data>
+  <data name="str00155" xml:space="preserve">
+    <value>Onto the specified course</value>
+  </data>
+  <data name="str00156" xml:space="preserve">
+    <value>Onto the specified WPT</value>
+  </data>
+  <data name="str00157" xml:space="preserve">
+    <value>Intercept course of facility</value>
+  </data>
+  <data name="str00158" xml:space="preserve">
+    <value>Onto the course of a specified facility</value>
+  </data>
+  <data name="str00159" xml:space="preserve">
+    <value>There is no guidance facility in the database to construct route.</value>
+  </data>
+  <data name="str00160" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="str00161" xml:space="preserve">
+    <value>The procedure geometry</value>
+  </data>
+  <data name="str00162" xml:space="preserve">
+    <value>Omnidirectional departure</value>
+  </data>
+  <data name="str00163" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="str00164" xml:space="preserve">
+    <value>Aircraft Category</value>
+  </data>
+  <data name="str00165" xml:space="preserve">
+    <value>Applied gradient</value>
+  </data>
+  <data name="str00166" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str00168" xml:space="preserve">
+    <value>Omnidirectional departure overall length</value>
+  </data>
+  <data name="str00170" xml:space="preserve">
+    <value>Report on Obstacles</value>
+  </data>
+  <data name="str00171" xml:space="preserve">
+    <value>Omnidirectional departure - Report</value>
+  </data>
+  <data name="str00172" xml:space="preserve">
+    <value>Omnidirectional departure - Log file</value>
+  </data>
+  <data name="str00200" xml:space="preserve">
+    <value>Runway and Obstacles</value>
+  </data>
+  <data name="str00210" xml:space="preserve">
+    <value>Navigation Aid Selection</value>
+  </data>
+  <data name="str00220" xml:space="preserve">
+    <value>Radial/Bearing Selection</value>
+  </data>
+  <data name="str00230" xml:space="preserve">
+    <value>Straight Departure</value>
+  </data>
+  <data name="str00240" xml:space="preserve">
+    <value>Initial Turn Parameters</value>
+  </data>
+  <data name="str00250" xml:space="preserve">
+    <value>PDG and Course Selection</value>
+  </data>
+  <data name="str00260" xml:space="preserve">
+    <value>TP and Turn Parameters</value>
+  </data>
+  <data name="str00270" xml:space="preserve">
+    <value>Turn Manoeuvre Designing</value>
+  </data>
+  <data name="str00280" xml:space="preserve">
+    <value>Areas Connection</value>
+  </data>
+  <data name="str00290" xml:space="preserve">
+    <value>Secondary Areas</value>
+  </data>
+  <data name="str00291" xml:space="preserve">
+    <value>Obstacle Assessment in TA</value>
+  </data>
+  <data name="str00300" xml:space="preserve">
+    <value>Runway and Obstacles</value>
+  </data>
+  <data name="str00310" xml:space="preserve">
+    <value>Track Adjustment</value>
+  </data>
+  <data name="str00320" xml:space="preserve">
+    <value>Straight Departure</value>
+  </data>
+  <data name="str00330" xml:space="preserve">
+    <value>Initial Turn Parameters</value>
+  </data>
+  <data name="str00340" xml:space="preserve">
+    <value>PDG and Course Selection</value>
+  </data>
+  <data name="str00350" xml:space="preserve">
+    <value>TP and Turn Parameters</value>
+  </data>
+  <data name="str00360" xml:space="preserve">
+    <value>Turn Manoeuvre Designing</value>
+  </data>
+  <data name="str00370" xml:space="preserve">
+    <value>Areas Connection</value>
+  </data>
+  <data name="str00380" xml:space="preserve">
+    <value>Secondary Areas</value>
+  </data>
+  <data name="str00390" xml:space="preserve">
+    <value>Obstacle Assessment in TA</value>
+  </data>
+  <data name="str00400" xml:space="preserve">
+    <value>PDG calculation</value>
+  </data>
+  <data name="str00410" xml:space="preserve">
+    <value>Turn Area preliminary result</value>
+  </data>
+  <data name="str00420" xml:space="preserve">
+    <value>Turn Area final result</value>
+  </data>
+  <data name="str00430" xml:space="preserve">
+    <value>Straight area limited by KK-line</value>
+  </data>
+  <data name="str00440" xml:space="preserve">
+    <value>Turn area</value>
+  </data>
+  <data name="str00450" xml:space="preserve">
+    <value>Obstacles localized in sectors</value>
+  </data>
+  <data name="str00500" xml:space="preserve">
+    <value>Straight segment up to the height </value>
+  </data>
+  <data name="str00501" xml:space="preserve">
+    <value>To the intersection with radial </value>
+  </data>
+  <data name="str00502" xml:space="preserve">
+    <value>To the intersection with bearing </value>
+  </data>
+  <data name="str00503" xml:space="preserve">
+    <value>Straight segment till WPT </value>
+  </data>
+  <data name="str00504" xml:space="preserve">
+    <value>Turn from the course </value>
+  </data>
+  <data name="str00505" xml:space="preserve">
+    <value> onto the course </value>
+  </data>
+  <data name="str00506" xml:space="preserve">
+    <value>Course interception </value>
+  </data>
+  <data name="str00507" xml:space="preserve">
+    <value>Wrong parameters of the maneuver.</value>
+  </data>
+  <data name="str00508" xml:space="preserve">
+    <value>Onto the course </value>
+  </data>
+  <data name="str00509" xml:space="preserve">
+    <value> on </value>
+  </data>
+  <data name="str00510" xml:space="preserve">
+    <value> from </value>
+  </data>
+  <data name="str00511" xml:space="preserve">
+    <value>Save files...</value>
+  </data>
+  <data name="str00512" xml:space="preserve">
+    <value>Initial point of the departure procedure</value>
+  </data>
+  <data name="str00513" xml:space="preserve">
+    <value>Starting point of </value>
+  </data>
+  <data name="str00514" xml:space="preserve">
+    <value>The point of recovery from the </value>
+  </data>
+  <data name="str00515" xml:space="preserve">
+    <value> turn</value>
+  </data>
+  <data name="str00516" xml:space="preserve">
+    <value>Departure final point</value>
+  </data>
+  <data name="str00517" xml:space="preserve">
+    <value>The procedure geometry</value>
+  </data>
+  <data name="str00518" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="str00519" xml:space="preserve">
+    <value>The departure procedure overall length</value>
+  </data>
+  <data name="str00520" xml:space="preserve">
+    <value>Log file</value>
+  </data>
+  <data name="str00521" xml:space="preserve">
+    <value>Intersection with DME arc</value>
+  </data>
+  <data name="str00522" xml:space="preserve">
+    <value> passing through </value>
+  </data>
+  <data name="str00531" xml:space="preserve">
+    <value>RWY</value>
+  </data>
+  <data name="str00532" xml:space="preserve">
+    <value>RWY TRUE BRG:</value>
+  </data>
+  <data name="str00533" xml:space="preserve">
+    <value>RWY magnetic course:</value>
+  </data>
+  <data name="str00534" xml:space="preserve">
+    <value>RWY length</value>
+  </data>
+  <data name="str00536" xml:space="preserve">
+    <value>Radius of Area 3</value>
+  </data>
+  <data name="str00537" xml:space="preserve">
+    <value>Minimum altitude authorized for the next phase</value>
+  </data>
+  <data name="str00538" xml:space="preserve">
+    <value>Calculated PDG within TIA</value>
+  </data>
+  <data name="str00539" xml:space="preserve">
+    <value>Calculated PDG within TA</value>
+  </data>
+  <data name="str00540" xml:space="preserve">
+    <value>TIA length</value>
+  </data>
+  <data name="str00541" xml:space="preserve">
+    <value>TNA / TNH</value>
+  </data>
+  <data name="str00542" xml:space="preserve">
+    <value>Obstacle causing min. PDG</value>
+  </data>
+  <data name="str00543" xml:space="preserve">
+    <value>Obstacle causing height of return to the nominal gradient</value>
+  </data>
+  <data name="str00544" xml:space="preserve">
+    <value>Obstacle causing minimum turn altitude</value>
+  </data>
+  <data name="str00545" xml:space="preserve">
+    <value>Radius covering area of obstacles assessment</value>
+  </data>
+  <data name="str00546" xml:space="preserve">
+    <value>Variant of Area 1 border determination</value>
+  </data>
+  <data name="str00547" xml:space="preserve">
+    <value>Departure magnetic course</value>
+  </data>
+  <data name="str00548" xml:space="preserve">
+    <value>Course displacement</value>
+  </data>
+  <data name="str00549" xml:space="preserve">
+    <value>PDG</value>
+  </data>
+  <data name="str00550" xml:space="preserve">
+    <value>Height of return to the nominal gradient</value>
+  </data>
+  <data name="str00551" xml:space="preserve">
+    <value>Obstacle requiring maximum gradient to be cleared by MOC:</value>
+  </data>
+  <data name="str00552" xml:space="preserve">
+    <value>Obstacle causing PDG</value>
+  </data>
+  <data name="str00553" xml:space="preserve">
+    <value>Turning point type</value>
+  </data>
+  <data name="str00554" xml:space="preserve">
+    <value>The departure procedure overall length</value>
+  </data>
+  <data name="str00555" xml:space="preserve">
+    <value>Guidance facility</value>
+  </data>
+  <data name="str00556" xml:space="preserve">
+    <value>Facility radial</value>
+  </data>
+  <data name="str00557" xml:space="preserve">
+    <value>Guidance is provided starting from</value>
+  </data>
+  <data name="str00558" xml:space="preserve">
+    <value>Trajectory lateral displacement over DER</value>
+  </data>
+  <data name="str00559" xml:space="preserve">
+    <value>Gradient within TIA</value>
+  </data>
+  <data name="str00560" xml:space="preserve">
+    <value>Snapshot of the screen</value>
+  </data>
+  <data name="str00561" xml:space="preserve">
+    <value>Save Trace Report to ...</value>
+  </data>
+  <data name="str00562" xml:space="preserve">
+    <value>Applied gradient</value>
+  </data>
+  <data name="str00563" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str00564" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="str00565" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="str00566" xml:space="preserve">
+    <value>Latitude of the circle center </value>
+  </data>
+  <data name="str00567" xml:space="preserve">
+    <value>Longitude of the circle center</value>
+  </data>
+  <data name="str00568" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str00569" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="str00571" xml:space="preserve">
+    <value>Route modeling</value>
+  </data>
+  <data name="str00572" xml:space="preserve">
+    <value>Turning radius</value>
+  </data>
+  <data name="str00573" xml:space="preserve">
+    <value>Turn direction</value>
+  </data>
+  <data name="str00574" xml:space="preserve">
+    <value>right</value>
+  </data>
+  <data name="str00575" xml:space="preserve">
+    <value>left</value>
+  </data>
+  <data name="str00576" xml:space="preserve">
+    <value>Angle of the turn</value>
+  </data>
+  <data name="str00577" xml:space="preserve">
+    <value>True course</value>
+  </data>
+  <data name="str00578" xml:space="preserve">
+    <value>Distance to the next point</value>
+  </data>
+  <data name="str00579" xml:space="preserve">
+    <value>Turn arc length</value>
+  </data>
+  <data name="str00581" xml:space="preserve">
+    <value>[Starting point of the straight segment] - </value>
+  </data>
+  <data name="str00582" xml:space="preserve">
+    <value>Coordinates</value>
+  </data>
+  <data name="str00583" xml:space="preserve">
+    <value>[Ending point of the straight segment] - </value>
+  </data>
+  <data name="str00584" xml:space="preserve">
+    <value>[The point of entering the turn] - </value>
+  </data>
+  <data name="str00585" xml:space="preserve">
+    <value>Turning center</value>
+  </data>
+  <data name="str00586" xml:space="preserve">
+    <value>[The point of recovery from the turn] - </value>
+  </data>
+  <data name="str00587" xml:space="preserve">
+    <value>[The point of entering the 1-st turn] - </value>
+  </data>
+  <data name="str00588" xml:space="preserve">
+    <value>Center of the 1-st turn</value>
+  </data>
+  <data name="str00589" xml:space="preserve">
+    <value>Radius of the 1-st turn</value>
+  </data>
+  <data name="str00590" xml:space="preserve">
+    <value>Direction of the 1-st turn</value>
+  </data>
+  <data name="str00591" xml:space="preserve">
+    <value>Angle of the 1-st turn</value>
+  </data>
+  <data name="str00592" xml:space="preserve">
+    <value>[The point of recovery from the 1-st turn] - </value>
+  </data>
+  <data name="str00593" xml:space="preserve">
+    <value>[The point of entering the 2-nd turn] - </value>
+  </data>
+  <data name="str00594" xml:space="preserve">
+    <value>Center of the 2-nd turn</value>
+  </data>
+  <data name="str00595" xml:space="preserve">
+    <value>Radius of the 2-nd turn</value>
+  </data>
+  <data name="str00596" xml:space="preserve">
+    <value>Direction of the 2-nd turn</value>
+  </data>
+  <data name="str00597" xml:space="preserve">
+    <value>Angle of the 2-nd turn</value>
+  </data>
+  <data name="str00598" xml:space="preserve">
+    <value>[The point of recovery from the 2-nd turn] - </value>
+  </data>
+  <data name="str00601" xml:space="preserve">
+    <value>'AIRPORT' layer is not found.</value>
+  </data>
+  <data name="str00602" xml:space="preserve">
+    <value>'RWY' layer is not found.</value>
+  </data>
+  <data name="str00603" xml:space="preserve">
+    <value>'NAVAID' layer is not found.</value>
+  </data>
+  <data name="str00604" xml:space="preserve">
+    <value>'OBSTACLE' layer is not found.</value>
+  </data>
+  <data name="str00605" xml:space="preserve">
+    <value>'WPT_FIX' layer is not found.</value>
+  </data>
+  <data name="str00611" xml:space="preserve">
+    <value>'AIRPORT' layer is invalid.</value>
+  </data>
+  <data name="str00612" xml:space="preserve">
+    <value>'AIRPORT' layer is empty.</value>
+  </data>
+  <data name="str00615" xml:space="preserve">
+    <value>Field </value>
+  </data>
+  <data name="str00616" xml:space="preserve">
+    <value> field is not found in the 'AIRPORT' fields collection.</value>
+  </data>
+  <data name="str00701" xml:space="preserve">
+    <value>Report on Obstacles</value>
+  </data>
+  <data name="str00702" xml:space="preserve">
+    <value>Creation date: </value>
+  </data>
+  <data name="str00703" xml:space="preserve">
+    <value>Creation time: </value>
+  </data>
+  <data name="str00819" xml:space="preserve">
+    <value>ESRI Map document:  </value>
+  </data>
+  <data name="str00821" xml:space="preserve">
+    <value>Procedure name:</value>
+  </data>
+  <data name="str00822" xml:space="preserve">
+    <value>Runway:  </value>
+  </data>
+  <data name="str00823" xml:space="preserve">
+    <value>Aircraft category: up to </value>
+  </data>
+  <data name="str00806" xml:space="preserve">
+    <value>Distances are in </value>
+  </data>
+  <data name="str00807" xml:space="preserve">
+    <value>Elevations and heights are in </value>
+  </data>
+  <data name="str00900" xml:space="preserve">
+    <value>Error in RWY Table.</value>
+  </data>
+  <data name="str00901" xml:space="preserve">
+    <value>Options are selected incorrectly.</value>
+  </data>
+  <data name="str00902" xml:space="preserve">
+    <value>V min </value>
+  </data>
+  <data name="str00903" xml:space="preserve">
+    <value>V max </value>
+  </data>
+  <data name="str00904" xml:space="preserve">
+    <value>Height at KK-line:</value>
+  </data>
+  <data name="str00905" xml:space="preserve">
+    <value>Altitude at KK-line:</value>
+  </data>
+  <data name="str00906" xml:space="preserve">
+    <value>DER - KK-line distance:</value>
+  </data>
+  <data name="str00907" xml:space="preserve">
+    <value>Within the segment there is a course onto the restricted sector not provided with obstacle clearance. Continue?</value>
+  </data>
+  <data name="str01001" xml:space="preserve">
+    <value>Runway direction designator:</value>
+  </data>
+  <data name="str01002" xml:space="preserve">
+    <value>Runway direction true bearing:</value>
+  </data>
+  <data name="str01003" xml:space="preserve">
+    <value>Runway length:</value>
+  </data>
+  <data name="str01004" xml:space="preserve">
+    <value>Radius of Area 3:</value>
+  </data>
+  <data name="str01005" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="str01006" xml:space="preserve">
+    <value>Runway direction magnetic bearing:</value>
+  </data>
+  <data name="str01007" xml:space="preserve">
+    <value>Number within the radius X:</value>
+  </data>
+  <data name="str01008" xml:space="preserve">
+    <value>Max. distance from the center of Area 3:</value>
+  </data>
+  <data name="str01009" xml:space="preserve">
+    <value>DER elevation:</value>
+  </data>
+  <data name="str01010" xml:space="preserve">
+    <value>Terminal control area upper limit:</value>
+  </data>
+  <data name="str01011" xml:space="preserve">
+    <value>MOC limitation:</value>
+  </data>
+  <data name="str01012" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="str01101" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str01103" xml:space="preserve">
+    <value>The PDG operation distance:</value>
+  </data>
+  <data name="str01105" xml:space="preserve">
+    <value>The altitude of turn over DER:</value>
+  </data>
+  <data name="str01107" xml:space="preserve">
+    <value>Obstacles causing…</value>
+  </data>
+  <data name="str01108" xml:space="preserve">
+    <value>Minimum PDG:</value>
+  </data>
+  <data name="str01109" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str01110" xml:space="preserve">
+    <value>Minimum TNA/H:</value>
+  </data>
+  <data name="str01201" xml:space="preserve">
+    <value>Miss of altitude:</value>
+  </data>
+  <data name="str01202" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str01203" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str01204" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str01301" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str01303" xml:space="preserve">
+    <value>PDG in the TA:</value>
+  </data>
+  <data name="str01305" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str01307" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str01401" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str01402" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str01403" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str01404" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str01406" xml:space="preserve">
+    <value>Valid range of IAS values:</value>
+  </data>
+  <data name="str01409" xml:space="preserve">
+    <value>Applied gradient:</value>
+  </data>
+  <data name="str01410" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str01501" xml:space="preserve">
+    <value>Add segment</value>
+  </data>
+  <data name="str01502" xml:space="preserve">
+    <value>Delete segment </value>
+  </data>
+  <data name="str01503" xml:space="preserve">
+    <value>Save protocol</value>
+  </data>
+  <data name="str02001" xml:space="preserve">
+    <value>Runway direction designator:</value>
+  </data>
+  <data name="str02002" xml:space="preserve">
+    <value>Runway direction true bearing:</value>
+  </data>
+  <data name="str02003" xml:space="preserve">
+    <value>Runway length:</value>
+  </data>
+  <data name="str02004" xml:space="preserve">
+    <value>Radius of Area 3:</value>
+  </data>
+  <data name="str02005" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="str02006" xml:space="preserve">
+    <value>Runway direction magnetic bearing:</value>
+  </data>
+  <data name="str02007" xml:space="preserve">
+    <value>Number within the radius X:</value>
+  </data>
+  <data name="str02008" xml:space="preserve">
+    <value>Max. distance from the center of Area 3:</value>
+  </data>
+  <data name="str02101" xml:space="preserve">
+    <value>Navigation aid:</value>
+  </data>
+  <data name="str02102" xml:space="preserve">
+    <value>Type of navigation aid:</value>
+  </data>
+  <data name="str02104" xml:space="preserve">
+    <value>Valid range</value>
+  </data>
+  <data name="str02105" xml:space="preserve">
+    <value> of VOR radial:</value>
+  </data>
+  <data name="str02106" xml:space="preserve">
+    <value> mag. bearings to NDB:</value>
+  </data>
+  <data name="str02107" xml:space="preserve">
+    <value> mag. bearings from NDB:</value>
+  </data>
+  <data name="str02201" xml:space="preserve">
+    <value>radial </value>
+  </data>
+  <data name="str02202" xml:space="preserve">
+    <value>bearing </value>
+  </data>
+  <data name="str02203" xml:space="preserve">
+    <value>PDG:</value>
+  </data>
+  <data name="str02204" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str02205" xml:space="preserve">
+    <value>Distance of guidance provision initiation from DER:</value>
+  </data>
+  <data name="str02206" xml:space="preserve">
+    <value>Departure track offset at the DER:</value>
+  </data>
+  <data name="str02207" xml:space="preserve">
+    <value>Select radial/bearing </value>
+  </data>
+  <data name="str02212" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="str02301" xml:space="preserve">
+    <value>Magnetic track:</value>
+  </data>
+  <data name="str02303" xml:space="preserve">
+    <value>Track offset:</value>
+  </data>
+  <data name="str02305" xml:space="preserve">
+    <value>PDG:</value>
+  </data>
+  <data name="str02307" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str02309" xml:space="preserve">
+    <value>Obstacle requiring maximum gradient to be cleared by MOC:</value>
+  </data>
+  <data name="str02310" xml:space="preserve">
+    <value>Obstacle causing PDG:</value>
+  </data>
+  <data name="str02401" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str02402" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str02404" xml:space="preserve">
+    <value>Bank angle:</value>
+  </data>
+  <data name="str02406" xml:space="preserve">
+    <value>Valid range of IAS values:</value>
+  </data>
+  <data name="str02411" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str02501" xml:space="preserve">
+    <value>Limited altitudes of TP:</value>
+  </data>
+  <data name="str02502" xml:space="preserve">
+    <value>Minimum turn height above DER:</value>
+  </data>
+  <data name="str02503" xml:space="preserve">
+    <value>Maximum turn height above DER:</value>
+  </data>
+  <data name="str02504" xml:space="preserve">
+    <value>Departure track in degrees magnetic:</value>
+  </data>
+  <data name="str02507" xml:space="preserve">
+    <value> Control over parameters of Area 1 </value>
+  </data>
+  <data name="str02508" xml:space="preserve">
+    <value>Departure track adjustment:</value>
+  </data>
+  <data name="str02510" xml:space="preserve">
+    <value>PDG in the Area 1:</value>
+  </data>
+  <data name="str02511" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="str02512" xml:space="preserve">
+    <value>PANDA optimal solution</value>
+  </data>
+  <data name="str02601" xml:space="preserve">
+    <value>Facility:</value>
+  </data>
+  <data name="str02604" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str02609" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str02611" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str02615" xml:space="preserve">
+    <value>R:</value>
+  </data>
+  <data name="str02617" xml:space="preserve">
+    <value>r:</value>
+  </data>
+  <data name="str02619" xml:space="preserve">
+    <value>E:</value>
+  </data>
+  <data name="str02621" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str02623" xml:space="preserve">
+    <value>Fix tolerance:</value>
+  </data>
+  <data name="str02625" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str02701" xml:space="preserve">
+    <value>FIX:</value>
+  </data>
+  <data name="str02703" xml:space="preserve">
+    <value>Next segment course:</value>
+  </data>
+  <data name="str02706" xml:space="preserve">
+    <value>Joining angle:</value>
+  </data>
+  <data name="str02708" xml:space="preserve">
+    <value>DR track length:</value>
+  </data>
+  <data name="str02709" xml:space="preserve">
+    <value>Recommended intervals of the course:</value>
+  </data>
+  <data name="str02801" xml:space="preserve">
+    <value>Angle that the nominal track after the turn make with the line connecting the earliest TP to abeam navigation aid:</value>
+  </data>
+  <data name="str02802" xml:space="preserve">
+    <value>Angle that the edge of the navigation aid tolerance make with the line connecting the tangent point (P) to abeam navigation aid:</value>
+  </data>
+  <data name="str02911" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str02912" xml:space="preserve">
+    <value>PDG in the TA:</value>
+  </data>
+  <data name="str02914" xml:space="preserve">
+    <value>An altitude missing above the critical obstacle:</value>
+  </data>
+  <data name="str03001" xml:space="preserve">
+    <value>Runway direction designator:</value>
+  </data>
+  <data name="str03002" xml:space="preserve">
+    <value>Runway direction true bearing:</value>
+  </data>
+  <data name="str03003" xml:space="preserve">
+    <value>Runway length:</value>
+  </data>
+  <data name="str03004" xml:space="preserve">
+    <value>Radius of Area 3:</value>
+  </data>
+  <data name="str03005" xml:space="preserve">
+    <value>Format:</value>
+  </data>
+  <data name="str03006" xml:space="preserve">
+    <value>Runway direction magnetic bearing:</value>
+  </data>
+  <data name="str03007" xml:space="preserve">
+    <value>Number within the radius X:</value>
+  </data>
+  <data name="str03008" xml:space="preserve">
+    <value>Max. distance from the center of Area 3:</value>
+  </data>
+  <data name="str03009" xml:space="preserve">
+    <value>Terminal control area upper limit:</value>
+  </data>
+  <data name="str03010" xml:space="preserve">
+    <value>MOC limitation:</value>
+  </data>
+  <data name="str03101" xml:space="preserve">
+    <value>PANDA's optimal solution</value>
+  </data>
+  <data name="str03102" xml:space="preserve">
+    <value>PDG:</value>
+  </data>
+  <data name="str03103" xml:space="preserve">
+    <value>Minimal OIS gradient plus 0.8% of the distance from the DER:</value>
+  </data>
+  <data name="str03104" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str03105" xml:space="preserve">
+    <value>Enroute req. altitude:</value>
+  </data>
+  <data name="str03106" xml:space="preserve">
+    <value>Causing obstacle: </value>
+  </data>
+  <data name="str03201" xml:space="preserve">
+    <value>Magnetic track:</value>
+  </data>
+  <data name="str03202" xml:space="preserve">
+    <value>Track adjustment:</value>
+  </data>
+  <data name="str03203" xml:space="preserve">
+    <value>PDG:</value>
+  </data>
+  <data name="str03207" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str03208" xml:space="preserve">
+    <value>Obstacle requiring maximum gradient to be cleared by MOC:</value>
+  </data>
+  <data name="str03209" xml:space="preserve">
+    <value>Obstacle causing PDG:</value>
+  </data>
+  <data name="str03301" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str03302" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str03303" xml:space="preserve">
+    <value>Bank angle:</value>
+  </data>
+  <data name="str03306" xml:space="preserve">
+    <value>Valid range of IAS values:</value>
+  </data>
+  <data name="str03311" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str03312" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str03313" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str03401" xml:space="preserve">
+    <value>Limited altitudes of TP:</value>
+  </data>
+  <data name="str03402" xml:space="preserve">
+    <value>Minimum turn height above DER:</value>
+  </data>
+  <data name="str03403" xml:space="preserve">
+    <value>Maximum turn height above DER:</value>
+  </data>
+  <data name="str03404" xml:space="preserve">
+    <value>Departure track in degrees magnetic:</value>
+  </data>
+  <data name="str03407" xml:space="preserve">
+    <value> Control over parameters of Area 1</value>
+  </data>
+  <data name="str03408" xml:space="preserve">
+    <value>Departure track adjustment:</value>
+  </data>
+  <data name="str03409" xml:space="preserve">
+    <value>PDG in the Area 1:</value>
+  </data>
+  <data name="str03412" xml:space="preserve">
+    <value>PANDA's optimal solution</value>
+  </data>
+  <data name="str03501" xml:space="preserve">
+    <value>Facility:</value>
+  </data>
+  <data name="str03504" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str03506" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str03509" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str03511" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str03515" xml:space="preserve">
+    <value>R:</value>
+  </data>
+  <data name="str03517" xml:space="preserve">
+    <value>r:</value>
+  </data>
+  <data name="str03519" xml:space="preserve">
+    <value>E:</value>
+  </data>
+  <data name="str03521" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str03523" xml:space="preserve">
+    <value>Fix tolerance:</value>
+  </data>
+  <data name="str03601" xml:space="preserve">
+    <value>FIX:</value>
+  </data>
+  <data name="str03603" xml:space="preserve">
+    <value>DR track length:</value>
+  </data>
+  <data name="str03605" xml:space="preserve">
+    <value>Magnetic course:</value>
+  </data>
+  <data name="str03607" xml:space="preserve">
+    <value>Joining angle:</value>
+  </data>
+  <data name="str03609" xml:space="preserve">
+    <value>Recommended heading ranges:</value>
+  </data>
+  <data name="str03610" xml:space="preserve">
+    <value>Minimum stabilization time:</value>
+  </data>
+  <data name="str03612" xml:space="preserve">
+    <value>Orienting Facility/WPT:</value>
+  </data>
+  <data name="str03613" xml:space="preserve">
+    <value>Facility/WPT:</value>
+  </data>
+  <data name="str03614" xml:space="preserve">
+    <value>Tracking facility:</value>
+  </data>
+  <data name="str03701" xml:space="preserve">
+    <value>Angle that the edge of the navigation aid tolerance make with the line connecting the earliest TP to abeam navigation aid:</value>
+  </data>
+  <data name="str03702" xml:space="preserve">
+    <value>Angle that the edge of the navigation aid tolerance make with the line connecting the tangent point (P) to abeam navigation aid:</value>
+  </data>
+  <data name="str03901" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str03902" xml:space="preserve">
+    <value>PDG in the TA:</value>
+  </data>
+  <data name="str03903" xml:space="preserve">
+    <value>Procedure termination FIX</value>
+  </data>
+  <data name="str03904" xml:space="preserve">
+    <value>An altitude missing above the critical obstacle:</value>
+  </data>
+  <data name="str03905" xml:space="preserve">
+    <value>Facility/WPT </value>
+  </data>
+  <data name="str03909" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str03910" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str10001" xml:space="preserve">
+    <value>Information about obstacles</value>
+  </data>
+  <data name="str11013" xml:space="preserve">
+    <value>Unified PDG for the entire procedure</value>
+  </data>
+  <data name="str12010" xml:space="preserve">
+    <value>Miss of altitude compensation parameters</value>
+  </data>
+  <data name="str12011" xml:space="preserve">
+    <value>Addition to TIA:</value>
+  </data>
+  <data name="str12012" xml:space="preserve">
+    <value>PDG within TA:</value>
+  </data>
+  <data name="str12013" xml:space="preserve">
+    <value>Sectorize departure area</value>
+  </data>
+  <data name="str12014" xml:space="preserve">
+    <value>Departure sector (True beraing)</value>
+  </data>
+  <data name="str12015" xml:space="preserve">
+    <value>Left limit:</value>
+  </data>
+  <data name="str12016" xml:space="preserve">
+    <value>Right limit:</value>
+  </data>
+  <data name="str12017" xml:space="preserve">
+    <value>Dominant obstacle:</value>
+  </data>
+  <data name="str12018" xml:space="preserve">
+    <value>Req./ factual height over the obstacle:</value>
+  </data>
+  <data name="str12019" xml:space="preserve">
+    <value>Initial data</value>
+  </data>
+  <data name="str12020" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str12021" xml:space="preserve">
+    <value>Go to the trajectory construction</value>
+  </data>
+  <data name="str12022" xml:space="preserve">
+    <value>Departure sector (True brg.)</value>
+  </data>
+  <data name="str12023" xml:space="preserve">
+    <value>From:</value>
+  </data>
+  <data name="str12024" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="str12025" xml:space="preserve">
+    <value>Min. entry height:</value>
+  </data>
+  <data name="str12602" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="str12603" xml:space="preserve">
+    <value>Segment type</value>
+  </data>
+  <data name="str12604" xml:space="preserve">
+    <value>Initial Alt./Height</value>
+  </data>
+  <data name="str12605" xml:space="preserve">
+    <value>Final Alt./Height</value>
+  </data>
+  <data name="str12606" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="str12607" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="str12609" xml:space="preserve">
+    <value>Initial mag. course</value>
+  </data>
+  <data name="str12610" xml:space="preserve">
+    <value>Final mag. course</value>
+  </data>
+  <data name="str12611" xml:space="preserve">
+    <value>Starting point</value>
+  </data>
+  <data name="str12612" xml:space="preserve">
+    <value>Endpoint</value>
+  </data>
+  <data name="str12613" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="str13001" xml:space="preserve">
+    <value>Route Segment Parameters</value>
+  </data>
+  <data name="str13002" xml:space="preserve">
+    <value>Route segment type</value>
+  </data>
+  <data name="str13003" xml:space="preserve">
+    <value>Straight segment</value>
+  </data>
+  <data name="str13004" xml:space="preserve">
+    <value>Turn to heading</value>
+  </data>
+  <data name="str13005" xml:space="preserve">
+    <value>Intercept track</value>
+  </data>
+  <data name="str13006" xml:space="preserve">
+    <value>Turn to facility/ WPT</value>
+  </data>
+  <data name="str13007" xml:space="preserve">
+    <value>Turn and intercept</value>
+  </data>
+  <data name="str13008" xml:space="preserve">
+    <value>Intercept DME arc</value>
+  </data>
+  <data name="str13009" xml:space="preserve">
+    <value>Following arc track</value>
+  </data>
+  <data name="str13100" xml:space="preserve">
+    <value>Straight segment</value>
+  </data>
+  <data name="str13101" xml:space="preserve">
+    <value>Current heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13102" xml:space="preserve">
+    <value>Current altitude/ height:</value>
+  </data>
+  <data name="str13103" xml:space="preserve">
+    <value>Segment completion variant</value>
+  </data>
+  <data name="str13104" xml:space="preserve">
+    <value>Designated at an distance</value>
+  </data>
+  <data name="str13105" xml:space="preserve">
+    <value>Over facility/WPT</value>
+  </data>
+  <data name="str13106" xml:space="preserve">
+    <value>Altitude:</value>
+  </data>
+  <data name="str13107" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="str13108" xml:space="preserve">
+    <value>At intersection</value>
+  </data>
+  <data name="str13201" xml:space="preserve">
+    <value>Turn onto the specified course</value>
+  </data>
+  <data name="str13202" xml:space="preserve">
+    <value>Current  true course:</value>
+  </data>
+  <data name="str13203" xml:space="preserve">
+    <value>Next true course:</value>
+  </data>
+  <data name="str13204" xml:space="preserve">
+    <value>Angle of the turn:</value>
+  </data>
+  <data name="str13205" xml:space="preserve">
+    <value>Current altitude/ height:</value>
+  </data>
+  <data name="str13206" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str13207" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str13208" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str13301" xml:space="preserve">
+    <value>Intercept facility radial/bearing</value>
+  </data>
+  <data name="str13302" xml:space="preserve">
+    <value>Reference Nav/WPT:</value>
+  </data>
+  <data name="str13303" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str13304" xml:space="preserve">
+    <value>Heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13305" xml:space="preserve">
+    <value>Determine course by facility/WPT</value>
+  </data>
+  <data name="str13306" xml:space="preserve">
+    <value>Turn angle:</value>
+  </data>
+  <data name="str13307" xml:space="preserve">
+    <value>Current altitude/ height:</value>
+  </data>
+  <data name="str13308" xml:space="preserve">
+    <value>Current heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13309" xml:space="preserve">
+    <value>Straight track length:</value>
+  </data>
+  <data name="str13310" xml:space="preserve">
+    <value>Allowable intervals:</value>
+  </data>
+  <data name="str13311" xml:space="preserve">
+    <value>Towards the facility:</value>
+  </data>
+  <data name="str13312" xml:space="preserve">
+    <value>Away from the facility: </value>
+  </data>
+  <data name="str13313" xml:space="preserve">
+    <value>From </value>
+  </data>
+  <data name="str13314" xml:space="preserve">
+    <value>° To </value>
+  </data>
+  <data name="str13315" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str13316" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str13401" xml:space="preserve">
+    <value>Turn onto the specified facility/WPT</value>
+  </data>
+  <data name="str13402" xml:space="preserve">
+    <value>Current heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13403" xml:space="preserve">
+    <value>Next heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13404" xml:space="preserve">
+    <value>Turn angle:</value>
+  </data>
+  <data name="str13405" xml:space="preserve">
+    <value>Current altitude/ height:</value>
+  </data>
+  <data name="str13406" xml:space="preserve">
+    <value>Facility:</value>
+  </data>
+  <data name="str13407" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str13408" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str13409" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str13501" xml:space="preserve">
+    <value>Onto the facility radial / bearing</value>
+  </data>
+  <data name="str13502" xml:space="preserve">
+    <value>Tracking facility:</value>
+  </data>
+  <data name="str13503" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str13504" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str13505" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str13506" xml:space="preserve">
+    <value>True course:</value>
+  </data>
+  <data name="str13507" xml:space="preserve">
+    <value>Determine heading by facility/WPT</value>
+  </data>
+  <data name="str13508" xml:space="preserve">
+    <value>Angle of interception:</value>
+  </data>
+  <data name="str13509" xml:space="preserve">
+    <value>Current altitude/ height:</value>
+  </data>
+  <data name="str13510" xml:space="preserve">
+    <value>Current heading (in degrees magnetic):</value>
+  </data>
+  <data name="str13511" xml:space="preserve">
+    <value>DR length:</value>
+  </data>
+  <data name="str13512" xml:space="preserve">
+    <value>Recommended ranges:</value>
+  </data>
+  <data name="str13513" xml:space="preserve">
+    <value>From </value>
+  </data>
+  <data name="str13514" xml:space="preserve">
+    <value>° To </value>
+  </data>
+  <data name="str13515" xml:space="preserve">
+    <value>toward</value>
+  </data>
+  <data name="str13516" xml:space="preserve">
+    <value>away</value>
+  </data>
+  <data name="str15001" xml:space="preserve">
+    <value>PDG of the entire procedure:</value>
+  </data>
+  <data name="str15002" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str15003" xml:space="preserve">
+    <value>PDG in the TA:</value>
+  </data>
+  <data name="str15009" xml:space="preserve">
+    <value>Textbox of necessary for departure distance contains incorrect value.</value>
+  </data>
+  <data name="str15010" xml:space="preserve">
+    <value>Procedure for omnidirectional departure cannot be designed for</value>
+  </data>
+  <data name="str15011" xml:space="preserve">
+    <value>runway</value>
+  </data>
+  <data name="str15012" xml:space="preserve">
+    <value>Required gradient exceeds</value>
+  </data>
+  <data name="str15014" xml:space="preserve">
+    <value>Page 1 -</value>
+  </data>
+  <data name="str15015" xml:space="preserve">
+    <value>Runway direction designator:</value>
+  </data>
+  <data name="str15016" xml:space="preserve">
+    <value>    RWY TRUE BRG:</value>
+  </data>
+  <data name="str15017" xml:space="preserve">
+    <value>    RWY magnetic course:</value>
+  </data>
+  <data name="str15018" xml:space="preserve">
+    <value>    RWY length (m):</value>
+  </data>
+  <data name="str15019" xml:space="preserve">
+    <value>    Radius covering area of obstacles assessment (m):</value>
+  </data>
+  <data name="str15020" xml:space="preserve">
+    <value>Information about obstacles</value>
+  </data>
+  <data name="str15021" xml:space="preserve">
+    <value>    Max. distance from the center of Area 3 (m):</value>
+  </data>
+  <data name="str15022" xml:space="preserve">
+    <value>    Number within set radius of Area 3:</value>
+  </data>
+  <data name="str15023" xml:space="preserve">
+    <value>'PDG' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15024" xml:space="preserve">
+    <value>Procedure for omnidirectional departure cannot be designed for the calculated gradient &gt;=</value>
+  </data>
+  <data name="str15025" xml:space="preserve">
+    <value>Page 2 -</value>
+  </data>
+  <data name="str15026" xml:space="preserve">
+    <value>    PDG within TIA:</value>
+  </data>
+  <data name="str15027" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str15029" xml:space="preserve">
+    <value>    Min. altitude of turn:</value>
+  </data>
+  <data name="str15030" xml:space="preserve">
+    <value>    Obstacles causing…</value>
+  </data>
+  <data name="str15031" xml:space="preserve">
+    <value>    Min. PDG:</value>
+  </data>
+  <data name="str15032" xml:space="preserve">
+    <value>    Altitude of return to the nominal gradient:</value>
+  </data>
+  <data name="str15033" xml:space="preserve">
+    <value>    Min. altitude of turn:</value>
+  </data>
+  <data name="str15034" xml:space="preserve">
+    <value>    'Unified PDG for the entire procedure' - option has been switched on</value>
+  </data>
+  <data name="str15035" xml:space="preserve">
+    <value>'Addition to TIA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15036" xml:space="preserve">
+    <value>'PDG within TA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15037" xml:space="preserve">
+    <value>Page 3 -</value>
+  </data>
+  <data name="str15038" xml:space="preserve">
+    <value>    TNA/H shortage:</value>
+  </data>
+  <data name="str15039" xml:space="preserve">
+    <value>    TIA length:</value>
+  </data>
+  <data name="str15040" xml:space="preserve">
+    <value>    Addition to TIA length:</value>
+  </data>
+  <data name="str15041" xml:space="preserve">
+    <value>    PDG in the TIA:</value>
+  </data>
+  <data name="str15042" xml:space="preserve">
+    <value>    Eliminate TNA/H shortage within TA</value>
+  </data>
+  <data name="str15043" xml:space="preserve">
+    <value>    PDG in the TA:</value>
+  </data>
+  <data name="str15044" xml:space="preserve">
+    <value>&lt;- Current step cancellation</value>
+  </data>
+  <data name="str15046" xml:space="preserve">
+    <value>Page 4 -</value>
+  </data>
+  <data name="str15047" xml:space="preserve">
+    <value>PDG in the TIA:</value>
+  </data>
+  <data name="str15048" xml:space="preserve">
+    <value>PDG in the TA:</value>
+  </data>
+  <data name="str15050" xml:space="preserve">
+    <value>    TIA length:</value>
+  </data>
+  <data name="str15051" xml:space="preserve">
+    <value>Procedure for omnidirectional departure cannot be designed for the calculated gradient &gt;=</value>
+  </data>
+  <data name="str15052" xml:space="preserve">
+    <value>Number within the radius of </value>
+  </data>
+  <data name="str15056" xml:space="preserve">
+    <value>Input data on RWY</value>
+  </data>
+  <data name="str15063" xml:space="preserve">
+    <value>Omnidirectional</value>
+  </data>
+  <data name="str15066" xml:space="preserve">
+    <value>Omnidirectional Departure</value>
+  </data>
+  <data name="str15069" xml:space="preserve">
+    <value>Report on Obstacles</value>
+  </data>
+  <data name="str15070" xml:space="preserve">
+    <value>PANDA application is not connected</value>
+  </data>
+  <data name="str15071" xml:space="preserve">
+    <value>'ArcMap' error number = </value>
+  </data>
+  <data name="str15072" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str15073" xml:space="preserve">
+    <value>'ESRI ArcMap' error !!!</value>
+  </data>
+  <data name="str15074" xml:space="preserve">
+    <value>Number of obstacles within PAA:</value>
+  </data>
+  <data name="str15075" xml:space="preserve">
+    <value>Preliminary Assessment Area</value>
+  </data>
+  <data name="str15076" xml:space="preserve">
+    <value>Calculation Report. Departure Routes / Without track guidance</value>
+  </data>
+  <data name="str15077" xml:space="preserve">
+    <value>Calculation Report. Departure Routes / With track guidance</value>
+  </data>
+  <data name="str15078" xml:space="preserve">
+    <value>Number of obstacles within obstacle assessment area:</value>
+  </data>
+  <data name="str15079" xml:space="preserve">
+    <value>Straight departure</value>
+  </data>
+  <data name="str15080" xml:space="preserve">
+    <value>Primary</value>
+  </data>
+  <data name="str15081" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="str15082" xml:space="preserve">
+    <value>Number of obstacles within departure area:</value>
+  </data>
+  <data name="str15083" xml:space="preserve">
+    <value>TNA/H is determined by minimum altitude</value>
+  </data>
+  <data name="str15084" xml:space="preserve">
+    <value>Number of obstacles within TIA:</value>
+  </data>
+  <data name="str15085" xml:space="preserve">
+    <value>TNA/H is formed by obstacle with ID</value>
+  </data>
+  <data name="str15086" xml:space="preserve">
+    <value>. To get more detailed information press the button.</value>
+  </data>
+  <data name="str15087" xml:space="preserve">
+    <value>Obstacle clearance is calculated for the gradient</value>
+  </data>
+  <data name="str15088" xml:space="preserve">
+    <value>% within TA</value>
+  </data>
+  <data name="str15089" xml:space="preserve">
+    <value>Save report to ...</value>
+  </data>
+  <data name="str15090" xml:space="preserve">
+    <value>Turn Initiation Area</value>
+  </data>
+  <data name="str15092" xml:space="preserve">
+    <value>Critical obstacles</value>
+  </data>
+  <data name="str15093" xml:space="preserve">
+    <value>Dominant obstacles</value>
+  </data>
+  <data name="str15094" xml:space="preserve">
+    <value>Optimal value:</value>
+  </data>
+  <data name="str15095" xml:space="preserve">
+    <value>Turn parameters' values do not allow putting on the course onto the specified waypoint.</value>
+  </data>
+  <data name="str15096" xml:space="preserve">
+    <value>DME Distance:</value>
+  </data>
+  <data name="str15097" xml:space="preserve">
+    <value>Valid range of distance:</value>
+  </data>
+  <data name="str15098" xml:space="preserve">
+    <value>from </value>
+  </data>
+  <data name="str15099" xml:space="preserve">
+    <value> to</value>
+  </data>
+  <data name="str15100" xml:space="preserve">
+    <value>Allowable interval of bearings: 
+from </value>
+  </data>
+  <data name="str15101" xml:space="preserve">
+    <value>VOR Radial:</value>
+  </data>
+  <data name="str15102" xml:space="preserve">
+    <value>Allowable interval of radials: 
+from </value>
+  </data>
+  <data name="str15103" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="str15104" xml:space="preserve">
+    <value>Bearing to NDB:</value>
+  </data>
+  <data name="str15105" xml:space="preserve">
+    <value>'Distance' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15106" xml:space="preserve">
+    <value>Optimal value:</value>
+  </data>
+  <data name="str15107" xml:space="preserve">
+    <value>Page 1 -</value>
+  </data>
+  <data name="str15108" xml:space="preserve">
+    <value>Runway direction true bearing:</value>
+  </data>
+  <data name="str15109" xml:space="preserve">
+    <value>    RWY TRUE BRG:</value>
+  </data>
+  <data name="str15110" xml:space="preserve">
+    <value>    RWY magnetic course:</value>
+  </data>
+  <data name="str15111" xml:space="preserve">
+    <value>Runway length:</value>
+  </data>
+  <data name="str15112" xml:space="preserve">
+    <value>    Options of the Area 1 length determination:</value>
+  </data>
+  <data name="str15113" xml:space="preserve">
+    <value>    Radius covering area of obstacles assessment (m):</value>
+  </data>
+  <data name="str15114" xml:space="preserve">
+    <value>    Obstacles information:</value>
+  </data>
+  <data name="str15115" xml:space="preserve">
+    <value>    Max. distance from the center of Area 3:</value>
+  </data>
+  <data name="str15116" xml:space="preserve">
+    <value>    Number within set radius of Area 3:</value>
+  </data>
+  <data name="str15117" xml:space="preserve">
+    <value>    'Course displacement' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15118" xml:space="preserve">
+    <value>Page 2 -</value>
+  </data>
+  <data name="str15119" xml:space="preserve">
+    <value>    Course displacement:</value>
+  </data>
+  <data name="str15120" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15121" xml:space="preserve">
+    <value>Minimal OIS gradient plus 0.8% of the distance from the DER:</value>
+  </data>
+  <data name="str15122" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str15124" xml:space="preserve">
+    <value>Page 3 -</value>
+  </data>
+  <data name="str15125" xml:space="preserve">
+    <value>Magnetic track:</value>
+  </data>
+  <data name="str15126" xml:space="preserve">
+    <value>Track adjustment:</value>
+  </data>
+  <data name="str15127" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15128" xml:space="preserve">
+    <value>Height at which a gradient in excess of 3.3% is no longer required:</value>
+  </data>
+  <data name="str15130" xml:space="preserve">
+    <value>    Obstacle causing course displacement:</value>
+  </data>
+  <data name="str15131" xml:space="preserve">
+    <value>    Obstacle causing PDG:</value>
+  </data>
+  <data name="str15132" xml:space="preserve">
+    <value>'IAS' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15133" xml:space="preserve">
+    <value>'Bank angle' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15134" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15135" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15136" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15138" xml:space="preserve">
+    <value> Minimum turn angle:</value>
+  </data>
+  <data name="str15139" xml:space="preserve">
+    <value>Within entire area straight departure is provided
+by using </value>
+  </data>
+  <data name="str15140" xml:space="preserve">
+    <value>% gradient</value>
+  </data>
+  <data name="str15141" xml:space="preserve">
+    <value>Page 4 -</value>
+  </data>
+  <data name="str15142" xml:space="preserve">
+    <value>    Aircraft category:</value>
+  </data>
+  <data name="str15144" xml:space="preserve">
+    <value>    Bank angle:</value>
+  </data>
+  <data name="str15145" xml:space="preserve">
+    <value>    Diapason of IAS values:</value>
+  </data>
+  <data name="str15147" xml:space="preserve">
+    <value>    Turn:</value>
+  </data>
+  <data name="str15148" xml:space="preserve">
+    <value>    Turning Point type is:     Designated at an altitude/height</value>
+  </data>
+  <data name="str15149" xml:space="preserve">
+    <value>    Turning Point type is:     Designated at a FIX</value>
+  </data>
+  <data name="str15150" xml:space="preserve">
+    <value>    Turns before DER are accommodated</value>
+  </data>
+  <data name="str15151" xml:space="preserve">
+    <value>    Turns before DER are not accommodated</value>
+  </data>
+  <data name="str15152" xml:space="preserve">
+    <value>'PDG' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15153" xml:space="preserve">
+    <value>'Course displacement' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15154" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15155" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15156" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15157" xml:space="preserve">
+    <value> Minimum turn angle:</value>
+  </data>
+  <data name="str15161" xml:space="preserve">
+    <value>Valid range of turn height: 
+from </value>
+  </data>
+  <data name="str15162" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="str15163" xml:space="preserve">
+    <value>It is impossible to form FIX in the given range of altitudes.</value>
+  </data>
+  <data name="str15164" xml:space="preserve">
+    <value>Page 5 -</value>
+  </data>
+  <data name="str15165" xml:space="preserve">
+    <value>    Limited altitudes of TP:</value>
+  </data>
+  <data name="str15166" xml:space="preserve">
+    <value>Minimum turn height above DER:</value>
+  </data>
+  <data name="str15167" xml:space="preserve">
+    <value>Maximum turn height above DER:</value>
+  </data>
+  <data name="str15168" xml:space="preserve">
+    <value>Departure track in degrees magnetic:</value>
+  </data>
+  <data name="str15169" xml:space="preserve">
+    <value>    Control over parameters of Area 1</value>
+  </data>
+  <data name="str15170" xml:space="preserve">
+    <value>Departure track adjustment:</value>
+  </data>
+  <data name="str15171" xml:space="preserve">
+    <value>PDG in the Area 1:</value>
+  </data>
+  <data name="str15172" xml:space="preserve">
+    <value>    PANDA optimal solution (Minimum PDG and Displacement of track for Area 1 of turning departure)</value>
+  </data>
+  <data name="str15173" xml:space="preserve">
+    <value>'TNH' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15174" xml:space="preserve">
+    <value>Textbox </value>
+  </data>
+  <data name="str15175" xml:space="preserve">
+    <value> contains incorrect value.</value>
+  </data>
+  <data name="str15176" xml:space="preserve">
+    <value>Maximum value:</value>
+  </data>
+  <data name="str15178" xml:space="preserve">
+    <value>Page 6 -</value>
+  </data>
+  <data name="str15179" xml:space="preserve">
+    <value>    Turn at a designated turning point</value>
+  </data>
+  <data name="str15180" xml:space="preserve">
+    <value>    Intersecting facility</value>
+  </data>
+  <data name="str15181" xml:space="preserve">
+    <value>    Facility type</value>
+  </data>
+  <data name="str15182" xml:space="preserve">
+    <value>    Turn designated at an altitude/height</value>
+  </data>
+  <data name="str15183" xml:space="preserve">
+    <value>    Turning altitude:</value>
+  </data>
+  <data name="str15184" xml:space="preserve">
+    <value>Select a variant.</value>
+  </data>
+  <data name="str15185" xml:space="preserve">
+    <value>'Next segment course' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15186" xml:space="preserve">
+    <value>'Joining angle' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15187" xml:space="preserve">
+    <value>'Stabilization time' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15188" xml:space="preserve">
+    <value>Page 7 -</value>
+  </data>
+  <data name="str15189" xml:space="preserve">
+    <value>    Next segment course:</value>
+  </data>
+  <data name="str15190" xml:space="preserve">
+    <value>    Facility:</value>
+  </data>
+  <data name="str15191" xml:space="preserve">
+    <value>    Stabilization time:</value>
+  </data>
+  <data name="str15194" xml:space="preserve">
+    <value>    DR length:</value>
+  </data>
+  <data name="str15195" xml:space="preserve">
+    <value>    Onto facility/FIX/WPT</value>
+  </data>
+  <data name="str15197" xml:space="preserve">
+    <value>    Nominal course is not specified</value>
+  </data>
+  <data name="str15198" xml:space="preserve">
+    <value>Page 8 -</value>
+  </data>
+  <data name="str15199" xml:space="preserve">
+    <value>    On the inner side of the turn:</value>
+  </data>
+  <data name="str15200" xml:space="preserve">
+    <value>    Parallel to final course</value>
+  </data>
+  <data name="str15201" xml:space="preserve">
+    <value>    Splay area at 15° from the final course</value>
+  </data>
+  <data name="str15202" xml:space="preserve">
+    <value>    Splay facility area</value>
+  </data>
+  <data name="str15203" xml:space="preserve">
+    <value>    On the inner side of the turn areas were joined in line with PANS-OPS rules</value>
+  </data>
+  <data name="str15204" xml:space="preserve">
+    <value>    On the outer side of the turn:</value>
+  </data>
+  <data name="str15208" xml:space="preserve">
+    <value>    On the outer side of the turn areas were joined in line with PANS-OPS rules</value>
+  </data>
+  <data name="str15209" xml:space="preserve">
+    <value>Select a variant.</value>
+  </data>
+  <data name="str15210" xml:space="preserve">
+    <value>Page 9 -</value>
+  </data>
+  <data name="str15211" xml:space="preserve">
+    <value>    Construction on the inner side:</value>
+  </data>
+  <data name="str15212" xml:space="preserve">
+    <value>    Resume track guidance</value>
+  </data>
+  <data name="str15213" xml:space="preserve">
+    <value>    30° rule</value>
+  </data>
+  <data name="str15214" xml:space="preserve">
+    <value>    Along line 'facility-earliest TP'</value>
+  </data>
+  <data name="str15215" xml:space="preserve">
+    <value>    Construction on the outer side:</value>
+  </data>
+  <data name="str15220" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str15221" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str15222" xml:space="preserve">
+    <value>IAS to TAS calc. altitude:</value>
+  </data>
+  <data name="str15223" xml:space="preserve">
+    <value>Distance from earliest TP to DER:</value>
+  </data>
+  <data name="str15224" xml:space="preserve">
+    <value>System has calculated acceptable PDG within TIA.</value>
+  </data>
+  <data name="str15225" xml:space="preserve">
+    <value>&lt;- Current step cancellation</value>
+  </data>
+  <data name="str15226" xml:space="preserve">
+    <value>Page 3 -</value>
+  </data>
+  <data name="str15227" xml:space="preserve">
+    <value>    Magnetic course:</value>
+  </data>
+  <data name="str15228" xml:space="preserve">
+    <value>    Course displacement:</value>
+  </data>
+  <data name="str15229" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15230" xml:space="preserve">
+    <value>    Height of return to the nominal gradient:</value>
+  </data>
+  <data name="str15232" xml:space="preserve">
+    <value>    Obstacle causing course displacement:</value>
+  </data>
+  <data name="str15233" xml:space="preserve">
+    <value>    Obstacle causing gradient:</value>
+  </data>
+  <data name="str15234" xml:space="preserve">
+    <value>'PDG within TIA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15235" xml:space="preserve">
+    <value>'PDG within TA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15236" xml:space="preserve">
+    <value>Page 10 -</value>
+  </data>
+  <data name="str15237" xml:space="preserve">
+    <value>    PDG within TIA:</value>
+  </data>
+  <data name="str15238" xml:space="preserve">
+    <value>    PDG within TA:</value>
+  </data>
+  <data name="str15239" xml:space="preserve">
+    <value>    TNA/H shortage:</value>
+  </data>
+  <data name="str15240" xml:space="preserve">
+    <value>    Variants of MOC provision:</value>
+  </data>
+  <data name="str15241" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15242" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15243" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15245" xml:space="preserve">
+    <value> Minimum turning angle:</value>
+  </data>
+  <data name="str15246" xml:space="preserve">
+    <value>Within entire area straight departure is provided by using </value>
+  </data>
+  <data name="str15247" xml:space="preserve">
+    <value>% gradient</value>
+  </data>
+  <data name="str15248" xml:space="preserve">
+    <value>Valid range of turn height:</value>
+  </data>
+  <data name="str15250" xml:space="preserve">
+    <value>DR minimum length = </value>
+  </data>
+  <data name="str15252" xml:space="preserve">
+    <value>Recommended heading ranges:</value>
+  </data>
+  <data name="str15255" xml:space="preserve">
+    <value>on </value>
+  </data>
+  <data name="str15256" xml:space="preserve">
+    <value>Specified value of angle does not allow setting on the course onto the specified facility.</value>
+  </data>
+  <data name="str15257" xml:space="preserve">
+    <value>Specified direction of turn and radius value </value>
+  </data>
+  <data name="str15258" xml:space="preserve">
+    <value>do not allow setting on the course onto the waypoint given.</value>
+  </data>
+  <data name="str15259" xml:space="preserve">
+    <value>In the specified direction Rmax =</value>
+  </data>
+  <data name="str15261" xml:space="preserve">
+    <value>Number within the radius of </value>
+  </data>
+  <data name="str15265" xml:space="preserve">
+    <value>It is wrong value of the parameter.</value>
+  </data>
+  <data name="str15266" xml:space="preserve">
+    <value>System could not calculate acceptable PDG within TIA.</value>
+  </data>
+  <data name="str15267" xml:space="preserve">
+    <value>It is wrong value of the new PDG.</value>
+  </data>
+  <data name="str15268" xml:space="preserve">
+    <value>Minimum value in line with PANS-OPS</value>
+  </data>
+  <data name="str15269" xml:space="preserve">
+    <value>Input data on RWY</value>
+  </data>
+  <data name="str15270" xml:space="preserve">
+    <value>Without Track Guidance</value>
+  </data>
+  <data name="str15271" xml:space="preserve">
+    <value>Departure without guidance</value>
+  </data>
+  <data name="str15272" xml:space="preserve">
+    <value>Guidance is not provided</value>
+  </data>
+  <data name="str15273" xml:space="preserve">
+    <value>Optimal value:</value>
+  </data>
+  <data name="str15276" xml:space="preserve">
+    <value>Valid range of departure magnetic track angle:</value>
+  </data>
+  <data name="str15279" xml:space="preserve">
+    <value> in front of DER</value>
+  </data>
+  <data name="str15280" xml:space="preserve">
+    <value>Allowable flight 'away from facility' is in diapason:</value>
+  </data>
+  <data name="str15282" xml:space="preserve">
+    <value> behind the DER</value>
+  </data>
+  <data name="str15283" xml:space="preserve">
+    <value> to the right of CL</value>
+  </data>
+  <data name="str15284" xml:space="preserve">
+    <value> to the left of CL</value>
+  </data>
+  <data name="str15295" xml:space="preserve">
+    <value>Page 4 -</value>
+  </data>
+  <data name="str15296" xml:space="preserve">
+    <value>    Magnetic course:</value>
+  </data>
+  <data name="str15297" xml:space="preserve">
+    <value>    Course displacement:</value>
+  </data>
+  <data name="str15298" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15299" xml:space="preserve">
+    <value>    Height of return to the nominal gradient:</value>
+  </data>
+  <data name="str15301" xml:space="preserve">
+    <value>    Obstacle causing course displacement:</value>
+  </data>
+  <data name="str15302" xml:space="preserve">
+    <value>    Obstacle causing PDG:</value>
+  </data>
+  <data name="str15303" xml:space="preserve">
+    <value>'PDG within TIA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15304" xml:space="preserve">
+    <value>'PDG within TA' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15305" xml:space="preserve">
+    <value>Page 11 -</value>
+  </data>
+  <data name="str15306" xml:space="preserve">
+    <value>    PDG within TIA:</value>
+  </data>
+  <data name="str15307" xml:space="preserve">
+    <value>    PDG within TA:</value>
+  </data>
+  <data name="str15308" xml:space="preserve">
+    <value>    TNA/H shortage:</value>
+  </data>
+  <data name="str15309" xml:space="preserve">
+    <value>    Variants of MOC provision:</value>
+  </data>
+  <data name="str15313" xml:space="preserve">
+    <value>System could not calculate acceptable PDG within TIA.</value>
+  </data>
+  <data name="str15314" xml:space="preserve">
+    <value>It is not possible to provide guidance for the RWY given</value>
+  </data>
+  <data name="str15315" xml:space="preserve">
+    <value>Textbox of necessary for departure distance contains incorrect value.</value>
+  </data>
+  <data name="str15316" xml:space="preserve">
+    <value>Page 1 -</value>
+  </data>
+  <data name="str15317" xml:space="preserve">
+    <value>    RWY:</value>
+  </data>
+  <data name="str15318" xml:space="preserve">
+    <value>    RWY TRUE BRG:</value>
+  </data>
+  <data name="str15319" xml:space="preserve">
+    <value>    RWY magnetic course:</value>
+  </data>
+  <data name="str15321" xml:space="preserve">
+    <value>    Variant of Area 1 border determination:</value>
+  </data>
+  <data name="str15322" xml:space="preserve">
+    <value>    Radius covering area of obstacles assessment (m):</value>
+  </data>
+  <data name="str15323" xml:space="preserve">
+    <value>    Obstacles information:</value>
+  </data>
+  <data name="str15325" xml:space="preserve">
+    <value>    Number within set radius of Area 3:</value>
+  </data>
+  <data name="str15326" xml:space="preserve">
+    <value>Page 2 -</value>
+  </data>
+  <data name="str15327" xml:space="preserve">
+    <value>    Guidance facility:</value>
+  </data>
+  <data name="str15328" xml:space="preserve">
+    <value>    Facility type:</value>
+  </data>
+  <data name="str15329" xml:space="preserve">
+    <value>    Diapason of radial / bearing provided: </value>
+  </data>
+  <data name="str15330" xml:space="preserve">
+    <value>    Facility location:</value>
+  </data>
+  <data name="str15331" xml:space="preserve">
+    <value>'Course' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15332" xml:space="preserve">
+    <value>° to the right</value>
+  </data>
+  <data name="str15333" xml:space="preserve">
+    <value>° to the left</value>
+  </data>
+  <data name="str15334" xml:space="preserve">
+    <value>Page 3 -</value>
+  </data>
+  <data name="str15335" xml:space="preserve">
+    <value>    Radial / bearing: </value>
+  </data>
+  <data name="str15336" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15337" xml:space="preserve">
+    <value>    Height of return to 3.3% PDG over DER:</value>
+  </data>
+  <data name="str15339" xml:space="preserve">
+    <value>    Track guidance is provided starting from:</value>
+  </data>
+  <data name="str15340" xml:space="preserve">
+    <value>    DER displacement: </value>
+  </data>
+  <data name="str15342" xml:space="preserve">
+    <value>Page 4 -</value>
+  </data>
+  <data name="str15343" xml:space="preserve">
+    <value>    Magnetic course:</value>
+  </data>
+  <data name="str15344" xml:space="preserve">
+    <value>    Course displacement:</value>
+  </data>
+  <data name="str15345" xml:space="preserve">
+    <value>    PDG:</value>
+  </data>
+  <data name="str15346" xml:space="preserve">
+    <value>    Height of return to the nominal gradient: </value>
+  </data>
+  <data name="str15347" xml:space="preserve">
+    <value>    Obstacle causing course displacement: </value>
+  </data>
+  <data name="str15348" xml:space="preserve">
+    <value>    Obstacle causing PDG:</value>
+  </data>
+  <data name="str15349" xml:space="preserve">
+    <value>'IAS' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15350" xml:space="preserve">
+    <value>'Bank angle' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15351" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15352" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15353" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15354" xml:space="preserve">
+    <value> Minimum turn angle:</value>
+  </data>
+  <data name="str15355" xml:space="preserve">
+    <value>Within entire area straight departure is provided by using </value>
+  </data>
+  <data name="str15356" xml:space="preserve">
+    <value>% gradient</value>
+  </data>
+  <data name="str15357" xml:space="preserve">
+    <value>Page 5 -</value>
+  </data>
+  <data name="str15358" xml:space="preserve">
+    <value>    Aircraft Category:</value>
+  </data>
+  <data name="str15360" xml:space="preserve">
+    <value>    Bank angle:</value>
+  </data>
+  <data name="str15361" xml:space="preserve">
+    <value>    Diapason of IAS values:</value>
+  </data>
+  <data name="str15363" xml:space="preserve">
+    <value>    Turn: </value>
+  </data>
+  <data name="str15364" xml:space="preserve">
+    <value>    Turning Point type:</value>
+  </data>
+  <data name="str15365" xml:space="preserve">
+    <value>    Designated at an altitude/height</value>
+  </data>
+  <data name="str15367" xml:space="preserve">
+    <value>    TP is over facility</value>
+  </data>
+  <data name="str15368" xml:space="preserve">
+    <value>    Turns before DER are accommodated</value>
+  </data>
+  <data name="str15369" xml:space="preserve">
+    <value>    Turns before DER are not accommodated</value>
+  </data>
+  <data name="str15370" xml:space="preserve">
+    <value>'PDG' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15371" xml:space="preserve">
+    <value>'Course displacement' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15372" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15373" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15374" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15375" xml:space="preserve">
+    <value>Facility/ WPT/ FIX:</value>
+  </data>
+  <data name="str15376" xml:space="preserve">
+    <value> Minimum turn angle:</value>
+  </data>
+  <data name="str15377" xml:space="preserve">
+    <value>Within entire area straight departure is provided by using </value>
+  </data>
+  <data name="str15378" xml:space="preserve">
+    <value>% gradient</value>
+  </data>
+  <data name="str15380" xml:space="preserve">
+    <value>Valid range of turn height: 
+from </value>
+  </data>
+  <data name="str15382" xml:space="preserve">
+    <value> contains incorrect value.</value>
+  </data>
+  <data name="str15383" xml:space="preserve">
+    <value>It is impossible to form FIX in the given range of altitudes.</value>
+  </data>
+  <data name="str15384" xml:space="preserve">
+    <value>Page 6 -</value>
+  </data>
+  <data name="str15385" xml:space="preserve">
+    <value>    Limited altitudes of TP:</value>
+  </data>
+  <data name="str15388" xml:space="preserve">
+    <value>    Departure true course:</value>
+  </data>
+  <data name="str15389" xml:space="preserve">
+    <value>    Control over parameters of Area 1:</value>
+  </data>
+  <data name="str15390" xml:space="preserve">
+    <value>    Displacement of departure track of the runway centre line:</value>
+  </data>
+  <data name="str15391" xml:space="preserve">
+    <value>    PDG within Area 1 determines placement of KK line:</value>
+  </data>
+  <data name="str15392" xml:space="preserve">
+    <value>    PANDA optimal solution (Minimum PDG and Displacement of track for Area 1 of turning departure)</value>
+  </data>
+  <data name="str15393" xml:space="preserve">
+    <value>'TNH' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15394" xml:space="preserve">
+    <value>Textbox </value>
+  </data>
+  <data name="str15395" xml:space="preserve">
+    <value>Maximum value:</value>
+  </data>
+  <data name="str15397" xml:space="preserve">
+    <value>Page 7 -</value>
+  </data>
+  <data name="str15398" xml:space="preserve">
+    <value>    Turn at a designated turning point</value>
+  </data>
+  <data name="str15399" xml:space="preserve">
+    <value>    Intersecting facility</value>
+  </data>
+  <data name="str15400" xml:space="preserve">
+    <value>    Facility type</value>
+  </data>
+  <data name="str15401" xml:space="preserve">
+    <value>    Turn designated at an altitude/height</value>
+  </data>
+  <data name="str15402" xml:space="preserve">
+    <value>    Turning altitude:</value>
+  </data>
+  <data name="str15403" xml:space="preserve">
+    <value>'Joining angle' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15404" xml:space="preserve">
+    <value>Select a variant.</value>
+  </data>
+  <data name="str15405" xml:space="preserve">
+    <value>'Next segment course' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15406" xml:space="preserve">
+    <value>'Stabilization time' textbox contains incorrect value.</value>
+  </data>
+  <data name="str15407" xml:space="preserve">
+    <value>Page 8 -</value>
+  </data>
+  <data name="str15408" xml:space="preserve">
+    <value>    Next segment course:</value>
+  </data>
+  <data name="str15409" xml:space="preserve">
+    <value>Tracking facility:</value>
+  </data>
+  <data name="str15410" xml:space="preserve">
+    <value>    Stabilization time:</value>
+  </data>
+  <data name="str15412" xml:space="preserve">
+    <value>    Next segment course:</value>
+  </data>
+  <data name="str15413" xml:space="preserve">
+    <value>    DR length:</value>
+  </data>
+  <data name="str15414" xml:space="preserve">
+    <value>    On the outer side of the turn areas were joined in line with PANS-OPS rules</value>
+  </data>
+  <data name="str15415" xml:space="preserve">
+    <value>    Onto the facility/FIX/WPT</value>
+  </data>
+  <data name="str15416" xml:space="preserve">
+    <value>    Next segment course:</value>
+  </data>
+  <data name="str15417" xml:space="preserve">
+    <value>    Nominal course is not specified</value>
+  </data>
+  <data name="str15418" xml:space="preserve">
+    <value>Page 9 -</value>
+  </data>
+  <data name="str15419" xml:space="preserve">
+    <value>    On the inner side of the turn:</value>
+  </data>
+  <data name="str15420" xml:space="preserve">
+    <value>    Parallel to final course</value>
+  </data>
+  <data name="str15421" xml:space="preserve">
+    <value>    Splay area at 15° from the final course</value>
+  </data>
+  <data name="str15422" xml:space="preserve">
+    <value>    Splay facility area</value>
+  </data>
+  <data name="str15423" xml:space="preserve">
+    <value>    On the inner side of the turn areas were joined in line with PANS-OPS rules</value>
+  </data>
+  <data name="str15424" xml:space="preserve">
+    <value>    On the outer side of the turn:</value>
+  </data>
+  <data name="str15425" xml:space="preserve">
+    <value>Select a variant.</value>
+  </data>
+  <data name="str15426" xml:space="preserve">
+    <value>Page 10 -</value>
+  </data>
+  <data name="str15427" xml:space="preserve">
+    <value>    Construction on the inner side:</value>
+  </data>
+  <data name="str15428" xml:space="preserve">
+    <value>    Resume track guidance</value>
+  </data>
+  <data name="str15429" xml:space="preserve">
+    <value>    30° rule</value>
+  </data>
+  <data name="str15430" xml:space="preserve">
+    <value>    Along line 'facility-earliest TP'</value>
+  </data>
+  <data name="str15431" xml:space="preserve">
+    <value>    Construction on the outer side:</value>
+  </data>
+  <data name="str15432" xml:space="preserve">
+    <value>    Resume track guidance</value>
+  </data>
+  <data name="str15433" xml:space="preserve">
+    <value>    Along line 'facility-earliest TP'</value>
+  </data>
+  <data name="str15434" xml:space="preserve">
+    <value>TIA length:</value>
+  </data>
+  <data name="str15435" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str15436" xml:space="preserve">
+    <value>IAS to TAS calc. altitude:</value>
+  </data>
+  <data name="str15437" xml:space="preserve">
+    <value>Distance from earliest TP to DER:</value>
+  </data>
+  <data name="str15438" xml:space="preserve">
+    <value>Tracking facility:</value>
+  </data>
+  <data name="str15439" xml:space="preserve">
+    <value>&lt;- Current step cancellation</value>
+  </data>
+  <data name="str15440" xml:space="preserve">
+    <value>to the right</value>
+  </data>
+  <data name="str15441" xml:space="preserve">
+    <value>to the left</value>
+  </data>
+  <data name="str15442" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str15443" xml:space="preserve">
+    <value> PDG of the obstacle clearance line:</value>
+  </data>
+  <data name="str15444" xml:space="preserve">
+    <value> Distance from DER:</value>
+  </data>
+  <data name="str15446" xml:space="preserve">
+    <value> Minimum turn angle:</value>
+  </data>
+  <data name="str15447" xml:space="preserve">
+    <value>Within entire area straight departure is provided by using </value>
+  </data>
+  <data name="str15448" xml:space="preserve">
+    <value>% gradient</value>
+  </data>
+  <data name="str15449" xml:space="preserve">
+    <value>Valid range of turn height:</value>
+  </data>
+  <data name="str15452" xml:space="preserve">
+    <value>minimum DR length = </value>
+  </data>
+  <data name="str15454" xml:space="preserve">
+    <value>Recommended heading ranges:</value>
+  </data>
+  <data name="str15455" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="str15456" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="str15457" xml:space="preserve">
+    <value>Specified value of angle does not allow setting on the course onto the specified facility.</value>
+  </data>
+  <data name="str15458" xml:space="preserve">
+    <value>Specified direction of turn and radius value </value>
+  </data>
+  <data name="str15459" xml:space="preserve">
+    <value>do not allow setting on the course onto the waypoint given</value>
+  </data>
+  <data name="str15460" xml:space="preserve">
+    <value>In the specified direction Rmax =</value>
+  </data>
+  <data name="str15462" xml:space="preserve">
+    <value>System could not calculate acceptable PDG within TIA.</value>
+  </data>
+  <data name="str15463" xml:space="preserve">
+    <value>Minimum value in line with PANS-OPS</value>
+  </data>
+  <data name="str15465" xml:space="preserve">
+    <value>Allowable value </value>
+  </data>
+  <data name="str15466" xml:space="preserve">
+    <value>Facilities meeting requirments ±</value>
+  </data>
+  <data name="str15467" xml:space="preserve">
+    <value> m and ±</value>
+  </data>
+  <data name="str15468" xml:space="preserve">
+    <value>Allowable value </value>
+  </data>
+  <data name="str15469" xml:space="preserve">
+    <value>Input data on RWY</value>
+  </data>
+  <data name="str15470" xml:space="preserve">
+    <value>Turn parameters' values do not allow putting on the course onto the specified waypoint.</value>
+  </data>
+  <data name="str15471" xml:space="preserve">
+    <value>Number within the radius of </value>
+  </data>
+  <data name="str15473" xml:space="preserve">
+    <value>It is wrong value of the new PDG</value>
+  </data>
+  <data name="str15474" xml:space="preserve">
+    <value>Flight tech. tol. (</value>
+  </data>
+  <data name="str15476" xml:space="preserve">
+    <value>It is wrong value of the parameter.</value>
+  </data>
+  <data name="str15478" xml:space="preserve">
+    <value>With Track Guidance</value>
+  </data>
+  <data name="str15479" xml:space="preserve">
+    <value>Departure with track guidance</value>
+  </data>
+  <data name="str15480" xml:space="preserve">
+    <value>Hide Center Line</value>
+  </data>
+  <data name="str15481" xml:space="preserve">
+    <value>Unhide Center Line</value>
+  </data>
+  <data name="str15482" xml:space="preserve">
+    <value>Hide aerodrome circle</value>
+  </data>
+  <data name="str15483" xml:space="preserve">
+    <value>Unhide aerodrome circle</value>
+  </data>
+  <data name="str15486" xml:space="preserve">
+    <value>Hide FIX</value>
+  </data>
+  <data name="str15487" xml:space="preserve">
+    <value>Unhide FIX</value>
+  </data>
+  <data name="str15488" xml:space="preserve">
+    <value>Hide KK and K'K' lines</value>
+  </data>
+  <data name="str15489" xml:space="preserve">
+    <value>Unhide KK and K'K' lines</value>
+  </data>
+  <data name="str15490" xml:space="preserve">
+    <value>Hide nominal track</value>
+  </data>
+  <data name="str15491" xml:space="preserve">
+    <value>Unhide nominal track</value>
+  </data>
+  <data name="str15492" xml:space="preserve">
+    <value>Hide guidance facility areas</value>
+  </data>
+  <data name="str15493" xml:space="preserve">
+    <value>Unhide guidance facility areas</value>
+  </data>
+  <data name="str15494" xml:space="preserve">
+    <value>Hide straight departure area</value>
+  </data>
+  <data name="str15495" xml:space="preserve">
+    <value>Unhide straight departure area</value>
+  </data>
+  <data name="str15496" xml:space="preserve">
+    <value>Hide TA</value>
+  </data>
+  <data name="str15497" xml:space="preserve">
+    <value>Unhide TA</value>
+  </data>
+  <data name="str20010" xml:space="preserve">
+    <value>Options of the Area 1 length determination</value>
+  </data>
+  <data name="str20011" xml:space="preserve">
+    <value>Information about obstacles</value>
+  </data>
+  <data name="str20111" xml:space="preserve">
+    <value>3485 m (Part I, Sec.3, 3.2.4.2.2)</value>
+  </data>
+  <data name="str20112" xml:space="preserve">
+    <value>115 m/ PDG (Part I, Sec.3, 3.2.3)</value>
+  </data>
+  <data name="str21101" xml:space="preserve">
+    <value>Navigation aid position relative to runway</value>
+  </data>
+  <data name="str23301" xml:space="preserve">
+    <value>Go to the turning departure design</value>
+  </data>
+  <data name="str24001" xml:space="preserve">
+    <value>Turn is specified</value>
+  </data>
+  <data name="str24011" xml:space="preserve">
+    <value>At an altitude/height</value>
+  </data>
+  <data name="str24012" xml:space="preserve">
+    <value>At a TP defined by the intersection</value>
+  </data>
+  <data name="str24013" xml:space="preserve">
+    <value>Over navigation aid</value>
+  </data>
+  <data name="str24401" xml:space="preserve">
+    <value>Accommodate turn before DER</value>
+  </data>
+  <data name="str25301" xml:space="preserve">
+    <value>Adjust manually</value>
+  </data>
+  <data name="str26001" xml:space="preserve">
+    <value>Turn at a designated turning point</value>
+  </data>
+  <data name="str26002" xml:space="preserve">
+    <value>Turn designated at an altitude/height</value>
+  </data>
+  <data name="str26101" xml:space="preserve">
+    <value>Before facility</value>
+  </data>
+  <data name="str26102" xml:space="preserve">
+    <value>After facility</value>
+  </data>
+  <data name="str27101" xml:space="preserve">
+    <value>Turn to a specified heading</value>
+  </data>
+  <data name="str27102" xml:space="preserve">
+    <value>Turn and interception of a specified radial/ bearing</value>
+  </data>
+  <data name="str27103" xml:space="preserve">
+    <value>Turn towards a specified facility/ WPT/ FIX</value>
+  </data>
+  <data name="str27301" xml:space="preserve">
+    <value>No track to the facility is specified:</value>
+  </data>
+  <data name="str28001" xml:space="preserve">
+    <value>On the inner side of the turn</value>
+  </data>
+  <data name="str28002" xml:space="preserve">
+    <value>On the outer side of the turn</value>
+  </data>
+  <data name="str28101" xml:space="preserve">
+    <value>Parallel to the nominal track after the turn</value>
+  </data>
+  <data name="str28102" xml:space="preserve">
+    <value>Splayed from the nominal track at an angle of 15 degrees</value>
+  </data>
+  <data name="str28103" xml:space="preserve">
+    <value>Connect the earliest TP to abeam navigation aid</value>
+  </data>
+  <data name="str28104" xml:space="preserve">
+    <value>Parallel to the nominal track after the turn</value>
+  </data>
+  <data name="str28105" xml:space="preserve">
+    <value>Splayed from the nominal track at an angle of 15 degrees</value>
+  </data>
+  <data name="str28106" xml:space="preserve">
+    <value>Connect the tangent point (P) to abeam navigation aida</value>
+  </data>
+  <data name="str29001" xml:space="preserve">
+    <value>On the inner side of the turn</value>
+  </data>
+  <data name="str29002" xml:space="preserve">
+    <value>On the outer side of the turn</value>
+  </data>
+  <data name="str29101" xml:space="preserve">
+    <value>Primary situation</value>
+  </data>
+  <data name="str29102" xml:space="preserve">
+    <value>Variants of MOC provision</value>
+  </data>
+  <data name="str29111" xml:space="preserve">
+    <value>Control PDG in the TIA</value>
+  </data>
+  <data name="str29112" xml:space="preserve">
+    <value>Control PDG in TA</value>
+  </data>
+  <data name="str29113" xml:space="preserve">
+    <value>Calculate a unified PDG</value>
+  </data>
+  <data name="str29114" xml:space="preserve">
+    <value>Control PDG in the TA</value>
+  </data>
+  <data name="str29301" xml:space="preserve">
+    <value>Based on the line beyond which guidance is available</value>
+  </data>
+  <data name="str29302" xml:space="preserve">
+    <value>Based on the 30° line</value>
+  </data>
+  <data name="str29303" xml:space="preserve">
+    <value>Based on Navaid – Earliest TP</value>
+  </data>
+  <data name="str29304" xml:space="preserve">
+    <value>Based on the line beyond which guidance is available</value>
+  </data>
+  <data name="str29305" xml:space="preserve">
+    <value>Based on the 30° line</value>
+  </data>
+  <data name="str29306" xml:space="preserve">
+    <value>Based on Navaid – Tangent point (P)</value>
+  </data>
+  <data name="str30001" xml:space="preserve">
+    <value>Options of the Area 1 length determination:</value>
+  </data>
+  <data name="str30002" xml:space="preserve">
+    <value>Information about obstacles</value>
+  </data>
+  <data name="str30101" xml:space="preserve">
+    <value>3485 m (Part I, Sec.3, 3.2.4.2.2)</value>
+  </data>
+  <data name="str30102" xml:space="preserve">
+    <value>115 m/ PDG (Part I, Sec.3, 3.2.3)</value>
+  </data>
+  <data name="str31301" xml:space="preserve">
+    <value>Adjust manually</value>
+  </data>
+  <data name="str31302" xml:space="preserve">
+    <value>to the left</value>
+  </data>
+  <data name="str31303" xml:space="preserve">
+    <value>to the right</value>
+  </data>
+  <data name="str32301" xml:space="preserve">
+    <value>Go to the turning departure design</value>
+  </data>
+  <data name="str33001" xml:space="preserve">
+    <value>Turn is specified</value>
+  </data>
+  <data name="str33101" xml:space="preserve">
+    <value>At an altitude/height</value>
+  </data>
+  <data name="str33102" xml:space="preserve">
+    <value>At a TP defined by the intersection</value>
+  </data>
+  <data name="str33301" xml:space="preserve">
+    <value>Accommodate turn before DER</value>
+  </data>
+  <data name="str34301" xml:space="preserve">
+    <value>Adjust manually</value>
+  </data>
+  <data name="str34302" xml:space="preserve">
+    <value>to the left</value>
+  </data>
+  <data name="str34303" xml:space="preserve">
+    <value>to the right</value>
+  </data>
+  <data name="str35001" xml:space="preserve">
+    <value>Turn at a designated turning point</value>
+  </data>
+  <data name="str35002" xml:space="preserve">
+    <value>Turn designated at an altitude/height</value>
+  </data>
+  <data name="str35101" xml:space="preserve">
+    <value>Before facility</value>
+  </data>
+  <data name="str35102" xml:space="preserve">
+    <value>After facility</value>
+  </data>
+  <data name="str36101" xml:space="preserve">
+    <value>Turn to a specified heading</value>
+  </data>
+  <data name="str36102" xml:space="preserve">
+    <value> Turn and interception of a specified radial/ bearing </value>
+  </data>
+  <data name="str36103" xml:space="preserve">
+    <value>Turn towards a specified facility/ WPT/ FIX</value>
+  </data>
+  <data name="str36301" xml:space="preserve">
+    <value>No track to the facility is specified</value>
+  </data>
+  <data name="str36302" xml:space="preserve">
+    <value>Onto the specified radial</value>
+  </data>
+  <data name="str36303" xml:space="preserve">
+    <value>Onto the specified bearing</value>
+  </data>
+  <data name="str36304" xml:space="preserve">
+    <value>Specify the heading value</value>
+  </data>
+  <data name="str36305" xml:space="preserve">
+    <value>Select an orienting Facility/ WPT/ FIX</value>
+  </data>
+  <data name="str37001" xml:space="preserve">
+    <value>On the inner side of the turn</value>
+  </data>
+  <data name="str37002" xml:space="preserve">
+    <value>On the outer side of the turn</value>
+  </data>
+  <data name="str37101" xml:space="preserve">
+    <value>Parallel to the nominal track after the turn</value>
+  </data>
+  <data name="str37102" xml:space="preserve">
+    <value>Splayed from the nominal track at an angle of 15 degrees</value>
+  </data>
+  <data name="str37103" xml:space="preserve">
+    <value>Connect the earliest TP to abeam navigation aid</value>
+  </data>
+  <data name="str37104" xml:space="preserve">
+    <value>Parallel to the nominal track after the turn</value>
+  </data>
+  <data name="str37105" xml:space="preserve">
+    <value>Splayed from the nominal track at an angle of 15 degrees</value>
+  </data>
+  <data name="str37106" xml:space="preserve">
+    <value>Connect the tangent point (P) to abeam navigation aid</value>
+  </data>
+  <data name="str38001" xml:space="preserve">
+    <value>On the inner side of the turn</value>
+  </data>
+  <data name="str38002" xml:space="preserve">
+    <value>On the outer side of the turn</value>
+  </data>
+  <data name="str38031" xml:space="preserve">
+    <value>Based on the line beyond which guidance is available</value>
+  </data>
+  <data name="str38032" xml:space="preserve">
+    <value>Based on the 30° line</value>
+  </data>
+  <data name="str38033" xml:space="preserve">
+    <value>Based on Navaid – Earliest TP</value>
+  </data>
+  <data name="str38034" xml:space="preserve">
+    <value>Based on the line beyond which guidance is available</value>
+  </data>
+  <data name="str38035" xml:space="preserve">
+    <value>Based on the 30° line</value>
+  </data>
+  <data name="str38036" xml:space="preserve">
+    <value>Based on Navaid – Tangent point (P)</value>
+  </data>
+  <data name="str39001" xml:space="preserve">
+    <value>INITIAL</value>
+  </data>
+  <data name="str39002" xml:space="preserve">
+    <value>CURRENT</value>
+  </data>
+  <data name="str39003" xml:space="preserve">
+    <value>Altitude resulting from PDG in the TIA and TA:</value>
+  </data>
+  <data name="str39004" xml:space="preserve">
+    <value>CONTROL MODE</value>
+  </data>
+  <data name="str39011" xml:space="preserve">
+    <value>Control PDG in the TIA</value>
+  </data>
+  <data name="str39012" xml:space="preserve">
+    <value>Control PDG in the TA</value>
+  </data>
+  <data name="str39013" xml:space="preserve">
+    <value>Calculate a unified PDG</value>
+  </data>
+  <data name="str39014" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="str39015" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="str39016" xml:space="preserve">
+    <value>Altitude at termination FIX:</value>
+  </data>
+  <data name="str39017" xml:space="preserve">
+    <value>Turning area is limited by distance:</value>
+  </data>
+  <data name="str39018" xml:space="preserve">
+    <value>Enroute req. altitude:</value>
+  </data>
+  <data name="str39019" xml:space="preserve">
+    <value>Procedure termination altitude:</value>
+  </data>
+  <data name="str40000" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="str40001" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="str40002" xml:space="preserve">
+    <value>Lateral distance from DNT</value>
+  </data>
+  <data name="str40003" xml:space="preserve">
+    <value>Distance from DER along DNT</value>
+  </data>
+  <data name="str40004" xml:space="preserve">
+    <value>Hor. accuracy</value>
+  </data>
+  <data name="str40005" xml:space="preserve">
+    <value>Height above DER</value>
+  </data>
+  <data name="str40006" xml:space="preserve">
+    <value>Vert. accuracy</value>
+  </data>
+  <data name="str40007" xml:space="preserve">
+    <value>Gradient to the obstacle top, %</value>
+  </data>
+  <data name="str40008" xml:space="preserve">
+    <value>MOC 0.8%</value>
+  </data>
+  <data name="str40009" xml:space="preserve">
+    <value>Req. H 0.8%</value>
+  </data>
+  <data name="str40010" xml:space="preserve">
+    <value>Req H &gt; 60 m</value>
+  </data>
+  <data name="str40011" xml:space="preserve">
+    <value>Req. gradient, %</value>
+  </data>
+  <data name="str40012" xml:space="preserve">
+    <value>PDG, %</value>
+  </data>
+  <data name="str40013" xml:space="preserve">
+    <value>Track length of climbing at PDG</value>
+  </data>
+  <data name="str40014" xml:space="preserve">
+    <value>Req. height reached using PDG</value>
+  </data>
+  <data name="str40015" xml:space="preserve">
+    <value>Distance to obstacle causing gradient:</value>
+  </data>
+  <data name="str40016" xml:space="preserve">
+    <value>A new PDG operational distance:</value>
+  </data>
+  <data name="str40017" xml:space="preserve">
+    <value>PDG:</value>
+  </data>
+  <data name="str40018" xml:space="preserve">
+    <value>Distance from DER covering obstacles causing TNA/H:</value>
+  </data>
+  <data name="str40019" xml:space="preserve">
+    <value>TNA/TNH:</value>
+  </data>
+  <data name="str40020" xml:space="preserve">
+    <value>Distance from DER to TIA latest border:</value>
+  </data>
+  <data name="str40021" xml:space="preserve">
+    <value>DER elevation relative to MSL:</value>
+  </data>
+  <data name="str40022" xml:space="preserve">
+    <value>TNA/TNH:</value>
+  </data>
+  <data name="str40023" xml:space="preserve">
+    <value>Departure magnetic course:</value>
+  </data>
+  <data name="str40024" xml:space="preserve">
+    <value>Departure course displacement:</value>
+  </data>
+  <data name="str40025" xml:space="preserve">
+    <value>Obstacle causing PDG:</value>
+  </data>
+  <data name="str40026" xml:space="preserve">
+    <value>Height resulting from PDG</value>
+  </data>
+  <data name="str40027" xml:space="preserve">
+    <value>H penetration</value>
+  </data>
+  <data name="str40028" xml:space="preserve">
+    <value>BRG. GEO. , °</value>
+  </data>
+  <data name="str40029" xml:space="preserve">
+    <value>Shortage,</value>
+  </data>
+  <data name="str40030" xml:space="preserve">
+    <value>Close-In</value>
+  </data>
+  <data name="str40031" xml:space="preserve">
+    <value>Req. TNH</value>
+  </data>
+  <data name="str40032" xml:space="preserve">
+    <value>d0</value>
+  </data>
+  <data name="str40033" xml:space="preserve">
+    <value>Dr*</value>
+  </data>
+  <data name="str40034" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str40101" xml:space="preserve">
+    <value>Altitude at K-line:</value>
+  </data>
+  <data name="str40102" xml:space="preserve">
+    <value>Height at K-line:</value>
+  </data>
+  <data name="str40103" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str40104" xml:space="preserve">
+    <value>Req. H</value>
+  </data>
+  <data name="str40105" xml:space="preserve">
+    <value>Clearance calculation</value>
+  </data>
+  <data name="str00523" xml:space="preserve">
+    <value>To the intersection with distance</value>
+  </data>
+  <data name="str00704" xml:space="preserve">
+    <value>Effective date: </value>
+  </data>
+  <data name="str00808" xml:space="preserve">
+    <value>Speeds are in </value>
+  </data>
+  <data name="str12608" xml:space="preserve">
+    <value>PDG</value>
+  </data>
+  <data name="str13517" xml:space="preserve">
+    <value>Magnetic course:</value>
+  </data>
+  <data name="str00173" xml:space="preserve">
+    <value>Accuracy report</value>
+  </data>
+</root>

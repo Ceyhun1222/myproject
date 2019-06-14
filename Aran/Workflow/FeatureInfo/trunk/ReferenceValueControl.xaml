@@ -1,0 +1,108 @@
+﻿<UserControl x:Class="Aran.Aim.FeatureInfo.ReferenceValueControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.Resources>
+        
+        <Style x:Key="r_noFocusableListItem" TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Focusable" Value="False"/>
+        </Style>
+        
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <ListBox
+            x:Name="ui_refLB"
+            BorderThickness="0"
+            ItemsSource="{Binding RefList}"
+            Grid.Column="1"
+            ItemContainerStyle="{StaticResource r_noFocusableListItem}">
+
+            <ListBox.Resources>
+                <Style x:Key="r_visibleIfList" TargetType="FrameworkElement">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=ui_refLB, Path=DataContext.IsList}" Value="False">
+                            <Setter Property="Visibility" Value="Collapsed" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.Resources>
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+
+                        <TextBlock>
+                            <TextBlock Style="{StaticResource r_visibleIfList}">
+                                <Bold>
+                                    <TextBlock Text="{Binding Index}" />
+                                    <TextBlock Text=". " />
+                                </Bold>
+                            </TextBlock>
+
+                            <TextBlock 
+                                Text="{Binding FeatureType}">
+                                <TextBlock Text="  ">
+                                    <Hyperlink Click="FeatureRefOpen_Click">
+                                        <Run Text="Open" />
+                                    </Hyperlink>
+                                </TextBlock>
+                            </TextBlock>                                    
+                        </TextBlock>
+
+                        <TextBox 
+                            BorderThickness="0"
+                            IsReadOnly="True"
+                            Text="{Binding Identifier, Mode=OneWay}"/>
+                                
+                        <Separator>
+                            <Separator.Style>
+                                <Style TargetType="FrameworkElement">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding IsLast}" Value="True">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Separator.Style>
+                        </Separator>
+                                
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <TextBlock Grid.Row="1" Margin="6">
+            <Hyperlink Click="MoreFeatureList_Click">
+                <Run Text="More" />
+            </Hyperlink>
+            
+            <Bold>
+                <TextBlock Text=" (" />
+                <TextBlock Text="{Binding MoreFeatureCount}" />
+                <TextBlock Text=")" />    
+            </Bold>
+                
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsMoreButtonVisible}" Value="True">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+                
+        </TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/MenuBar.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/MenuButton.generic.xaml" />
+		<!--<ResourceDictionary Source="/Technewlogic.WpfShell;component/Themes/SubMenu.generic.xaml" />-->
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/SubMenuContent.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/HeadingContentView.generic.xaml" />
+		<!--<ResourceDictionary Source="/Technewlogic.WpfShell;component/Themes/UserDialog.generic.xaml" />-->
+		<!--<ResourceDictionary Source="/Technewlogic.WpfShell;component/Themes/ProgressInfo.generic.xaml" />-->
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/NumericTextBox.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/LinkButton.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/KeyValueGrid.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/SortListView.generic.xaml" />
+
+		<!-- CRUD -->
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/CrudDisplay.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/DetailsPanel.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/ModificationPanel.generic.xaml" />
+        <ResourceDictionary Source="/WpfEnvelope;component/Themes/MasterView.generic.xaml" />
+		
+		<!-- BI -->
+		<!--<ResourceDictionary Source="/Technewlogic.WpfShell;component/Themes/BIDisplay.generic.xaml" />-->
+	</ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1217D10E-3871-4398-956F-2E2BAF4CECAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PVT</RootNamespace>
+    <AssemblyName>PVTool</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MVVMLight\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MVVMLight\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MVVMLight\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\RefFiles\HtmlAgilityPack\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.1.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\..\RefFiles\itextsharp\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\..\..\RefFiles\itextsharp\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\..\RefFiles\itextsharp\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=3.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MathNet.Numerics.3.11.1\lib\net40\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MVVMLight\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="presentationframework.aero2">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\MVVMLight\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine\CDOTMA\Converters\Converters.cs" />
+    <Compile Include="Engine\CDOTMA\Geometry\Geometry.cs" />
+    <Compile Include="Engine\CDOTMA\Graphics\Graphics.cs" />
+    <Compile Include="Engine\CDOTMA\Database\DbProvider.cs" />
+    <Compile Include="Engine\CDOTMA\CDOTMAEnvironment.cs" />
+    <Compile Include="Engine\CDOTMA\Logging\Logger.cs" />
+    <Compile Include="Engine\Common\Converters\ConvertersManager.cs" />
+    <Compile Include="Engine\Common\Converters\IConverters.cs" />
+    <Compile Include="Engine\Common\Database\CommonDbProvider.cs" />
+    <Compile Include="Engine\Common\Database\DbManager.cs" />
+    <Compile Include="Engine\Common\Geometry\CommonGeometry.cs" />
+    <Compile Include="Engine\Common\Geometry\GeometryManager.cs" />
+    <Compile Include="Engine\Common\Geometry\IGeometry.cs" />
+    <Compile Include="Engine\Common\Graphics\CommonGraphics.cs" />
+    <Compile Include="Engine\Common\Logging\ILogger.cs" />
+    <Compile Include="Engine\Common\Logging\LogManager.cs" />
+    <Compile Include="Engine\Common\Utils\IUtils.cs" />
+    <Compile Include="Engine\Common\Utils\UtilsManager.cs" />
+    <Compile Include="Engine\IAIM\Converters\Converters.cs" />
+    <Compile Include="Engine\IAIM\Database\DbProvider.cs" />
+    <Compile Include="Engine\Common\Database\IDbProvider.cs" />
+    <Compile Include="Engine\Common\Graphics\GraphicsManager.cs" />
+    <Compile Include="Engine\IAIM\Geometry\Geometry.cs" />
+    <Compile Include="Engine\IAIM\Graphics\Graphics.cs" />
+    <Compile Include="Engine\Common\Graphics\IGraphics.cs" />
+    <Compile Include="Engine\Environments.cs" />
+    <Compile Include="Engine\Environment.cs" />
+    <Compile Include="Engine\IAIM\IAIMEnvironment.cs" />
+    <Compile Include="Engine\IAIM\Logging\Logger.cs" />
+    <Compile Include="Engine\IAIM\Utils\GDBExportBase.cs" />
+    <Compile Include="Engine\IAIM\Utils\HoldingGBExport.cs" />
+    <Compile Include="Engine\IAIM\Utils\ProcedureGDBExport.cs" />
+    <Compile Include="Engine\IAIM\Utils\Utils.cs" />
+    <Compile Include="Graphics\CommonHoldingDrawer.cs" />
+    <Compile Include="Graphics\CommonProcedureDrawer.cs" />
+    <Compile Include="Graphics\CurveHoldingDrawer.cs" />
+    <Compile Include="Graphics\CurveProcedureDrawer.cs" />
+    <Compile Include="Graphics\DrawerBase.cs" />
+    <Compile Include="Graphics\Handlers.cs" />
+    <Compile Include="Graphics\HoldingDrawerBase.cs" />
+    <Compile Include="Graphics\ObstacleAssestmentAreaHoldingDrawer.cs" />
+    <Compile Include="Graphics\ObstacleAssestmentAreaProcedureDrawer.cs" />
+    <Compile Include="Graphics\PointHoldingDrawer.cs" />
+    <Compile Include="Graphics\PointProcedureDrawer.cs" />
+    <Compile Include="Graphics\FixToleranceAreaProcedureeDrawer.cs" />
+    <Compile Include="Graphics\IFeatureDrawer.cs" />
+    <Compile Include="Graphics\IProcedureDrawer.cs" />
+    <Compile Include="Graphics\SecondaryProttectedAreaProcedureDrawer.cs" />
+    <Compile Include="Graphics\ProcedureDrawerBase.cs" />
+    <Compile Include="Graphics\ProcedureDrawType.cs" />
+    <Compile Include="Graphics\PrimaryProttectedAreaProcedureDrawer.cs" />
+    <Compile Include="Integration\IAIM\PVTPlugin.cs" />
+    <Compile Include="Model\AirNavigation\GIS\GeoPoint.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Airport.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\ApproachProcedure.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\ArrivalProcedure.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\BaseClass.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\DepartureProcedure.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Feature.cs" />
+    <Compile Include="Model\AirNavigation\GIS\Point.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\FeatureReport.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\HoldingPattern.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\ObstacleAssestmentArea.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Points.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Procedure.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Runway.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\SegmentLeg.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\Transtion.cs" />
+    <Compile Include="Model\AirNavigation\Procedure\VerticalStructure.cs" />
+    <Compile Include="Model\Drawing\Color.cs" />
+    <Compile Include="Model\Drawing\Style.cs" />
+    <Compile Include="Model\Drawing\Styles.cs" />
+    <Compile Include="Model\Drawing\LineStyle.cs" />
+    <Compile Include="Model\Geometry\Box.cs" />
+    <Compile Include="Model\Geometry\Ellipse.cs" />
+    <Compile Include="Model\Geometry\Geometry.cs" />
+    <Compile Include="Model\Geometry\Line.cs" />
+    <Compile Include="Model\Geometry\Point.cs" />
+    <Compile Include="Model\Geometry\PolyLine.cs" />
+    <Compile Include="Model\Geometry\Vector.cs" />
+    <Compile Include="Model\Plot\Axis.cs" />
+    <Compile Include="Model\Plot\Box.cs" />
+    <Compile Include="Model\Plot\LinearAxis.cs" />
+    <Compile Include="Model\Plot\Margin.cs" />
+    <Compile Include="Model\Plot\PlotElement.cs" />
+    <Compile Include="Model\Plot\PlotGeometry.cs" />
+    <Compile Include="Model\Plot\PlotModel.cs" />
+    <Compile Include="Model\Screenshot.cs" />
+    <Compile Include="Model\Transformations\CommonTransformation.cs" />
+    <Compile Include="Model\Transformations\ITransformation.cs" />
+    <Compile Include="Model\Plot\Point.cs" />
+    <Compile Include="Model\Transformations\ProjectiveTransformation.cs" />
+    <Compile Include="Model\Transformations\ScaleTransformation.cs" />
+    <Compile Include="Model\Transformations\XZTransformation.cs" />
+    <Compile Include="UI\Converters\EnumToVisibilityConverter.cs" />
+    <Compile Include="UI\Settings\Options.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Graphics\DrawOperation.cs" />
+    <Compile Include="UI\Converters\BoolToValueConverter.cs" />
+    <Compile Include="UI\Converters\ColorToBrushConverter.cs" />
+    <Compile Include="UI\Converters\PercentageConverter.cs" />
+    <Compile Include="Model\Drawing\PointStyle.cs" />
+    <Compile Include="Model\Drawing\Symbols.cs" />
+    <Compile Include="UI\Utils\WebBrowserExtensions.cs" />
+    <Compile Include="UI\ViewModel\BaseViewModel.cs" />
+    <Compile Include="UI\ViewModel\BlockerModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Arrival\ArrivalLegsViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Arrival\ArrivalTransitionViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Arrival\ArrivalViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\AssessmentAreasViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\FeatureViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\HoldingViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Departure\DepartureLegsViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Departure\DepartureTransitionViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Approach\ApproachLegsViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Approach\ApproachTransitionViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Approach\ApproachViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\CommonProcedureViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Departure\DepartureViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\ProcedureViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\LegsViewModel.cs" />
+    <Compile Include="UI\ViewModel\MainViewModel.cs" />
+    <Compile Include="UI\ViewModel\ProfileGraphViewModel.cs" />
+    <Compile Include="UI\ViewModel\ReportViewModel.cs" />
+    <Compile Include="UI\ViewModel\ScreenshotViewModel.cs" />
+    <Compile Include="UI\ViewModel\StateViewModel.cs" />
+    <Compile Include="UI\ViewModel\Procedure\Base\TransitionViewModel.cs" />
+    <Compile Include="UI\View\ColorOptionsView.xaml.cs">
+      <DependentUpon>ColorOptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ProfileGraphView.xaml.cs">
+      <DependentUpon>ProfileGraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ReportView.xaml.cs">
+      <DependentUpon>ReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\ScreenshotView.xaml.cs">
+      <DependentUpon>ScreenshotView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\AreaControl.xaml.cs">
+      <DependentUpon>AreaControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\ArrivalOverviewControl.xaml.cs">
+      <DependentUpon>ArrivalOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\HoldingOverviewControl.xaml.cs">
+      <DependentUpon>HoldingOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\HoldingViewGrid.xaml.cs">
+      <DependentUpon>HoldingViewGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\ProcedureViewGrid.xaml.cs">
+      <DependentUpon>ProcedureViewGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\DepartureOverviewControl.xaml.cs">
+      <DependentUpon>DepartureOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\ApproachOverviewControl.xaml.cs">
+      <DependentUpon>ApproachOverviewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\TransitionContol.xaml.cs">
+      <DependentUpon>TransitionContol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\LegsContol.xaml.cs">
+      <DependentUpon>LegsContol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\ProcedureViewControl.xaml.cs">
+      <DependentUpon>ProcedureViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Color Options\ColorOptionGroupBox.xaml.cs">
+      <DependentUpon>ColorOptionGroupBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Color Options\ColorOptionsControl.xaml.cs">
+      <DependentUpon>ColorOptionsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Procedure\CommonProcedureControl.xaml.cs">
+      <DependentUpon>CommonProcedureControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Color Options\LineDrawingComboBox.xaml.cs">
+      <DependentUpon>LineDrawingComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Plot\PlotCanvas.cs" />
+    <Compile Include="UI\View\UserControls\Plot\PlotCanvas.xaml.cs">
+      <DependentUpon>PlotCanvas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Color Options\PointDrawComboBox.xaml.cs">
+      <DependentUpon>PointDrawComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\View\UserControls\Color Options\SizeComboBox.xaml.cs">
+      <DependentUpon>SizeComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Extentions.cs" />
+    <Compile Include="Utils\PDFDocument.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32f3ce80-0590-4881-8614-1cddf8bd052e}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799ad2bf-bd65-4584-8b84-bffe4b5abcb0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Validation\Info\trunk\Aran.Aim.ValidationInfo.csproj">
+      <Project>{37846d3b-46a6-4fbe-8cec-4654163f569e}</Project>
+      <Name>Aran.Aim.ValidationInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524bf09-dd69-4a72-a213-d6a69701144d}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{bcbbde4e-098d-45e9-9b72-0a2e6a7cae6a}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\IO\trunk\Aran.Geometries.IO.csproj">
+      <Project>{6904a5cc-44b7-4c24-b416-98198cc00eee}</Project>
+      <Name>Aran.Geometries.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38b5708a-8c3d-40ef-bf53-819b03e8e9f6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{c796c154-348a-4f4f-8843-807fbfa0456c}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Panda\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14c16238-324e-417a-92f9-684d5d2bb6e9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184e1f94-ed6f-481e-84ff-2efd1468ccc6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Panda\trunk\Aran.Queries.Panda.csproj">
+      <Project>{8238c02f-87e7-4fad-99a0-32d4c5cdab73}</Project>
+      <Name>Aran.Queries.Panda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8e1ca34f-d479-4637-8a0a-3e8e1f23cc9d}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\Animation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\Common.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\Styles\RoundedButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\ColorOptionsView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\ProfileGraphView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\ReportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UI\View\ScreenshotView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\AreaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\ArrivalOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\HoldingOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\HoldingViewGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\ProcedureViewGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\DepartureOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\ApproachOverviewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\TransitionContol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\LegsContol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\ProcedureViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Color Options\ColorOptionGroupBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Color Options\ColorOptionsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Procedure\CommonProcedureControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\MainView.xaml">
+      <SubType>Form</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Color Options\LineDrawingComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Plot\PlotCanvas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Color Options\PointDrawComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\View\UserControls\Color Options\SizeComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Arrow-double-up-icon.png" />
+    <Content Include="Static\Images\ArrowDoubleDown.png" />
+    <Content Include="Static\Images\ArrowDoubleUp.png" />
+    <Resource Include="Static\Images\document-export.png" />
+    <Resource Include="Static\Images\pdf-icon.png" />
+    <Resource Include="Static\Images\left32.png" />
+    <Resource Include="Static\Images\right32.png" />
+    <Resource Include="Static\Images\print.png" />
+    <Resource Include="Static\Images\left.png" />
+    <Resource Include="Static\Images\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\ViewModel\Procedure\Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\Styles\Entypo.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,56 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 10;
+    int i = 1;
+}
+
+@if (Model != null && Model.Count > 0)
+{
+<table frame="border" align="center">
+    <colgroup>
+        <col width="7%" />
+        <col width="9%" />
+        <col width="7%" />
+        <col width="9%" />
+        <col width="7%" />
+        <col width="24%" />
+        <col width="16%" />
+        <col width="7%" />
+        <col width="7%" />
+        <col width="7%" />
+    </colgroup>
+	<thead>
+	<tr class="Table-row-type-1">
+	    @for (i = 1; i <= Col; i++)
+	    {
+	        <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD214_"+@i))</th>
+	    }
+	</tr>
+	<tr class="Table-row-type-2">
+	    @for (i = 1; i <= Col; i++)
+	    {
+	        <th class="bleft btop bright bbottom">@i</th>
+	    }
+	</tr>
+	</thead>
+
+		<tbody valign="top">
+		@foreach (var data in Model)
+		{
+			<tr>
+				<td class="bleft btop bright bbottom">@Raw(data.Designator)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.ALSIntensityLevel), @Raw(data.ALSType), @Raw(data.ALSLength)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.THRColour)<br/>@Raw(data.WBARColour)<br/>@Raw(data.WBARDesc)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.VASIS)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.TDZColour)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.CLColour)<br/>@Raw(data.CLIntensity)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.EDGEColour)<br/>@Raw(data.EDGEIntensity)</td>
+				<td class="bleft btop bright bbottom"></td>
+				<td class="bleft btop bright bbottom">@Raw(data.SWYColour)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.Remarks)</td>
+			</tr>
+		}
+		</tbody>
+</table>
+}

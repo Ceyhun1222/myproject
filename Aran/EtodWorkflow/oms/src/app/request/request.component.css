@@ -1,0 +1,26 @@
+.container {
+	height: calc(100vh - 48px);
+}
+
+.container > .row >div:first-child{
+	height: calc(100vh - 48px);
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+ul.list-unstyled li span {
+	font-weight: 500;
+}
+ul.list-unstyled li > span:first-child {
+	margin: 0!important;
+	font-weight: 500;
+	color: #7b7b7b!important;
+}
+
+td,th{
+	padding: 5px!important;
+}
+
+#oms-request-style{
+	min-height: 350px;
+}

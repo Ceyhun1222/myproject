@@ -1,0 +1,80 @@
+@using System
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        content {
+            display: block;
+            max-width: 600px !important;
+            margin: auto !important;
+        }
+        table {
+            border: 1px solid darkgray;
+            border-collapse: collapse;
+			width: 100%;
+        }
+        td {
+            border: 1px solid darkgray;
+            padding: 2px
+        }
+        thead {
+            background: lightgrey
+        }
+        th {
+            border: 1px solid darkgray;
+            text-align: left;
+            padding: 4px;
+        }
+        tbody tr:nth-child(odd) {
+            background-color: whitesmoke;
+        }
+		.head-line {
+			border: none;
+			height: 0.05em;
+			color: gray;
+			background-color: gray;
+		}
+		.sbvr {
+		    font-weight: normal;
+			font-style: italic;
+		}
+    </style>
+</head>
+<body>
+	<content>
+		<td style="vertical-align: middle;">
+			<h2 style="text-align: center">Business Rules Report</h2>
+		</td>
+		@foreach (var profileItem in Model.Profiles)
+		{
+			<td style="vertical-align: left;">
+				<h3>@profileItem.Type</h3>
+			</td>
+			foreach (var ruleItem in profileItem.Rules)
+			{
+				<table>
+					<thead>
+						<tr>
+							<th colspan="2">
+								<p>@ruleItem.Uid</p>
+								<hr class="head-line">
+								<p class="sbvr">@ruleItem.Sbvr</p>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+					@foreach (var feature in ruleItem.Features)
+					{
+						<tr>
+							<td>@feature.Type</td>
+							<td>@feature.Identifier</td>
+						</tr>
+					}
+					</tbody>
+				</table>
+				<br>
+			}
+		}
+	</content>
+</body>
+</html>

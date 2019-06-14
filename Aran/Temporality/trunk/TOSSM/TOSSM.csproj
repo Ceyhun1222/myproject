@@ -1,0 +1,1492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3721960C-9282-450C-9279-8121D31C0212}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TOSSM</RootNamespace>
+    <AssemblyName>TOSSM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_LOCAL_SERVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>world.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>TOSSM.Common.EntryPoint</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.93.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\ClosedXML.0.68.1\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\DocumentFormat.OpenXml.1.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcCatalogUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMap, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoX, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoXUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesNetCDF, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesOleDB, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRasterUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditorExt, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EngineCore, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributed, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributedUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoReferenceUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Location, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.LocationUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalysis, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.OutputExtensions, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.OutputUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Fare, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\bin\Debug\Fare.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.3.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\NHibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphSharp">
+      <HintPath>..\..\..\..\RefFiles\Graph\GraphSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphSharp.Contracts">
+      <HintPath>..\..\..\..\RefFiles\Graph\GraphSharp.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="GraphSharp.Controls">
+      <HintPath>..\..\..\..\RefFiles\Graph\GraphSharp.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Contracts">
+      <HintPath>..\..\..\..\RefFiles\Graph\Microsoft.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.3.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\NHibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph">
+      <HintPath>..\..\..\..\RefFiles\Graph\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\RazorEngine\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\Microsoft.AspNet.Razor\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Windows7, Version=2016.3.1024.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF R3 2016\Binaries.NoXaml\WPF45\Telerik.Windows.Themes.Windows7.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UMCommonModels, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFExtensions, Version=1.0.3437.34043, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\Graph\WPFExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Common\EntryPoint.cs" />
+    <Compile Include="Common\Error.cs" />
+    <Compile Include="Common\UnsafeNative.cs" />
+    <Compile Include="Control\ChildListView.cs" />
+    <Compile Include="Control\HierarchyControl.cs" />
+    <Compile Include="Converter\ColorConverter.cs" />
+    <Compile Include="Converter\EnumConverter.cs" />
+    <Compile Include="Extensions\EnumerationExtension.cs" />
+    <Compile Include="Geometry\EsriUtil.cs" />
+    <Compile Include="Geometry\GeoFormatter.cs" />
+    <Compile Include="Geometry\GeometrySimplifier.cs" />
+    <Compile Include="Geometry\NativeMethods.cs" />
+    <Compile Include="Graph\PocEdge.cs" />
+    <Compile Include="Graph\PocGraph.cs" />
+    <Compile Include="Graph\PocVertex.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Report\Model\AccuracyReportModel.cs" />
+    <Compile Include="Report\Model\ReportViewModel.cs" />
+    <Compile Include="Util\AccuracyReportUtil.cs" />
+    <Compile Include="Util\ApplicationLogUtil.cs" />
+    <Compile Include="Control\ClipboardMonitor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\ClipboardMonitor.cs" />
+    <Compile Include="Util\DataProvider.cs" />
+    <Compile Include="Util\DeltaMask.cs" />
+    <Compile Include="Util\DispatcherUtil.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_2.cs" />
+    <Compile Include="Util\GeoUtil\_ClassCreationArgs.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Annotations.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Add_Data.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Workspaces.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Geometry.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Dataset_And_Classes.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil_Names.cs" />
+    <Compile Include="Util\GeoUtil\GeoDbUtil.cs" />
+    <Compile Include="Util\GeoUtil\_RelationCreationArgs.cs" />
+    <Compile Include="Util\MessageBoxHelper.cs" />
+    <Compile Include="Util\Notams\NotamUtils.cs" />
+    <Compile Include="Util\Notams\Operations\AirspaceOperationBase.cs" />
+    <Compile Include="Util\Notams\Operations\WarningAirspaceOperation.cs" />
+    <Compile Include="Util\Notams\Operations\PermanentAirspaceOperationBase.cs" />
+    <Compile Include="Util\Notams\Operations\AirspaceReservationOperation.cs" />
+    <Compile Include="Util\Notams\Operations\BaseOperation.cs" />
+    <Compile Include="Util\Notams\Operations\INotamOperation.cs" />
+    <Compile Include="Util\Notams\NotamConverter.cs" />
+    <Compile Include="Util\Notams\NotamManager.cs" />
+    <Compile Include="Util\Notams\NotamParser.cs" />
+    <Compile Include="Util\Notams\Operations\TemporaryAirspaceOperation.cs" />
+    <Compile Include="Util\Notams\Xml\NotamXml.cs" />
+    <Compile Include="Util\Parallel.cs" />
+    <Compile Include="Util\Razor.cs" />
+    <Compile Include="Util\SafeWinFormInvoker.cs" />
+    <Compile Include="Util\StateDeltaUtil.cs" />
+    <Compile Include="Util\Wrapper\LightFeatureWrapper.cs" />
+    <Compile Include="VersionTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VersionTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Control\DatabaseDate\DatabaseDateViewModel.cs" />
+    <Compile Include="ViewModel\Control\DataSourceTemplate\EditDataSourceTemplateViewModel.cs" />
+    <Compile Include="ViewModel\Control\EventView\EventViewModel.cs" />
+    <Compile Include="ViewModel\Control\FeatureSelectionControl\FeatureSelectionViewModel.cs" />
+    <Compile Include="ViewModel\Control\Filter\FilterViewModel.cs" />
+    <Compile Include="ViewModel\Control\Filter\SingleFilterViewModel.cs" />
+    <Compile Include="ViewModel\Control\GuidControl\GuidControlViewModel.cs" />
+    <Compile Include="ViewModel\Control\LightElementControl\LightElementViewModel.cs" />
+    <Compile Include="ViewModel\Control\Interpretation\InterpretationViewModel.cs" />
+    <Compile Include="ViewModel\Control\OriginatorFilter\OriginatorFilterViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertyPrecision\PropertyPrecisionControlViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertySelector\Menu\AnnotationLanguageViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertySelector\Menu\PropertyMenuItemViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertySelector\Menu\MenuItemViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertySelector\Menu\PropertySetMenuItemViewModel.cs" />
+    <Compile Include="ViewModel\Control\PropertySelector\Menu\SeparatorViewModel.cs" />
+    <Compile Include="ViewModel\Control\SlotValidationOptionViewModel.cs" />
+    <Compile Include="ViewModel\Control\XmlViewer\XmlViewerViewModel.cs" />
+    <Compile Include="ViewModel\Document\Editor\NotamFeatureEditorViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\SlotValidationOverviewViewModel.cs" />
+    <Compile Include="Util\AixmGenerator.cs" />
+    <Compile Include="ViewModel\Enums\EventsEnum.cs" />
+    <Compile Include="ViewModel\Enums\StatesEnum.cs" />
+    <Compile Include="ViewModel\Tool\AIMSLToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\DataSourceTemplateManagerViewModel.cs" />
+    <Compile Include="ViewModel\Enums\ExportEnum.cs" />
+    <Compile Include="ViewModel\Tool\ExportToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\LogViewerToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\NotamPresenterViewModel.cs" />
+    <Compile Include="ViewModel\Tool\NotamViewModel.cs" />
+    <Compile Include="ViewModel\Tool\SlotMergeViewModel.cs" />
+    <Compile Include="ViewModel\Tool\UpdatableToolViewModel.cs" />
+    <Compile Include="View\Control\DatabaseDateControl.xaml.cs">
+      <DependentUpon>DatabaseDateControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\EditDataSourceControl.xaml.cs">
+      <DependentUpon>EditDataSourceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\FeatureSelectionControl.xaml.cs">
+      <DependentUpon>FeatureSelectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\AnnotationLanguageControl.xaml.cs">
+      <DependentUpon>AnnotationLanguageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\LanguageSelector.xaml.cs">
+      <DependentUpon>LanguageSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\FilteredComboBox.xaml.cs">
+      <DependentUpon>FilteredComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\GuidControl.xaml.cs">
+      <DependentUpon>GuidControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\InterpretationControl.xaml.cs">
+      <DependentUpon>InterpretationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\LightElementControl.xaml.cs">
+      <DependentUpon>LightElementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\RichTextEditor.xaml.cs">
+      <DependentUpon>RichTextControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\SlotValidationOptionView.xaml.cs">
+      <DependentUpon>SlotValidationOptionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\XmlViewer.xaml.cs">
+      <DependentUpon>XmlViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Document\DocumentEditingType.cs" />
+    <Compile Include="ViewModel\Document\DocumentType.cs" />
+    <Compile Include="ViewModel\Document\Editor\FeatureEditorDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\FeatureDependencyReportDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Graph\RelationExplorerDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Relations\EraserDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Evolution\EvolutionDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\HierarchyDocViewerModel.cs" />
+    <Compile Include="ViewModel\Document\IFocusableDataGridHolder.cs" />
+    <Compile Include="ViewModel\Document\Relations\GeoIntersectionDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Relations\Util\RelationDirection.cs" />
+    <Compile Include="ViewModel\Document\Relations\Util\RelationPurpose.cs" />
+    <Compile Include="ViewModel\Document\Relations\RelationsDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Relations\Util\SingleTypeRelationViewModel.cs" />
+    <Compile Include="ViewModel\Document\Single\Editable\ListPropertyModel.cs" />
+    <Compile Include="ViewModel\Document\Single\Editable\ReflectionEditablePropertyModel.cs" />
+    <Compile Include="ViewModel\Document\Single\ReadOnly\SingleModelBase.cs" />
+    <Compile Include="ViewModel\Document\Single\HistorySingleViewModel.cs" />
+    <Compile Include="ViewModel\Document\Single\Editable\AimEditablePropertyModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\ProblemList\MissingLinksProblemListViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\Single\MissingLinkViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\ProblemList\_ProblemListViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\ProblemViewModelTemplateSelector.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\ProblemList\SyntaxProblemListViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\Single\SyntaxErrorViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\SlotContentDocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\SlotValidationCategoryViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\SlotValidationReportViewModel.cs" />
+    <Compile Include="ViewModel\Graph\PocGraphLayout.cs" />
+    <Compile Include="ViewModel\Pane\ColumnSet.cs" />
+    <Compile Include="ViewModel\Pane\DataPresenterModel.cs" />
+    <Compile Include="ViewModel\Pane\IPresenterParent.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\ProblemList\BusinessRulesCategoryViewModel.cs" />
+    <Compile Include="ViewModel\Tool\BusinessRulesManagerToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\FeatureDependencyManagerToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\ImportToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\InformerToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\MyAccountToolViewModel.cs" />
+    <Compile Include="Util\Wrapper\ReadonlyFeatureWrapper.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Editor\PrecisionSubEditorViewModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Util\HierarchyToolViewerModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Util\PrecisionEditorPropertyTemplateSelector.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\PrecisionEditorToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Editor\PrecisionSubViewerProvider.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Single\ComplexPropertyPrecisionViewModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Single\DoublePropertyPrecisionViewModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Single\SinglePropertyPrecisionViewModel.cs" />
+    <Compile Include="ViewModel\Tool\PropertyPrecision\Single\ValPropertyPrecisionViewModel.cs" />
+    <Compile Include="ViewModel\Tool\RelationFinderToolViewModel.cs" />
+    <Compile Include="ViewModel\Document\Slot\Problems\Single\RuleViewModel.cs" />
+    <Compile Include="ViewModel\Tool\SlotSelectorToolViewModel.cs" />
+    <Compile Include="ViewModel\Tool\UserManagerToolViewModel.cs" />
+    <Compile Include="Converter\ActiveDocumentConverter.cs" />
+    <Compile Include="Converter\GridLengthConverter.cs" />
+    <Compile Include="Converter\HumanReadableConverter.cs" />
+    <Compile Include="ViewModel\Pane\Base\DocViewModel.cs" />
+    <Compile Include="ViewModel\Document\Editor\SubViewerProvider.cs" />
+    <Compile Include="ViewModel\Document\Editor\FeatureSubEditorDocViewModel.cs" />
+    <Compile Include="ViewModel\Tool\FeaturePresenterToolViewModel.cs" />
+    <Compile Include="ViewModel\MainManagerModel.cs" />
+    <Compile Include="ViewModel\Pane\Base\PaneViewModel.cs" />
+    <Compile Include="ViewModel\Document\Single\Editable\EditableSinglePropertyModel.cs" />
+    <Compile Include="ViewModel\Document\Single\ReadOnly\ReadOnlySinglePropertyModel.cs" />
+    <Compile Include="View\Control\EditPrivateSlotControl.xaml.cs">
+      <DependentUpon>EditPrivateSlotControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\EditPublicSlotControl.xaml.cs">
+      <DependentUpon>EditPublicSlotControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\FeatureTypeSelector.xaml.cs">
+      <DependentUpon>FeatureTypeSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\OriginationFilter.xaml.cs">
+      <DependentUpon>OriginationFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Control\PropertyPrecisionControl.xaml.cs">
+      <DependentUpon>PropertyPrecisionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Document\Editor\EditorPropertyTemplateSelector.cs" />
+    <Compile Include="ViewModel\Tool\FeatureSelectorToolViewModel.cs" />
+    <Compile Include="ViewModel\Pane\Base\ToolViewModel.cs" />
+    <Compile Include="View\Control\TraditionalPropertyPrecisionControl.xaml.cs">
+      <DependentUpon>TraditionalPropertyPrecisionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\EventDialog.xaml.cs">
+      <DependentUpon>EventDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\GuidDialog.xaml.cs">
+      <DependentUpon>GuidDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\FeatureSelectionDialog.xaml.cs">
+      <DependentUpon>FeatureSelectionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\LightElementDialog.xaml.cs">
+      <DependentUpon>LightElementDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dialog\SlotValidationOptionDialog.xaml.cs">
+      <DependentUpon>SlotValidationOptionDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Editor\NotamFeatureEditor.xaml.cs">
+      <DependentUpon>NotamFeatureEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Editor\FeatureEditor.xaml.cs">
+      <DependentUpon>FeatureEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\FeatureDependencyReport.xaml.cs">
+      <DependentUpon>FeatureDependencyReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Graph\RelationExplorer.xaml.cs">
+      <DependentUpon>RelationExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Relations\FeatureEraser.xaml.cs">
+      <DependentUpon>FeatureEraser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Evolution\EvolutionViewer.xaml.cs">
+      <DependentUpon>EvolutionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Relations\GeoIntersectionViewer.xaml.cs">
+      <DependentUpon>GeoIntersectionViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Relations\RelationsViewer.xaml.cs">
+      <DependentUpon>RelationsViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Slot\SlotContentViewer.xaml.cs">
+      <DependentUpon>SlotContentViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Slot\SlotValidationCategoryView.xaml.cs">
+      <DependentUpon>SlotValidationCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Slot\SlotValidationOverviewView.xaml.cs">
+      <DependentUpon>SlotValidationOverviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Document\Slot\SlotValidationReport.xaml.cs">
+      <DependentUpon>SlotValidationReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DummyWindow.xaml.cs">
+      <DependentUpon>DummyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\DataSourceTemplateManager.xaml.cs">
+      <DependentUpon>DataSourceTemplateManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\ExportView.xaml.cs">
+      <DependentUpon>ExportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\AIMSLView.xaml.cs">
+      <DependentUpon>AIMSLView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\FeatureConflictViewModel.cs" />
+    <Compile Include="View\Tool\ImportView.xaml.cs">
+      <DependentUpon>ImportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\LogViewer.xaml.cs">
+      <DependentUpon>LogViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\NotamPresenterView.xaml.cs">
+      <DependentUpon>NotamPresenterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\Problems\BusinessRulesCategoryView.xaml.cs">
+      <DependentUpon>BusinessRulesCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\BusinessRulesManager.xaml.cs">
+      <DependentUpon>BusinessRulesManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\FeatureDependencyManager.xaml.cs">
+      <DependentUpon>FeatureDependencyManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\FeaturePresenter.xaml.cs">
+      <DependentUpon>FeaturePresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\FeatureSelector.xaml.cs">
+      <DependentUpon>FeatureSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainManagerWindow.xaml.cs">
+      <DependentUpon>MainManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Pane\LayoutInitializer.cs" />
+    <Compile Include="ViewModel\Pane\PanesStyleSelector.cs" />
+    <Compile Include="ViewModel\Pane\PanesTemplateSelector.cs" />
+    <Compile Include="View\Document\Editor\FeatureSubEditor.xaml.cs">
+      <DependentUpon>FeatureSubEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\Informer.xaml.cs">
+      <DependentUpon>Informer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\Problems\DatasetCategoryView.xaml.cs">
+      <DependentUpon>DatasetCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\Problems\MissingLinksCategoryView.xaml.cs">
+      <DependentUpon>MissingLinksCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\MyAccount.xaml.cs">
+      <DependentUpon>MyAccount.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\Problems\SyntaxCategoryView.xaml.cs">
+      <DependentUpon>SyntaxCategoryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\PropertyPrecisionEditor.xaml.cs">
+      <DependentUpon>PropertyPrecisionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\PropertyPrecisionSubEditor.xaml.cs">
+      <DependentUpon>PropertyPrecisionSubEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\RelationFinder.xaml.cs">
+      <DependentUpon>RelationFinder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\SlotMerge.xaml.cs">
+      <DependentUpon>SlotMerge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\SlotSelector.xaml.cs">
+      <DependentUpon>SlotSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tool\UserManager.xaml.cs">
+      <DependentUpon>UserManager.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\Dictionary\Graph.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionary\Images.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Dictionary\ItemTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionary\Menu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionary\ProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Dictionary\ToolBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\DatabaseDateControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\EditDataSourceControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\EventView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\FeatureSelectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\AnnotationLanguageControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Control\LanguageSelector.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Control\FilteredComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\GuidControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\InterpretationControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\LightElementControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\RichTextControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\SlotValidationOptionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\XmlViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Control\EditPrivateSlotControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\EditPublicSlotControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\FeatureTypeSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\OriginationFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\PropertyPrecisionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Control\TraditionalPropertyPrecisionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialog\EventDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialog\GuidDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialog\FeatureSelectionDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Dialog\LightElementDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Dialog\SlotValidationOptionDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Document\Editor\NotamFeatureEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Document\Editor\FeatureEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\FeatureDependencyReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Graph\RelationExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Relations\FeatureEraser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Evolution\EvolutionViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Relations\GeoIntersectionViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Relations\RelationsViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Slot\SlotContentViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Slot\SlotValidationCategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Slot\SlotValidationOverviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Slot\SlotValidationReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DummyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\DataSourceTemplateManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\ExportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\AIMSLView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Tool\ImportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\LogViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\NotamPresenterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\Problems\BusinessRulesCategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\BusinessRulesManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\FeatureDependencyManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\FeaturePresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\FeatureSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Document\Editor\FeatureSubEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\Informer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\Problems\DatasetCategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\Problems\MissingLinksCategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\MyAccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\Problems\SyntaxCategoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\PropertyPrecisionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\PropertyPrecisionSubEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\RelationFinder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\SlotMerge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Tool\SlotSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tool\UserManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Report\Template\Content.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="VersionTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VersionTemplate.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aim\AixmMessage\trunk\Aran.Aim.AixmMessage.csproj">
+      <Project>{571DFCBB-8CC5-45A8-AE95-F5323DB3B459}</Project>
+      <Name>Aran.Aim.AixmMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\CawProvider\trunk\Aran.Aim.CawProvider.csproj">
+      <Project>{e29ac94c-6ad0-4acd-abeb-cfced544af62}</Project>
+      <Name>Aran.Aim.CawProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\XmlProvider\trunk\Aran.Aim.Data.XmlProvider.csproj">
+      <Project>{4B2648E4-0F57-4D73-9CBB-DF8374AD4BAF}</Project>
+      <Name>Aran.Aim.Data.XmlProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Metadata\UI\Base\trunk\Aran.Aim.Metadata.UI.csproj">
+      <Project>{4914E959-CE35-452C-80DF-35B6DA52FAD0}</Project>
+      <Name>Aran.Aim.Metadata.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\AIP\XHtml\XHTML_WPF\XHTML_WPF.csproj">
+      <Project>{639ca3ef-a7a8-46ef-8af9-f0b648ba2157}</Project>
+      <Name>XHTML_WPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Metadata\Aran.Metadata.Utils\Aran.Metadata.Utils.csproj">
+      <Project>{824AFFCC-12AA-48B7-A674-0F983378DA15}</Project>
+      <Name>Aran.Metadata.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AddIns\TocManagerAddIn\TocManagerAddIn.csproj">
+      <Project>{79651CD4-EBA0-4E8C-AB48-D4564A965E76}</Project>
+      <Name>TocManagerAddIn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AIMSL\AIMSLServiceClient\AIMSLServiceClient.csproj">
+      <Project>{105fc405-ca1d-4c01-9101-09bf2fbfd3ed}</Project>
+      <Name>AIMSLServiceClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aran.Aim.PropertyPrecision\Aran.Aim.PropertyPrecision.csproj">
+      <Project>{6999cfda-f3e3-46a7-a03a-751a3037eb2e}</Project>
+      <Name>Aran.Aim.PropertyPrecision</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aran.Temporality.Resources\Aran.Temporality.Resources.csproj">
+      <Project>{0af11123-0e9d-4f56-b176-219427e18cf0}</Project>
+      <Name>Aran.Temporality.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aran.Temporality\Aran.Temporality.csproj">
+      <Project>{d29d95ab-c621-423c-bbc6-d712edf7d023}</Project>
+      <Name>Aran.Temporality</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonUtil\Aran.Temporality.CommonUtil.csproj">
+      <Project>{4AE7195A-C292-421D-98EE-95E741A05DA0}</Project>
+      <Name>Aran.Temporality.CommonUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logger\Logger.csproj">
+      <Project>{6a672b73-2abc-4a73-9ed0-0f30cb3d25cb}</Project>
+      <Name>Logger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MvvmCore\MvvmCore.csproj">
+      <Project>{03054ef7-f009-4b50-a3f7-cfbf8d3de009}</Project>
+      <Name>MvvmCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VisualizerCommon\VisualizerCommon.csproj">
+      <Project>{8d9dc4fa-8b6f-42d3-bffc-8fbaa36fca9b}</Project>
+      <Name>VisualizerCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\world.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="world.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\add_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\bad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\blue_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\chart_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\chart_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\close_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\commit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\delete_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\delete20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\delete24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\down_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\explore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\feature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\file_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_explore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\folder_reopen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\go_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\good.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\lamp_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\lamp_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\link_db.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\link_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\locked_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\move_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\on_map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\plugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\publish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\relation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\remove_link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\right_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\tab_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\trash_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ungroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\up_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\wait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\direction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\rules.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\geo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\status_off.png" />
+    <Resource Include="Resources\Images\status_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\in.png" />
+    <Resource Include="Resources\Images\out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\dependency.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\evolution.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\link_break.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\cluster.png" />
+    <Resource Include="Resources\Images\label.png" />
+    <Resource Include="Resources\Images\label2.png" />
+    <Resource Include="Resources\Images\status_busy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\character.png" />
+    <Resource Include="Resources\Images\xml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\case.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\convert.png" />
+    <Resource Include="Resources\Images\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\data_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\xml2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\database.png" />
+    <Resource Include="Resources\Images\database_gray.png" />
+    <Resource Include="Resources\Images\database_table.png" />
+    <Resource Include="Resources\Images\database_yellow.png" />
+    <Resource Include="Resources\Images\drawing_template.png" />
+    <Resource Include="Resources\Images\folder_accept.png" />
+    <Resource Include="Resources\Images\folder_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\check_all.png" />
+    <Resource Include="Resources\Images\uncheck_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\first.png" />
+    <Resource Include="Resources\Images\last.png" />
+    <Resource Include="Resources\Images\next.png" />
+    <Resource Include="Resources\Images\prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\small_error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\shop_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\shop_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\maintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\connection.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\merge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Splash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AimUIModel.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions />
+  <PropertyGroup>
+    <PostBuildEvent>IF %25ComputerName%25 == EMINS GOTO end
+SET "VER=15.0"
+
+IF  EXIST  "%2525VS140COMNTOOLS%2525"  (CALL  "%2525VS140COMNTOOLS%2525vsvars32.bat"  
+SET "VER=14.0")
+IF  EXIST  "%2525VS120COMNTOOLS%2525"  (CALL  "%2525VS120COMNTOOLS%2525vsvars32.bat" 
+SET "VER=12.0")
+IF  EXIST  "%2525VS110COMNTOOLS%2525"  (CALL  "%2525VS110COMNTOOLS%2525vsvars32.bat" 
+SET "VER=11.0")
+IF  EXIST  "%2525VS100COMNTOOLS%2525"  (CALL  "%2525VS100COMNTOOLS%2525vsvars32.bat" 
+SET "VER=10.0")
+
+IF "%2525VER%2525" GEQ "15.0"  (
+CALL "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsDevCmd.bat"
+CALL  "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars32.bat"
+CALL "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\Tools\VsDevCmd.bat"
+CALL  "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\vcvars32.bat"
+CALL "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"
+CALL  "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
+)
+
+editbin.exe /LARGEADDRESSAWARE "$(TargetDir)TOSSM.exe"
+:end</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

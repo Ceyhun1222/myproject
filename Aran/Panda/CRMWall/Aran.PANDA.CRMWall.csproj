@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE60086A-7DD3-4165-ADB9-E03FEF407A61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.PANDA.CRMWall</RootNamespace>
+    <AssemblyName>Aran.PANDA.CRMWall</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PANDA.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ComSoft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ComSoft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RefFiles\JTS\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="NetTopologySuite, Version=1.14.0.0, Culture=neutral, PublicKeyToken=f580a05016ebada1, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RefFiles\JTS\NetTopologySuite.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.0.0, Culture=neutral, PublicKeyToken=2573bf8a1bdddcd5, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\RefFiles\JTS\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Omega\Base\Trunk\Models\TransForm.cs">
+      <Link>topology\TransForm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Omega\Base\Trunk\Topology\ConvertToAranGeo.cs">
+      <Link>topology\ConvertToAranGeo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Omega\Base\Trunk\Topology\ConvertToMyGeo.cs">
+      <Link>topology\ConvertToMyGeo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\Omega\Base\Trunk\Topology\GeometryOperators.cs">
+      <Link>topology\GeometryOperators.cs</Link>
+    </Compile>
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AranWallPlugin.cs" />
+    <Compile Include="Modules\Functions.cs" />
+    <Compile Include="Forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DBModule.cs" />
+    <Compile Include="Modules\DecoderCode.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\GeoMinMaxPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\GlobalVars.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Slicer\Slicer.cs" />
+    <Compile Include="Slicer\SlicerBase.cs" />
+    <Compile Include="Slicer\SortedArrayList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{BCBBDE4E-098D-45E9-9B72-0A2E6A7CAE6A}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184E1F94-ED6F-481E-84FF-2EFD1468CCC6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Queries\Panda\trunk\Aran.Queries.Panda.csproj">
+      <Project>{8238C02F-87E7-4FAD-99A0-32D4C5CDAB73}</Project>
+      <Name>Aran.Queries.Panda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8E1CA34F-D479-4637-8A0A-3E8E1F23CC9D}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14C16238-324E-417A-92F9-684D5D2BB6E9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Types\trunk\Aran.Panda.Types.csproj">
+      <Project>{3B67D75D-8BDE-4CCD-B32C-784087BAEFBA}</Project>
+      <Name>Aran.Panda.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANDA.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

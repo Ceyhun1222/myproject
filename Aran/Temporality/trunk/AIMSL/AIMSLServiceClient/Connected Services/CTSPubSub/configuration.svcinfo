@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.CustomBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;AIMSLPubSubExtConsumerBinding&quot;&gt;&lt;httpsTransport /&gt;&lt;security authenticationMode=&quot;MutualCertificateDuplex&quot; defaultAlgorithmSuite=&quot;TripleDesRsa15&quot; includeTimestamp=&quot;true&quot; messageProtectionOrder=&quot;SignBeforeEncrypt&quot; requireDerivedKeys=&quot;false&quot; requireSignatureConfirmation=&quot;false&quot;&gt;&lt;localClientSettings detectReplays=&quot;true&quot; /&gt;&lt;localServiceSettings detectReplays=&quot;true&quot; /&gt;&lt;/security&gt;&lt;textMessageEncoding messageVersion=&quot;Soap11&quot; /&gt;&lt;/Data&gt;" bindingType="customBinding" name="AIMSLPubSubExtConsumerBinding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://vead03.cts.ead-itp.com:4443/aimsl/AIMSLPubSubExtConsumer/1.0&quot; binding=&quot;customBinding&quot; bindingConfiguration=&quot;AIMSLPubSubExtConsumerBinding&quot; contract=&quot;CTSPubSub.AIMSLPubSubExtConsumer&quot; name=&quot;AIMSLPubSubExtConsumerPort&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://vead03.cts.ead-itp.com:4443/aimsl/AIMSLPubSubExtConsumer/1.0&quot; binding=&quot;customBinding&quot; bindingConfiguration=&quot;AIMSLPubSubExtConsumerBinding&quot; contract=&quot;CTSPubSub.AIMSLPubSubExtConsumer&quot; name=&quot;AIMSLPubSubExtConsumerPort&quot; /&gt;" contractName="CTSPubSub.AIMSLPubSubExtConsumer" name="AIMSLPubSubExtConsumerPort" />
+  </endpoints>
+</configurationSnapshot>

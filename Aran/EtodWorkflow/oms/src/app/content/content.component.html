@@ -1,0 +1,101 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header header-elements-inline">
+      <h5 class="card-title">User List
+        <!-- <a [routerLink]="['/user', 'create']" class=" ml-2" title="Create new user"><i class="icon-plus22"></i></a> -->
+        <a [routerLink]="['/user']" class=" ml-2" title="Create new user"><i class="icon-plus22"></i></a>
+      </h5>
+      <div class="header-elements">
+        <div>
+          <span>Status - </span>
+          <div class="dropdown d-inline-block">
+            <a href="#" class="badge bg-blue-700 dropdown-toggle" data-toggle="dropdown">{{status}}</a>
+
+            <ul class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" (click)="status='All';loadAllUsers()" href="javascript:void(0)">
+                <span class="badge badge-mark bg-brown border-brown align-self-center mr-2"></span>
+                All
+              </a>
+              <a class="dropdown-item" (click)="status='Pending';loadAllUsers()" href="javascript:void(0)">
+                <span class="badge badge-mark bg-grey border-grey align-self-center mr-2"></span>
+                Pending
+              </a>
+              <a class="dropdown-item" (click)="status='Accepted';loadAllUsers()" href="javascript:void(0)">
+                <span class="badge badge-mark bg-success border-success align-self-center mr-2"></span>
+                Accepted
+              </a>
+              <a class="dropdown-item" (click)="status='Declined';loadAllUsers()" href="javascript:void(0)">
+                <span class="badge badge-mark bg-danger border-danger align-self-center mr-2"></span>
+                Declined
+              </a>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card-body">
+      
+      <div class="text-muted text-center" *ngIf="loading"> Loading...</div>
+      <div class="text-muted text-center" *ngIf="!loading && users.length==0"> Data not found</div>
+
+      <div class="card card-table table-responsive shadow-0 mb-0" *ngIf="users.length > 0">
+        <table class="table table-borderedtable-striped table-xs">
+          <thead>
+            <tr>
+              <!-- <th scope="col"></th> -->
+              <!-- <th scope="col">Username</th> -->
+              <th scope="col">Full name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Airport</th>
+              <th scope="col">Status</th>
+              <!-- <th scope="col" style="max-width: 70px!important;"></th> -->
+              <th class="text-center" style="width: 30px;"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <!-- <th scope="row">{{i+1}}</th> -->
+              <!-- <td title="edit"><a [routerLink]="['/user', 'edit', user.id]" class="text-info">{{user.firstName + ' ' +user.lastName}}</a></td> -->
+              <td title="edit"><a [routerLink]="['/user', user.id]" class="text-info">{{user.firstName + ' ' +user.lastName}}</a></td>
+              <td>{{user.email}}</td>
+              <td>{{user.phoneNumber}}</td>
+              <td>{{user.company.airportName}}</td>
+              <!-- <td><span class="badge bg-blue" [ngClass]="{'bg-blue':user.status==='Accepted','bg-grey-400':user.status==='Pending', 'bg-danger':user.status==='Declined'}">{{user.status}}</span></td> -->
+              <td>
+                <div class="dropdown">
+                  <a href="javascript:void(0)" class="badge dropdown-toggle" data-toggle="dropdown" [ngClass]="{'bg-success':user.status==='Accepted','bg-grey':user.status==='Pending', 'bg-danger':user.status==='Declined'}">{{user.status}}</a>
+
+                  <ul class="dropdown-menu dropdown-menu-right py-0">
+                    <!-- <a href="javascript:void(0)" class="dropdown-item">
+                      <span class="badge badge-mark bg-grey border-grey align-self-center mr-2"></span>
+                      Pending
+                    </a> -->
+                    <a *ngIf="user.status!=='Accepted'" href="javascript:void(0)" class="dropdown-item" (click)="confirmStatus(user, true)">
+                      <span class="badge badge-mark bg-success border-success align-self-center mr-2"></span>
+                      Accept
+                    </a>
+                    <a *ngIf="user.status!=='Declined'" href="javascript:void(0)" class="dropdown-item" (click)="confirmStatus(user, false)">
+                      <span class="badge badge-mark bg-danger border-danger align-self-center mr-2"></span>
+                      Decline
+                    </a>
+                  </ul>
+                </div>
+              </td>
+              <td class="text-center">
+                <div class="list-icons">
+                  <a [swal]="{ title: 'Are you sure?',  showCancelButton:'true'}" (confirm)="deleteUser(user.id)" href="javascript:void(0)"
+                    title="Remove" class="list-icons-item text-danger-600"><i class="icon-bin"></i></a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- <p><a [routerLink]="['/login']">Logout</a> (click)="editUser(user.id)"</p> -->
+</div>

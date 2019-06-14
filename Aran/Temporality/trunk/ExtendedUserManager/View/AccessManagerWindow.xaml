@@ -1,0 +1,239 @@
+﻿<UserControl x:Class="UserManager.View.Extended.AccessManagerWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Extended="clr-namespace:UserManager.ViewModel.Extended" 
+             mc:Ignorable="d" d:DesignHeight="329" d:DesignWidth="756">
+    <UserControl.DataContext>
+        <Extended:AccessManagerModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="8"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Row="1"  Grid.Column="0" Header="Work Packages">
+
+                <DataGrid ItemsSource="{Binding Path=FilteredWorkPackageList}" 
+                          IsReadOnly="True"
+                          AutoGenerateColumns="False" 
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="False" 
+                          CanUserResizeRows="False"
+                          CanUserSortColumns="False"
+                          >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}" Width="*" />
+                        <DataGridTextColumn Header="Creator" Binding="{Binding Path=Description}" Width="*" />
+                        <DataGridTextColumn Header="Creation Date" Binding="{Binding Path=Description}" Width="*" />
+                        <DataGridCheckBoxColumn Header="Is Safe" Binding="{Binding Path=Description}" Width="45" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+
+
+            <GroupBox Header="Storage" Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <ComboBox IsTextSearchCaseSensitive="False" IsTextSearchEnabled="True" Name="StorageComboBox"/>
+
+                    <Button Command="{Binding OnClearStorageFilter}" 
+                            Grid.Column="1" Width="25" 
+                            Visibility="{Binding Path=StorageFilterEmptyButtonVisibility}"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                            Content="{StaticResource BackButtonIcon2}" Focusable="False" />
+                </Grid>
+            </GroupBox>
+
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+
+                </Grid.RowDefinitions>
+
+                <GroupBox Grid.Row="0" Header="Storage">
+                    <WrapPanel>
+                        <Button Content= "New Storage" Margin="5" Width="120"/>
+                        <Button Content= "New WorkPackage" Margin="5" Width="120"/>
+                        <Button Content= "Truncate Storage" Margin="5" Width="120"/>
+                        <Button Content= "Import Snapshot" Margin="5" Width="120"/>
+                        <Button Content= "Export Snapshot" Margin="5" Width="120"/>
+                    </WrapPanel>
+                    
+                </GroupBox>
+
+                <GroupBox Grid.Row="1"  Header="WorkPackage">
+                    <WrapPanel>
+                        <Button Content= "Validate" Margin="5" Width="90"/>
+                        <Button Content= "Commit" Margin="5" Width="90"/>
+                        <Button Content="Rollback" Margin="5" Width="90"/>
+                    </WrapPanel>
+
+                </GroupBox>
+
+            </Grid>
+        </Grid>
+
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="8" >
+            <GridSplitter.Template>
+                <ControlTemplate TargetType="{x:Type GridSplitter}">
+                    <Grid>
+                        <Button Content="⁞" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"/>
+                        <Rectangle Fill="#10000000" />
+                    </Grid>
+                </ControlTemplate>
+            </GridSplitter.Template>
+        </GridSplitter>
+
+        <Grid Grid.Column="2" MinWidth="350">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Feature Filter" Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Text="{Binding Path=FeatureFilter, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Command="{Binding OnClearFeatureFilter}" 
+                            Grid.Column="1" Width="25" 
+                            Visibility="{Binding Path=FeatureFilterEmptyButtonVisibility}"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                            Content="{StaticResource BackButtonIcon3}" Focusable="False"  />
+                </Grid>
+            </GroupBox>
+            
+            <GroupBox Grid.Row="2"  Grid.Column="0" Header="Feature Access">
+                <DataGrid ItemsSource="{Binding Path=FilteredFeatureList}" 
+                          Name="FilteredFeatureList"
+                          AutoGenerateColumns="False" 
+                          CanUserAddRows="False" 
+                          CanUserDeleteRows="False" 
+                          CanUserReorderColumns="False" 
+                          CanUserResizeRows="False"
+                          CanUserSortColumns="False"
+                          >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Feature" Binding="{Binding Path=Feature}" Width="*" IsReadOnly="True"/>
+
+                        <DataGridTemplateColumn Header="Read" Width="40">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox HorizontalAlignment="Center" IsChecked="{Binding IsRead, UpdateSourceTrigger=PropertyChanged}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Write" Width="40">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox HorizontalAlignment="Center" IsChecked="{Binding IsWrite, UpdateSourceTrigger=PropertyChanged}"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+
+
+            <GroupBox Grid.Row="0" Header="User">
+                <StackPanel>
+                    <ComboBox IsTextSearchCaseSensitive="False" 
+                              IsTextSearchEnabled="True" 
+                              Name="UserComboBox" 
+                              SelectedItem="{Binding Path=SelectedUser}"
+                              ItemsSource="{Binding Path=UserList}" 
+                              DisplayMemberPath="DisplayName"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition  Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <GroupBox Grid.Column="1" Header="Selected WorkPackage">
+                            <StackPanel>
+                                <CheckBox Content="Can read workpackage" />
+                                <CheckBox Content="Can write workpackage" />
+                                <CheckBox Content="Can commit/rollback workpackage" />
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Grid.Column="0" Header="Selected Storage">
+                            <StackPanel>
+                                <CheckBox Content="Can create workpackage" />
+                                <CheckBox Content="Has read only access to storage" />
+                                <CheckBox Content="Has full access to storage" />
+                                <CheckBox Content="Can truncate storage" />
+                            </StackPanel>
+                        </GroupBox>
+                    </Grid>
+                    
+
+
+                </StackPanel>
+                
+            </GroupBox>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <WrapPanel Grid.Column="0">
+                    <Button Command="{Binding Path=OnNoAccess}" 
+                        CommandParameter="{Binding ElementName=FilteredFeatureList, Path=SelectedItems}" 
+                        ToolTip="Restrict any access to selected features" 
+                        Content="No access" 
+                        Margin="5" 
+                        Width="70"/>
+                    <Button Command="{Binding Path=OnReadOnly}" 
+                        CommandParameter="{Binding ElementName=FilteredFeatureList, Path=SelectedItems}" 
+                        ToolTip="Grant read only access to selected features" 
+                        Content="Read only" 
+                        Margin="5" 
+                        Width="70"/>
+                    <Button Command="{Binding Path=OnFull}" 
+                        CommandParameter="{Binding ElementName=FilteredFeatureList, Path=SelectedItems}" 
+                        ToolTip="Grant full access to selected features" 
+                        Content="Full" 
+                        Margin="5" 
+                        Width="70"/>
+                    
+                </WrapPanel>
+
+                <Button Grid.Column="1" Command="{Binding Path=OnApply}" 
+                        CommandParameter="{Binding ElementName=UserComboBox, Path=SelectedItem}" 
+                        ToolTip="Grant full access to selected features" 
+                        Content="Apply" 
+                        HorizontalAlignment="Right"
+                        Margin="5" 
+                        Width="100"/>
+            </Grid>
+           
+        </Grid>
+
+    </Grid>
+</UserControl>

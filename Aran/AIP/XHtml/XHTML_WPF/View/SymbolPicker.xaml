@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="XHTML_WPF.SymbolPicker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:symbols="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs.Symbols;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+             xmlns:dialogs="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI"
+             mc:Ignorable="d" >
+    <FrameworkElement.Resources>
+        <telerik:FontFamiliesProvider x:Key="FontFamiliesProvider"/>
+    </FrameworkElement.Resources>
+    <Grid x:Name="LayoutRootX" Width="520">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="50"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="228*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <symbols:SymbolsTable x:Name="symbolTable" SymbolMouseEnter="characterTable_CharMouseEnter"
+                     SymbolMouseLeave="characterTable_CharMouseLeave" SymbolSelected="characterTable_CharSelected"
+                     Margin="12 12 8 0" Grid.ColumnSpan="4" MinWidth="500"/>
+        <dialogs:HeadingLabel HorizontalAlignment="Left" Margin="12 10 6 10" VerticalAlignment="Center"
+                        telerik:LocalizationManager.ResourceKey="Documents_InsertSymbolDialog_Filter" Grid.Row="2"/>
+        <telerik:RadComboBox SelectionChanged="comboCategory_SelectionChanged" Name="comboCategory" DisplayMemberPath="Item1"
+                         SelectedValuePath="Item2" Grid.Row="2" Grid.Column="1" Width="149" HorizontalAlignment="Left"
+                         VerticalAlignment="Center" Margin="0 5"/>
+        <dialogs:HeadingLabel HorizontalAlignment="Left" Margin="12 10 6 10" VerticalAlignment="Center"
+                              telerik:LocalizationManager.ResourceKey="Documents_InsertSymbolDialog_Font" Grid.Row="1" Visibility="Collapsed"/>
+        <telerik:RadComboBox SelectionChanged="comboFont_SelectionChanged" Name="comboFont" Width="149" Margin="0 10 0 5"
+                         HorizontalAlignment="Left" VerticalAlignment="Center" MaxDropDownHeight="213" Grid.Column="1"
+                         Grid.Row="1" DisplayMemberPath="DisplayName"
+                         ItemsSource="{Binding Source={StaticResource FontFamiliesProvider}, Path=RegisteredFonts}" Visibility="Collapsed"/>
+        <Border BorderBrush="Silver" BorderThickness="1" Height="64" VerticalAlignment="Center"
+            HorizontalAlignment="Center" Width="64" Grid.RowSpan="2" Grid.Column="3" Grid.Row="1">
+            <TextBlock Name="textSymbolPreview" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+        <TextBlock Name="textDescription" VerticalAlignment="Center" Margin="6 0 0 0" Opacity=".75" FontSize="13"
+               Grid.Row="2" Grid.Column="2" TextWrapping="Wrap" TextTrimming="WordEllipsis"/>
+    </Grid>
+</UserControl>

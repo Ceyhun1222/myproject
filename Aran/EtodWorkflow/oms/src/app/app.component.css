@@ -1,0 +1,8 @@
+.login-cover {
+    background: url('../../global_assets/limitless/global_assets/images/login_cover.jpg') no-repeat;
+    background-size: cover;
+}
+
+.page-content {
+    height: calc(100vh - 48px);
+}

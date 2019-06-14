@@ -1,0 +1,115 @@
+﻿<Window x:Class="Aran.AimEnvironment.Tools.View.AngleMeasureView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:conv ="clr-namespace:Aran.AimEnvironment.Tools.Converter"
+        mc:Ignorable="d ignore"
+        SizeToContent="WidthAndHeight"
+        Icon="../Images/angle.png">
+
+    <DockPanel >
+        <GroupBox Header="Oprions" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.Resources>
+                    <conv:EnumBooleanConverter x:Key="enumBooleanConverter" />
+                </Grid.Resources>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <RadioButton Content="KM" Grid.Column="0" GroupName="Distance" IsChecked="{Binding Path = AngleMeasure.DistanceType, Converter={StaticResource enumBooleanConverter}, ConverterParameter=KM}"></RadioButton>
+                <RadioButton Content="NM" Grid.Column="1" GroupName="Distance" IsChecked="{Binding Path = AngleMeasure.DistanceType, Converter={StaticResource enumBooleanConverter}, ConverterParameter=NM}"></RadioButton>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Course 1" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Direction Course" Grid.Row="0" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.Course1}"></Label>
+                    <Label Content="°"></Label>
+                </StackPanel>
+                <Label Content="True Course" Grid.Row="1" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.AzimuthCourse1}"></Label>
+                    <Label Content="°"></Label>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Course 2" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Direction Course" Grid.Row="0" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.Course2}"></Label>
+                    <Label Content="°" ></Label>
+                </StackPanel>
+                <Label Content="True Course" Grid.Row="1" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.AzimuthCourse2}"></Label>
+                    <Label Content="°"></Label>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Angle" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Angle" Grid.Row="0" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.Angle}"></Label>
+                    <Label Content="°"></Label>
+                </StackPanel>
+                <Label Content="Azimuth angle" Grid.Row="1" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.AzimuthAngle}" ></Label>
+                    <Label Content="°"></Label>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Arc" DockPanel.Dock="Top">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Radius" Grid.Row="0" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.Radius}"></Label>
+                    <Label Content="{Binding AngleMeasure.DistanceType}"></Label>
+                </StackPanel>
+                <Label Content="Arc" Grid.Row="1" Grid.Column="0"></Label>
+                <StackPanel  Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="{Binding AngleMeasure.Arc}" ></Label>
+                    <Label Content="{Binding AngleMeasure.DistanceType}"></Label>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+    </DockPanel>
+</Window>

@@ -1,0 +1,45 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 4;
+    int i = 1;
+}
+@if(Model != null && Model.Count > 0) {
+    <table frame="border" align="center">
+        <colgroup>
+            <col width="15%" />
+            <col width="10%" />
+            <col width="10%" />
+            <col width="65%" />
+        </colgroup>
+        <thead>
+        <tr class="Table-row-type-1">
+            @for (i = 1; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("ENR55_"+@i))</th>
+            }
+        </tr>
+        <tr class="Table-row-type-2">
+            @for (i = 1; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@i</th>
+            }
+        </tr>
+        </thead>
+        <tbody valign="top">
+        @foreach (var data in Model) {
+            <tr>
+                <td class="bleft btop bright bbottom" colspan="4"><strong class="Cell-body">@Raw(data.Activity)</strong></td>
+            </tr>
+            foreach (var subdata in data.Row) {
+                <tr>
+                    <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["Name"])</td>
+                    <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["VerticalLimits"])</td>
+                    <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["OperatorPhone"])</td>
+                    <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["Remarks"])</td>
+                </tr>
+            }
+        }
+        </tbody>
+    </table>
+}

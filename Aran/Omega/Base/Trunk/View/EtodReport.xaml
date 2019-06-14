@@ -1,0 +1,114 @@
+﻿<controls:MetroWindow x:Class="Aran.Omega.View.EtodReport"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+            xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+            xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+            mc:Ignorable="d" 
+            WindowStyle="SingleBorderWindow"
+            Title="Omega Report"
+            ResizeMode="CanResize"
+            Width="800"
+            Height="670" Background="#FFEEEDED" 
+            Cursor="{Binding CurrCursor}"
+            >
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/EtodResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <!--<Style TargetType="{x:Type ListBoxItem}">
+            <Setter Property="BorderThickness" Value="1.5"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="BorderBrush" Value="#adc6e5"/>
+                </Trigger>
+            </Style.Triggers>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="2"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <DataTemplate x:Key="xs">
+            <TextBlock Text="{Binding Path=ViewCaption}" Margin="8,6,0,6" FontSize="11.5" />
+        </DataTemplate>-->
+    </Window.Resources>
+    <Grid Background="#FFEEEDED" Margin="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <TabControl Name="ReportTabControl" VerticalAlignment="Stretch"  ItemsSource="{Binding Path=SurfaceList}" HorizontalAlignment="Stretch" IsSynchronizedWithCurrentItem="True" 
+                      SelectedItem="{Binding SelectedSurface}" SelectionChanged="TabControl_SelectionChanged">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=ViewCaption}"/>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <DataGrid  Name="reportGrid" VerticalAlignment="Top" ItemsSource="{Binding Path=SurfaceBase.FilteredReport}" 
+                      Margin="5" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedEtodObstacle}" SelectionUnit="FullRow" 
+                               Background="#AECBCBCB" BorderBrush="Black" BorderThickness="0.6">
+                        <DataGrid.Resources>
+                            <Style TargetType="DataGridCell" x:Key="cellStyle">
+                                <Setter Property="Foreground" Value="{Binding CellColor}" />
+                                <Setter Property="FontSize" Value="12"/>
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID"  IsReadOnly="True" Binding="{Binding Id}" Width="50" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Name" IsReadOnly="True" Binding="{Binding Name}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Type" IsReadOnly="True" Binding="{Binding VsType}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Geometry Type" IsReadOnly="True" Binding="{Binding GeomType}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <!--<DataGridTextColumn Header="Lat" IsReadOnly="True" Binding="{Binding Lat}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Long" IsReadOnly="True" Binding="{Binding Long}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>-->
+                            <DataGridTextColumn Header="Height" IsReadOnly="True" Binding="{Binding Height}" Width="150" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="X (m)" IsReadOnly="True" Binding="{Binding X}" Width="60" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Y (m)" IsReadOnly="True" Binding="{Binding Y}" Width="60" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="HAcc" IsReadOnly="True" Binding="{Binding HorizontalAccuracy}" Width="80" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="VAcc" IsReadOnly="True" Binding="{Binding VerticalAccuracy}" Width="80" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <!--<DataGridTextColumn Header="Distance" IsReadOnly="True" Binding="{Binding Distance}" Width="60" CellStyle="{StaticResource ResourceKey=cellStyle}"/>-->
+                            <DataGridTextColumn Header="Elevation (m)" IsReadOnly="True" Binding="{Binding Elevation}" Width="110" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Penetrate(m)" IsReadOnly="True" Binding="{Binding Penetrate}" Width="110" CellStyle="{StaticResource ResourceKey=cellStyle}"/>
+                            <DataGridTextColumn Header="Equation (m)" IsReadOnly="True" Binding="{Binding Plane}" Width="auto" CellStyle="{StaticResource ResourceKey=cellStyle}" MinWidth="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+        <Grid Grid.Row="1" MaxHeight="35" MinHeight="35" Margin="0 0 10 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="263*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="90" />
+            </Grid.ColumnDefinitions>
+            <Button  Name="btnSave"
+                            Grid.Column="2" Width="80" 
+                            Content="Save"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Height="28" />
+            <!--<Button  Name="btnSaveValidationReport"
+                            Grid.Column="1" Width="100" 
+                            Content="Validation Report"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Height="28" />-->
+            <StackPanel Grid.Column="0" HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Bottom">
+                <TextBlock Text="Obstacle Name:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox Name="txtVsName" Text="{Binding SelectedSurface.SurfaceBase.SearchName,UpdateSourceTrigger=PropertyChanged}" Margin="5" Width="130" Height="25"/>
+                <CheckBox Margin="10"  IsChecked="{Binding IsPenetrated}" Content="Penetrated Obstacles"/>
+            </StackPanel>
+        </Grid>
+        <StatusBar Margin="0,0,0,2" BorderBrush="Black"  BorderThickness="0.6" Grid.Row="3" Height="25" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+            <TextBlock Name="lblCursorPosition" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="13" Text="{Binding ReportCount}" />
+        </StatusBar>
+    </Grid>
+</controls:MetroWindow>

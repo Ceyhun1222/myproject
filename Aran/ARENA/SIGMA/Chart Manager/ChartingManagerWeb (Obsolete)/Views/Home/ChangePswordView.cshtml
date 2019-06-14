@@ -1,0 +1,120 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Password Page</title>
+    <style type="text/css">
+        .headerr {
+            font-weight: bold;
+            background-color: #e8e3e3;
+            color: #dc8b8b;
+            font-size: 1.7em;
+            padding: 1rem;
+            top: 0;
+            text-align: center;
+            text-transform: uppercase;
+            min-width: 900px;
+        }
+
+        tr.spaceUnder > td {
+            padding-bottom: 1em;
+        }
+
+        .border {
+            border: 1px solid #f60000;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#SaveChangePsw").click(function () {
+                var newpassword = $("#NewChgPsw").val();
+                var repnewpassw = $("#RepNewPsw").val();
+                var oldpassword = $("#OldChgPsw").val();
+                if (oldpassword == "") {
+                    $("#OldChgPsw").addClass("border");
+                }
+                if (oldpassword != "") {
+                    $("#OldChgPsw").removeClass("border");
+                }
+                if (newpassword == "") {
+                    $("#NewChgPsw").addClass("border");
+                }
+                if (repnewpassw == "") {
+                    $("#RepNewPsw").addClass("border");
+                }
+                if (newpassword != "") {
+                    $("#NewChgPsw").removeClass("border");
+                }
+                if (repnewpassw != "") {
+                    $("#RepNewPsw").removeClass("border");
+                }
+                if (newpassword != "" && repnewpassw != "") {
+                    if (newpassword == repnewpassw) {
+                        $("#IncorRepNewPsw").css("display", "none");
+                        var usersession = '@Session["username"]';
+                        if (usersession == "admin") {
+                            $.ajax({
+                                type: "POST",
+                                url: "/MyHome/ChangePasswordOnlyAdmin",
+                                data: '{OnlyAdmin:"' + usersession + '",oldpsw:"' + $("#OldChgPsw").val() + '",newpsw:"' + $("#NewChgPsw").val() + '"}',
+                                contentType: "application/json; charset=utf-8",
+                                dataType: "json",
+                                success: function (response) {
+                                    alert("Successed");
+                                    $("#IncorOldPsw").css("display", "none");
+                                },
+                                error: function (response) {
+                                    //alert("Error");
+                                    $("#IncorOldPsw").css("display", "block");
+                                }
+                            });
+                        }
+                    }
+                    else if (newpassword != repnewpassw) {
+                        $("#IncorRepNewPsw").css("display", "block");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="headerr" style="padding-top: 100px;">Change Password</div>
+    <br />
+    <center>
+        <table id="TblChgPsw" style="margin-left: 10px;">
+            <tr class="spaceUnder">
+                <td><span style="font-weight: bold;">Old Password:</span></td>
+                <td>
+                    <input id="OldChgPsw" class="form-control" type="password" placeholder="Old Password" />
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td><span style="font-weight: bold;">New Password:</span></td>
+                <td>
+                    <input id="NewChgPsw" class="form-control" type="password" placeholder="New Password" />
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td><span style="font-weight: bold;">Repeat New Password:</span></td>
+                <td><input id="RepNewPsw" class="form-control" type="password" placeholder="Repeat New Password" /></td>
+            </tr>
+            <tr class="spaceUnder">
+                <td>
+                    <label id="IncorOldPsw" style="color: red;display:none;">Incorrect Old Password</label>
+                    <br />
+                    <label id="IncorRepNewPsw" style="color: red;display:none;">Incorrect Repeat New Password</label>
+                </td>
+            </tr>
+            <tr class="spaceUnder">
+                <td><input id="BackPage" value="Back" style="width: 100px;" class="btn btn-primary" readonly="readonly" onclick="location.href='@Url.Action("LoadHome", "MyHome")'" /></td>
+                <td><input id="SaveChangePsw" type="button" value="Save Change" class="btn btn-danger" style="width: 150px;" /></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

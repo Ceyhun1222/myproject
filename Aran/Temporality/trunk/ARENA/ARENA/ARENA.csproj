@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{087BD49B-F12C-4F3D-A9A7-ED993835974B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ARENA</RootNamespace>
+    <AssemblyName>ARENA</AssemblyName>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>AB1FA1D7D455E2706F6FD4338C8B4CF0291F0A95</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ARENA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\Program Files\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Common\stdole.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AIM_PDM_Converter.cs" />
+    <Compile Include="AIRTRACK_PDM_Converter.cs" />
+    <Compile Include="DataLoaders\AIXM45_DataConverter.cs" />
+    <Compile Include="DataLoaders\AIXM51_DataConverter.cs" />
+    <Compile Include="DataLoaders\ArenaDataLoader.cs" />
+    <Compile Include="DataLoaders\ARINC_DataConverter.cs" />
+    <Compile Include="DataLoaders\Intermediate_AIXM51_Arena.cs" />
+    <Compile Include="DataLoaders\TOOSM_DataConverter.cs" />
+    <Compile Include="FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLayerProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLayerProperties.designer.cs">
+      <DependentUpon>FormLayerProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\PandaProject.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="Util\ArenaSnapping.cs" />
+    <Compile Include="Project\ArenaProject.cs" />
+    <Compile Include="Project\NotamProject.cs" />
+    <Compile Include="Environment\Environment.cs" />
+    <Compile Include="Project\AbstractProject.cs" />
+    <Compile Include="Environment\EnvironmentData.cs" />
+    <Compile Include="Util\AnnotationUtil.cs" />
+    <Compile Include="Util\cExcel.cs" />
+    <Compile Include="Util\DataGridViewAutoFilterColumnHeaderCell.cs" />
+    <Compile Include="Util\FileAssociation.cs" />
+    <Compile Include="Util\LogicUtil.cs" />
+    <Compile Include="Util\PDMObjectExtension.cs" />
+    <Compile Include="Util\Splash\AlertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\Splash\AlertForm.designer.cs">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Splash\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\Splash\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\TreeNodeHandler.cs" />
+    <Compile Include="Util\ZzArchivatorClass.cs" />
+    <Compile Include="Version.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Version.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\AddNavaidComponentButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\AddNavaidComponentButton.Designer.cs">
+      <DependentUpon>AddNavaidComponentButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\AirportDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\AirportDataView.Designer.cs">
+      <DependentUpon>AirportDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnnoClasses\MapCore\AcnFrameMargins.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntArrowMarker.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntChartElementWord.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntColor.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntDataSource.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntFont.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntFrame.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntLeaderLine.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntMarkerBackGround.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntPoint.cs" />
+    <Compile Include="AnnoClasses\MapCore\AcntTextElement.cs" />
+    <Compile Include="AnnoClasses\MapCore\AdvancedProprtiesEditors.cs" />
+    <Compile Include="AnnoClasses\MapCore\Enums.cs" />
+    <Compile Include="AnnoClasses\MapCore\HelperClass.cs" />
+    <Compile Include="AnnoClasses\MapCore\IElementInfo.cs" />
+    <Compile Include="AnnoClasses\MapCore\TextContestEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnnoClasses\MapCore\TextContestEditorForm.Designer.cs">
+      <DependentUpon>TextContestEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnnoClasses\MapElements\AbstractChartElement.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_AerspaceBufer.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_BorderedText.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_BorderedText_Collout.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_NorthArrow.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_RouteDesignator.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_SimpleText.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_TextArrow.cs" />
+    <Compile Include="AnnoClasses\MapElements\ChartElement_TextBordered_Collout_CaptionBottom.cs" />
+    <Compile Include="AnnoClasses\MapElements\GraphicsChartElement.cs" />
+    <Compile Include="CreateNewDocument.cs" />
+    <Compile Include="VisualComponents\AirspaceDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\AirspaceDataView.Designer.cs">
+      <DependentUpon>AirspaceDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\Converter_excel_VerticalStrucrure.cs" />
+    <Compile Include="VisualComponents\DataTableView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\DataTableView.Designer.cs">
+      <DependentUpon>DataTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataViewerForm.Designer.cs">
+      <DependentUpon>DataViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EsriUtils.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\DoubleType_Property.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\DoubleType_Property.Designer.cs">
+      <DependentUpon>DoubleType_Property.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\EnrouteDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\EnrouteDataView.Designer.cs">
+      <DependentUpon>EnrouteDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\EnumProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\EnumProperty.Designer.cs">
+      <DependentUpon>EnumProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\NavaidsDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\NavaidsDataView.Designer.cs">
+      <DependentUpon>NavaidsDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlCommand\ARENA_DataReader.cs" />
+    <Compile Include="VisualComponents\ProcedureListDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\ProcedureListDataView.Designer.cs">
+      <DependentUpon>ProcedureListDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\StringProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\StringProperty.Designer.cs">
+      <DependentUpon>StringProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\VerticalStructureDataView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\VerticalStructureDataView.Designer.cs">
+      <DependentUpon>VerticalStructureDataView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComponents\VerticalStructureLoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisualComponents\VerticalStructureLoader.Designer.cs">
+      <DependentUpon>VerticalStructureLoader.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLayerProperties.resx">
+      <DependentUpon>FormLayerProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\Splash\AlertForm.resx">
+      <DependentUpon>AlertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\Splash\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\AddNavaidComponentButton.resx">
+      <DependentUpon>AddNavaidComponentButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\AirportDataView.resx">
+      <DependentUpon>AirportDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnnoClasses\MapCore\TextContestEditorForm.resx">
+      <DependentUpon>TextContestEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\AirspaceDataView.resx">
+      <DependentUpon>AirspaceDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\DataTableView.resx">
+      <DependentUpon>DataTableView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewerForm.resx">
+      <DependentUpon>DataViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\DoubleType_Property.resx">
+      <DependentUpon>DoubleType_Property.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\EnrouteDataView.resx">
+      <DependentUpon>EnrouteDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\EnumProperty.resx">
+      <DependentUpon>EnumProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\NavaidsDataView.resx">
+      <DependentUpon>NavaidsDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VisualComponents\ProcedureListDataView.resx">
+      <DependentUpon>ProcedureListDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\StringProperty.resx">
+      <DependentUpon>StringProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\VerticalStructureDataView.resx">
+      <DependentUpon>VerticalStructureDataView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComponents\VerticalStructureLoader.resx">
+      <DependentUpon>VerticalStructureLoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Version.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Version.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Earth.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\CadastralJobAppendFile16.png" />
+    <None Include="Resources\Folder16.png" />
+    <None Include="Resources\TableGroupRows16.png" />
+    <None Include="Resources\ServerWMS16.png" />
+    <None Include="Resources\MetadataCreateUpdate16.png" />
+    <None Include="Resources\GeoprocessingScript16.png" />
+    <None Include="Resources\CatalogHome16.png" />
+    <None Include="Resources\Map16.png" />
+    <None Include="Resources\up.gif" />
+    <None Include="Resources\down1.gif" />
+    <None Include="Resources\configure1.png" />
+    <None Include="Resources\apply.gif" />
+    <Content Include="Resources\512x512.png" />
+    <None Include="Resources\ArcMap16.png" />
+    <Content Include="Resources\Bitmap1.bmp" />
+    <None Include="Resources\refresh.gif" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\down.gif" />
+    <None Include="Resources\info.gif" />
+    <None Include="Resources\settings.gif" />
+    <None Include="Resources\cancel.gif" />
+    <None Include="Resources\edit.gif" />
+    <None Include="Resources\zoom_in.png" />
+    <None Include="Resources\search.gif" />
+    <None Include="Resources\layerProp.bmp" />
+    <None Include="Resources\EditingStartEditing32.png" />
+    <None Include="Resources\MapUnits.bmp" />
+    <None Include="Resources\Measure.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Geometries\IO\trunk\Aran.Geometries.IO.csproj">
+      <Project>{6904A5CC-44B7-4C24-B416-98198CC00EEE}</Project>
+      <Name>Aran.Geometries.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Aran.Temporality.Resources\Aran.Temporality.Resources.csproj">
+      <Project>{0AF11123-0E9D-4F56-B176-219427E18CF0}</Project>
+      <Name>Aran.Temporality.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Aran.Temporality\Aran.Temporality.csproj">
+      <Project>{D29D95AB-C621-423C-BBC6-D712EDF7D023}</Project>
+      <Name>Aran.Temporality</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonUtil\Aran.Temporality.CommonUtil.csproj">
+      <Project>{4AE7195A-C292-421D-98EE-95E741A05DA0}</Project>
+      <Name>Aran.Temporality.CommonUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AIXM45Loader\AIXM45Loader.csproj">
+      <Project>{54177F06-291B-4DCB-9A1F-585CAF194B98}</Project>
+      <Name>AIXM45Loader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\AranSupport\AranSupport.csproj">
+      <Project>{A099BE8A-B446-4933-9179-2ABFDFF726B2}</Project>
+      <Name>AranSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\AreaManager\AreaManager.csproj">
+      <Project>{25757852-6CFC-4042-BE6A-8428981F7024}</Project>
+      <Name>AreaManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\ARINC_DECODER_CORE\ARINC_DECODER_ENGINE.csproj">
+      <Project>{2F387850-489C-4A7A-B03A-3ED2543C73EF}</Project>
+      <Name>ARINC_DECODER_ENGINE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\ARINC_DECODER_UI\ARINC_DECODER_UI.csproj">
+      <Project>{3F9C46E5-4534-40C4-AA42-7C6BD3E32BB2}</Project>
+      <Name>ARINC_DECODER_UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\ARINC_SPECIFICATION\ARINC_Specification.csproj">
+      <Project>{1BF74140-D2FA-430D-9E17-2F1A03A138B0}</Project>
+      <Name>ARINC_Specification</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ARINC_Module\GeometryFunctions\GeometryFunctions\GeometryFunctions.vbproj">
+      <Project>{DD732411-21E8-4CAC-86E5-0C461D93436F}</Project>
+      <Name>GeometryFunctions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDM\PDM\PDM.csproj">
+      <Project>{A8627D4A-3F1F-486E-AA5C-16D78EA74278}</Project>
+      <Name>PDM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

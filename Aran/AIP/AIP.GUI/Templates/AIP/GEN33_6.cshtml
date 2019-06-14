@@ -1,0 +1,41 @@
+﻿@using System
+@using AIP.GUI
+@if (Model != null && Model.Count > 0)
+{
+<table frame="border" align="center">
+    <colgroup>
+        <col width="15%" />
+        <col width="20%" />
+        <col width="13%" />
+        <col width="13%" />
+        <col width="13%" />
+        <col width="13%" />
+        <col width="13%" />
+    </colgroup>
+	<thead>
+	<tr class="Table-row-type-1">
+	    <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_1"))</th>
+	    <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_2"))</th>
+	    <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_3"))</th>
+        <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_4"))</th>
+        <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_5"))</th>
+        <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_6"))</th>
+	    <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN33_7"))</th>
+	</tr>
+	</thead>
+	<tbody valign="top">
+	@foreach (var data in Model)
+	{
+		<tr>
+			<td class="bleft btop bright bbottom">@Raw(data.UnitName)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.AdministrativeArea) @Raw(data.City) @Raw(data.PostalCode) @Raw(data.Country)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Phone)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Fax)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Email)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.AFSAddress)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.URL)</td>
+		</tr>
+	}
+	</tbody>
+</table>
+}

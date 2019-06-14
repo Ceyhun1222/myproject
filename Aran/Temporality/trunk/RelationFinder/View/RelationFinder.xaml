@@ -1,0 +1,186 @@
+﻿    <UserControl x:Class="ADM.View.Tool.RelationFinder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View1="clr-namespace:Aran.Temporality.CommonUtil.View;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Control1="clr-namespace:Aran.Temporality.CommonUtil.Control;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Extender1="clr-namespace:Aran.Temporality.CommonUtil.Extender;assembly=Aran.Temporality.CommonUtil"
+             xmlns:zoom="clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions"
+             xmlns:local="clr-namespace:ADM.ViewModel.Graph"
+             xmlns:Graph1="clr-namespace:ADM.Graph" 
+             mc:Ignorable="d" 
+             d:DesignHeight="87" d:DesignWidth="889">
+
+        <UserControl.Resources>
+
+        <DataTemplate x:Key="demoTemplate" DataType="{x:Type Graph1:PocVertex}">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Text="{Binding Path=ID, Mode=OneWay}"  />
+            </StackPanel>
+        </DataTemplate>
+
+        <!--<Style TargetType="{x:Type Controls:VertexControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Controls:VertexControl}">
+                            <Border BorderBrush="SteelBlue" 
+                                    Background="Lavender"
+							        BorderThickness="1"
+							        CornerRadius="5"
+							        Padding="{TemplateBinding Padding}">
+
+                                <Expander IsExpanded="True" Foreground="DarkSlateBlue">
+                                    <ContentPresenter Content="{TemplateBinding Vertex}" 
+                                            ContentTemplate="{StaticResource demoTemplate}"/>
+                                </Expander>
+                                <Border.Effect>
+                                    <DropShadowEffect 
+                                    BlurRadius="2" 
+                                    Color="Gray" 
+                                    ShadowDepth="3"
+                                    RenderingBias="Quality"
+                                    Opacity="0.5" 
+                                    Direction="315"/>
+                                </Border.Effect>
+                            </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+
+
+
+        <Style TargetType="{x:Type MenuItem}">
+                <Style.Triggers>
+                    <Trigger Property="Role" Value="SubmenuItem">
+                        <Setter Property="Template" Value="{StaticResource LeafMenuWrapperItemTemplate}"/>
+                    </Trigger>
+                    <Trigger Property="Role" Value="SubmenuHeader">
+                        <Setter Property="Template" Value="{StaticResource NodeMenuWrapperItemTemplate}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="MyMenu" TargetType="{x:Type Menu}">
+                <Setter Property="OverridesDefaultStyle" Value="True" />
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Menu}">
+                            <Border BorderThickness="1" Background="WhiteSmoke">
+                                <Border.BorderBrush>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <LinearGradientBrush.GradientStops>
+                                            <GradientStopCollection>
+                                                <GradientStop Color="{DynamicResource BorderLightColor}" Offset="0.0" />
+                                                <GradientStop Color="{DynamicResource BorderDarkColor}" Offset="1.0" />
+                                            </GradientStopCollection>
+                                        </LinearGradientBrush.GradientStops>
+                                    </LinearGradientBrush>
+                                </Border.BorderBrush>
+                                <StackPanel ClipToBounds="True" Height="20" Orientation="Horizontal" IsItemsHost="True" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+           
+
+        </UserControl.Resources>
+
+        <Grid>
+
+            <Grid Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <DockPanel Grid.Row="0">
+                    <ToolBarTray DockPanel.Dock="Top">
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        <Label Content="From feature:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                        <ComboBox Grid.Column="0" 
+                                  MinWidth="200" 
+                                  Focusable="True"
+                                  StaysOpenOnEdit="True"
+                                  Text="{Binding Path=FeatureTypeFilter, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+                                  IsTextSearchEnabled="False"
+                                  DropDownClosed="ComboBox_OnDropDownClosed"
+                            VerticalAlignment="Center"
+                            IsEditable="True" 
+                            Style="{StaticResource ToolBarComboboxStyle}"
+                            SelectedItem="{Binding Path=FeatureType, UpdateSourceTrigger=PropertyChanged}" 
+                            ItemsSource="{Binding Path=FeatureListFiltered}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                    </Control1:ExtendedToolBar>
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        <Label Content="To feature:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                        <ComboBox Grid.Column="0" 
+                                  MinWidth="200" 
+                                  Focusable="True"
+                                  StaysOpenOnEdit="True"
+                                  DropDownClosed="ComboBox_OnDropDownClosed"
+                                  Text="{Binding Path=FeatureTypeFilter2, UpdateSourceTrigger=PropertyChanged, Mode=OneWayToSource}"
+                                  IsTextSearchEnabled="False"
+                            VerticalAlignment="Center"
+                            IsEditable="True" 
+                            Style="{StaticResource ToolBarComboboxStyle}"
+                            SelectedItem="{Binding Path=FeatureType2, UpdateSourceTrigger=PropertyChanged}" 
+                            ItemsSource="{Binding Path=FeatureListFiltered2}">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel />
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                    </Control1:ExtendedToolBar>
+
+
+                    <Control1:ExtendedToolBar Band="0" Extender1:ToolBarExtender.PreventOverflow="True">
+                        
+                        <Label VerticalAlignment="Center" Content="Layout:"/>
+                        <ComboBox ItemsSource="{Binding LayoutAlgorithmTypes}"
+                                  VerticalAlignment="Center"
+                                  Style="{StaticResource ToolBarComboboxStyle}"
+                                  SelectedItem="{Binding Path=LayoutAlgorithmType, Mode=TwoWay}"
+                                  MinWidth="100"/>
+                        
+                    </Control1:ExtendedToolBar>
+                </ToolBarTray>
+                </DockPanel>
+
+
+                <Grid Grid.Row="1">
+
+                <zoom:ZoomControl Zoom="0.25" MaxZoom="10" MinZoom="0.1">
+
+                    <local:PocGraphLayout Margin="10"
+						Graph="{Binding Path=Graph}"
+						LayoutAlgorithmType="{Binding Path=LayoutAlgorithmType, Mode=OneWay}"
+						OverlapRemovalAlgorithmType="FSA"
+						HighlightAlgorithmType="Simple" />
+                    
+                </zoom:ZoomControl>
+            </Grid>
+            </Grid>
+
+            <View1:BlockerControl 
+            DataContext="{Binding Path=BlockerModel}" 
+            Grid.Row="0" Grid.Column="0" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"/>
+        </Grid>
+    </UserControl>

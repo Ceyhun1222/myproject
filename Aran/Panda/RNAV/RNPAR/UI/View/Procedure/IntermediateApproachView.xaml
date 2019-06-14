@@ -1,0 +1,306 @@
+﻿<UserControl x:Class="Aran.Panda.RNAV.RNPAR.UI.View.Procedure.IntermediateApproachView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.View.Procedure"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}"/>
+            <Style TargetType="Label" BasedOn="{StaticResource LabelStyle}"/>
+            <Style TargetType="ComboBox" BasedOn="{StaticResource ComboBoxStyle}"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Track Type" HorizontalAlignment="Stretch">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <RadioButton Content="RF Leg" GroupName="LegType" IsChecked="{Binding RfLeg}" IsEnabled="{Binding RfLegEnabled}"/>
+                <RadioButton Grid.Column="1" Content="Fly By" GroupName="LegType" IsChecked="{Binding FlyByLeg}" IsEnabled="{Binding FlyByLegEnabled}"/>
+                <RadioButton Grid.Column="2" Content="Straight leg" GroupName="LegType" IsChecked="{Binding StraightLeg}"/>
+            </Grid>
+        </GroupBox>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">MOC:</Label>
+                <TextBox Grid.Row="0" Text="{Binding Moc}" Grid.Column="1"/>
+                <Label Grid.Row="0" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+
+
+                <Label Grid.Row="1" Grid.Column="0">WPT altitude:</Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding WptAltitude}"></TextBox>
+                <Label Grid.Row="1" Grid.Column="2" Content="{Binding HeightUnit}"></Label>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0">Segment RNP:</Label>
+                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding SegmentRnpValue}"></TextBox>
+                <Label Grid.Row="0" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+
+                <Label Grid.Row="1" Grid.Column="0">IAS:</Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Ias}"></TextBox>
+                <Label Grid.Row="1" Grid.Column="2" Content="{Binding SpeedUnit}"></Label>
+
+                <Label Grid.Row="2">Descent gradient:</Label>
+                <xctk:DecimalUpDown Grid.Row="2" Grid.Column="1" Increment=".1" Maximum="{Binding DGMax}" Minimum="{Binding DGMin}" Value="{Binding DG}" Margin="5 5"></xctk:DecimalUpDown>
+                <Label Grid.Row="2" Grid.Column="2">°</Label>
+            </Grid>
+        </Grid>
+        <TabControl Grid.Row="3" SelectedIndex="{Binding SelectedTab}">
+            <TabItem IsEnabled="{Binding RfLeg}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox HorizontalAlignment="Stretch">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Content="Radius" GroupName="RFParameter" IsChecked="{Binding UseRfRadius}"/>
+                            <RadioButton Grid.Column="1" Content="WPT" GroupName="RFParameter" IsChecked="{Binding UseRfWpt}"/>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0">Turn direction:</Label>
+                            <ComboBox Grid.Row="0" Grid.Column="1" SelectedIndex="{Binding TurnDirection}">
+                                <ComboBoxItem>Left</ComboBoxItem>
+                                <ComboBoxItem>Right</ComboBoxItem>
+                            </ComboBox>
+
+
+                            <Label Grid.Row="1" Grid.Column="0">Bank angle:</Label>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding BankAngle}" IsEnabled="{Binding UseRfRadius}"></TextBox>
+                            <Label Grid.Row="1" Grid.Column="2">°</Label>
+
+                            <Label Grid.Row="2" Grid.Column="0">Turn radius:</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TurnRadius}" IsEnabled="{Binding UseRfRadius}"></TextBox>
+                            <Label Grid.Row="2" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0">WPT:</Label>
+                            <ComboBox Grid.Row="0" IsEnabled="{Binding UseRfWpt}" ItemsSource="{Binding RfWptList}" SelectedItem="{Binding SelectedRfWpt}" DisplayMemberPath="Name" Grid.Column="1">
+                            </ComboBox>
+
+                            <Label Grid.Row="1" Grid.Column="0">Entry true course:</Label>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EntryTrueCourse}" IsEnabled="{Binding UseRfRadius}"></TextBox>
+                            <Label Grid.Row="1" Grid.Column="2">°</Label>
+
+                            <Label Grid.Row="2" Grid.Column="0">Track distance:</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TrackDistance}" IsEnabled="False"></TextBox>
+                            <Label Grid.Row="2" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+                        </Grid>
+                    </Grid>
+                </Grid>
+
+            </TabItem>
+            <TabItem IsEnabled="{Binding FlyByLeg}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox HorizontalAlignment="Stretch" Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Content="Radius" GroupName="FlyByParameter" IsChecked="{Binding UseFlyByRadius}"/>
+                            <RadioButton Grid.Column="1" Content="WPT" GroupName="FlyByParameter" IsChecked="{Binding UseFlyByWpt}"/>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0">Turn direction:</Label>
+                            <ComboBox Grid.Row="0" Grid.Column="1" SelectedIndex="{Binding TurnDirection}">
+                                <ComboBoxItem>Left</ComboBoxItem>
+                                <ComboBoxItem>Right</ComboBoxItem>
+                            </ComboBox>
+
+
+                            <Label Grid.Row="1" Grid.Column="0">Bank angle:</Label>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding BankAngle}" IsEnabled="False"></TextBox>
+                            <Label Grid.Row="1" Grid.Column="2">°</Label>
+
+                            <Label Grid.Row="2" Grid.Column="0">Turn radius:</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TurnRadius}" IsEnabled="False"></TextBox>
+                            <Label Grid.Row="2" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0">WPT:</Label>
+                            <ComboBox Grid.Row="0" IsEnabled="{Binding UseFlyByWpt}" ItemsSource="{Binding FlyByWptList}" SelectedItem="{Binding SelectedFlyByWpt}" DisplayMemberPath="Name" Grid.Column="1">
+                            </ComboBox>
+
+                            <Label Grid.Row="1" Grid.Column="0">Entry true course:</Label>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding EntryTrueCourse}" IsEnabled="{Binding UseFlyByRadius}"></TextBox>
+                            <Label Grid.Row="1" Grid.Column="2">°</Label>
+
+                            <Label Grid.Row="2" Grid.Column="0">Track distance:</Label>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding TrackDistance}" IsEnabled="False"></TextBox>
+                            <Label Grid.Row="2" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem IsEnabled="{Binding StraightLeg}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <GroupBox HorizontalAlignment="Stretch" Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <RadioButton Content="Track Distance" GroupName="StraightLegParameter" IsChecked="{Binding UseTrackDistance}"/>
+                            <RadioButton Grid.Column="1" Content="WPT" GroupName="StraightLegParameter" IsChecked="{Binding UseStraightWpt}"/>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0">Track distance:</Label>
+                            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding TrackDistance}"></TextBox>
+                            <Label Grid.Row="0" Grid.Column="2" Content="{Binding DistanceUnit}"></Label>
+
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Row="0" Grid.Column="0">WPT:</Label>
+                            <ComboBox Grid.Row="0"  IsEnabled="{Binding UseStraightWpt}" ItemsSource="{Binding StraightWptList}" SelectedItem="{Binding SelectedStraightWpt}" DisplayMemberPath="Name" Grid.Column="1">
+                            </ComboBox>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" VerticalAlignment="Center" Width="100" Command="{Binding AddCommand}" >Add</Button>
+            <Button Grid.Column="1" VerticalAlignment="Center" Width="100" Command="{Binding RemoveCommand}" IsEnabled="{Binding Committed}">Remove</Button>
+        </Grid>
+    </Grid>
+
+</UserControl>

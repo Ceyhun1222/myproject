@@ -1,0 +1,15 @@
+.oms-map-obstacle {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: 1000;
+    background-color: white;
+    min-width: 300px;
+    max-width: 600px;
+    width: 25vw;
+}
+
+.form-group label{
+    margin: 0px!important;
+}

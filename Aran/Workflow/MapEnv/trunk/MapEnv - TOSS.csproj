@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{249250C0-9188-4DD4-9D41-0532FE43B871}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MapEnv</RootNamespace>
+    <AssemblyName>MapEnv</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>MapEnv.Program</StartupObject>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_COMSOFTDB;_AIM_LOCAL;TDB;TEST</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Globe.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TEST;_TDB;_COMSOFTDB;_XMLDB;_AIM_LOCAL</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_TEST;   _TDB;   COMSOFTDB;   _XMLDB</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ComSoft\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_TEST;_TDB;_COMSOFTDB; _XMLDB</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.3DAnalyst.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Connection.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.ArcMapUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\DotNet\ESRI.ArcGIS.AxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.Carto.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.CartoUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.CatalogUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\DotNet\ESRI.ArcGIS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.DataSourcesGDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.DataSourcesRaster.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.DisplayUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.2\DotNet\ESRI.ArcGIS.Output.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="MapTools, Version=1.0.1972.21747, Culture=neutral">
+      <HintPath>..\..\..\..\RefFiles\Shapefile\MapTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AranDrawing.cs" />
+    <Compile Include="AranDrawingBase.cs" />
+    <Compile Include="AranLayoutViewGraphics.cs" />
+    <Compile Include="CustomCommand.cs" />
+    <Compile Include="Controls\FeatureTypesStyleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FeatureTypesStyleControl.Designer.cs">
+      <DependentUpon>FeatureTypesStyleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AixmExportOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AixmExportOptionsForm.Designer.cs">
+      <DependentUpon>AixmExportOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewProjectForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewProjectForm2.Designer.cs">
+      <DependentUpon>NewProjectForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphicsLayer.cs" />
+    <Compile Include="LayoutView\LayoutViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayoutView\LayoutViewForm.Designer.cs">
+      <DependentUpon>LayoutViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdbExporter\View\ExporterFormW.xaml.cs">
+      <DependentUpon>ExporterFormW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\AimFeatureLayer\AimFeatureLayer.cs" />
+    <Compile Include="Layers\AimFeatureLayer\AimFLComplexLoader.cs" />
+    <Compile Include="Layers\AimFeatureLayer\AimFLGlobal.cs" />
+    <Compile Include="Layers\Common\AimComplexTable.cs" />
+    <Compile Include="Layers\Common\AimRow.cs" />
+    <Compile Include="Layers\Common\AimTable.cs" />
+    <Compile Include="Layers\Common\ClassExtensions.cs" />
+    <Compile Include="AimInfoTool.cs" />
+    <Compile Include="Layers\Common\CategoriesSymbol.cs" />
+    <Compile Include="Layers\Common\LayersGlobals.cs" />
+    <Compile Include="Layers\Common\QueryInfo.cs" />
+    <Compile Include="Layers\Common\TableShapeInfo.cs" />
+    <Compile Include="Layers\ComplexLayer\CompLayerTreeControl.xaml.cs">
+      <DependentUpon>CompLayerTreeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\ComplexLayerBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\ComplexLayerBuilderForm.Designer.cs">
+      <DependentUpon>ComplexLayerBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\ComplexLayerRefSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\ComplexLayerRefSetForm.Designer.cs">
+      <DependentUpon>ComplexLayerRefSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\Viewer\ComplexLayerViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\Viewer\ComplexLayerViewerControl.Designer.cs">
+      <DependentUpon>ComplexLayerViewerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\Viewer\ComplexLayerViewerW.xaml.cs">
+      <DependentUpon>ComplexLayerViewerW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\FeatureSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\FeatureSelectorForm.Designer.cs">
+      <DependentUpon>FeatureSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmptyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmptyForm.Designer.cs">
+      <DependentUpon>EmptyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layers\ComplexLayer\QueryInfoGenerator.cs" />
+    <Compile Include="Controls\FeatureTypeSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FeatureTypeSelector.Designer.cs">
+      <DependentUpon>FeatureTypeSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LeftWindowTitle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LeftWindowTitle.Designer.cs">
+      <DependentUpon>LeftWindowTitle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LineControl.Designer.cs">
+      <DependentUpon>LineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DefaultFeatureStyleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DefaultFeatureStyleForm.Designer.cs">
+      <DependentUpon>DefaultFeatureStyleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RasterPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RasterPropertyForm.Designer.cs">
+      <DependentUpon>RasterPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILeftWindow.cs" />
+    <Compile Include="Controls\NewPro\NewProConnectionPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProConnectionPage.Designer.cs">
+      <DependentUpon>NewProConnectionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProPluginPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProPluginPage.Designer.cs">
+      <DependentUpon>NewProPluginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProFileNamePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProFileNamePage.Designer.cs">
+      <DependentUpon>NewProFileNamePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProPluginSettinsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProPluginSettinsPage.Designer.cs">
+      <DependentUpon>NewProPluginSettinsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProLoginPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProLoginPage.Designer.cs">
+      <DependentUpon>NewProLoginPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProRecentFilesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NewPro\NewProRecentFilesPage.Designer.cs">
+      <DependentUpon>NewProRecentFilesPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdbExporter\ExporterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdbExporter\ExporterForm.Designer.cs">
+      <DependentUpon>ExporterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdbExporter\ExportInfo.cs" />
+    <Compile Include="MdbExporter\GdbExporter2.cs" />
+    <Compile Include="Forms\NewWorkPackageLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewWorkPackageLayerForm.Designer.cs">
+      <DependentUpon>NewWorkPackageLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scene\TestSceneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scene\TestSceneForm.designer.cs">
+      <DependentUpon>TestSceneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TOC\AimComplexTocItem.cs" />
+    <Compile Include="TOC\AimLayer.cs" />
+    <Compile Include="AranGraphics.cs" />
+    <Compile Include="TOC\AimSimpleTocItem.cs" />
+    <Compile Include="TOC\EsriFeatureTocItem.cs" />
+    <Compile Include="TOC\TOCControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TOC\TOCControl.Designer.cs">
+      <DependentUpon>TOCControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TOC\TOCControlW.xaml.cs">
+      <DependentUpon>TOCControlW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FeatureLayerPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FeatureLayerPropertyForm.Designer.cs">
+      <DependentUpon>FeatureLayerPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeatureStyleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FeatureStyleControl.designer.cs">
+      <DependentUpon>FeatureStyleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AttributesPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AttributesPageControl.Designer.cs">
+      <DependentUpon>AttributesPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FeatureGridPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FeatureGridPageControl.Designer.cs">
+      <DependentUpon>FeatureGridPageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delegates.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormManageAerodrome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormManageAerodrome.Designer.cs">
+      <DependentUpon>FormManageAerodrome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormUserManger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormUserManger.Designer.cs">
+      <DependentUpon>FormUserManger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropertyForm.Designer.cs">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TabDocumentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TabDocumentForm.Designer.cs">
+      <DependentUpon>TabDocumentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeomCreatorTool.cs" />
+    <Compile Include="IAttributePageControl.cs" />
+    <Compile Include="Forms\SimpleLayerBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SimpleLayerBuilderForm.Designer.cs">
+      <DependentUpon>SimpleLayerBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapToolItem.cs" />
+    <Compile Include="MapEnvData.cs" />
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyTool.cs" />
+    <Compile Include="Controls\PropertySelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PropertySelectorForm.Designer.cs">
+      <DependentUpon>PropertySelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PropertySelectorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PropertySelectorControl.Designer.cs">
+      <DependentUpon>PropertySelectorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="StyleFunctions.cs" />
+    <Compile Include="Globals.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TOC\TocGlobal.cs" />
+    <Compile Include="TOC\TocItem.cs" />
+    <Compile Include="TOC\TocSymbolItem.cs" />
+    <Compile Include="TOC\TocTemplateSelector.cs" />
+    <Compile Include="WindowsAPI.cs" />
+    <Compile Include="Forms\WorkPackage\WorkPackageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkPackage\WorkPackageForm.Designer.cs">
+      <DependentUpon>WorkPackageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkPackage\WorkPackageSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkPackage\WorkPackageSelectionForm.Designer.cs">
+      <DependentUpon>WorkPackageSelectionForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\FeatureTypesStyleControl.resx">
+      <DependentUpon>FeatureTypesStyleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AixmExportOptionsForm.resx">
+      <DependentUpon>AixmExportOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewProjectForm2.resx">
+      <DependentUpon>NewProjectForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layers\ComplexLayer\ComplexLayerBuilderForm.resx">
+      <DependentUpon>ComplexLayerBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layers\ComplexLayer\ComplexLayerRefSetForm.resx">
+      <DependentUpon>ComplexLayerRefSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layers\ComplexLayer\Viewer\ComplexLayerViewerControl.resx">
+      <DependentUpon>ComplexLayerViewerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layers\ComplexLayer\FeatureSelectorForm.resx">
+      <DependentUpon>FeatureSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProConnectionPage.resx">
+      <DependentUpon>NewProConnectionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProRecentFilesPage.resx">
+      <DependentUpon>NewProRecentFilesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmptyForm.resx">
+      <DependentUpon>EmptyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FeatureTypeSelector.resx">
+      <DependentUpon>FeatureTypeSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LeftWindowTitle.resx">
+      <DependentUpon>LeftWindowTitle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LineControl.resx">
+      <DependentUpon>LineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DefaultFeatureStyleForm.resx">
+      <DependentUpon>DefaultFeatureStyleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RasterPropertyForm.resx">
+      <DependentUpon>RasterPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProPluginPage.resx">
+      <DependentUpon>NewProPluginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProFileNamePage.resx">
+      <DependentUpon>NewProFileNamePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProPluginSettinsPage.resx">
+      <DependentUpon>NewProPluginSettinsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewPro\NewProLoginPage.resx">
+      <DependentUpon>NewProLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayoutView\LayoutViewForm.resx">
+      <DependentUpon>LayoutViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdbExporter\ExporterForm.resx">
+      <DependentUpon>ExporterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewWorkPackageLayerForm.resx">
+      <DependentUpon>NewWorkPackageLayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scene\TestSceneForm.resx">
+      <DependentUpon>TestSceneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TOC\TOCControl.resx">
+      <DependentUpon>TOCControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FeatureLayerPropertyForm.resx">
+      <DependentUpon>FeatureLayerPropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FeatureStyleControl.resx">
+      <DependentUpon>FeatureStyleControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AttributesPageControl.resx">
+      <DependentUpon>AttributesPageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FeatureGridPageControl.resx">
+      <DependentUpon>FeatureGridPageControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormManageAerodrome.resx">
+      <DependentUpon>FormManageAerodrome.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUserManger.resx">
+      <DependentUpon>FormUserManger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropertyForm.resx">
+      <DependentUpon>PropertyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TabDocumentForm.resx">
+      <DependentUpon>TabDocumentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SimpleLayerBuilderForm.resx">
+      <DependentUpon>SimpleLayerBuilderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Controls\PropertySelectorForm.resx">
+      <DependentUpon>PropertySelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PropertySelectorControl.resx">
+      <DependentUpon>PropertySelectorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkPackage\WorkPackageForm.resx">
+      <DependentUpon>WorkPackageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkPackage\WorkPackageSelectionForm.resx">
+      <DependentUpon>WorkPackageSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ico\edit_24.png" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Globe.ico" />
+    <Resource Include="wpf_images\export_16.png" />
+    <Resource Include="wpf_images\property_16.png" />
+    <Resource Include="wpf_images\refresh_16.png" />
+    <Resource Include="wpf_images\zoom_in_16.png" />
+    <Resource Include="wpf_images\remove_16.png" />
+    <Resource Include="wpf_images\table_16.png" />
+    <Resource Include="wpf_images\loader-16.gif" />
+    <Resource Include="wpf_images\ref_left_32.png" />
+    <Resource Include="wpf_images\ref_right_32.png" />
+    <Resource Include="wpf_images\remove.png" />
+    <None Include="ico\add_to_right_32.png" />
+    <Content Include="ico\airport.png" />
+    <None Include="ico\new_24.png" />
+    <None Include="ico\ref_left_32.png" />
+    <None Include="ico\ref_right_32.png" />
+    <None Include="ico\remove_to_left.png" />
+    <None Include="ico\left_win_title_backg.png" />
+    <None Include="ico\close_2_24.png" />
+    <None Include="ico\left_win_title_active_backg.png" />
+    <None Include="ico\close_title_24.png" />
+    <None Include="ico\close_title_click_24.png" />
+    <None Include="ico\close_title_hover_24.png" />
+    <None Include="ico\settings_24.png" />
+    <None Include="ico\layer_export_32.png" />
+    <None Include="ico\info_16.png" />
+    <None Include="ico\layout.ico" />
+    <None Include="ico\print_16.png" />
+    <None Include="ico\arcmap_16.png" />
+    <None Include="ico\risk final_tf.gif" />
+    <Content Include="ico\user.ico" />
+    <Content Include="ico\User_Group.ico" />
+    <None Include="ico\arrow_down_16.png" />
+    <None Include="ico\arrow_up_16.png" />
+    <None Include="ico\aim_info.cur" />
+    <None Include="ico\create_geom.cur" />
+    <None Include="ico\Zoom-icon_16.png" />
+    <None Include="ico\open_pro_48.png" />
+    <None Include="ico\new_pro_48.png" />
+    <None Include="ico\menu_24.png" />
+    <None Include="ico\remove_16.png" />
+    <None Include="ico\add_16.png" />
+    <None Include="ico\layers_24.png" />
+    <None Include="ico\cancel_24.png" />
+    <None Include="ico\ok_apply_24.png" />
+    <None Include="ico\Layers.ico" />
+    <None Include="ico\remove_layer_24.png" />
+    <None Include="ico\link_add_24.png" />
+    <None Include="ico\export_file_24.png" />
+    <None Include="ico\open_file_24.png" />
+    <None Include="ico\save_as_24.png" />
+    <None Include="ico\save_24.png" />
+    <None Include="ico\form_24.png" />
+    <None Include="ico\add_layer_24.png" />
+    <None Include="ico\preview_24.png" />
+    <None Include="ico\close_32x32.png" />
+    <None Include="ico\aim_info_cur.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MdbExporter\View\ExporterFormW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layers\ComplexLayer\CompLayerTreeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Layers\ComplexLayer\Viewer\ComplexLayerViewerW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TOC\TOCControlW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aim\AixmMessage\trunk\Aran.Aim.AixmMessage.csproj">
+      <Project>{571dfcbb-8cc5-45a8-ae95-f5323db3b459}</Project>
+      <Name>Aran.Aim.AixmMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\CawProvider\trunk\Aran.Aim.CawProvider.csproj">
+      <Project>{E29AC94C-6AD0-4ACD-ABEB-CFCED544AF62}</Project>
+      <Name>Aran.Aim.CawProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799ad2bf-bd65-4584-8b84-bffe4b5abcb0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\InputForm\trunk\Lib\Aran.Aim.InputForm.Lib.csproj">
+      <Project>{D6D6CB74-8CD4-4FDE-A077-F55703FD71DB}</Project>
+      <Name>Aran.Aim.InputForm.Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\InputForm\trunk\UI\Aran.Aim.InputForm.UI.csproj">
+      <Project>{8A296AC8-4D60-430B-9E01-E5D3E02699B0}</Project>
+      <Name>Aran.Aim.InputForm.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Metadata\Geo\trunk\Aran.Aim.Metadata.Geo.csproj">
+      <Project>{7163E1B9-801B-41B6-AE11-498EF20FDEDE}</Project>
+      <Name>Aran.Aim.Metadata.Geo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Metadata\UI\Base\trunk\Aran.Aim.Metadata.UI.csproj">
+      <Project>{4914E959-CE35-452C-80DF-35B6DA52FAD0}</Project>
+      <Name>Aran.Aim.Metadata.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Validation\Info\trunk\Aran.Aim.ValidationInfo.csproj">
+      <Project>{37846D3B-46A6-4FBE-8CEC-4654163F569E}</Project>
+      <Name>Aran.Aim.ValidationInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{bcbbde4e-098d-45e9-9b72-0a2e6a7cae6a}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\IO\trunk\Aran.Geometries.IO.csproj">
+      <Project>{6904A5CC-44B7-4C24-B416-98198CC00EEE}</Project>
+      <Name>Aran.Geometries.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Other\FilterControl\Aran.Aim.Controls.FilterControl.csproj">
+      <Project>{0EB9EC0C-AD75-4354-9F68-C072A9E03210}</Project>
+      <Name>Aran.Aim.Controls.FilterControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184E1F94-ED6F-481E-84FF-2EFD1468CCC6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Temporality\trunk\Aran.Temporality.Provider\Aran.Temporality.Provider.csproj">
+      <Project>{138e5df3-c6bb-4386-93ea-4cbaf9770a5d}</Project>
+      <Name>Aran.Temporality.Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Temporality\trunk\Aran.Temporality.Resources\Aran.Temporality.Resources.csproj">
+      <Project>{0af11123-0e9d-4f56-b176-219427e18cf0}</Project>
+      <Name>Aran.Temporality.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Temporality\trunk\Aran.Temporality\Aran.Temporality.csproj">
+      <Project>{d29d95ab-c621-423c-bbc6-d712edf7d023}</Project>
+      <Name>Aran.Temporality</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Temporality\trunk\CommonUtil\Aran.Temporality.CommonUtil.csproj">
+      <Project>{4ae7195a-c292-421d-98ee-95e741a05da0}</Project>
+      <Name>Aran.Temporality.CommonUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8E1CA34F-D479-4637-8A0A-3E8E1F23CC9D}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FeatureInfo\trunk\Aran.Aim.FeatureInfo.csproj">
+      <Project>{C251A63D-BA09-4A5D-B1B4-5279F9A168F0}</Project>
+      <Name>Aran.Aim.FeatureInfo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MdbExporter\Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetDir)..\..\RefFiles\Shapefile\shapelib.dll" "$(TargetDir)shapelib.dll"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Aran.Aim.DBService" elementFormDefault="qualified" targetNamespace="http://Aran.Aim.DBService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SetFeatures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aixmBasicMessageText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFeaturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetFeaturesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeatures">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="creationTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeaturesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFeaturesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

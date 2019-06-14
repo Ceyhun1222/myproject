@@ -1,0 +1,98 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+
+
+<html>
+<head>
+	<style type="text/css">
+		body{
+		background:#eee;
+		}
+		
+	    h2 {
+		font-size: 2em;
+		color: #036;
+		margin: 0;
+		padding-top: 1em;
+		font-weight: normal;
+		}
+		.MainTable {
+		border:1px solid #042F52;
+		margin-top:50px;
+		}
+		.HeaderCell {
+		font-size: 1.25em;
+		color:#fff;
+		background-color: #036;
+		margin: 5px;
+		padding: 5px;
+		}
+		.RowCell0 {
+		font-size: 1em;
+		background-color: #C8D7E3;
+		margin: 5px;
+		padding: 5px;
+		color:#036;
+		font-weight: normal;
+		}
+		.RowCell1 {
+		font-size: 1em;
+		background-color: #8FBEE3;
+		color:#036;
+		margin: 5px;
+		padding: 5px;
+		font-weight: normal;
+		}
+		.TotalCell {
+		font-size: 1em;
+		background-color: #F59B87;
+		color:#036;
+		margin: 5px;
+		padding: 5px;
+		font-weight: normal;
+		}
+	</style>
+	
+	<title>Statistics for Snapshot File <#= FileName #></title>
+</head>
+
+<body>
+<h2>Statistics for Snapshot File <#= FileName #></h2>
+
+<table class="MainTable">
+
+  <tr>
+		<td class="HeaderCell"> Feature Type </td>
+		<td class="HeaderCell"> Count </td>
+		<td class="HeaderCell"> Links </td>
+		<td class="HeaderCell"> Root Properties </td>
+  </tr>
+
+<# 
+	int i=0;
+    foreach (var item in Issues) 
+   {
+   i++;
+    #>
+     <tr>
+		<td class="RowCell<#= i%2 #>"><#= item.FeatureType #></td>
+		<td class="RowCell<#= i%2 #>"><#= item.Count #></td>
+		<td class="RowCell<#= i%2 #>"><#= item.Links #></td>
+		<td class="RowCell<#= i%2 #>"><#= item.RootProperties #></td>
+	 </tr>
+<# } // end of foreach
+#>
+
+	<tr>
+		<td class="TotalCell"> Total </td>
+		<td class="TotalCell"><#= Count #></td>
+		<td class="TotalCell"><#= Links #></td>
+		<td class="TotalCell"><#= RootProperties #></td>
+  </tr>
+
+</table>
+
+</body></html>

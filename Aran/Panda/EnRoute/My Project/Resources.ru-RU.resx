@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bmpHIDE_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV161qp2cQ4cuvyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUtn0l+e/Y+tiftn0luYU++e/YyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUuYIp+eW//92O/9+d161qqWgEy6V0yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+eW/9cR4
+        /8Fm/8Fm/8+MuYU+tn0l59a/yNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+tif/7dT/69D/69D/6w+/7dT
+        9cR4qWgEw5hgyNDUyNDUyNDUyNDUyNDUyNDUtn0l/8+M/6w+/6w+/6w+/6w+/69D9cR4uYIpuYU+yNDU
+        yNDUyNDUyNDUyNDUyNDUuYIp/9ST/6w+/6w+/6w+/8FmzZhFqWgE28GfyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUtn0l/8+M/6w+/8Fm2qZWqWgEy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUtn0l/9+d/8Fm
+        tn0luYU++eW/yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV2qZWp2cQ28GfyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="bmpSHOW_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        +fXvy6V0n1oAyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU4cuvp2cQ161qsncVyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+e/YuYU+tn0l+tif+e/Ytn0lyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUy6V0qWgE161q/9+d/92O+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUyNDU59a/tn0l
+        uYU+/8+M/8Fm/8Fm9cR4+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUw5hgqWgE9cR4/7dT/6w+/69D/69D
+        /7dT+tifuYIpyNDUyNDUyNDUyNDUyNDUyNDUuYU+uYIp9cR4/69D/6w+/6w+/6w+/6w+/8+Mtn0lyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDU28GfqWgEzZhF/8Fm/6w+/6w+/6w+/9STuYIpyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDU+fXvy6V0qWgE2qZW/8Fm/6w+/8+Mtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDU+eW/uYU+tn0l/8Fm/9+dtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU28Gf
+        p2cQ2qZWsncVyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+fXvy6V0n1oAyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="str1" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str2" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str3" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str4" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str5" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str6" xml:space="preserve">
+    <value>Enroute</value>
+  </data>
+  <data name="str50" xml:space="preserve">
+    <value>WPT</value>
+  </data>
+  <data name="str51" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="str52" xml:space="preserve">
+    <value>фт</value>
+  </data>
+  <data name="str53" xml:space="preserve">
+    <value>км</value>
+  </data>
+  <data name="str54" xml:space="preserve">
+    <value>ММ</value>
+  </data>
+  <data name="str55" xml:space="preserve">
+    <value>км/ч</value>
+  </data>
+  <data name="str56" xml:space="preserve">
+    <value>узлы</value>
+  </data>
+  <data name="str57" xml:space="preserve">
+    <value>м/мин</value>
+  </data>
+  <data name="str58" xml:space="preserve">
+    <value>фт/мин</value>
+  </data>
+  <data name="str59" xml:space="preserve">
+    <value>сек</value>
+  </data>
+  <data name="str60" xml:space="preserve">
+    <value>°/сек</value>
+  </data>
+  <data name="str67" xml:space="preserve">
+    <value>ЭП</value>
+  </data>
+  <data name="str100" xml:space="preserve">
+    <value>От </value>
+  </data>
+  <data name="str101" xml:space="preserve">
+    <value> до </value>
+  </data>
+  <data name="str102" xml:space="preserve">
+    <value>Радиал: </value>
+  </data>
+  <data name="str103" xml:space="preserve">
+    <value>Пеленг: </value>
+  </data>
+  <data name="str104" xml:space="preserve">
+    <value>Расстояние: </value>
+  </data>
+  <data name="str105" xml:space="preserve">
+    <value>В прямом направлении зоны невозможно стыковать.</value>
+  </data>
+  <data name="str106" xml:space="preserve">
+    <value>Средство наведения требует минимальную высоту сегмента не менее </value>
+  </data>
+  <data name="str107" xml:space="preserve">
+    <value>Выберите другое средсто или другую категорию маршрута.</value>
+  </data>
+  <data name="str108" xml:space="preserve">
+    <value>Не все средства определены.</value>
+  </data>
+  <data name="str109" xml:space="preserve">
+    <value>Изменить эшелон полёта ?</value>
+  </data>
+  <data name="str110" xml:space="preserve">
+    <value>Средство наведения требует минимальную высоту сегмента превышающую макс. высоту для данной категории маршрута.
+Выберите другое средсто или другую категорию маршрута.</value>
+  </data>
+  <data name="str111" xml:space="preserve">
+    <value>Средство пересечения требует минимальную высоту сегмента не менее </value>
+  </data>
+  <data name="str112" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="str113" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="str114" xml:space="preserve">
+    <value>Средство пересечения требует минимальную высоту сегмента превышающую макс. высоту для данной категории маршрута.
+Выберите другое средсто или другую категорию маршрута.</value>
+  </data>
+  <data name="str115" xml:space="preserve">
+    <value>Параметры шаблона разворота на посадочный курс неправильны.</value>
+  </data>
+  <data name="str116" xml:space="preserve">
+    <value>Аналогичный сегмент </value>
+  </data>
+  <data name="str117" xml:space="preserve">
+    <value> маршрута </value>
+  </data>
+  <data name="str118" xml:space="preserve">
+    <value> имеет высоту FL- </value>
+  </data>
+  <data name="str119" xml:space="preserve">
+    <value>Угол разворота превышает макс. допустимое значение: </value>
+  </data>
+  <data name="str120" xml:space="preserve">
+    <value>Зона начала разварота находится дальше чем начало сегмента.</value>
+  </data>
+  <data name="str121" xml:space="preserve">
+    <value>Для выполнения операции не хватает радиуса действия средства наведения.</value>
+  </data>
+  <data name="str122" xml:space="preserve">
+    <value>Маршрут с названием "</value>
+  </data>
+  <data name="str123" xml:space="preserve">
+    <value>" уже существует в базе данных.</value>
+  </data>
+  <data name="str124" xml:space="preserve">
+    <value>Тематический слой </value>
+  </data>
+  <data name="str125" xml:space="preserve">
+    <value>не найден</value>
+  </data>
+  <data name="str126" xml:space="preserve">
+    <value>на </value>
+  </data>
+  <data name="str127" xml:space="preserve">
+    <value>от </value>
+  </data>
+  <data name="str128" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="str500" xml:space="preserve">
+    <value>Объект с данным названием уже существует в базе данных.</value>
+  </data>
+  <data name="str501" xml:space="preserve">
+    <value>Измените </value>
+  </data>
+  <data name="str502" xml:space="preserve">
+    <value> объекта.</value>
+  </data>
+  <data name="str503" xml:space="preserve">
+    <value>Приложение 'PANDA' не подключено.</value>
+  </data>
+  <data name="str504" xml:space="preserve">
+    <value>Направление разворота:</value>
+  </data>
+  <data name="str505" xml:space="preserve">
+    <value>Налево</value>
+  </data>
+  <data name="str506" xml:space="preserve">
+    <value>Направо</value>
+  </data>
+  <data name="str507" xml:space="preserve">
+    <value>метр</value>
+  </data>
+  <data name="str508" xml:space="preserve">
+    <value>Сохранить файлы...</value>
+  </data>
+  <data name="str509" xml:space="preserve">
+    <value>Протокол рассчетов</value>
+  </data>
+  <data name="str510" xml:space="preserve">
+    <value>EnRoute - Протокол рассчетов</value>
+  </data>
+  <data name="str1000" xml:space="preserve">
+    <value>Начало маршрута</value>
+  </data>
+  <data name="str1001" xml:space="preserve">
+    <value>Сегменты маршрута</value>
+  </data>
+  <data name="str1002" xml:space="preserve">
+    <value>Конец маршрута определяется</value>
+  </data>
+  <data name="str1003" xml:space="preserve">
+    <value>Определение WPT</value>
+  </data>
+  <data name="str1004" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str1005" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str1006" xml:space="preserve">
+    <value>Добавить новую точку</value>
+  </data>
+  <data name="str1007" xml:space="preserve">
+    <value>Максимальный допуск на КТ:</value>
+  </data>
+  <data name="str1008" xml:space="preserve">
+    <value>Рекомендуемый интервал: </value>
+  </data>
+  <data name="str1009" xml:space="preserve">
+    <value>WPT:</value>
+  </data>
+  <data name="str1010" xml:space="preserve">
+    <value>Интервал курсов </value>
+  </data>
+  <data name="str1011" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str1012" xml:space="preserve">
+    <value>Название:</value>
+  </data>
+  <data name="str1013" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1014" xml:space="preserve">
+    <value>Направление следующего сегмента</value>
+  </data>
+  <data name="str1015" xml:space="preserve">
+    <value>WPT/FIX:</value>
+  </data>
+  <data name="str1016" xml:space="preserve">
+    <value>Курс сегмента:</value>
+  </data>
+  <data name="str1017" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1018" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1019" xml:space="preserve">
+    <value>Наводящее средство:</value>
+  </data>
+  <data name="str1020" xml:space="preserve">
+    <value>Конец маршрута</value>
+  </data>
+  <data name="str1021" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str1022" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str1023" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1024" xml:space="preserve">
+    <value>Название WPT:</value>
+  </data>
+  <data name="str1025" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str1026" xml:space="preserve">
+    <value>Применить правило </value>
+  </data>
+  <data name="str1027" xml:space="preserve">
+    <value>WPT:</value>
+  </data>
+  <data name="str1028" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="str1029" xml:space="preserve">
+    <value>Прямой сегмент</value>
+  </data>
+  <data name="str1030" xml:space="preserve">
+    <value>Cегмент с разворотом</value>
+  </data>
+  <data name="str1031" xml:space="preserve">
+    <value>Выбор начальной точки пути</value>
+  </data>
+  <data name="str1032" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str1033" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str1034" xml:space="preserve">
+    <value>Interval</value>
+  </data>
+  <data name="str1035" xml:space="preserve">
+    <value>WPT:</value>
+  </data>
+  <data name="str1036" xml:space="preserve">
+    <value>На ростоянии:</value>
+  </data>
+  <data name="str1037" xml:space="preserve">
+    <value>Название:</value>
+  </data>
+  <data name="str1038" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str1039" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1040" xml:space="preserve">
+    <value>Расположение сегмента относительно средства</value>
+  </data>
+  <data name="str1041" xml:space="preserve">
+    <value>Сегмент распологается до средства</value>
+  </data>
+  <data name="str1042" xml:space="preserve">
+    <value>Сегмент распологается после средства</value>
+  </data>
+  <data name="str1043" xml:space="preserve">
+    <value>Направление первого сегмента</value>
+  </data>
+  <data name="str1044" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1045" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1046" xml:space="preserve">
+    <value>Средство наведения:</value>
+  </data>
+  <data name="str1047" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1048" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1049" xml:space="preserve">
+    <value>COP</value>
+  </data>
+  <data name="str1050" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str1051" xml:space="preserve">
+    <value>Категория маршрута:</value>
+  </data>
+  <data name="str1052" xml:space="preserve">
+    <value>Название маршрута:</value>
+  </data>
+  <data name="str1053" xml:space="preserve">
+    <value>Высота:</value>
+  </data>
+  <data name="str1054" xml:space="preserve">
+    <value>Эшелон полёта:</value>
+  </data>
+  <data name="str1055" xml:space="preserve">
+    <value>Применить правило 30°</value>
+  </data>
+  <data name="str1056" xml:space="preserve">
+    <value>Курс проходит</value>
+  </data>
+  <data name="str2000" xml:space="preserve">
+    <value>Сегмент</value>
+  </data>
+  <data name="str2001" xml:space="preserve">
+    <value>От WPT</value>
+  </data>
+  <data name="str2002" xml:space="preserve">
+    <value>к WPT</value>
+  </data>
+  <data name="str2003" xml:space="preserve">
+    <value>Истинный курс</value>
+  </data>
+  <data name="str2004" xml:space="preserve">
+    <value>Длина</value>
+  </data>
+  <data name="str2005" xml:space="preserve">
+    <value>Угол разворота</value>
+  </data>
+  <data name="str2006" xml:space="preserve">
+    <value>MRA начала сегмента</value>
+  </data>
+  <data name="str2007" xml:space="preserve">
+    <value>MRA конца сегмента</value>
+  </data>
+  <data name="str2008" xml:space="preserve">
+    <value>MRA наведения</value>
+  </data>
+  <data name="str2009" xml:space="preserve">
+    <value>Средство пересечения конца сегмента: </value>
+  </data>
+  <data name="str2010" xml:space="preserve">
+    <value>Расстояние от начала сегмента до места захвата наведения: </value>
+  </data>
+  <data name="str2011" xml:space="preserve">
+    <value>Ближний допуск конца сегмента: </value>
+  </data>
+  <data name="str2012" xml:space="preserve">
+    <value>Длина сегмента: </value>
+  </data>
+  <data name="str2013" xml:space="preserve">
+    <value>Угол разворота: </value>
+  </data>
+  <data name="str2014" xml:space="preserve">
+    <value>Длина участка стабилизации: </value>
+  </data>
+  <data name="str2015" xml:space="preserve">
+    <value>Требуемая длина участка стабилизации: </value>
+  </data>
+  <data name="str2016" xml:space="preserve">
+    <value>Мин абс. высота для приема сигнала от средства наведения: </value>
+  </data>
+  <data name="str2017" xml:space="preserve">
+    <value>Мин абс. высота для приема сигнала от средства пересечениия: </value>
+  </data>
+  <data name="str2018" xml:space="preserve">
+    <value>MOCA</value>
+  </data>
+  <data name="str2019" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str2020" xml:space="preserve">
+    <value>Dominic Obs. ID </value>
+  </data>
+  <data name="str2021" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="str2022" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="str2023" xml:space="preserve">
+    <value>Абс. выс.</value>
+  </data>
+  <data name="str2024" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str2025" xml:space="preserve">
+    <value>MOCA</value>
+  </data>
+  <data name="str2026" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="str2027" xml:space="preserve">
+    <value>Зона</value>
+  </data>
+  <data name="str2028" xml:space="preserve">
+    <value>Средство наведения</value>
+  </data>
+  <data name="str2029" xml:space="preserve">
+    <value>Средство пересечения</value>
+  </data>
+  <data name="str2030" xml:space="preserve">
+    <value>MCA</value>
+  </data>
+  <data name="str2500" xml:space="preserve">
+    <value>Создать новый</value>
+  </data>
+</root>

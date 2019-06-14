@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C491729C-387B-4FE8-A96E-8304C30DE3D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.PANDA.RNAV.Enroute.VD</RootNamespace>
+    <AssemblyName>Aran.PANDA.RNAV.Enroute.VD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PANDA.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Aim">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Aim.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Aim.Data.DbProvider">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Aim.Data.DbProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.AranEnvironment">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.AranEnvironment.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Converters.ConverterGeom">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Converters.ConverterGeom.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Converters.ConverterJtsGeom">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Converters.ConverterJtsGeom.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Converters.ConverterSI">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Converters.ConverterSI.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Geometries.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Geometries.Operators">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Geometries.Operators.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Package.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.PANDA.Common">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.PANDA.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Panda.Constants">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Panda.Constants.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.PANDA.Settings">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.PANDA.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Panda.Types">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Panda.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Queries.Common">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Queries.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Aran.Queries.Panda">
+      <HintPath>..\..\..\..\..\bin\Debug\Aran.Queries.Panda.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoAPI, Version=1.7.4.0, Culture=neutral, PublicKeyToken=a1a0da7def465678, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\RefFiles\JTS\GeoAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AranPlugin.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\CReportFile.cs" />
+    <Compile Include="Forms\FIXInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FIXInfoForm.Designer.cs">
+      <DependentUpon>FIXInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DBModule.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\DecoderCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\GlobalVars.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.Designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Types.cs" />
+    <Compile Include="Modules\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FIXInfoForm.resx">
+      <DependentUpon>FIXInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANDA.ico" />
+    <None Include="Resources\Rev_play.gif" />
+    <None Include="Resources\play.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    string currentController = ViewContext.RouteData.Values["Controller"].ToString();
+    string currentAction = ViewContext.RouteData.Values["Action"].ToString();
+}
+
+<footer class="main-footer">
+    <div class="navbar-collapse collapse" id="LangNavBar">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#LangNavBar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <strong>Copyright &copy; @DateTime.Now.Year <a asp-controller="Home" asp-action="Index">Company</a>.</strong>@Localizer["All rights reserved"].
+
+        <ul class="pull-right list-inline">
+            <li is-active-language asp-route-lang="ru">
+                <a asp-controller=@currentController asp-action=@currentAction asp-route-lang="ru">
+                    <img asp-append-version="true" src="~/images/ru.png" alt="Ru" />
+                </a>
+            </li>
+
+            <li is-active-language asp-route-lang="en">
+                <a asp-controller=@currentController asp-action=@currentAction asp-route-lang="en">
+                    <img asp-append-version="true" src="~/images/eng.png" alt="Eng" />
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>            

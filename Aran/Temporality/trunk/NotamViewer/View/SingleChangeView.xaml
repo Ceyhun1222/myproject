@@ -1,0 +1,189 @@
+﻿<UserControl x:Class="NotamViewer.View.SingleChangeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             Width="{Binding ControlWidth}"
+             
+             HorizontalAlignment="Left" 
+             VerticalAlignment="Stretch"
+             ToolTip="{Binding ControlToolTip}"
+             Margin="{Binding Path=ControlMargin, Converter={StaticResource marginConverter}}"
+             d:DesignHeight="44" d:DesignWidth="336">
+    <Grid Margin="0,1,0,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+            <Popup x:Name="ChangePopup"
+                   IsOpen="{Binding PopupIsOpen, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                   AllowsTransparency="True" 
+                   HorizontalOffset="-10"
+                   VerticalOffset="-10"
+                   Placement="Right"
+                   PlacementTarget="{Binding ElementName=ChangePresenter}">
+
+            <Border Background="Transparent">
+                <Border Background="Lavender" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0" BorderThickness="1,1,1,0" BorderBrush="Gray">
+                            <Border.Background>
+                                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                        <GradientStop Color="Lavender" Offset="0" />
+                                        <GradientStop Color="LightSteelBlue" Offset="1" />
+                                    </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+
+                                <StackPanel Grid.Column="0" Margin="2,1,2,2" Orientation="Vertical">
+                                    <WrapPanel>
+                                        <TextBlock Text="From:" Foreground="Black"/>
+                                        <TextBlock Text="{Binding StartDate}" Margin="5,0,0,0" Foreground="Black"/>
+                                    </WrapPanel>
+                                    <WrapPanel>
+                                        <TextBlock Text="To:" Foreground="Black"/>
+                                        <TextBlock Text="{Binding EndDate}" Margin="5,0,0,0" Foreground="Black"/>
+                                    </WrapPanel>
+                                </StackPanel>
+
+
+                                <Image VerticalAlignment="Top" 
+                                       HorizontalAlignment="Right"
+                                       MouseDown="ChangePopupMouseDown" 
+                                       Grid.Column="1" 
+                                       Source="{StaticResource SmallCloseImage}"/>
+                            </Grid>
+                        </Border>
+
+
+                        <DataGrid Grid.Row="1" AutoGenerateColumns="False"
+                          MouseDown="ChangePopupMouseDown"
+                          ItemsSource="{Binding Path=ChangeList}" 
+                          IsReadOnly="True" 
+                  
+                          CanUserSortColumns="True"
+                          Background="WhiteSmoke"
+                        
+                          VerticalGridLinesBrush="Lavender"
+                          HorizontalGridLinesBrush="Lavender"
+                      
+                  
+                          VirtualizingStackPanel.VirtualizationMode="Standard"
+                          VirtualizingStackPanel.IsVirtualizing="True"
+                        
+                          ScrollViewer.IsDeferredScrollingEnabled="True"
+                        
+                          EnableRowVirtualization="True"
+                          EnableColumnVirtualization="False"
+                          
+                          HeadersVisibility="Column"
+                          
+                          AlternatingRowBackground="WhiteSmoke"
+                          RowStyle="{StaticResource AllwaysSelectedDataGrid}">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="Changed Property">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding ChangedProperty}" VerticalAlignment="Center"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <!--<DataGridTemplateColumn Header="Old Value">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding OldStringValue}" VerticalAlignment="Center" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>-->
+
+                                <DataGridTemplateColumn Header="New Value">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding NewStringValue}" VerticalAlignment="Center" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+
+                        </DataGrid>
+                    </Grid>
+                   
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="3" 
+                                Color="Gray" 
+                                ShadowDepth="2"
+                                RenderingBias="Quality"
+                                Opacity="0.5" 
+                                Direction="315"/>
+                </Border.Effect>
+                
+                </Border>
+            </Border>
+
+
+        </Popup>
+
+        <Border x:Name="ChangePresenter" MouseDown="ChangePresenterMouseDown" Grid.Row="{Binding RowPosition}" 
+                Background="{Binding ControlBackground}">
+           
+            
+            
+            <Border.Style>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="BorderBrush" Value="#30000000"/>
+                    <Setter Property="BorderThickness" Value="8,1,1,1"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="2" 
+                                                        Color="Black" 
+                                                        ShadowDepth="2"
+                                                        RenderingBias="Quality"
+                                                        Opacity="0.5" 
+                                                        Direction="315"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding PopupIsOpen}" Value="True">
+                            <Setter Property="BorderBrush" Value="Black"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="2" 
+                                                        Color="Gray" 
+                                                        ShadowDepth="2"
+                                                        RenderingBias="Quality"
+                                                        Opacity="0.5" 
+                                                        Direction="315"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <!--<Border.Effect>
+                <DropShadowEffect BlurRadius="2" 
+                                Color="Gray" 
+                                ShadowDepth="2"
+                                RenderingBias="Quality"
+                                Opacity="0.5" 
+                                Direction="315"/>
+            </Border.Effect>-->
+        </Border>
+            
+    </Grid>
+</UserControl>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6A7E5F8-F9B8-4824-A38D-D16F6F99867A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BRuleManager</RootNamespace>
+    <AssemblyName>BRuleManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico\ruler.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RazorEngine, Version=3.10.0.0, Culture=neutral, PublicKeyToken=9ee697374c7e744a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\RazorEngine\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\RefFiles\SQLite\System.Data.SQLite.Core.1.0.99.0\lib\net45\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="..\AixmMessageProvider\AixmMessageProvider.cs">
+      <Link>Linked\AixmMessageProvider.cs</Link>
+    </Compile>
+    <Compile Include="AimTypeItems.cs" />
+    <Compile Include="BRuleReport.cs" />
+    <Compile Include="Converters\HasTextConverter.cs" />
+    <Compile Include="Converters\TaggedDescriptionItemsConverter.cs" />
+    <Compile Include="Converters\TaggedStyleConverter.cs" />
+    <Compile Include="DropDownButton.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Model\AboutInitializer.cs" />
+    <Compile Include="Model\BaseInitializer.cs" />
+    <Compile Include="Model\CheckReportInitializer.cs" />
+    <Compile Include="Model\ModelFactory.cs" />
+    <Compile Include="Model\PropertySelectorInitializer.cs" />
+    <Compile Include="Model\RuleEditInitializer.cs" />
+    <Compile Include="Model\RulesGroupInitializer.cs" />
+    <Compile Include="Model\RulesInitializer.cs" />
+    <Compile Include="Model\VocabularyInitializer.cs" />
+    <Compile Include="Razor.cs" />
+    <Compile Include="View\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CheckReportView.xaml.cs">
+      <DependentUpon>CheckReportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PropertySelectorView.xaml.cs">
+      <DependentUpon>PropertySelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RuleEditView.xaml.cs">
+      <DependentUpon>RuleEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RuleInfoView.xaml.cs">
+      <DependentUpon>RuleInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RulesGroup.xaml.cs">
+      <DependentUpon>RulesGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RulesView.xaml.cs">
+      <DependentUpon>RulesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SbvrEditorControl.xaml.cs">
+      <DependentUpon>SbvrEditorControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SbvrViewControl.xaml.cs">
+      <DependentUpon>SbvrViewControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowService.cs" />
+    <Page Include="View\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CheckReportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PropertySelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RuleEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\RuleInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RulesGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RulesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SbvrEditorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SbvrViewControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RazorTemplate\ReportTemplate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ruler.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38b5708a-8c3d-40ef-bf53-819b03e8e9f6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{c796c154-348a-4f4f-8843-807fbfa0456c}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Temporality\trunk\MvvmCore\MvvmCore.csproj">
+      <Project>{03054ef7-f009-4b50-a3f7-cfbf8d3de009}</Project>
+      <Name>MvvmCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AixmMessage\trunk\Aran.Aim.AixmMessage.csproj">
+      <Project>{571dfcbb-8cc5-45a8-ae95-f5323db3b459}</Project>
+      <Name>Aran.Aim.AixmMessage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\trunk\Aran.Aim.csproj">
+      <Project>{32f3ce80-0590-4881-8614-1cddf8bd052e}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Aran.Aim.BusinessRules.csproj">
+      <Project>{1cd75f5a-d3c2-4a21-94ce-bc013a7b3ad6}</Project>
+      <Name>Aran.Aim.BusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BRuleChecker\Aran.Aim.BRuleChecker.csproj">
+      <Project>{3d09e897-b572-482c-acb0-1ee878aa6e4b}</Project>
+      <Name>Aran.Aim.BRuleChecker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\BusinessRules.Data.csproj">
+      <Project>{1332f998-1a68-4fd8-8fce-2cd29094a6d5}</Project>
+      <Name>BusinessRules.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SbvrParser\Aran.Aim.BusinessRules.SbvrParser.csproj">
+      <Project>{c6acb3f7-8024-418b-afd6-6fe0e1f563e3}</Project>
+      <Name>Aran.Aim.BusinessRules.SbvrParser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy  $(ProjectDir)..\..\..\..\RefFiles\BusinessRules\bin-folder\brule-db.sdb $(ProjectDir)$(OutDir)
+mkdir $(ProjectDir)$(OutDir)Report\Template 2&gt; NUL
+copy  $(ProjectDir)..\..\..\..\RefFiles\BusinessRules\bin-folder\Report\Template\ReportTemplate.cshtml $(ProjectDir)$(OutDir)Report\Template\*</PostBuildEvent>
+  </PropertyGroup>
+</Project>

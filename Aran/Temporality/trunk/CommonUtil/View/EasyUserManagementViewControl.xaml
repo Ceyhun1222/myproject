@@ -1,0 +1,331 @@
+﻿<UserControl x:Class="Aran.Temporality.CommonUtil.View.EasyUserManagementViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View1="clr-namespace:Aran.Temporality.CommonUtil.View"
+             xmlns:Easy="clr-namespace:Aran.Temporality.CommonUtil.ViewModel"
+             xmlns:Control1="clr-namespace:Aran.Temporality.CommonUtil.Control"
+             xmlns:Extender="clr-namespace:Aran.Temporality.CommonUtil.Extender" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1200">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/Colors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/DataGrid.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/TreeView.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/VectorImages.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/ToolTip.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/ToolBar.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/Buttons.xaml"/>
+
+                <!--<ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Dictionary/ComboBox.xaml"/>-->
+
+                <ResourceDictionary Source="pack://application:,,,/Aran.Temporality.Resources;component/Resources/Dictionary/Images.xaml"/>
+
+
+                <ResourceDictionary>
+                    <Style x:Key="{x:Type Control1:ExtendedToolBar}" 
+                   TargetType="{x:Type Control1:ExtendedToolBar}" 
+                   BasedOn="{StaticResource {x:Type ToolBar}}">
+                    </Style>
+
+                </ResourceDictionary>
+
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
+
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Easy:EasyUserManagementViewModel/>
+    </UserControl.DataContext>
+    <TabControl>
+        <TabItem Header="Users">
+            <Grid>
+                <Grid Background="Lavender">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <DockPanel Grid.Row="0">
+                        <ToolBarTray DockPanel.Dock="Top">
+
+
+
+                            <Control1:ExtendedToolBar Band="0" BandIndex="0">
+                                <Label Content="User Operations:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                                <Button ToolTip="Create New User"  
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnAddUser}">
+                                    <Image Source="{StaticResource NewBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                                <Button ToolTip="Delete User"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnDeleteUser}">
+                                    <Image Source="{StaticResource DeleteRedBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                                <Button ToolTip="Save Changes"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnApply}">
+                                    <Image Source="{StaticResource SaveBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                                <Button ToolTip="Activate"  
+                                        VerticalAlignment="Bottom"
+                                        Command="{Binding Path=ActivateCommand}" Margin="0,0,0,1.6">
+                                    <Image Source="{StaticResource ActivateBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+
+                                <Button ToolTip="Deactivate"  
+                                        VerticalAlignment="Center"
+                                        Command="{Binding Path=DeactivateCommand}">
+                                    <Image Source="{StaticResource DeactivateBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+
+
+                                <Separator Margin="5,0,5,0"/>
+
+                                <Button ToolTip="Reset Password"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnResetPassword}">
+                                    <Image Source="{StaticResource UnlockBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+
+
+                                <Button ToolTip="Prepare Installation File"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnPrepareInstall}">
+                                    <Image Source="{StaticResource CustomBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                            </Control1:ExtendedToolBar>
+
+
+                            <Control1:ExtendedToolBar Band="0" BandIndex="1" Extender:ToolBarExtender.PreventOverflow="True">
+                                <Label Content="User Filter:" VerticalAlignment="Center"/>
+
+                                <TextBox Grid.Column="0" 
+                                 MinWidth="200" 
+                                 Height="22"
+                                 Margin="0,0,5,0"
+                                 Background="WhiteSmoke"
+                                 Style="{StaticResource {x:Static ToolBar.TextBoxStyleKey}}"
+                                 VerticalAlignment="Center"
+                                 Text="{Binding Path=UserFilter, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                <Button Command="{Binding Path=OnClearFilter}" 
+                                    Grid.Column="1" 
+                                    Width="25" 
+                                    Margin="0,0,5,0"
+                                    Height="22"
+                                    VerticalAlignment="Center"
+                                    Visibility="{Binding Path=FilterEmptyButtonVisibility}"
+                                    Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                                    Focusable="False" >
+                                    <Image Source="{StaticResource DeleteBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+                            </Control1:ExtendedToolBar>
+                            <Control1:ExtendedToolBar Band="0" BandIndex="2">
+                                <Label Content="Reports:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                                <Button ToolTip="Create Report"  
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnReport}">
+                                    <Image Source="{StaticResource ReportBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                            </Control1:ExtendedToolBar>
+                        </ToolBarTray>
+                    </DockPanel>
+
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid   Grid.Column="0" 
+                            IsReadOnly="True"
+                            AutoGenerateColumns="False"
+                            SelectedItem="{Binding Path=SelectedUser}"
+                            ItemsSource="{Binding Path=UserListFiltered, UpdateSourceTrigger=PropertyChanged}" 
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch" 
+                            CanUserSortColumns="True"
+                            Background="WhiteSmoke"
+                            VerticalGridLinesBrush="Lavender"
+                            HorizontalGridLinesBrush="Lavender"
+                            HeadersVisibility="Column"
+                            AlternatingRowBackground="WhiteSmoke"
+        
+                            MinWidth="200">
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow" BasedOn="{StaticResource  AllwaysSelectedDataGrid}">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Active}" Value="False">
+                                            <Setter Property="Background" Value="SandyBrown"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DataGrid.RowStyle>
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn Header="Active" Width="Auto" Binding="{Binding Path=Active, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+                                <DataGridTextColumn Header="User" Width="Auto" Binding="{Binding Path=UserName, UpdateSourceTrigger=PropertyChanged}" />
+                                <DataGridTextColumn Header="Group" Width="Auto" Binding="{Binding Path=UserGroup.GroupName, UpdateSourceTrigger=PropertyChanged}" />
+                                 
+                                <DataGridTextColumn Header="PANDA" Width="Auto" Binding="{Binding Path=PandaVersion, UpdateSourceTrigger=PropertyChanged}" />
+                                <DataGridTextColumn Header="DELTA" Width="Auto" Binding="{Binding Path=DeltaVersion, UpdateSourceTrigger=PropertyChanged}" />
+                                <DataGridTextColumn Header="OMEGA" Width="Auto" Binding="{Binding Path=OmegaVersion, UpdateSourceTrigger=PropertyChanged}" />
+                                <DataGridTextColumn Header="ARENA" Width="Auto" Binding="{Binding Path=ArenaVersion, UpdateSourceTrigger=PropertyChanged}" />
+                                <DataGridTextColumn Header="TOSSM" Width="Auto" Binding="{Binding Path=TossmVersion, UpdateSourceTrigger=PropertyChanged}" />
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+
+                        <View1:EasyUserViewControl Grid.Column="1"
+                                        Margin="5"
+                                        x:Name="EasyUserWindow"
+                                        IsEnabled="{Binding Path=IsUiEnable, FallbackValue=false}" 
+                                        HorizontalAlignment="Left" 
+                                        VerticalAlignment="Top" 
+                                        DataContext="{Binding Path=SelectedUser, UpdateSourceTrigger=PropertyChanged}"  />
+                    </Grid>
+                </Grid>
+                <View1:BlockerControl DataContext="{Binding Path=BlockerModel}" 
+                              Grid.Row="0" 
+                              Grid.Column="0" 
+                              HorizontalAlignment="Stretch" 
+                              VerticalAlignment="Stretch"/>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Groups">
+            <Grid>
+                <Grid Background="Lavender">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+                    <DockPanel Grid.Row="0">
+                        <ToolBarTray DockPanel.Dock="Top">
+
+                            <Control1:ExtendedToolBar Band="0">
+                                <Label Content="Group Operations:" VerticalAlignment="Center" ToolBar.OverflowMode="Never"/>
+
+                                <Button ToolTip="Create New User Group"  
+                                    ToolBar.OverflowMode="Never"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnAddUserGroup}">
+                                    <Image Source="{StaticResource NewBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                                <Button ToolTip="Delete User Group"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnDeleteUserGroup}">
+                                    <Image Source="{StaticResource DeleteRedBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+                                <Button ToolTip="Save Changes"  
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=OnGroupApply}">
+                                    <Image Source="{StaticResource SaveBitmapImage}" Width="16" Height="16" />
+                                </Button>
+
+
+                            </Control1:ExtendedToolBar>
+
+
+                            <Control1:ExtendedToolBar Band="0" Extender:ToolBarExtender.PreventOverflow="True">
+                                <Label Content="Features Access Operations:" VerticalAlignment="Center"/>
+
+                                <Button Command="{Binding Path=OnNoAccess}" 
+                                CommandParameter="{Binding ElementName=EasyUserGroupWindow}" 
+                                ToolTip="Restrict Any Access" 
+                                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                VerticalAlignment="Center">
+                                    <Image Source="{StaticResource CancelBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+
+                                <Button Command="{Binding Path=OnReadOnly}" 
+                                CommandParameter="{Binding ElementName=EasyUserGroupWindow}" 
+                                ToolTip="Grant Read Only Access" 
+                                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                VerticalAlignment="Center">
+                                    <Image Source="{StaticResource OpenBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+
+                                <Button Command="{Binding Path=OnFull}" 
+                                CommandParameter="{Binding ElementName=EasyUserGroupWindow}" 
+                                ToolTip="Grant Full Access" 
+                                Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                VerticalAlignment="Center">
+                                    <Image Source="{StaticResource EditBitmapImage}" Width="16" Height="16"/>
+                                </Button>
+
+
+                            </Control1:ExtendedToolBar>
+                        </ToolBarTray>
+                    </DockPanel>
+
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <DataGrid   Grid.Column="0" 
+                            IsReadOnly="True"
+                            AutoGenerateColumns="False"
+                            SelectedItem="{Binding Path=SelectedGroup}"
+                            ItemsSource="{Binding Path=GroupListFiltered, UpdateSourceTrigger=PropertyChanged}" 
+                            HorizontalAlignment="Stretch" 
+                            VerticalAlignment="Stretch" 
+                            CanUserSortColumns="True"
+                            Background="WhiteSmoke"
+                            VerticalGridLinesBrush="Lavender"
+                            HorizontalGridLinesBrush="Lavender"
+                            HeadersVisibility="Column"
+                            AlternatingRowBackground="WhiteSmoke"
+                            RowStyle="{StaticResource AllwaysSelectedDataGrid}"
+                            MinWidth="200">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Group" Width="Auto" Binding="{Binding Path=GroupName}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+
+                        <View1:EasyUserGroupControl Grid.Column="1"
+                                        Margin="5,5,5,0"
+                                        x:Name="EasyUserGroupWindow"
+                                        IsEnabled="{Binding Path=IsUiEnable, FallbackValue=false}" 
+                                        HorizontalAlignment="Stretch" 
+                                        VerticalAlignment="Stretch" 
+                                        DataContext="{Binding Path=SelectedGroup, UpdateSourceTrigger=PropertyChanged}"  />
+                    </Grid>
+                </Grid>
+                <View1:BlockerControl DataContext="{Binding Path=BlockerModel}" 
+                              Grid.Row="0" 
+                              Grid.Column="0" 
+                              HorizontalAlignment="Stretch" 
+                              VerticalAlignment="Stretch"/>
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+</UserControl>

@@ -1,0 +1,353 @@
+<div class="container p-0 m-0" style="max-width: 100vw;">
+  <div class="row p-0 m-0" style="width: inherit;">
+    <div class="col-lg-3 col-md-4 col-sm-5 p-0 m-0 h-100">
+      <div class="card">
+        <div class="card-header header-elements-inline">
+          <h6 class="card-title">{{lang.get('Request details')}}</h6>
+          <!-- <div class="header-elements">
+            <div class="list-icons">
+              {{lang.get('')}}
+              <a class="list-icons-item" data-action="collapse"></a>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="card-body">
+          <ul class="nav nav-tabs nav-tabs-bottom nav-justified">
+            <li class="nav-item"><a href="#bottom-justified-tab1" class="nav-link active" data-toggle="tab">{{lang.get('Location')}}</a></li>
+            <li class="nav-item"><a href="#bottom-justified-tab2" class="nav-link" data-toggle="tab">{{lang.get('Attributes')}}</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="bottom-justified-tab1">
+              <form novalidate (ngSubmit)="save(null, null)" #form1="ngForm">
+                <fieldset [attr.disabled]="requestData?.submitted">
+
+                </fieldset>
+                <div class="form-group">
+                  <label>Obstacle List</label>
+                  <select [disabled]="requestData?.submitted" [(ngModel)]='verticalStructuresDtoSelected'
+                    [ngModelOptions]="{standalone: true}" class='form-control' (change)="onChange()">
+                    <option value="verticalStructuresDtoSelected">Select obstacle</option>
+                    <option [ngValue]="verticalStructuresDto" *ngFor="let verticalStructuresDto of verticalStructuresDtoList">{{verticalStructuresDto.name}}</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="elevation" ngbTooltip="{{lang.get('Site elevation AMSL (m)')}}" container="body">{{lang.get('Site elevation AMSL (m)')}}</label>
+                  <input [readonly]="requestData?.submitted" type="number" class="form-control py-0" min="0.00001"
+                    required pattern="^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$" [(ngModel)]="requestData.elevation"
+                    name="elevation" #elevation="ngModel">
+
+                  <!-- {{elevation.errors|json}} -->
+                  <div *ngIf="(submitted || elevation.touched) && elevation.invalid" class="form-text text-danger m-0 pl-2">
+                    <div *ngIf="elevation.errors?.required">{{lang.get('Elevation is required')}}</div>
+                    <div *ngIf="elevation.errors?.pattern">{{lang.get('Elevation must be greater than zero')}}</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="height">{{lang.get('Height AGL (m)')}}</label>
+                  <input [readonly]="requestData?.submitted" type="number" class="form-control py-0" required
+                    [(ngModel)]="requestData.height" name="height" #height="ngModel">
+                  <div *ngIf="height.touched && height.invalid">{{lang.get('Height is required')}}</div>
+                </div>
+
+                <div class="form-group">
+                  <label>{{lang.get('Overall height AMSL:')}}</label>
+                  <label class="ml-2">{{requestData.height + requestData.elevation}}
+                    <span>{{lang.get('metr')}}</span></label>
+                </div>
+
+                <div class="form-group">
+                  <label for="verticalAccuracy">{{lang.get('Vertical accuracy')}}</label>
+                  <input [readonly]="requestData?.submitted" type="text" class="form-control py-0" required pattern="^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$"
+                    [(ngModel)]="requestData.verticalAccuracy" name="verticalAccuracy" #verticalAccuracy="ngModel">
+
+                  <div *ngIf="(submitted || verticalAccuracy.touched) && verticalAccuracy.invalid" class="form-text text-danger m-0 pl-2">
+                    <div *ngIf="verticalAccuracy.errors?.required">{{lang.get('Vertical accuracy is required')}}</div>
+                    <div *ngIf="verticalAccuracy.errors?.pattern">{{lang.get('Vertical accuracy must be greater than zero')}}</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="horizontalAccuracy">{{lang.get('Horizontal accuracy')}}</label>
+                  <input [readonly]="requestData?.submitted" type="text" class="form-control py-0" required pattern="^(0*[1-9][0-9]*(\.[0-9]+)?|0+\.[0-9]*[1-9][0-9]*)$"
+                    [(ngModel)]="requestData.horizontalAccuracy" name="horizontalAccuracy" #horizontalAccuracy="ngModel">
+                  <div *ngIf="(submitted || horizontalAccuracy.touched) && horizontalAccuracy.invalid" class="form-text text-danger m-0 pl-2">
+                    <div *ngIf="horizontalAccuracy.errors?.required">{{lang.get('Horizontal accuracy is required')}}</div>
+                    <div *ngIf="horizontalAccuracy.errors?.pattern">{{lang.get('Horizontal accuracy must be greater
+                      than zero')}}</div>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3 px-2">
+                  <label for="type" class="d-block mb-1">{{lang.get('Type')}}</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input py-0" required name="geometryType" value="Point"
+                        [(ngModel)]="requestData.geometryType" #geometryType="ngModel">
+                      <span>{{lang.get('Point')}}</span>
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input py-0" required name="geometryType" value="LineString"
+                        [(ngModel)]="requestData.geometryType" #geometryType="ngModel">
+                      <span>{{lang.get('Line')}}</span>
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input py-0" required name="geometryType" value="Polygon"
+                        [(ngModel)]="requestData.geometryType" #geometryType="ngModel">
+                      <span>{{lang.get('Polygon')}}</span>
+                    </label>
+                  </div>
+                  <div *ngIf="geometryType.invalid">
+                    {{lang.get('Select geometry type')}}
+                  </div>
+                </div>
+
+                <!-- Basic responsive table -->
+                <div class="form-group mb-2">
+                  <label for="horizontalAccuracy">{{lang.get('Coordinates')}}</label>
+                  <span [title]="lang.get('New coordinate')" class="badge badge-success cursor-pointer ml-3" (click)="newCoordinate()"
+                    [hidden]="requestData?.submitted || currentDmsData || (requestData.geometryType==='Point'&& coorDmsList.length>0)">{{lang.get('Add')}}</span>
+                </div>
+                <div class="card oms-dms-card">
+                  <div class="card-body pt-0 pb-1 pl-0 pr-0" *ngIf="currentDmsData">
+                    <div class="form-group row m-0">
+                      <label class="col-3 col-form-label mt-2 pt-1 pr-0">{{lang.get('Latitude')}}</label>
+                      <div class="col-7 pl-0">
+                        <div class="input-group">
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                            maxlength="2" class="form-control" required [(ngModel)]="currentDmsData.latitude.degree"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">°</span>
+                          </div>
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                            maxlength="2" class="form-control" required [(ngModel)]="currentDmsData.latitude.minute"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">′</span>
+                          </div>
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9,.]/g,'');"
+                            maxlength="5" class="form-control" required [(ngModel)]="currentDmsData.latitude.second"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">″</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2 mt-2 pt-1 p-0">
+                        <select [(ngModel)]="currentDmsData.latitude.direction" [ngModelOptions]="{standalone: true}">
+                          <option value="N">N</option>
+                          <option value="S">S</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row m-0">
+                      <label class="col-3 col-form-label mt-2 pt-1 pr-0">{{lang.get('Longitude')}}</label>
+                      <div class="col-7 pl-0">
+                        <div class="input-group">
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                            maxlength="3" class="form-control" required [(ngModel)]="currentDmsData.longitude.degree"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">°</span>
+                          </div>
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                            maxlength="2" class="form-control" required [(ngModel)]="currentDmsData.longitude.minute"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">′</span>
+                          </div>
+                          <input [readonly]="requestData?.submitted" type="text" oninput="this.value=this.value.replace(/[^0-9,.]/g,'');"
+                            maxlength="5" class="form-control" required [(ngModel)]="currentDmsData.longitude.second"
+                            [ngModelOptions]="{standalone: true}">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">″</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-2 mt-2 pt-1 p-0">
+                        <select [(ngModel)]="currentDmsData.longitude.direction" [ngModelOptions]="{standalone: true}">
+                          <option value="W">W</option>
+                          <option value="E">E</option>
+                        </select>
+                      </div>
+                    </div>
+                    <span *ngIf="coordinateParseError" class="text-danger ml-2 mt-1">{{lang.get('Coordinate syntax
+                      error')}}</span>
+                    <span *ngIf="!requestData?.submitted" class="badge badge-danger float-right cursor-pointer mr-3 mt-1"
+                      (click)="cancelCoordinate()">{{lang.get('Cancel')}}</span>
+                    <span *ngIf="!requestData?.submitted" class="badge badge-success float-right cursor-pointer mr-2 mt-1"
+                      (click)="saveCoordinate()">{{lang.get('Apply')}}</span>
+
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-xs">
+                      <thead>
+                        <tr>
+                          <th>
+                            <span class="mr-5">{{lang.get('Latitude')}}
+                            </span>
+                            <span>{{lang.get('Longitude')}}
+                            </span>
+                          </th>
+                          <th class="text-center" style="width: 30px;">
+                            <span *ngIf="currentDmsData==null && ((requestData.geometryType==='Point'&& coorDmsList.length>=1)||(requestData.geometryType==='LineString'&& coorDmsList.length>1)||(requestData.geometryType==='Polygon'&& coorDmsList.length>2))"
+                              class="badge badge-info cursor-pointer" (click)="showCoordinate(null)">{{lang.get('Show')}}</span></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of coorDmsList;let index = index; let last = last" [ngClass]="{'table-success':index==selectedDmsIndex}">
+                          <td (click)="showCoordinate(index)" class="cursor-pointer text-blue-800">
+                            <span class="mr-3 pr-2">
+                              {{item.latitude.degree+"°"+item.latitude.minute+"'"+item.latitude.second+'"'+item.latitude.direction}}
+                            </span>
+                            {{item.longitude.degree+"°"+item.longitude.minute+"'"+item.longitude.second+'"'+item.longitude.direction}}
+                          </td>
+                          <td>
+                            <div class="list-icons" *ngIf="!requestData?.submitted">
+                              <a [title]="lang.get('Edit')" href="javascript:void(0)" class="list-icons-item text-primary-600"
+                                (click)="selectCoordinate(index)"><i class="icon-pencil7"></i></a>
+                              <a [title]="lang.get('Remove')" href="javascript:void(0)" class="list-icons-item text-danger-600"
+                                (click)="removeCoordinate(index)"><i class="icon-trash"></i></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div *ngIf="submitted && coordinateValidationError" class="form-text text-danger m-0 pl-2">{{lang.get('Coordinate syntax error')}}</div>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="bottom-justified-tab2">
+              <form novalidate (ngSubmit)="save(null, null)" #form2="ngForm">
+                <div class="form-group">
+                  <label class="m-0 d-block text-blue">{{lang.get('Airport')}}</label>
+                  <select [disabled]="requestData?.submitted" class="form-control" (change)="airportOnChange($event.target.value)"
+                    [ngClass]="{'border-danger' : (submitted || airportId.touched) && airportId.invalid}" required
+                    [(ngModel)]="requestData.airportId" name="airportId" #airportId="ngModel">
+                    <!-- <option selected value="">{{lang.get('Airport')}}</option> -->
+                    <option *ngFor="let airport of airportList" [value]="airport.identifier">{{airport.name}}</option>
+                  </select>
+                  <div *ngIf="submitted || airportId.touched" class="form-text text-danger m-0 pl-2">
+                    <div *ngIf="airportId.invalid">
+                      <span *ngIf="airportId.errors?.required">{{lang.get('Select airport')}}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="m-0 d-block text-blue">{{lang.get('Designator')}}</label>
+                  <input [readonly]="requestData?.submitted" type="text" required [ngClass]="{'border-danger' : (submitted || designator.touched) && designator.invalid}"
+                    class="form-control" placeholder="Designator" [(ngModel)]="requestData.designator" name="designator"
+                    #designator="ngModel">
+                  <div *ngIf="submitted || designator.touched" class="form-text text-danger m-0 pl-2">
+                    <div *ngIf="designator.invalid">
+                      <span *ngIf="designator.errors?.required">{{lang.get('Designator is required')}}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="submitted" class="d-block mb-1">{{lang.get('Obstruction type')}}</label>
+                  <select [disabled]="requestData?.submitted" class="form-control form-control-sm" [(ngModel)]="requestData.obstructionType"
+                    [ngModelOptions]="{standalone: true}">
+                    <option value="Building">{{lang.get('Building')}}</option>
+                    <option value="Antenna">{{lang.get('Antenna')}}</option>
+                    <option value="Tower">{{lang.get('Tower')}}</option>
+                    <option value="Crane">{{lang.get('Crane')}}</option>
+                    <option value="Pole">{{lang.get('Pole')}}</option>
+                    <option value="Monument">{{lang.get('Monument')}}</option>
+                    <option value="Other">{{lang.get('Other')}}</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="type" class="d-block mb-1">{{lang.get('Type')}}</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input [readonly]="requestData?.submitted" type="radio" class="form-check-input" required name="type"
+                        value="NewConstruction" [(ngModel)]="requestData.type" #type="ngModel">
+                      <span>{{lang.get('New Construction')}}</span></label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input [readonly]="requestData?.submitted" type="radio" class="form-check-input" required name="type"
+                        value="Alteration" [(ngModel)]="requestData.type" #type="ngModel">
+                      <span>{{lang.get('Alteration')}}</span>
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input [readonly]="requestData?.submitted" type="radio" class="form-check-input" required name="type"
+                        value="Existing " [(ngModel)]="requestData.type" #type="ngModel">
+                      <span>{{lang.get('Existing')}}</span>
+                    </label>
+                  </div>
+                  <div *ngIf="type.invalid">{{lang.get('Select a type')}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="duration" class="d-block mb-1">{{lang.get('Duration')}}</label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input [readonly]="requestData?.submitted" type="radio" class="form-check-input" required name="duration"
+                        value="Permanent" [(ngModel)]="requestData.duration" #duration="ngModel">
+                      <span>{{lang.get('Permanent')}}</span>
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input [readonly]="requestData?.submitted" type="radio" class="form-check-input" required name="duration"
+                        value="Temporary" [(ngModel)]="requestData.duration" #duration="ngModel">
+                      <span>{{lang.get('Temporary')}}</span>
+                    </label>
+                  </div>
+                  <div *ngIf="duration.invalid">{{lang.get('Select a duration')}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="beginningDate">{{lang.get('Beginning date')}}</label>
+                  <input [readonly]="requestData?.submitted" type="date" class="form-control" required min="{{todayDate}}"
+                    max="{{requestData.endDate}}" [(ngModel)]="requestData.beginningDate" name="beginningDate"
+                    #beginningDate="ngModel">
+                  <div *ngIf="beginningDate.touched && beginningDate.invalid">{{lang.get('Beginning date is required')}}
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="endDate">{{lang.get('End date')}}</label>
+                  <input [readonly]="requestData?.submitted" type="date" class="form-control" required min="{{requestData.beginningDate}}"
+                    [(ngModel)]="requestData.endDate" name="endDate" #endDate="ngModel">
+                  <div *ngIf="endDate.touched && endDate.invalid">{{lang.get('End date is required')}}
+                  </div>
+                </div>
+
+                <div class="form-group pb-0 mb-0">
+                  <label for="attachment">{{lang.get('Attach picture')}}</label>
+                  <input [readonly]="requestData?.submitted" type="file" accept="image/jpeg,image/png,application/pdf,image/x-eps"
+                    class="form-control" name="attachment" (change)="previewFile($event)">
+                </div>
+              </form>
+            </div>
+            <div *ngIf="!requestData?.submitted" class="text-right mt-3">
+              <button [disabled]="loading" type="button" class="btn btn-sm btn-outline-success" (click)="save(form1, form2)">{{lang.get('Save request')}}</button>
+              <button type="button" [routerLink]="['/requests']" class="btn btn-sm bg-transparent text-danger border-danger ml-2">{{lang.get('Cancel')}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-7 p-0 m-0">
+      <app-map></app-map>
+    </div>
+  </div>
+</div>

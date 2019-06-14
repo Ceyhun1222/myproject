@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="ChartTypeA.View.SelectRunwayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="600"
+             Height="470"
+             >
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="AirportHeliport : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0"
+                   Grid.Column="0" Width="100" FontSize="12"/>
+        <ComboBox Width="100" Grid.Row="0" Grid.Column="1" Height="24" 
+                  ItemsSource="{Binding AirportList}" SelectedItem="{Binding SelectedAirport}" 
+                  DisplayMemberPath="Name" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+
+        <TextBlock Text="Runway : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0" Grid.Column="2" FontSize="12"/>
+        <ComboBox Width="100" Grid.Row="0" Grid.Column="3" ItemsSource="{Binding RunwayList}" SelectedItem="{Binding SelectedRunway}" DisplayMemberPath="Designator" Height="24" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+
+        <TextBlock Text="Horizontal Unit : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" FontSize="12"/>
+        <ComboBox Width="100" Grid.Row="1" Grid.Column="1" Height="24"  ItemsSource="{Binding DistanceUnits}" SelectedIndex="{Binding SelectedDistanceUnit}"  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+
+        <TextBlock Text="Vertical Unit : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2"  FontSize="12"/>
+        <ComboBox Width="100" Grid.Row="1" Grid.Column="3" Height="24" ItemsSource="{Binding HeightUnits}" SelectedIndex="{Binding SelectedElevUnit}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+
+        <TextBlock Text="Horizontal Accuracy : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" FontSize="12"/>
+        <TextBox Width="100" Grid.Row="2" Grid.Column="1" Height="24" Text="{Binding HorAccuracy}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding HorUnit}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Margin="120 0 0 0"/>
+
+        <TextBlock Text="Vertical Accuracy : " HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2"  FontSize="12"/>
+        <TextBox Width="100" Grid.Row="2" Grid.Column="3" Height="24" Text="{Binding VerAccuracy}" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 8 0 7" />
+        <TextBlock Grid.Row="2" Grid.Column="3" Text="{Binding VerUnit}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" Margin="120 0 0 0"/>
+
+
+        <DataGrid Name="dGridRwy" Grid.Row="3" Grid.ColumnSpan="4" ItemsSource="{Binding RwyDirList}" 
+                  Margin="0,0,0,4" 
+                  RowHeight="20" AutoGenerateColumns="False" Background="#AECBCBCB" BorderBrush="Black"
+                  BorderThickness="0.6">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header=""  Binding="{Binding Checked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxWidth="30" MinWidth="30">
+                    <DataGridCheckBoxColumn.ElementStyle>
+                        <Style TargetType="CheckBox">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridCheckBoxColumn.ElementStyle>
+                </DataGridCheckBoxColumn>
+                <DataGridTextColumn Header="RWY DIR" IsReadOnly="True"  Binding="{Binding Name}" Width="80"/>
+                <DataGridTextColumn Header="Length" IsReadOnly="True" Binding="{Binding Length}" Width="60"/>
+                <!--<DataGridTextColumn Header="Direction" IsReadOnly="True" Binding="{Binding Dir}" />-->
+                <!--<DataGridTextColumn Header="Azimuth" IsReadOnly="True" Binding="{Binding Azim}" />-->
+                <DataGridTextColumn  Header="CODE" IsReadOnly="True" Binding="{Binding CodeNumber}" Width="60"/>
+                <DataGridTextColumn Header="Clearway(m)" IsReadOnly="True" Binding="{Binding ClearWay}" Width="80"/>
+                <DataGridTextColumn  Header="TORA(m)" IsReadOnly="True" Binding="{Binding TORA}" Width="70"/>
+                <DataGridTextColumn Header="TODA(m)" IsReadOnly="True" Binding="{Binding TODA}" Width="70"/>
+                <DataGridTextColumn  Header="ASDA(m)" IsReadOnly="True" Binding="{Binding ASDA}" Width="70"/>
+                <DataGridTextColumn  Header="LDA(m)" IsReadOnly="True" Binding="{Binding LDA}" Width="70"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

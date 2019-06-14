@@ -1,0 +1,137 @@
+.tooltip {
+	color: #FF1744;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	text-decoration: underline;
+}
+
+.tooltip-content {
+	opacity: 0;
+	visibility: hidden;
+	font-size: 0.75em;
+	color: white;
+	display: block;
+	padding: 12px;
+	line-height: 1.3;
+	min-width: 160px;
+	position: absolute;
+	background: #FF1744;
+	bottom: 100%;
+	left: 50%;
+	-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+	-webkit-transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%) translateY(0);
+	-webkit-border-radius: 2px;
+			border-radius: 2px;
+}
+
+.tooltip:hover .tooltip-content {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transform: translateX(-50%) translateY(-4px);
+			transform: translateX(-50%) translateY(-4px);
+}
+
+.tooltip.right .tooltip-content {
+	bottom: auto;
+	left: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%) translateX(0);
+			transform: translateY(-50%) translateX(0);
+}
+
+.tooltip.right:hover .tooltip-content {
+	-webkit-transform: translateY(-50%) translateX(4px);
+			transform: translateY(-50%) translateX(4px);
+}
+
+.tooltip.bottom .tooltip-content {
+	bottom: auto;
+	left: 50%;
+	top: 100%;
+	-webkit-transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%) translateY(0);
+}
+
+.tooltip.bottom:hover .tooltip-content {
+	-webkit-transform: translateX(-50%) translateY(4px);
+			transform: translateX(-50%) translateY(4px);
+}
+
+.tooltip.left .tooltip-content {
+	bottom: auto;
+	left: auto;
+	top: 50%;
+	right: 100%;
+	-webkit-transform: translateY(-50%) translateX(0);
+			transform: translateY(-50%) translateX(0);
+}
+
+.tooltip.left:hover .tooltip-content {
+	-webkit-transform: translateY(-50%) translateX(-4px);
+			transform: translateY(-50%) translateX(-4px);
+}
+
+.tooltip-triangle {
+	fill: #FF1744;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	-webkit-transition: all 0.3s ease 0;
+			transition: all 0.3s ease 0;
+	-webkit-transform: translateX(-50%) translateY(0);
+			transform: translateX(-50%) translateY(0);
+}
+
+.tooltip:hover .tooltip-triangle {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all 0.3s ease 0.3s;
+			transition: all 0.3s ease 0.3s;
+	-webkit-transform: translateX(-50%) translateY(2px);
+			transform: translateX(-50%) translateY(2px);
+}
+
+.tooltip.right .tooltip-triangle {
+	bottom: auto;
+	left: 100%;
+	top: 50%;
+	-webkit-transform: translateY(-50%) translateX(0) rotate(90deg);
+			transform: translateY(-50%) translateX(0) rotate(90deg);
+}
+
+.tooltip.right:hover .tooltip-triangle {
+	-webkit-transform: translateY(-50%) translateX(-4px) rotate(90deg);
+			transform: translateY(-50%) translateX(-4px) rotate(90deg);
+}
+
+.tooltip.bottom .tooltip-triangle {
+	bottom: auto;
+	left: 50%;
+	top: 100%;
+	-webkit-transform: translateX(-50%) translateY(0) rotate(180deg);
+			transform: translateX(-50%) translateY(0) rotate(180deg);
+}
+
+.tooltip.bottom:hover .tooltip-triangle {
+	-webkit-transform: translateX(-50%) translateY(-2px) rotate(180deg);
+			transform: translateX(-50%) translateY(-2px) rotate(180deg);
+}
+
+.tooltip.left .tooltip-triangle {
+	bottom: auto;
+	left: auto;
+	top: 50%;
+	right: 100%;
+	-webkit-transform: translateY(-50%) translateX(0) rotate(-90deg);
+			transform: translateY(-50%) translateX(0) rotate(-90deg);
+}
+
+.tooltip.left:hover .tooltip-triangle {
+	-webkit-transform: translateY(-50%) translateX(4px) rotate(-90deg);
+			transform: translateY(-50%) translateX(4px) rotate(-90deg);
+}

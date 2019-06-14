@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WpfEnvelope.Crud.UserControls.GeometryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfEnvelope.Crud.UserControls"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+            >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox Grid.Column="0" Name="hasValueCheckbox"  Margin="3 10 3 10" IsEnabled="False" IsChecked="False"  />
+        <xctk:SplitButton Click="setGeo_Click" Grid.Column="1" Content="Set geometry" Name="makeSelected"
+                                                      Height="30" 
+                                                      Width="96" 
+                                                      VerticalAlignment="Center" 
+                                                      Margin="5 0 5 0" 
+                                                                                                          
+                                                     >
+            <xctk:SplitButton.ToolTip>
+                <ToolTip>
+                    <TextBlock>Set selected geometry on map</TextBlock>
+                </ToolTip>
+            </xctk:SplitButton.ToolTip>
+            <xctk:SplitButton.DropDownContent>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    
+                    <Button Click="clearGeo_Click" Content="Clear" Name="clearGeo" Height="30" Width="100" FontSize="14" >
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <TextBlock>Set null</TextBlock>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Click="zoomTo_Click" Content="Zoom to" Name="zoomTo" Height="30" Width="100" FontSize="14" >
+                        <Button.ToolTip>
+                            <ToolTip>
+                                <TextBlock>Zoom To</TextBlock>
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                </StackPanel>
+            </xctk:SplitButton.DropDownContent>
+        </xctk:SplitButton>
+      
+    </Grid>
+</UserControl>

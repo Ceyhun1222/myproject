@@ -1,0 +1,2683 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bmpARRIVAL" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk32AAAAAAAAAHYAAAAoAAAAEAAAABAAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/4CAgP/AwMD/AAD//wD/AP8A/////wAA//8A/////wD//////4iI
+        iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIju7oiIiIju7u7u7u
+        iIiI7u7u7u7oiIiIiIiIiO7oiIiIiIiIjoiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiI
+        iIiIiIiI
+</value>
+  </data>
+  <data name="bmpSHOW_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV161qp2cQ4cuvyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUtn0l+e/Y+tiftn0luYU++e/YyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUuYIp+eW//92O/9+d161qqWgEy6V0yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+eW/9cR4
+        /8Fm/8Fm/8+MuYU+tn0l59a/yNDUyNDUyNDUyNDUyNDUyNDUyNDUuYIp+tif/7dT/69D/69D/6w+/7dT
+        9cR4qWgEw5hgyNDUyNDUyNDUyNDUyNDUyNDUtn0l/8+M/6w+/6w+/6w+/6w+/69D9cR4uYIpuYU+yNDU
+        yNDUyNDUyNDUyNDUyNDUuYIp/9ST/6w+/6w+/6w+/8FmzZhFqWgE28GfyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUtn0l/8+M/6w+/8Fm2qZWqWgEy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUtn0l/9+d/8Fm
+        tn0luYU++eW/yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUsncV2qZWp2cQ28GfyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUn1oAy6V0+fXvyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="bmpHIDE_INFO" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAAAAAAjLgAAIy4AAAAAAAAAAAAAyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        +fXvy6V0n1oAyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU4cuvp2cQ161qsncVyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+e/YuYU+tn0l+tif+e/Ytn0lyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUy6V0qWgE161q/9+d/92O+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUyNDU59a/tn0l
+        uYU+/8+M/8Fm/8Fm9cR4+eW/uYIpyNDUyNDUyNDUyNDUyNDUyNDUw5hgqWgE9cR4/7dT/6w+/69D/69D
+        /7dT+tifuYIpyNDUyNDUyNDUyNDUyNDUyNDUuYU+uYIp9cR4/69D/6w+/6w+/6w+/6w+/8+Mtn0lyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDU28GfqWgEzZhF/8Fm/6w+/6w+/6w+/9STuYIpyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDU+fXvy6V0qWgE2qZW/8Fm/6w+/8+Mtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDU+eW/uYU+tn0l/8Fm/9+dtn0lyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU28Gf
+        p2cQ2qZWsncVyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU+fXvy6V0n1oAyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+        yNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDUyNDU
+</value>
+  </data>
+  <data name="str00001" xml:space="preserve">
+    <value>Non-precision</value>
+  </data>
+  <data name="str00002" xml:space="preserve">
+    <value>Precision</value>
+  </data>
+  <data name="str00003" xml:space="preserve">
+    <value>Initial approach</value>
+  </data>
+  <data name="str00004" xml:space="preserve">
+    <value>Approach profile</value>
+  </data>
+  <data name="str00010" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="str00011" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="str00013" xml:space="preserve">
+    <value>m/min</value>
+  </data>
+  <data name="str00014" xml:space="preserve">
+    <value>°/sec</value>
+  </data>
+  <data name="str00015" xml:space="preserve">
+    <value>sec</value>
+  </data>
+  <data name="str00016" xml:space="preserve">
+    <value>ft/min</value>
+  </data>
+  <data name="str00017" xml:space="preserve">
+    <value>Kt</value>
+  </data>
+  <data name="str00018" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="str00019" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="str00020" xml:space="preserve">
+    <value>NM</value>
+  </data>
+  <data name="str00021" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="str00080" xml:space="preserve">
+    <value>PANDA  -  Approach</value>
+  </data>
+  <data name="str00090" xml:space="preserve">
+    <value>Approach</value>
+  </data>
+  <data name="str00101" xml:space="preserve">
+    <value>Circling</value>
+  </data>
+  <data name="str00102" xml:space="preserve">
+    <value>RWY / Application. type</value>
+  </data>
+  <data name="str00103" xml:space="preserve">
+    <value>Final approach track</value>
+  </data>
+  <data name="str00104" xml:space="preserve">
+    <value>Final approach</value>
+  </data>
+  <data name="str00105" xml:space="preserve">
+    <value>Intermediate segment</value>
+  </data>
+  <data name="str00106" xml:space="preserve">
+    <value>over facility</value>
+  </data>
+  <data name="str00107" xml:space="preserve">
+    <value>Reversal/Racetrack</value>
+  </data>
+  <data name="str00108" xml:space="preserve">
+    <value>SDF</value>
+  </data>
+  <data name="str00109" xml:space="preserve">
+    <value>MAPt</value>
+  </data>
+  <data name="str00110" xml:space="preserve">
+    <value>Turning missed app.</value>
+  </data>
+  <data name="str00111" xml:space="preserve">
+    <value>OCH</value>
+  </data>
+  <data name="str00112" xml:space="preserve">
+    <value>Turn parameters</value>
+  </data>
+  <data name="str00113" xml:space="preserve">
+    <value>Miss. app. dir.</value>
+  </data>
+  <data name="str00114" xml:space="preserve">
+    <value>Turn area construction</value>
+  </data>
+  <data name="str00115" xml:space="preserve">
+    <value>Secondary areas</value>
+  </data>
+  <data name="str00116" xml:space="preserve">
+    <value>Miss. app. Termination</value>
+  </data>
+  <data name="str00150" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="str00151" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="str00152" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="str00153" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="str00154" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="str00155" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="str00156" xml:space="preserve">
+    <value>Save files...</value>
+  </data>
+  <data name="str00157" xml:space="preserve">
+    <value>Non-precision</value>
+  </data>
+  <data name="str00158" xml:space="preserve">
+    <value>Precision</value>
+  </data>
+  <data name="str00159" xml:space="preserve">
+    <value>Initial Approach</value>
+  </data>
+  <data name="str00160" xml:space="preserve">
+    <value>Dead Reckoning</value>
+  </data>
+  <data name="str00201" xml:space="preserve">
+    <value>RWY and ILS options</value>
+  </data>
+  <data name="str00202" xml:space="preserve">
+    <value>Precision segment</value>
+  </data>
+  <data name="str00203" xml:space="preserve">
+    <value>Intermediate segment</value>
+  </data>
+  <data name="str00210" xml:space="preserve">
+    <value>Permissible range:</value>
+  </data>
+  <data name="str00220" xml:space="preserve">
+    <value>Recomended range:</value>
+  </data>
+  <data name="str00221" xml:space="preserve">
+    <value> from </value>
+  </data>
+  <data name="str00222" xml:space="preserve">
+    <value> to </value>
+  </data>
+  <data name="str00223" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str00224" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="str00225" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str00226" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str00227" xml:space="preserve">
+    <value>Radial:</value>
+  </data>
+  <data name="str00228" xml:space="preserve">
+    <value>Bearing:</value>
+  </data>
+  <data name="str00229" xml:space="preserve">
+    <value>DME distance:</value>
+  </data>
+  <data name="str00230" xml:space="preserve">
+    <value>Before facility</value>
+  </data>
+  <data name="str00231" xml:space="preserve">
+    <value>After facility</value>
+  </data>
+  <data name="str00232" xml:space="preserve">
+    <value>True course:</value>
+  </data>
+  <data name="str00233" xml:space="preserve">
+    <value>Absent</value>
+  </data>
+  <data name="str00234" xml:space="preserve">
+    <value>Elevation</value>
+  </data>
+  <data name="str00300" xml:space="preserve">
+    <value>Wrong parameters of RWY</value>
+  </data>
+  <data name="str00301" xml:space="preserve">
+    <value>Unable to create intersection.</value>
+  </data>
+  <data name="str00302" xml:space="preserve">
+    <value> wrong value.</value>
+  </data>
+  <data name="str00303" xml:space="preserve">
+    <value>Solution does not exist.</value>
+  </data>
+  <data name="str00304" xml:space="preserve">
+    <value>There is no appropriate facility to create FIX.</value>
+  </data>
+  <data name="str00305" xml:space="preserve">
+    <value>'PANDA' application is not linked up.</value>
+  </data>
+  <data name="str00500" xml:space="preserve">
+    <value>OCH is greater than FAF height. Increase FAF height.</value>
+  </data>
+  <data name="str00501" xml:space="preserve">
+    <value>IAF altitude/height is lower than minimum safe flight altitude/height.</value>
+  </data>
+  <data name="str00502" xml:space="preserve">
+    <value>Unrounded value:</value>
+  </data>
+  <data name="str00503" xml:space="preserve">
+    <value>Select solution.</value>
+  </data>
+  <data name="str00504" xml:space="preserve">
+    <value>Increase FAF altitude.</value>
+  </data>
+  <data name="str00505" xml:space="preserve">
+    <value>To the intersection with radial </value>
+  </data>
+  <data name="str00506" xml:space="preserve">
+    <value>The optimal lenght of Final approach segment is </value>
+  </data>
+  <data name="str00507" xml:space="preserve">
+    <value>To the intersection with bearing </value>
+  </data>
+  <data name="str00508" xml:space="preserve">
+    <value>To the intersection with distance </value>
+  </data>
+  <data name="str00509" xml:space="preserve">
+    <value>Straight segment up to the height </value>
+  </data>
+  <data name="str00510" xml:space="preserve">
+    <value>Straight segment till WPT </value>
+  </data>
+  <data name="str00511" xml:space="preserve">
+    <value>Course interception </value>
+  </data>
+  <data name="str00512" xml:space="preserve">
+    <value> does not exist in the database</value>
+  </data>
+  <data name="str00513" xml:space="preserve">
+    <value>Intersection facility </value>
+  </data>
+  <data name="str00514" xml:space="preserve">
+    <value>There is no intersection facility.</value>
+  </data>
+  <data name="str00515" xml:space="preserve">
+    <value>There is no guidance facility.</value>
+  </data>
+  <data name="str00516" xml:space="preserve">
+    <value>In the direction selected it is impossible to put on the course onto the specified waypoint.
+</value>
+  </data>
+  <data name="str00517" xml:space="preserve">
+    <value>It is not possible to put on the course onto the way point given from other directions.</value>
+  </data>
+  <data name="str00518" xml:space="preserve">
+    <value>'Definitions' database is absent.</value>
+  </data>
+  <data name="str00519" xml:space="preserve">
+    <value>'APP_FIX' layer is not found</value>
+  </data>
+  <data name="str00520" xml:space="preserve">
+    <value>A minimum of obstacle clearance in the
+intermediate approach segment cannot
+be provided due to low FAP height.</value>
+  </data>
+  <data name="str00521" xml:space="preserve">
+    <value>Starting point of the </value>
+  </data>
+  <data name="str00522" xml:space="preserve">
+    <value>Ending point of the </value>
+  </data>
+  <data name="str00523" xml:space="preserve">
+    <value> turn</value>
+  </data>
+  <data name="str00524" xml:space="preserve">
+    <value>Missed approach end point</value>
+  </data>
+  <data name="str00525" xml:space="preserve">
+    <value>: Out of licensed area.</value>
+  </data>
+  <data name="str00526" xml:space="preserve">
+    <value>ILS database is empty.</value>
+  </data>
+  <data name="str00527" xml:space="preserve">
+    <value>OCH is greater than SDF height. Increase SDF height.</value>
+  </data>
+  <data name="str00528" xml:space="preserve">
+    <value>OCH is greater than SoIL height. Increase SoIL height.</value>
+  </data>
+  <data name="str00531" xml:space="preserve">
+    <value>Unknown type of Facility.</value>
+  </data>
+  <data name="str00601" xml:space="preserve">
+    <value>Page 1 - </value>
+  </data>
+  <data name="str00602" xml:space="preserve">
+    <value>    List of runways forming the area:</value>
+  </data>
+  <data name="str00603" xml:space="preserve">
+    <value>    Aircraft category:    </value>
+  </data>
+  <data name="str00604" xml:space="preserve">
+    <value>    Aircraft speed :      </value>
+  </data>
+  <data name="str00605" xml:space="preserve">
+    <value>    Banck angle :         </value>
+  </data>
+  <data name="str00606" xml:space="preserve">
+    <value>    Turn rate :           </value>
+  </data>
+  <data name="str00607" xml:space="preserve">
+    <value>    TAS+Wind :            </value>
+  </data>
+  <data name="str00608" xml:space="preserve">
+    <value>    Magnitude of turn :   </value>
+  </data>
+  <data name="str00609" xml:space="preserve">
+    <value>    Straight segment :    </value>
+  </data>
+  <data name="str00610" xml:space="preserve">
+    <value>    Radius from THR :     </value>
+  </data>
+  <data name="str00611" xml:space="preserve">
+    <value>    Aerodrome elevation : </value>
+  </data>
+  <data name="str00612" xml:space="preserve">
+    <value>    MOC :                 </value>
+  </data>
+  <data name="str00613" xml:space="preserve">
+    <value>MOCA :</value>
+  </data>
+  <data name="str00614" xml:space="preserve">
+    <value>    OCH :                 </value>
+  </data>
+  <data name="str00615" xml:space="preserve">
+    <value>    OCA :                 </value>
+  </data>
+  <data name="str00616" xml:space="preserve">
+    <value>    Obstacle causing OCH: </value>
+  </data>
+  <data name="str00621" xml:space="preserve">
+    <value>Page 2 - </value>
+  </data>
+  <data name="str00622" xml:space="preserve">
+    <value>    RWY:                        </value>
+  </data>
+  <data name="str00623" xml:space="preserve">
+    <value>    Guidance facility :             </value>
+  </data>
+  <data name="str00624" xml:space="preserve">
+    <value>    Distance from THR to facility : </value>
+  </data>
+  <data name="str00625" xml:space="preserve">
+    <value>    Approach                    </value>
+  </data>
+  <data name="str00626" xml:space="preserve">
+    <value>    Magnetic course :               </value>
+  </data>
+  <data name="str00627" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="str00628" xml:space="preserve">
+    <value>    True cource :                   </value>
+  </data>
+  <data name="str00631" xml:space="preserve">
+    <value>Page 3 - </value>
+  </data>
+  <data name="str00632" xml:space="preserve">
+    <value>    Intervals of the true course :           </value>
+  </data>
+  <data name="str00633" xml:space="preserve">
+    <value>    Final segment true course :            </value>
+  </data>
+  <data name="str00634" xml:space="preserve">
+    <value>    Final segment magnetic course :        </value>
+  </data>
+  <data name="str00635" xml:space="preserve">
+    <value>    Min OCH :                                </value>
+  </data>
+  <data name="str00636" xml:space="preserve">
+    <value>    Min OCH ??? :                            </value>
+  </data>
+  <data name="str00637" xml:space="preserve">
+    <value>IF: </value>
+  </data>
+  <data name="str00638" xml:space="preserve">
+    <value>FAF:</value>
+  </data>
+  <data name="str00641" xml:space="preserve">
+    <value>Page 4 - </value>
+  </data>
+  <data name="str00642" xml:space="preserve">
+    <value>    THR-FAF distance:                     </value>
+  </data>
+  <data name="str00643" xml:space="preserve">
+    <value>    Descent gradient:                     </value>
+  </data>
+  <data name="str00644" xml:space="preserve">
+    <value>    Final segment. OCH, limits of THR-FAF distances for the OCH given:</value>
+  </data>
+  <data name="str00645" xml:space="preserve">
+    <value>    OCH:                                  </value>
+  </data>
+  <data name="str00646" xml:space="preserve">
+    <value>    Obstacle causing OCH:                 </value>
+  </data>
+  <data name="str00647" xml:space="preserve">
+    <value>    Facility:                             </value>
+  </data>
+  <data name="str00648" xml:space="preserve">
+    <value>    Distance from THR to the obstacle :   </value>
+  </data>
+  <data name="str00649" xml:space="preserve">
+    <value>    Intermediate segment:</value>
+  </data>
+  <data name="str00650" xml:space="preserve">
+    <value>    Magnitude of the turn in the IF:      </value>
+  </data>
+  <data name="str00651" xml:space="preserve">
+    <value>    Minimum length of the track:          </value>
+  </data>
+  <data name="str00656" xml:space="preserve">
+    <value>Page 5 - </value>
+  </data>
+  <data name="str00657" xml:space="preserve">
+    <value>    FAF-IF distance:             </value>
+  </data>
+  <data name="str00658" xml:space="preserve">
+    <value>    Descent gradient:            </value>
+  </data>
+  <data name="str00659" xml:space="preserve">
+    <value>    Horizontal segment:          </value>
+  </data>
+  <data name="str00660" xml:space="preserve">
+    <value>    Minimum height of descent:   </value>
+  </data>
+  <data name="str00661" xml:space="preserve">
+    <value>    Dominant obstacle:           </value>
+  </data>
+  <data name="str00662" xml:space="preserve">
+    <value>    Distance from FAF:           </value>
+  </data>
+  <data name="str00663" xml:space="preserve">
+    <value>    IF definition</value>
+  </data>
+  <data name="str00664" xml:space="preserve">
+    <value>    Facility:                    </value>
+  </data>
+  <data name="str00665" xml:space="preserve">
+    <value>    Slant distance:              </value>
+  </data>
+  <data name="str00671" xml:space="preserve">
+    <value>Page 6 - </value>
+  </data>
+  <data name="str00672" xml:space="preserve">
+    <value>    IAF altitude :    </value>
+  </data>
+  <data name="str00673" xml:space="preserve">
+    <value>    IAF height :      </value>
+  </data>
+  <data name="str00681" xml:space="preserve">
+    <value>Page 7 - </value>
+  </data>
+  <data name="str00682" xml:space="preserve">
+    <value>    Procedure parameters</value>
+  </data>
+  <data name="str00683" xml:space="preserve">
+    <value>    Turn :        </value>
+  </data>
+  <data name="str00684" xml:space="preserve">
+    <value>    IAF altitude: </value>
+  </data>
+  <data name="str00685" xml:space="preserve">
+    <value>    T :           </value>
+  </data>
+  <data name="str00686" xml:space="preserve">
+    <value>    IAS :         </value>
+  </data>
+  <data name="str00687" xml:space="preserve">
+    <value>    Procedure type </value>
+  </data>
+  <data name="str00688" xml:space="preserve">
+    <value>    Rate of descent in the outbound track :  </value>
+  </data>
+  <data name="str00689" xml:space="preserve">
+    <value>    Rate of descent in the final app. segment :  </value>
+  </data>
+  <data name="str00691" xml:space="preserve">
+    <value>        Outbound track</value>
+  </data>
+  <data name="str00692" xml:space="preserve">
+    <value>    Reached descent altitude :          </value>
+  </data>
+  <data name="str00693" xml:space="preserve">
+    <value>    Minimum flight altitude :           </value>
+  </data>
+  <data name="str00694" xml:space="preserve">
+    <value>    Dominant obstacle :                 </value>
+  </data>
+  <data name="str00695" xml:space="preserve">
+    <value>        Final approach segment</value>
+  </data>
+  <data name="str00696" xml:space="preserve">
+    <value>    Height over THR:                    </value>
+  </data>
+  <data name="str00697" xml:space="preserve">
+    <value>    OCH :                               </value>
+  </data>
+  <data name="str00698" xml:space="preserve">
+    <value>    OCA :                               </value>
+  </data>
+  <data name="str00699" xml:space="preserve">
+    <value>    Dominant obstacle:                  </value>
+  </data>
+  <data name="str00700" xml:space="preserve">
+    <value>    Factual flight time:                </value>
+  </data>
+  <data name="str00701" xml:space="preserve">
+    <value>    MOC:                                </value>
+  </data>
+  <data name="str00711" xml:space="preserve">
+    <value>Page 8 - </value>
+  </data>
+  <data name="str00712" xml:space="preserve">
+    <value>    Form stepdown fix</value>
+  </data>
+  <data name="str00713" xml:space="preserve">
+    <value>    Descent gradient :           </value>
+  </data>
+  <data name="str00714" xml:space="preserve">
+    <value>    Altitude :                   </value>
+  </data>
+  <data name="str00715" xml:space="preserve">
+    <value>    Height :                     </value>
+  </data>
+  <data name="str00716" xml:space="preserve">
+    <value>    Distance from THR :          </value>
+  </data>
+  <data name="str00717" xml:space="preserve">
+    <value>    Facility:                    </value>
+  </data>
+  <data name="str00718" xml:space="preserve">
+    <value>    Horizontal segment length:   </value>
+  </data>
+  <data name="str00719" xml:space="preserve">
+    <value>    OCH :                        </value>
+  </data>
+  <data name="str00720" xml:space="preserve">
+    <value>    MOC :                        </value>
+  </data>
+  <data name="str00721" xml:space="preserve">
+    <value>    Dominant obstacle :          </value>
+  </data>
+  <data name="str00722" xml:space="preserve">
+    <value>    Obstacle height:             </value>
+  </data>
+  <data name="str00731" xml:space="preserve">
+    <value>Page 9 - </value>
+  </data>
+  <data name="str00732" xml:space="preserve">
+    <value>    Facility:                                 </value>
+  </data>
+  <data name="str00733" xml:space="preserve">
+    <value>Final approach way-point</value>
+  </data>
+  <data name="str00741" xml:space="preserve">
+    <value>Page 10 - </value>
+  </data>
+  <data name="str00751" xml:space="preserve">
+    <value>Page 11 - </value>
+  </data>
+  <data name="str00761" xml:space="preserve">
+    <value>Page 12 - </value>
+  </data>
+  <data name="str00762" xml:space="preserve">
+    <value>    Turn at a designated TP</value>
+  </data>
+  <data name="str00763" xml:space="preserve">
+    <value>    Facility   : </value>
+  </data>
+  <data name="str00764" xml:space="preserve">
+    <value>    Turn at a designated altitude/height</value>
+  </data>
+  <data name="str00771" xml:space="preserve">
+    <value>Page 13 - </value>
+  </data>
+  <data name="str00772" xml:space="preserve">
+    <value>    Next segment course :           </value>
+  </data>
+  <data name="str00773" xml:space="preserve">
+    <value>    Magnitude of the turn:          </value>
+  </data>
+  <data name="str00781" xml:space="preserve">
+    <value>Page 14 - </value>
+  </data>
+  <data name="str00782" xml:space="preserve">
+    <value>    Required angle of the area splay at the inner side of the turn :</value>
+  </data>
+  <data name="str00783" xml:space="preserve">
+    <value>    Required angle of the area splay at the outer side of the turn :</value>
+  </data>
+  <data name="str00791" xml:space="preserve">
+    <value>Page 15 - </value>
+  </data>
+  <data name="str00801" xml:space="preserve">
+    <value>Page 16 - </value>
+  </data>
+  <data name="str00802" xml:space="preserve">
+    <value>    PDG       : </value>
+  </data>
+  <data name="str00803" xml:space="preserve">
+    <value>    OCH       : </value>
+  </data>
+  <data name="str00804" xml:space="preserve">
+    <value>    Max PDG   : </value>
+  </data>
+  <data name="str00805" xml:space="preserve">
+    <value>Accuracy report</value>
+  </data>
+  <data name="str00811" xml:space="preserve">
+    <value>Procedure geometry</value>
+  </data>
+  <data name="str00812" xml:space="preserve">
+    <value>Nonprecision approach - Procedure geometry</value>
+  </data>
+  <data name="str00813" xml:space="preserve">
+    <value>Creation date: </value>
+  </data>
+  <data name="str00814" xml:space="preserve">
+    <value>Nonprecision approach procedure overall length</value>
+  </data>
+  <data name="str00815" xml:space="preserve">
+    <value>Report on Obstacles</value>
+  </data>
+  <data name="str00816" xml:space="preserve">
+    <value>Nonprecision approach - Calculation report</value>
+  </data>
+  <data name="str00817" xml:space="preserve">
+    <value>'Log' file</value>
+  </data>
+  <data name="str00819" xml:space="preserve">
+    <value>ESRI Map document:  </value>
+  </data>
+  <data name="str00820" xml:space="preserve">
+    <value>Approach</value>
+  </data>
+  <data name="str00821" xml:space="preserve">
+    <value>Procedure name:  </value>
+  </data>
+  <data name="str00822" xml:space="preserve">
+    <value>Runway:  </value>
+  </data>
+  <data name="str00823" xml:space="preserve">
+    <value>Aircraft category: up to </value>
+  </data>
+  <data name="str00824" xml:space="preserve">
+    <value>Creation time: </value>
+  </data>
+  <data name="str00806" xml:space="preserve">
+    <value>Distances are in </value>
+  </data>
+  <data name="str00807" xml:space="preserve">
+    <value>Elevations and heights are in </value>
+  </data>
+  <data name="str00827" xml:space="preserve">
+    <value>OCA calculated - </value>
+  </data>
+  <data name="str00828" xml:space="preserve">
+    <value>OCA rounded in accordance with PANS-OPS rules - </value>
+  </data>
+  <data name="str00829" xml:space="preserve">
+    <value>Published OCA - </value>
+  </data>
+  <data name="str00830" xml:space="preserve">
+    <value>OCH reference point- </value>
+  </data>
+  <data name="str00831" xml:space="preserve">
+    <value>OCH calculated - </value>
+  </data>
+  <data name="str00832" xml:space="preserve">
+    <value>OCH rounded in accordance with PANS-OPS rules - </value>
+  </data>
+  <data name="str00833" xml:space="preserve">
+    <value>Published OCH - </value>
+  </data>
+  <data name="str00834" xml:space="preserve">
+    <value>Missed approach climb gradient - </value>
+  </data>
+  <data name="str00835" xml:space="preserve">
+    <value>Nonprecision approach - 'Log' file</value>
+  </data>
+  <data name="str00836" xml:space="preserve">
+    <value>RWY:</value>
+  </data>
+  <data name="str00837" xml:space="preserve">
+    <value>Alignment: </value>
+  </data>
+  <data name="str00838" xml:space="preserve">
+    <value> from: </value>
+  </data>
+  <data name="str00839" xml:space="preserve">
+    <value> to: </value>
+  </data>
+  <data name="str00840" xml:space="preserve">
+    <value>Course</value>
+  </data>
+  <data name="str00841" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="str00842" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="str00843" xml:space="preserve">
+    <value>Latitude of circle center</value>
+  </data>
+  <data name="str00844" xml:space="preserve">
+    <value>Longitude of circle center</value>
+  </data>
+  <data name="str00845" xml:space="preserve">
+    <value>Turn radius</value>
+  </data>
+  <data name="str00846" xml:space="preserve">
+    <value>Turn direction</value>
+  </data>
+  <data name="str00847" xml:space="preserve">
+    <value>True bearing</value>
+  </data>
+  <data name="str00848" xml:space="preserve">
+    <value>Distance to the next point</value>
+  </data>
+  <data name="str00849" xml:space="preserve">
+    <value>Turn arc length</value>
+  </data>
+  <data name="str00850" xml:space="preserve">
+    <value>Departure termination point</value>
+  </data>
+  <data name="str00851" xml:space="preserve">
+    <value>Precision approach procedure overall length</value>
+  </data>
+  <data name="str00852" xml:space="preserve">
+    <value>Initial approach procedure overall length</value>
+  </data>
+  <data name="str01001" xml:space="preserve">
+    <value>Necessary THR crossing height is not provided.</value>
+  </data>
+  <data name="str10101" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str10102" xml:space="preserve">
+    <value>Speed:</value>
+  </data>
+  <data name="str10103" xml:space="preserve">
+    <value>Bank:</value>
+  </data>
+  <data name="str10104" xml:space="preserve">
+    <value>Rate of turn:</value>
+  </data>
+  <data name="str10105" xml:space="preserve">
+    <value>AD elevation:</value>
+  </data>
+  <data name="str10106" xml:space="preserve">
+    <value>MOC:</value>
+  </data>
+  <data name="str10107" xml:space="preserve">
+    <value>Aerodrome: </value>
+  </data>
+  <data name="str10109" xml:space="preserve">
+    <value>TAS+Wind:</value>
+  </data>
+  <data name="str10110" xml:space="preserve">
+    <value>Radius of turn:</value>
+  </data>
+  <data name="str10111" xml:space="preserve">
+    <value>Straight segment:</value>
+  </data>
+  <data name="str10112" xml:space="preserve">
+    <value>Radius from THR:</value>
+  </data>
+  <data name="str10113" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10114" xml:space="preserve">
+    <value>Min OCH:</value>
+  </data>
+  <data name="str10115" xml:space="preserve">
+    <value>Obstacle causing OCH:</value>
+  </data>
+  <data name="str10118" xml:space="preserve">
+    <value>OCA:</value>
+  </data>
+  <data name="str10201" xml:space="preserve">
+    <value>RWY:</value>
+  </data>
+  <data name="str10202" xml:space="preserve">
+    <value>TRUE BRG:</value>
+  </data>
+  <data name="str10203" xml:space="preserve">
+    <value>Intersecting facility:</value>
+  </data>
+  <data name="str10204" xml:space="preserve">
+    <value>Shortest facility distance from THR:</value>
+  </data>
+  <data name="str10205" xml:space="preserve">
+    <value>Approach</value>
+  </data>
+  <data name="str10206" xml:space="preserve">
+    <value>Straight in</value>
+  </data>
+  <data name="str10207" xml:space="preserve">
+    <value>Circling</value>
+  </data>
+  <data name="str10208" xml:space="preserve">
+    <value>MAG BRG:</value>
+  </data>
+  <data name="str10209" xml:space="preserve">
+    <value>Shortest facility distance from  ARP:</value>
+  </data>
+  <data name="str10210" xml:space="preserve">
+    <value>On-aerodrome facility</value>
+  </data>
+  <data name="str10211" xml:space="preserve">
+    <value>Off-aerodrome facility</value>
+  </data>
+  <data name="str10212" xml:space="preserve">
+    <value>OCH is specified relatively to Aerodrome elevation</value>
+  </data>
+  <data name="str10213" xml:space="preserve">
+    <value>OCH is specified relatively to THR elevation</value>
+  </data>
+  <data name="str10214" xml:space="preserve">
+    <value>OCH lower limit is used</value>
+  </data>
+  <data name="str10215" xml:space="preserve">
+    <value>OCH lower limit is not used</value>
+  </data>
+  <data name="str10217" xml:space="preserve">
+    <value>Circling</value>
+  </data>
+  <data name="str10218" xml:space="preserve">
+    <value>Ideal</value>
+  </data>
+  <data name="str10219" xml:space="preserve">
+    <value>Within desirable limits</value>
+  </data>
+  <data name="str10220" xml:space="preserve">
+    <value>Within maximum limits</value>
+  </data>
+  <data name="str10221" xml:space="preserve">
+    <value>Omnidirectional</value>
+  </data>
+  <data name="str10222" xml:space="preserve">
+    <value>Distance from RWY surface:</value>
+  </data>
+  <data name="str10223" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="str10224" xml:space="preserve">
+    <value>GEO from</value>
+  </data>
+  <data name="str10225" xml:space="preserve">
+    <value>GEO to</value>
+  </data>
+  <data name="str10226" xml:space="preserve">
+    <value>Aircraft parameters</value>
+  </data>
+  <data name="str10227" xml:space="preserve">
+    <value>Offset final approach (OCA/H  is equal to or bigger than the lower limit)</value>
+  </data>
+  <data name="str10228" xml:space="preserve">
+    <value>RWY aligned track guidance without OCA/H penalty</value>
+  </data>
+  <data name="str10301" xml:space="preserve">
+    <value>TRUE BRG range:</value>
+  </data>
+  <data name="str10302" xml:space="preserve">
+    <value>Intersection distance from THR</value>
+  </data>
+  <data name="str10303" xml:space="preserve">
+    <value>Alignment angle</value>
+  </data>
+  <data name="str10304" xml:space="preserve">
+    <value>Lateral track distance at </value>
+  </data>
+  <data name="str10305" xml:space="preserve">
+    <value>Circling OCH:</value>
+  </data>
+  <data name="str10306" xml:space="preserve">
+    <value>Alignment OCH min:</value>
+  </data>
+  <data name="str10307" xml:space="preserve">
+    <value>With FAF</value>
+  </data>
+  <data name="str10308" xml:space="preserve">
+    <value>No FAF/No IF</value>
+  </data>
+  <data name="str10309" xml:space="preserve">
+    <value>Navaids along approach track:</value>
+  </data>
+  <data name="str10310" xml:space="preserve">
+    <value> from the THR</value>
+  </data>
+  <data name="str10312" xml:space="preserve">
+    <value>Height above THR:</value>
+  </data>
+  <data name="str10313" xml:space="preserve">
+    <value>Height above usable landing surface:</value>
+  </data>
+  <data name="str10314" xml:space="preserve">
+    <value> to right</value>
+  </data>
+  <data name="str10315" xml:space="preserve">
+    <value> to left</value>
+  </data>
+  <data name="str10316" xml:space="preserve">
+    <value>Dist. from THR</value>
+  </data>
+  <data name="str10317" xml:space="preserve">
+    <value>GEO From</value>
+  </data>
+  <data name="str10318" xml:space="preserve">
+    <value>GEO To</value>
+  </data>
+  <data name="str10319" xml:space="preserve">
+    <value>Design scenario</value>
+  </data>
+  <data name="str10401" xml:space="preserve">
+    <value>Dist. FAF-THR:</value>
+  </data>
+  <data name="str10404" xml:space="preserve">
+    <value>Final approach segment. OCH, FAF- THR range for the specified OCH</value>
+  </data>
+  <data name="str10405" xml:space="preserve">
+    <value>Obstacle ID:</value>
+  </data>
+  <data name="str10406" xml:space="preserve">
+    <value>Guidance facility:</value>
+  </data>
+  <data name="str10408" xml:space="preserve">
+    <value>Obstacle distance from THR:</value>
+  </data>
+  <data name="str10409" xml:space="preserve">
+    <value>Intermediate phase</value>
+  </data>
+  <data name="str10410" xml:space="preserve">
+    <value>Intersection angle over IF:</value>
+  </data>
+  <data name="str10411" xml:space="preserve">
+    <value>Minimum track length:</value>
+  </data>
+  <data name="str10412" xml:space="preserve">
+    <value>Next OCH:</value>
+  </data>
+  <data name="str10413" xml:space="preserve">
+    <value>Distance of  the next obstacle from THR:</value>
+  </data>
+  <data name="str10414" xml:space="preserve">
+    <value>Next dominant obstacle:</value>
+  </data>
+  <data name="str10415" xml:space="preserve">
+    <value>Distance range recommended from FAF:</value>
+  </data>
+  <data name="str10416" xml:space="preserve">
+    <value>FAF Altitude</value>
+  </data>
+  <data name="str10417" xml:space="preserve">
+    <value>FAF Height</value>
+  </data>
+  <data name="str10501" xml:space="preserve">
+    <value>FAF-IF distance:</value>
+  </data>
+  <data name="str10502" xml:space="preserve">
+    <value>IF Alt:</value>
+  </data>
+  <data name="str10503" xml:space="preserve">
+    <value>Descent gradient:</value>
+  </data>
+  <data name="str10504" xml:space="preserve">
+    <value>FAF Alt:</value>
+  </data>
+  <data name="str10505" xml:space="preserve">
+    <value>Horizontal distance:</value>
+  </data>
+  <data name="str10506" xml:space="preserve">
+    <value>Minimum descent altitude</value>
+  </data>
+  <data name="str10507" xml:space="preserve">
+    <value>Obstacle causing intermediate segment altitude:</value>
+  </data>
+  <data name="str10508" xml:space="preserve">
+    <value>Distance from FAF:</value>
+  </data>
+  <data name="str10509" xml:space="preserve">
+    <value>IF formed by</value>
+  </data>
+  <data name="str10510" xml:space="preserve">
+    <value>Navaid:</value>
+  </data>
+  <data name="str10511" xml:space="preserve">
+    <value>Slant distance:</value>
+  </data>
+  <data name="str10512" xml:space="preserve">
+    <value>Before navaid</value>
+  </data>
+  <data name="str10513" xml:space="preserve">
+    <value>After navaid</value>
+  </data>
+  <data name="str10514" xml:space="preserve">
+    <value>Recommended range:</value>
+  </data>
+  <data name="str10515" xml:space="preserve">
+    <value> FAF</value>
+  </data>
+  <data name="str10516" xml:space="preserve">
+    <value>IF designator:</value>
+  </data>
+  <data name="str10517" xml:space="preserve">
+    <value>Select FAF from list:</value>
+  </data>
+  <data name="str10518" xml:space="preserve">
+    <value>Descent angle:</value>
+  </data>
+  <data name="str10603" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="str10604" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="str10605" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="str10606" xml:space="preserve">
+    <value>MSA-Altitude</value>
+  </data>
+  <data name="str10609" xml:space="preserve">
+    <value>Obstacle causing OCH:</value>
+  </data>
+  <data name="str10614" xml:space="preserve">
+    <value>Allowable intervals of the entry radial</value>
+  </data>
+  <data name="str10615" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="str10616" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="str10701" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str10704" xml:space="preserve">
+    <value>Reversal / Racetrack</value>
+  </data>
+  <data name="str10705" xml:space="preserve">
+    <value>Racetrack</value>
+  </data>
+  <data name="str10706" xml:space="preserve">
+    <value>Base turn</value>
+  </data>
+  <data name="str10707" xml:space="preserve">
+    <value>45/180 procedure turn</value>
+  </data>
+  <data name="str10708" xml:space="preserve">
+    <value>80/260 procedure turn</value>
+  </data>
+  <data name="str10709" xml:space="preserve">
+    <value>Visualize entry sectors</value>
+  </data>
+  <data name="str10710" xml:space="preserve">
+    <value>Entries from Sector 1 are not permitted</value>
+  </data>
+  <data name="str10711" xml:space="preserve">
+    <value>Min. safe height:</value>
+  </data>
+  <data name="str10712" xml:space="preserve">
+    <value>Allowable descent height:</value>
+  </data>
+  <data name="str10713" xml:space="preserve">
+    <value>Inbound track:</value>
+  </data>
+  <data name="str10714" xml:space="preserve">
+    <value>IAF height:</value>
+  </data>
+  <data name="str10715" xml:space="preserve">
+    <value>Outbound leg</value>
+  </data>
+  <data name="str10717" xml:space="preserve">
+    <value>Min. safe altitude:</value>
+  </data>
+  <data name="str10718" xml:space="preserve">
+    <value>Inbound track / Final Approach Segment</value>
+  </data>
+  <data name="str10719" xml:space="preserve">
+    <value>Allowable descent altitude:</value>
+  </data>
+  <data name="str10720" xml:space="preserve">
+    <value>Causing obstacle ID:</value>
+  </data>
+  <data name="str10721" xml:space="preserve">
+    <value>IAF altitude:</value>
+  </data>
+  <data name="str10722" xml:space="preserve">
+    <value>Outbound track:</value>
+  </data>
+  <data name="str10723" xml:space="preserve">
+    <value>Height above THR:</value>
+  </data>
+  <data name="str10724" xml:space="preserve">
+    <value>Actual inbound timing:</value>
+  </data>
+  <data name="str10725" xml:space="preserve">
+    <value>Outbound leg mag. course:</value>
+  </data>
+  <data name="str10726" xml:space="preserve">
+    <value>Outbound leg distance:</value>
+  </data>
+  <data name="str10727" xml:space="preserve">
+    <value>Entry variant</value>
+  </data>
+  <data name="str10728" xml:space="preserve">
+    <value>Straight</value>
+  </data>
+  <data name="str10729" xml:space="preserve">
+    <value>Entire sector</value>
+  </data>
+  <data name="str10730" xml:space="preserve">
+    <value>Right turn</value>
+  </data>
+  <data name="str10731" xml:space="preserve">
+    <value>Left turn</value>
+  </data>
+  <data name="str10732" xml:space="preserve">
+    <value>Entry options</value>
+  </data>
+  <data name="str10733" xml:space="preserve">
+    <value>Descent for 1 minute nominal outbound time</value>
+  </data>
+  <data name="str10801" xml:space="preserve">
+    <value>Implement SDF</value>
+  </data>
+  <data name="str10802" xml:space="preserve">
+    <value>FAF-SDF segment</value>
+  </data>
+  <data name="str10803" xml:space="preserve">
+    <value>SIL-SDF segment</value>
+  </data>
+  <data name="str10804" xml:space="preserve">
+    <value>FAF-SDF distance</value>
+  </data>
+  <data name="str10805" xml:space="preserve">
+    <value>SIL-SDF distance</value>
+  </data>
+  <data name="str10806" xml:space="preserve">
+    <value>Descent gradient:</value>
+  </data>
+  <data name="str10807" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10808" xml:space="preserve">
+    <value>Dominant obstacle ID:</value>
+  </data>
+  <data name="str10809" xml:space="preserve">
+    <value>Horizontal segment length:</value>
+  </data>
+  <data name="str10811" xml:space="preserve">
+    <value>SDF-MAPt over THR</value>
+  </data>
+  <data name="str10812" xml:space="preserve">
+    <value>Distance from THR:</value>
+  </data>
+  <data name="str10813" xml:space="preserve">
+    <value>FIX formed by:</value>
+  </data>
+  <data name="str10814" xml:space="preserve">
+    <value>over facility</value>
+  </data>
+  <data name="str10815" xml:space="preserve">
+    <value>Slant range to SDF:</value>
+  </data>
+  <data name="str10816" xml:space="preserve">
+    <value>Obstacle height:</value>
+  </data>
+  <data name="str10817" xml:space="preserve">
+    <value>MOC:</value>
+  </data>
+  <data name="str10818" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str10901" xml:space="preserve">
+    <value>MAPt is defined by</value>
+  </data>
+  <data name="str10902" xml:space="preserve">
+    <value>FIX</value>
+  </data>
+  <data name="str10903" xml:space="preserve">
+    <value>Distance from FAF</value>
+  </data>
+  <data name="str10904" xml:space="preserve">
+    <value>Distance from THR before/after(+/-):</value>
+  </data>
+  <data name="str10905" xml:space="preserve">
+    <value>Distance to the earliest MAPt:</value>
+  </data>
+  <data name="str10906" xml:space="preserve">
+    <value>Distance to the latest MAPt:</value>
+  </data>
+  <data name="str10907" xml:space="preserve">
+    <value>Distance from MAPt to SOC:</value>
+  </data>
+  <data name="str10908" xml:space="preserve">
+    <value>DME-MAPt distance:</value>
+  </data>
+  <data name="str10909" xml:space="preserve">
+    <value>Slant range:</value>
+  </data>
+  <data name="str10910" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10911" xml:space="preserve">
+    <value>Missed approach gradient:</value>
+  </data>
+  <data name="str10912" xml:space="preserve">
+    <value>Lenght of the missed approach interm. phase:</value>
+  </data>
+  <data name="str10913" xml:space="preserve">
+    <value>Missed approach is terminated within distance of MAPt:</value>
+  </data>
+  <data name="str10914" xml:space="preserve">
+    <value>Obstacle ID causing OCH:</value>
+  </data>
+  <data name="str10915" xml:space="preserve">
+    <value>Dominant obstacle ID within the missed approach area:</value>
+  </data>
+  <data name="str10916" xml:space="preserve">
+    <value>Proceed to turning missed app.</value>
+  </data>
+  <data name="str10917" xml:space="preserve">
+    <value>You have finished construction of straight missed approach procedure. To save the results, press OK.</value>
+  </data>
+  <data name="str10918" xml:space="preserve">
+    <value>Distance from SDF</value>
+  </data>
+  <data name="str10919" xml:space="preserve">
+    <value>Option unavailable</value>
+  </data>
+  <data name="str10920" xml:space="preserve">
+    <value>Enroute MOC:</value>
+  </data>
+  <data name="str11001" xml:space="preserve">
+    <value>Bank:</value>
+  </data>
+  <data name="str11002" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str11003" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str11004" xml:space="preserve">
+    <value>Aircraft Category:</value>
+  </data>
+  <data name="str11005" xml:space="preserve">
+    <value>Type of turn:</value>
+  </data>
+  <data name="str11006" xml:space="preserve">
+    <value>Designated at an altitude</value>
+  </data>
+  <data name="str11007" xml:space="preserve">
+    <value>FIX</value>
+  </data>
+  <data name="str11008" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="str11009" xml:space="preserve">
+    <value>Angle of turn is more than 15°</value>
+  </data>
+  <data name="str11043" xml:space="preserve">
+    <value>Overflight OCA:</value>
+  </data>
+  <data name="str11044" xml:space="preserve">
+    <value>MDA:</value>
+  </data>
+  <data name="str11051" xml:space="preserve">
+    <value>Final app. segment OCH:</value>
+  </data>
+  <data name="str11052" xml:space="preserve">
+    <value>Straight-in missed app. segment OCH :</value>
+  </data>
+  <data name="str11053" xml:space="preserve">
+    <value>Overflight OCH:</value>
+  </data>
+  <data name="str11054" xml:space="preserve">
+    <value>MDH:</value>
+  </data>
+  <data name="str11055" xml:space="preserve">
+    <value>Turning H, min:</value>
+  </data>
+  <data name="str11056" xml:space="preserve">
+    <value>Turning H, max:</value>
+  </data>
+  <data name="str11057" xml:space="preserve">
+    <value>Dominant obstacle ID:</value>
+  </data>
+  <data name="str11058" xml:space="preserve">
+    <value>Obstacle ID causing turn:</value>
+  </data>
+  <data name="str11059" xml:space="preserve">
+    <value>Distance from MAPt, min:</value>
+  </data>
+  <data name="str11060" xml:space="preserve">
+    <value>Distance from MAPt, max:</value>
+  </data>
+  <data name="str11061" xml:space="preserve">
+    <value>OCH is determined by MOC of the final segment</value>
+  </data>
+  <data name="str11062" xml:space="preserve">
+    <value>OCH is determined by MAPt location</value>
+  </data>
+  <data name="str11063" xml:space="preserve">
+    <value>OCH is determined by final segment alignment</value>
+  </data>
+  <data name="str11064" xml:space="preserve">
+    <value>OCH is determined by obstacle within circling Area</value>
+  </data>
+  <data name="str11065" xml:space="preserve">
+    <value>OCH is determined by obstacle</value>
+  </data>
+  <data name="str11066" xml:space="preserve">
+    <value>Optimum solution for missed approach</value>
+  </data>
+  <data name="str12001" xml:space="preserve">
+    <value>Turn designated at an altitude</value>
+  </data>
+  <data name="str12002" xml:space="preserve">
+    <value>Facility:</value>
+  </data>
+  <data name="str12005" xml:space="preserve">
+    <value>Flight tech. tol.</value>
+  </data>
+  <data name="str12006" xml:space="preserve">
+    <value>FIX tolerance:</value>
+  </data>
+  <data name="str12007" xml:space="preserve">
+    <value>Turn at designated TP</value>
+  </data>
+  <data name="str12012" xml:space="preserve">
+    <value>IAS to TAS calc. altitude:</value>
+  </data>
+  <data name="str13001" xml:space="preserve">
+    <value>Desired track</value>
+  </data>
+  <data name="str13002" xml:space="preserve">
+    <value>Desired radial</value>
+  </data>
+  <data name="str13003" xml:space="preserve">
+    <value>To Nav./FIX/WPT</value>
+  </data>
+  <data name="str13004" xml:space="preserve">
+    <value>Course change:</value>
+  </data>
+  <data name="str13005" xml:space="preserve">
+    <value>Magnetic course:</value>
+  </data>
+  <data name="str13006" xml:space="preserve">
+    <value>Intercept angle:</value>
+  </data>
+  <data name="str13007" xml:space="preserve">
+    <value>No track back to the facility is specified:</value>
+  </data>
+  <data name="str13008" xml:space="preserve">
+    <value>Recommended course intervals:</value>
+  </data>
+  <data name="str13009" xml:space="preserve">
+    <value>DR min. distance =</value>
+  </data>
+  <data name="str13010" xml:space="preserve">
+    <value>DR distance:</value>
+  </data>
+  <data name="str13011" xml:space="preserve">
+    <value>Navaid</value>
+  </data>
+  <data name="str13012" xml:space="preserve">
+    <value>Stabilization time:</value>
+  </data>
+  <data name="str13013" xml:space="preserve">
+    <value>Navaid/FIX/WPT</value>
+  </data>
+  <data name="str13014" xml:space="preserve">
+    <value>Specify the heading value</value>
+  </data>
+  <data name="str13015" xml:space="preserve">
+    <value>Select reference point</value>
+  </data>
+  <data name="str13016" xml:space="preserve">
+    <value>Reference point:</value>
+  </data>
+  <data name="str14001" xml:space="preserve">
+    <value>On the inner side of the turn:</value>
+  </data>
+  <data name="str14002" xml:space="preserve">
+    <value>Angle reguired to widen the facility associated area:</value>
+  </data>
+  <data name="str14003" xml:space="preserve">
+    <value>Paralel to the nominal trackafter turn completion:</value>
+  </data>
+  <data name="str14004" xml:space="preserve">
+    <value>Splay at 15 apart from the nominal track after the turn</value>
+  </data>
+  <data name="str14005" xml:space="preserve">
+    <value>Widen facility associated area</value>
+  </data>
+  <data name="str14006" xml:space="preserve">
+    <value>On the outer side of the turn</value>
+  </data>
+  <data name="str14007" xml:space="preserve">
+    <value>Angle required to widen the facility associated area:</value>
+  </data>
+  <data name="str15001" xml:space="preserve">
+    <value>Construction on the inner side of the turn</value>
+  </data>
+  <data name="str15002" xml:space="preserve">
+    <value>Resume track guidance</value>
+  </data>
+  <data name="str15003" xml:space="preserve">
+    <value>30° rule</value>
+  </data>
+  <data name="str15004" xml:space="preserve">
+    <value>Along the line "facility - earliest TP"</value>
+  </data>
+  <data name="str15005" xml:space="preserve">
+    <value>Construction on the outer side of the turn</value>
+  </data>
+  <data name="str15006" xml:space="preserve">
+    <value>Along line: facility - FP after turn</value>
+  </data>
+  <data name="str16001" xml:space="preserve">
+    <value>Missed app. gradient:</value>
+  </data>
+  <data name="str16002" xml:space="preserve">
+    <value>Altitude at KK-line:</value>
+  </data>
+  <data name="str16003" xml:space="preserve">
+    <value>Procedure termination FIX</value>
+  </data>
+  <data name="str16004" xml:space="preserve">
+    <value>You have finished construction of the procedure. To save the results, press OK.</value>
+  </data>
+  <data name="str16005" xml:space="preserve">
+    <value>Enroute req. altitude:</value>
+  </data>
+  <data name="str16006" xml:space="preserve">
+    <value>Turning area is limited by distance:</value>
+  </data>
+  <data name="str16007" xml:space="preserve">
+    <value>Procedure termination altitude:</value>
+  </data>
+  <data name="str16008" xml:space="preserve">
+    <value>TNA:</value>
+  </data>
+  <data name="str16009" xml:space="preserve">
+    <value>Altitude at termination point:</value>
+  </data>
+  <data name="str16010" xml:space="preserve">
+    <value>TNH:</value>
+  </data>
+  <data name="str20100" xml:space="preserve">
+    <value>Aircraft semi span is less than standard. Do you want it to be corrected automatically?</value>
+  </data>
+  <data name="str20101" xml:space="preserve">
+    <value>RWY:</value>
+  </data>
+  <data name="str20102" xml:space="preserve">
+    <value>Flight category:</value>
+  </data>
+  <data name="str20103" xml:space="preserve">
+    <value>TRUE BRG:</value>
+  </data>
+  <data name="str20104" xml:space="preserve">
+    <value>THR elevation:</value>
+  </data>
+  <data name="str20105" xml:space="preserve">
+    <value>LOC-THR Distance:</value>
+  </data>
+  <data name="str20106" xml:space="preserve">
+    <value>Reference datum height (for ILS):</value>
+  </data>
+  <data name="str20107" xml:space="preserve">
+    <value>Aircraft semi span:</value>
+  </data>
+  <data name="str20108" xml:space="preserve">
+    <value>Missed approach gradient:</value>
+  </data>
+  <data name="str20109" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str20110" xml:space="preserve">
+    <value>Altimeter margin:</value>
+  </data>
+  <data name="str20111" xml:space="preserve">
+    <value>Magnetic course</value>
+  </data>
+  <data name="str20112" xml:space="preserve">
+    <value>ILS category:</value>
+  </data>
+  <data name="str20113" xml:space="preserve">
+    <value>Glide path angle:</value>
+  </data>
+  <data name="str20114" xml:space="preserve">
+    <value>ILS sector width at threshold:</value>
+  </data>
+  <data name="str20115" xml:space="preserve">
+    <value>Wheels/GP antenna distance:</value>
+  </data>
+  <data name="str20116" xml:space="preserve">
+    <value>Type of altimeter margin:</value>
+  </data>
+  <data name="str20117" xml:space="preserve">
+    <value>Radio altimeter</value>
+  </data>
+  <data name="str20118" xml:space="preserve">
+    <value>Pressure altimeter</value>
+  </data>
+  <data name="str20119" xml:space="preserve">
+    <value>Aircraft vertical dimension is less than standard. Do you want it to be corrected automatically?</value>
+  </data>
+  <data name="str20120" xml:space="preserve">
+    <value>Inner horizontal
+surface height:</value>
+  </data>
+  <data name="str20121" xml:space="preserve">
+    <value>ILS sector width is more than </value>
+  </data>
+  <data name="str20201" xml:space="preserve">
+    <value>FAP-THR distance:</value>
+  </data>
+  <data name="str20202" xml:space="preserve">
+    <value>FAP altitude:</value>
+  </data>
+  <data name="str20203" xml:space="preserve">
+    <value>Intermediate approach segment placement with no OCH increase</value>
+  </data>
+  <data name="str20206" xml:space="preserve">
+    <value>FIX over FAP</value>
+  </data>
+  <data name="str20207" xml:space="preserve">
+    <value>Maximum FAP height for the given OCH value:</value>
+  </data>
+  <data name="str20210" xml:space="preserve">
+    <value>Magnitude of turn over IF:</value>
+  </data>
+  <data name="str20211" xml:space="preserve">
+    <value>Minimum length of the track:</value>
+  </data>
+  <data name="str20212" xml:space="preserve">
+    <value>FAP altitude</value>
+  </data>
+  <data name="str20213" xml:space="preserve">
+    <value>FAP height</value>
+  </data>
+  <data name="str20214" xml:space="preserve">
+    <value>Selection</value>
+  </data>
+  <data name="str20215" xml:space="preserve">
+    <value>OCH Highest obstacle</value>
+  </data>
+  <data name="str20301" xml:space="preserve">
+    <value>IF creation</value>
+  </data>
+  <data name="str20302" xml:space="preserve">
+    <value>The obstacle penetrate Obstacle Free Zone.</value>
+  </data>
+  <data name="str20303" xml:space="preserve">
+    <value>You can obtain detailed information in the report.</value>
+  </data>
+  <data name="str20304" xml:space="preserve">
+    <value>Initial approach adjacent to IF</value>
+  </data>
+  <data name="str20305" xml:space="preserve">
+    <value>Length of the segment:</value>
+  </data>
+  <data name="str20306" xml:space="preserve">
+    <value>IF parameters</value>
+  </data>
+  <data name="str20307" xml:space="preserve">
+    <value>Horizontal segment length:</value>
+  </data>
+  <data name="str20308" xml:space="preserve">
+    <value>IF-FAP distance:</value>
+  </data>
+  <data name="str20309" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="str20310" xml:space="preserve">
+    <value>Before facility</value>
+  </data>
+  <data name="str20311" xml:space="preserve">
+    <value>After facility</value>
+  </data>
+  <data name="str20312" xml:space="preserve">
+    <value>Recommended distance range</value>
+  </data>
+  <data name="str20313" xml:space="preserve">
+    <value>IF altitude</value>
+  </data>
+  <data name="str20314" xml:space="preserve">
+    <value>IF height</value>
+  </data>
+  <data name="str20315" xml:space="preserve">
+    <value>Descent gradient</value>
+  </data>
+  <data name="str20316" xml:space="preserve">
+    <value>Minimum altitude:</value>
+  </data>
+  <data name="str20402" xml:space="preserve">
+    <value>OCH within precision segment:</value>
+  </data>
+  <data name="str20403" xml:space="preserve">
+    <value>Missed approach OCH:</value>
+  </data>
+  <data name="str20404" xml:space="preserve">
+    <value>Pass to turn</value>
+  </data>
+  <data name="str20407" xml:space="preserve">
+    <value>SOC location relatively to THR:</value>
+  </data>
+  <data name="str20408" xml:space="preserve">
+    <value>The procedure constraction is completed. To save the results, press OK.</value>
+  </data>
+  <data name="str20501" xml:space="preserve">
+    <value>Bank:</value>
+  </data>
+  <data name="str20502" xml:space="preserve">
+    <value>Turn direction:</value>
+  </data>
+  <data name="str20503" xml:space="preserve">
+    <value>Turn is more than 15°</value>
+  </data>
+  <data name="str20504" xml:space="preserve">
+    <value>Turn specified by</value>
+  </data>
+  <data name="str20505" xml:space="preserve">
+    <value>Hight</value>
+  </data>
+  <data name="str20506" xml:space="preserve">
+    <value>FIX</value>
+  </data>
+  <data name="str20507" xml:space="preserve">
+    <value>Apply reduced TIA</value>
+  </data>
+  <data name="str20601" xml:space="preserve">
+    <value>Procedure DH:</value>
+  </data>
+  <data name="str20602" xml:space="preserve">
+    <value>Significant obstacle height/altitude:</value>
+  </data>
+  <data name="str20603" xml:space="preserve">
+    <value>Interval of allowable distances from THR:</value>
+  </data>
+  <data name="str20604" xml:space="preserve">
+    <value>There is no facility to create TP.</value>
+  </data>
+  <data name="str20606" xml:space="preserve">
+    <value>Obstacle causing Min OCH:</value>
+  </data>
+  <data name="str20607" xml:space="preserve">
+    <value>Obstacle causing turn:</value>
+  </data>
+  <data name="str20608" xml:space="preserve">
+    <value>Significant obstacle within TIA:</value>
+  </data>
+  <data name="str20609" xml:space="preserve">
+    <value>Turn limits in which obstacle:</value>
+  </data>
+  <data name="str20610" xml:space="preserve">
+    <value>Allowable Min OCH:</value>
+  </data>
+  <data name="str20611" xml:space="preserve">
+    <value>Overflight OCH:</value>
+  </data>
+  <data name="str20612" xml:space="preserve">
+    <value>Height at K-line:</value>
+  </data>
+  <data name="str20701" xml:space="preserve">
+    <value>Desired track</value>
+  </data>
+  <data name="str20702" xml:space="preserve">
+    <value>Course change</value>
+  </data>
+  <data name="str20703" xml:space="preserve">
+    <value>Next segment course</value>
+  </data>
+  <data name="str20801" xml:space="preserve">
+    <value>Desired radial</value>
+  </data>
+  <data name="str20802" xml:space="preserve">
+    <value>Alignment</value>
+  </data>
+  <data name="str20803" xml:space="preserve">
+    <value>Recommended course value:</value>
+  </data>
+  <data name="str20804" xml:space="preserve">
+    <value>Stabilization time:</value>
+  </data>
+  <data name="str20805" xml:space="preserve">
+    <value>Dead reckoning segment length:</value>
+  </data>
+  <data name="str20902" xml:space="preserve">
+    <value>Angle required to widen the facility associated area:</value>
+  </data>
+  <data name="str20903" xml:space="preserve">
+    <value>Parallel to the nominal track</value>
+  </data>
+  <data name="str20904" xml:space="preserve">
+    <value>Splay at 15° apart from the nominal track after the turn</value>
+  </data>
+  <data name="str20905" xml:space="preserve">
+    <value>Widen facity associated area</value>
+  </data>
+  <data name="str20907" xml:space="preserve">
+    <value>Angle required to widen the facility associated area:</value>
+  </data>
+  <data name="str21001" xml:space="preserve">
+    <value>Construction on the inner side of the turn</value>
+  </data>
+  <data name="str21002" xml:space="preserve">
+    <value>Resume track guidance</value>
+  </data>
+  <data name="str21003" xml:space="preserve">
+    <value>30° rule</value>
+  </data>
+  <data name="str21004" xml:space="preserve">
+    <value>Along line "facility-earliest TP"</value>
+  </data>
+  <data name="str21005" xml:space="preserve">
+    <value>Construction on the outer side of the turn</value>
+  </data>
+  <data name="str21006" xml:space="preserve">
+    <value>Facility-Point with track inbound</value>
+  </data>
+  <data name="str21101" xml:space="preserve">
+    <value>Altitude missing:</value>
+  </data>
+  <data name="str21102" xml:space="preserve">
+    <value>Reference values</value>
+  </data>
+  <data name="str21103" xml:space="preserve">
+    <value>The procedure constraction is completed. To save the results, press OK.</value>
+  </data>
+  <data name="str21104" xml:space="preserve">
+    <value>MAPt - THR distance:</value>
+  </data>
+  <data name="str21105" xml:space="preserve">
+    <value>SOC - THR distance:</value>
+  </data>
+  <data name="str21106" xml:space="preserve">
+    <value>Required values</value>
+  </data>
+  <data name="str21107" xml:space="preserve">
+    <value>Procedure termination height:</value>
+  </data>
+  <data name="str21108" xml:space="preserve">
+    <value>Height at KK line:</value>
+  </data>
+  <data name="str30000" xml:space="preserve">
+    <value>Clearance calculation</value>
+  </data>
+  <data name="str30001" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="str30002" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="str30003" xml:space="preserve">
+    <value>Circling Area</value>
+  </data>
+  <data name="str30004" xml:space="preserve">
+    <value>Racetrack/ Reversal</value>
+  </data>
+  <data name="str30005" xml:space="preserve">
+    <value>Final segment</value>
+  </data>
+  <data name="str30006" xml:space="preserve">
+    <value>Intermediate segment</value>
+  </data>
+  <data name="str30007" xml:space="preserve">
+    <value>Missed approach</value>
+  </data>
+  <data name="str30008" xml:space="preserve">
+    <value>Turn causing obstacles ID</value>
+  </data>
+  <data name="str30009" xml:space="preserve">
+    <value>Straight missed area</value>
+  </data>
+  <data name="str30010" xml:space="preserve">
+    <value>Turning area</value>
+  </data>
+  <data name="str30011" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="str30013" xml:space="preserve">
+    <value>Dist From SOC</value>
+  </data>
+  <data name="str30014" xml:space="preserve">
+    <value>Phase</value>
+  </data>
+  <data name="str30015" xml:space="preserve">
+    <value>Obs.H abv. ref.pt.</value>
+  </data>
+  <data name="str30016" xml:space="preserve">
+    <value>MOC30</value>
+  </data>
+  <data name="str30017" xml:space="preserve">
+    <value>Req.OCH</value>
+  </data>
+  <data name="str30018" xml:space="preserve">
+    <value>MA Surface H</value>
+  </data>
+  <data name="str30019" xml:space="preserve">
+    <value>MA Surface penet.</value>
+  </data>
+  <data name="str30020" xml:space="preserve">
+    <value>Ignored</value>
+  </data>
+  <data name="str30021" xml:space="preserve">
+    <value>FA Req.OCH</value>
+  </data>
+  <data name="str30022" xml:space="preserve">
+    <value>MOC50</value>
+  </data>
+  <data name="str30023" xml:space="preserve">
+    <value>Req. H50</value>
+  </data>
+  <data name="str30024" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str30025" xml:space="preserve">
+    <value>Obstacle Free Zone</value>
+  </data>
+  <data name="str30026" xml:space="preserve">
+    <value>Basic ILS</value>
+  </data>
+  <data name="str30027" xml:space="preserve">
+    <value>OAS</value>
+  </data>
+  <data name="str30028" xml:space="preserve">
+    <value>Precision area</value>
+  </data>
+  <data name="str30029" xml:space="preserve">
+    <value>15% Ignore</value>
+  </data>
+  <data name="str30030" xml:space="preserve">
+    <value>Missed approach</value>
+  </data>
+  <data name="str30031" xml:space="preserve">
+    <value>Turn causing obstacles</value>
+  </data>
+  <data name="str30032" xml:space="preserve">
+    <value>Turn initiation area</value>
+  </data>
+  <data name="str30033" xml:space="preserve">
+    <value>Turning area</value>
+  </data>
+  <data name="str30034" xml:space="preserve">
+    <value>Dist</value>
+  </data>
+  <data name="str30035" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="str30036" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str30037" xml:space="preserve">
+    <value>Req. H</value>
+  </data>
+  <data name="str30038" xml:space="preserve">
+    <value>TA Surface H</value>
+  </data>
+  <data name="str30039" xml:space="preserve">
+    <value>H penet.</value>
+  </data>
+  <data name="str30040" xml:space="preserve">
+    <value>Req. H</value>
+  </data>
+  <data name="str30041" xml:space="preserve">
+    <value>H abv. ARP</value>
+  </data>
+  <data name="str30042" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str30043" xml:space="preserve">
+    <value>X from FAF</value>
+  </data>
+  <data name="str30044" xml:space="preserve">
+    <value>Req OCH</value>
+  </data>
+  <data name="str30045" xml:space="preserve">
+    <value>hPnet</value>
+  </data>
+  <data name="str30046" xml:space="preserve">
+    <value>Avoid Dist</value>
+  </data>
+  <data name="str30047" xml:space="preserve">
+    <value>Avoid angle</value>
+  </data>
+  <data name="str30048" xml:space="preserve">
+    <value>Obs.H abv. ref.pt.</value>
+  </data>
+  <data name="str30049" xml:space="preserve">
+    <value>H Surface</value>
+  </data>
+  <data name="str30050" xml:space="preserve">
+    <value>H Abv. Tresh.</value>
+  </data>
+  <data name="str30051" xml:space="preserve">
+    <value>Penetrate</value>
+  </data>
+  <data name="str30052" xml:space="preserve">
+    <value>Surface</value>
+  </data>
+  <data name="str30053" xml:space="preserve">
+    <value>ILS Category</value>
+  </data>
+  <data name="str30054" xml:space="preserve">
+    <value>X from THR</value>
+  </data>
+  <data name="str30200" xml:space="preserve">
+    <value>Report on obstacles</value>
+  </data>
+  <data name="str30201" xml:space="preserve">
+    <value>Current critical obstacles</value>
+  </data>
+  <data name="str30202" xml:space="preserve">
+    <value>Segment obstacles</value>
+  </data>
+  <data name="str30210" xml:space="preserve">
+    <value>Segment:</value>
+  </data>
+  <data name="str30211" xml:space="preserve">
+    <value>End of segment altitude</value>
+  </data>
+  <data name="str40001" xml:space="preserve">
+    <value>Initial Data</value>
+  </data>
+  <data name="str40002" xml:space="preserve">
+    <value>Creation of Stepdown FIX/Turn point</value>
+  </data>
+  <data name="str40029" xml:space="preserve">
+    <value>Segment obstructions</value>
+  </data>
+  <data name="str40031" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="str40032" xml:space="preserve">
+    <value>Req. H</value>
+  </data>
+  <data name="str40033" xml:space="preserve">
+    <value>Req PDG</value>
+  </data>
+  <data name="str40034" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str40035" xml:space="preserve">
+    <value>Dist</value>
+  </data>
+  <data name="str40036" xml:space="preserve">
+    <value>Turn Dist</value>
+  </data>
+  <data name="str40100" xml:space="preserve">
+    <value>Starting point selection</value>
+  </data>
+  <data name="str40101" xml:space="preserve">
+    <value>Procedure group:</value>
+  </data>
+  <data name="str40102" xml:space="preserve">
+    <value>Starting point:</value>
+  </data>
+  <data name="str40103" xml:space="preserve">
+    <value>Interception angle at IF:</value>
+  </data>
+  <data name="str40106" xml:space="preserve">
+    <value>Altitude:</value>
+  </data>
+  <data name="str40107" xml:space="preserve">
+    <value>Minimum length of the track:</value>
+  </data>
+  <data name="str40108" xml:space="preserve">
+    <value>Intersecting facility:</value>
+  </data>
+  <data name="str40200" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="str40201" xml:space="preserve">
+    <value>Stepdown fix</value>
+  </data>
+  <data name="str40202" xml:space="preserve">
+    <value>Turn point</value>
+  </data>
+  <data name="str40203" xml:space="preserve">
+    <value>At the distance from current point:</value>
+  </data>
+  <data name="str40204" xml:space="preserve">
+    <value>Allowable interval</value>
+  </data>
+  <data name="str40205" xml:space="preserve">
+    <value>Recommended interval</value>
+  </data>
+  <data name="str40206" xml:space="preserve">
+    <value>Stepdown fix</value>
+  </data>
+  <data name="str40207" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="str40208" xml:space="preserve">
+    <value>Descent gradient</value>
+  </data>
+  <data name="str40209" xml:space="preserve">
+    <value>Actual earliest FIX tolerance:</value>
+  </data>
+  <data name="str40210" xml:space="preserve">
+    <value>Maximal earliest FIX tolerance:</value>
+  </data>
+  <data name="str40211" xml:space="preserve">
+    <value>FAF-IF distance:</value>
+  </data>
+  <data name="str40212" xml:space="preserve">
+    <value>IF altitude:</value>
+  </data>
+  <data name="str40213" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="str40214" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="str40215" xml:space="preserve">
+    <value>Magnitude of the turn:</value>
+  </data>
+  <data name="str40216" xml:space="preserve">
+    <value>Turn:</value>
+  </data>
+  <data name="str40217" xml:space="preserve">
+    <value>Guidance facility:</value>
+  </data>
+  <data name="str40218" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="str40219" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="str40220" xml:space="preserve">
+    <value>SDF is located too close to DME facility.</value>
+  </data>
+  <data name="str40221" xml:space="preserve">
+    <value>At the distance from prev. point:</value>
+  </data>
+  <data name="str40222" xml:space="preserve">
+    <value>Segment parameters</value>
+  </data>
+  <data name="str40223" xml:space="preserve">
+    <value>SDF location</value>
+  </data>
+  <data name="str40224" xml:space="preserve">
+    <value>Turn point location</value>
+  </data>
+  <data name="str50000" xml:space="preserve">
+    <value>Initial approach using DR track procedure</value>
+  </data>
+  <data name="str50100" xml:space="preserve">
+    <value>Initial parameters</value>
+  </data>
+  <data name="str50101" xml:space="preserve">
+    <value>Intermediat approach FIX</value>
+  </data>
+  <data name="str50102" xml:space="preserve">
+    <value>Procedure group:</value>
+  </data>
+  <data name="str50103" xml:space="preserve">
+    <value>Starting point:</value>
+  </data>
+  <data name="str50104" xml:space="preserve">
+    <value>Guidance facility:</value>
+  </data>
+  <data name="str50105" xml:space="preserve">
+    <value>Semi-width of the final approach area:</value>
+  </data>
+  <data name="str50106" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str50107" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str50108" xml:space="preserve">
+    <value>Turn radius</value>
+  </data>
+  <data name="str50109" xml:space="preserve">
+    <value>Procedure type:</value>
+  </data>
+  <data name="str50110" xml:space="preserve">
+    <value>Dead reckoning minimum length:</value>
+  </data>
+  <data name="str50111" xml:space="preserve">
+    <value>Dead reckoning maximum length:</value>
+  </data>
+  <data name="str50112" xml:space="preserve">
+    <value>IF and TP maximum tolerance:</value>
+  </data>
+  <data name="str50116" xml:space="preserve">
+    <value>Course:</value>
+  </data>
+  <data name="str50117" xml:space="preserve">
+    <value>FAF/FAP altitude:</value>
+  </data>
+  <data name="str50118" xml:space="preserve">
+    <value>Procedure altitude:</value>
+  </data>
+  <data name="str50119" xml:space="preserve">
+    <value>Intermediate segment minimum length:</value>
+  </data>
+  <data name="str50120" xml:space="preserve">
+    <value>Intercept angle:</value>
+  </data>
+  <data name="str50121" xml:space="preserve">
+    <value>Intersecting facility:</value>
+  </data>
+  <data name="str50122" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str50123" xml:space="preserve">
+    <value>Bank angle:</value>
+  </data>
+  <data name="str50124" xml:space="preserve">
+    <value>Arrival direction:</value>
+  </data>
+  <data name="str50125" xml:space="preserve">
+    <value>Intermediate segment minimum length:</value>
+  </data>
+  <data name="str50126" xml:space="preserve">
+    <value>Intermediate segment maximum length:</value>
+  </data>
+  <data name="str50127" xml:space="preserve">
+    <value>Left side</value>
+  </data>
+  <data name="str50128" xml:space="preserve">
+    <value>Right side</value>
+  </data>
+  <data name="str50200" xml:space="preserve">
+    <value>Procedure construction</value>
+  </data>
+  <data name="str50201" xml:space="preserve">
+    <value>Control parameters</value>
+  </data>
+  <data name="str50202" xml:space="preserve">
+    <value>IF location</value>
+  </data>
+  <data name="str50203" xml:space="preserve">
+    <value>DR length</value>
+  </data>
+  <data name="str50204" xml:space="preserve">
+    <value>TP location</value>
+  </data>
+  <data name="str50205" xml:space="preserve">
+    <value>Facility providing track guidance</value>
+  </data>
+  <data name="str50206" xml:space="preserve">
+    <value>Forward facility</value>
+  </data>
+  <data name="str50207" xml:space="preserve">
+    <value>Away from facility</value>
+  </data>
+  <data name="str50208" xml:space="preserve">
+    <value>Turn angle limitation at TP</value>
+  </data>
+  <data name="str50209" xml:space="preserve">
+    <value>Arrival true course</value>
+  </data>
+  <data name="str50210" xml:space="preserve">
+    <value>Set manually</value>
+  </data>
+  <data name="str50211" xml:space="preserve">
+    <value>Max. turn angle:</value>
+  </data>
+  <data name="str50212" xml:space="preserve">
+    <value>True course:</value>
+  </data>
+  <data name="str50213" xml:space="preserve">
+    <value>On the line of WPT/FIX</value>
+  </data>
+  <data name="str50214" xml:space="preserve">
+    <value>IF</value>
+  </data>
+  <data name="str50215" xml:space="preserve">
+    <value>IF - FAF/FAP distance:</value>
+  </data>
+  <data name="str50216" xml:space="preserve">
+    <value>Intersecting facility:</value>
+  </data>
+  <data name="str50217" xml:space="preserve">
+    <value>DR length:</value>
+  </data>
+  <data name="str50218" xml:space="preserve">
+    <value>Turn point</value>
+  </data>
+  <data name="str50219" xml:space="preserve">
+    <value>TP - guidance facility distance:</value>
+  </data>
+  <data name="str50221" xml:space="preserve">
+    <value>Intermediate Area</value>
+  </data>
+  <data name="str50222" xml:space="preserve">
+    <value>Area of the turn and DR</value>
+  </data>
+  <data name="str50223" xml:space="preserve">
+    <value>First leg area</value>
+  </data>
+  <data name="str50224" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="str50225" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="str50226" xml:space="preserve">
+    <value>Elevation</value>
+  </data>
+  <data name="str50227" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str50228" xml:space="preserve">
+    <value>Req. Alt.</value>
+  </data>
+  <data name="str50229" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str50230" xml:space="preserve">
+    <value>Before</value>
+  </data>
+  <data name="str50231" xml:space="preserve">
+    <value>After</value>
+  </data>
+  <data name="str50232" xml:space="preserve">
+    <value>Arrival course interval:</value>
+  </data>
+  <data name="str50233" xml:space="preserve">
+    <value>Interval of available values of the distance between FAP(FAF)-IF:</value>
+  </data>
+  <data name="str50234" xml:space="preserve">
+    <value>Interval of available values of the DR length:</value>
+  </data>
+  <data name="str50235" xml:space="preserve">
+    <value>Interval of available values of the distance between TP-navaid:</value>
+  </data>
+  <data name="str50236" xml:space="preserve">
+    <value> before the facility; up</value>
+  </data>
+  <data name="str50237" xml:space="preserve">
+    <value> after the facility</value>
+  </data>
+  <data name="str40003" xml:space="preserve">
+    <value>Transition coding</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Resources_ru_RU" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources.ru-RU.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="str00853" xml:space="preserve">
+    <value>Effective date: </value>
+  </data>
+  <data name="str00808" xml:space="preserve">
+    <value>Speeds are in </value>
+  </data>
+  <data name="str20122" xml:space="preserve">
+    <value> at threshold.</value>
+  </data>
+  <data name="str16011" xml:space="preserve">
+    <value>Go to creation of additional MA segments</value>
+  </data>
+  <data name="str40104" xml:space="preserve">
+    <value>Area semiwith:</value>
+  </data>
+  <data name="str60003" xml:space="preserve">
+    <value>Straight segment</value>
+  </data>
+  <data name="str60004" xml:space="preserve">
+    <value>Turn to heading</value>
+  </data>
+  <data name="str60005" xml:space="preserve">
+    <value>Intercept track</value>
+  </data>
+  <data name="str60006" xml:space="preserve">
+    <value>Turn to facility/ WPT</value>
+  </data>
+  <data name="str60007" xml:space="preserve">
+    <value>Turn and intercept</value>
+  </data>
+  <data name="str60008" xml:space="preserve">
+    <value>Intercept DME arc</value>
+  </data>
+  <data name="str60009" xml:space="preserve">
+    <value>Following arc track</value>
+  </data>
+  <data name="str60103" xml:space="preserve">
+    <value>Segment completion variant</value>
+  </data>
+  <data name="str60104" xml:space="preserve">
+    <value>Designated at an distance</value>
+  </data>
+  <data name="str60105" xml:space="preserve">
+    <value>Over facility/WPT</value>
+  </data>
+  <data name="str60108" xml:space="preserve">
+    <value>At intersection</value>
+  </data>
+  <data name="str60201" xml:space="preserve">
+    <value>Turn onto the specified course</value>
+  </data>
+  <data name="str60203" xml:space="preserve">
+    <value>Next true course:</value>
+  </data>
+  <data name="str60302" xml:space="preserve">
+    <value>Reference Nav/WPT:</value>
+  </data>
+  <data name="str60303" xml:space="preserve">
+    <value>Facility/WPT:</value>
+  </data>
+  <data name="str60305" xml:space="preserve">
+    <value>Determine course by facility/WPT</value>
+  </data>
+  <data name="str60306" xml:space="preserve">
+    <value>Turn angle:</value>
+  </data>
+  <data name="str60309" xml:space="preserve">
+    <value>Straight track length:</value>
+  </data>
+  <data name="str60310" xml:space="preserve">
+    <value>Allowable intervals:</value>
+  </data>
+  <data name="str60313" xml:space="preserve">
+    <value>From </value>
+  </data>
+  <data name="str60314" xml:space="preserve">
+    <value>° To </value>
+  </data>
+  <data name="str60508" xml:space="preserve">
+    <value>Angle of interception:</value>
+  </data>
+  <data name="str00907" xml:space="preserve">
+    <value>Within the segment there is a course onto the restricted sector not provided with obstacle clearance. Continue?</value>
+  </data>
+  <data name="str40225" xml:space="preserve">
+    <value>Direction:</value>
+  </data>
+  <data name="str40226" xml:space="preserve">
+    <value>Entrance to arch:</value>
+  </data>
+  <data name="str40227" xml:space="preserve">
+    <value>Outside</value>
+  </data>
+  <data name="str40228" xml:space="preserve">
+    <value>Inside</value>
+  </data>
+  <data name="str60010" xml:space="preserve">
+    <value>Turn from the course </value>
+  </data>
+  <data name="str60011" xml:space="preserve">
+    <value> onto the course </value>
+  </data>
+  <data name="str60515" xml:space="preserve">
+    <value>toward</value>
+  </data>
+  <data name="str60516" xml:space="preserve">
+    <value>away</value>
+  </data>
+  <data name="str60517" xml:space="preserve">
+    <value>Onto the course </value>
+  </data>
+  <data name="str60518" xml:space="preserve">
+    <value> on </value>
+  </data>
+  <data name="str60519" xml:space="preserve">
+    <value> from </value>
+  </data>
+  <data name="str60520" xml:space="preserve">
+    <value> passing through </value>
+  </data>
+  <data name="str00117" xml:space="preserve">
+    <value>Modelling</value>
+  </data>
+  <data name="str17002" xml:space="preserve">
+    <value>#</value>
+  </data>
+  <data name="str17003" xml:space="preserve">
+    <value>Segment type</value>
+  </data>
+  <data name="str17004" xml:space="preserve">
+    <value>Initial Alt./Height</value>
+  </data>
+  <data name="str17005" xml:space="preserve">
+    <value>Final Alt./Height</value>
+  </data>
+  <data name="str17006" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="str17007" xml:space="preserve">
+    <value>Radius</value>
+  </data>
+  <data name="str17008" xml:space="preserve">
+    <value>PDG</value>
+  </data>
+  <data name="str17009" xml:space="preserve">
+    <value>Initial mag. course</value>
+  </data>
+  <data name="str17010" xml:space="preserve">
+    <value>Final mag. course</value>
+  </data>
+  <data name="str17011" xml:space="preserve">
+    <value>Starting point</value>
+  </data>
+  <data name="str17012" xml:space="preserve">
+    <value>Endpoint</value>
+  </data>
+  <data name="str17013" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="str17021" xml:space="preserve">
+    <value>Add segment</value>
+  </data>
+  <data name="str17022" xml:space="preserve">
+    <value>Delete segment</value>
+  </data>
+  <data name="str17023" xml:space="preserve">
+    <value>Save protocol</value>
+  </data>
+  <data name="str40229" xml:space="preserve">
+    <value>Save procedure</value>
+  </data>
+  <data name="str40230" xml:space="preserve">
+    <value>Save report</value>
+  </data>
+  <data name="str40231" xml:space="preserve">
+    <value>Serial Number</value>
+  </data>
+  <data name="str40232" xml:space="preserve">
+    <value>Path Descriptor</value>
+  </data>
+  <data name="str40233" xml:space="preserve">
+    <value>Waypoint Identifier</value>
+  </data>
+  <data name="str40234" xml:space="preserve">
+    <value>Flyover</value>
+  </data>
+  <data name="str40235" xml:space="preserve">
+    <value>Course  ° M (° T)</value>
+  </data>
+  <data name="str40236" xml:space="preserve">
+    <value>Magnetic Variation</value>
+  </data>
+  <data name="str40237" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="str40238" xml:space="preserve">
+    <value>Turn Direction</value>
+  </data>
+  <data name="str40239" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str40240" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="str40241" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="str40242" xml:space="preserve">
+    <value>Longtitude</value>
+  </data>
+  <data name="str40243" xml:space="preserve">
+    <value>Req. Altitude</value>
+  </data>
+  <data name="str60521" xml:space="preserve">
+    <value>Report Distances are in </value>
+  </data>
+  <data name="str60522" xml:space="preserve">
+    <value>Report Elevations and heights are in </value>
+  </data>
+  <data name="str60523" xml:space="preserve">
+    <value>Report Speeds are in </value>
+  </data>
+  <data name="str10519" xml:space="preserve">
+    <value>ARP</value>
+  </data>
+  <data name="str10520" xml:space="preserve">
+    <value>THR</value>
+  </data>
+  <data name="str40109" xml:space="preserve">
+    <value>Design new STAR</value>
+  </data>
+  <data name="str40110" xml:space="preserve">
+    <value>Design new approach transition</value>
+  </data>
+  <data name="str20123" xml:space="preserve">
+    <value>Precision area
+obstacles classification</value>
+  </data>
+  <data name="str60202" xml:space="preserve">
+    <value>Next mag. course:</value>
+  </data>
+  <data name="str10320" xml:space="preserve">
+    <value>Ignore Left sector</value>
+  </data>
+  <data name="str10321" xml:space="preserve">
+    <value>Ignore Right sector</value>
+  </data>
+  <data name="str10311" xml:space="preserve">
+    <value>OCH for visiual manoeuring approach must be higher than lower limit OCH for visiual approach</value>
+  </data>
+</root>

@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="TOSSM.View.Tool.Problems.MissingLinksCategoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View1="clr-namespace:Aran.Temporality.CommonUtil.View;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Control1="clr-namespace:Aran.Temporality.CommonUtil.Control;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Extender1="clr-namespace:Aran.Temporality.CommonUtil.Extender;assembly=Aran.Temporality.CommonUtil"
+             xmlns:Menu="clr-namespace:TOSSM.ViewModel.Control.PropertySelector.Menu" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+
+        <Grid>
+
+            <Grid Background="WhiteSmoke">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            
+
+                <DataGrid Grid.Row="1"
+                                  AutoGenerateColumns="False"
+                                  ItemsSource="{Binding Path=RulesFiltered, UpdateSourceTrigger=PropertyChanged}" 
+                                  SelectedItem="{Binding Path=SelectedRule, UpdateSourceTrigger=PropertyChanged}"
+                      
+                          
+                                  VirtualizingStackPanel.VirtualizationMode="Recycling"
+                                  VirtualizingStackPanel.IsVirtualizing="True"
+                        
+                                  ScrollViewer.IsDeferredScrollingEnabled="True"
+                        
+                                  EnableRowVirtualization="True"
+                                  EnableColumnVirtualization="False"
+                          
+                                  IsReadOnly="True" 
+                                  CanUserSortColumns="True"
+                                  Background="WhiteSmoke"
+                        
+                                  VerticalGridLinesBrush="Lavender"
+                                  HorizontalGridLinesBrush="Lavender"
+                      
+                                  Visibility="{Binding Path=DataGridVisibility, FallbackValue=Collapsed}"    
+                      
+                      
+                                  HeadersVisibility="Column"
+                                  Name="PresenterDataGrid"
+                                  AlternatingRowBackground="WhiteSmoke"
+                                  RowStyle="{StaticResource AllwaysSelectedDataGrid}">
+
+                    <DataGrid.GroupStyle>
+                        <GroupStyle ContainerStyle="{StaticResource EditorDataGridGroupStyle2}"/>
+                    </DataGrid.GroupStyle>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Width="Auto" Header="Property Path">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="{Binding PropertyPath}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="Auto" Header="Reference Feature Type">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="{Binding ReferenceFeatureType}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Width="Auto" Header="Reference Feature Identifier">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Margin="5,0,5,0" VerticalAlignment="Center" Text="{Binding ReferenceFeatureIdentifier}"></TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Background="Lavender">
+                <TextBlock VerticalAlignment="Center" Margin="5,0,5,2" Foreground="SteelBlue" Text="{Binding Path=Status}"/>
+            </StackPanel>
+        </Grid>
+
+            <View1:BlockerControl   DataContext="{Binding Path=BlockerModel}" 
+                                            Grid.Row="0" Grid.Column="0" 
+                                            HorizontalAlignment="Stretch" 
+                                            VerticalAlignment="Stretch"/>
+
+        </Grid>
+    </UserControl>

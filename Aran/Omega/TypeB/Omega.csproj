@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96F70BAF-5D42-4F13-BAB1-68328243D456}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Omega</RootNamespace>
+    <AssemblyName>Omega</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DoddleReport, Version=1.2.2.0, Culture=neutral, PublicKeyToken=183ffec7490b24a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\Debug\DoddleReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.iTextSharp">
+      <HintPath>..\..\..\bin\Debug\DoddleReport.iTextSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculateThreeSurfaces.cs" />
+    <Compile Include="ChainHullAlgorithm.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="CommonFunctions.cs" />
+    <Compile Include="Models\Approach.cs" />
+    <Compile Include="Models\BalkedLanding.cs" />
+    <Compile Include="Models\CommonParam.cs" />
+    <Compile Include="Models\ConicalSurface.cs" />
+    <Compile Include="Models\Info.cs" />
+    <Compile Include="Models\InnerHorizontal.cs" />
+    <Compile Include="Models\GeoMinMaxPoint.cs" />
+    <Compile Include="Models\InnerApproach.cs" />
+    <Compile Include="Models\InnerTransitional.cs" />
+    <Compile Include="Models\TransForm.cs" />
+    <Compile Include="Models\VerticalStructureExtension.cs" />
+    <Compile Include="Models\WarningException.cs" />
+    <Compile Include="Models\OuterHorizontal.cs" />
+    <Compile Include="Models\Plane.cs" />
+    <Compile Include="Models\ReportItem.cs" />
+    <Compile Include="Models\RwyDirClass.cs" />
+    <Compile Include="Models\Strip.cs" />
+    <Compile Include="Models\SurfaceBase.cs" />
+    <Compile Include="Models\DrawingSurface.cs" />
+    <Compile Include="Models\ElevationDatum.cs" />
+    <Compile Include="Models\RwyClassificationEnumName.cs" />
+    <Compile Include="Models\RwyClassification.cs" />
+    <Compile Include="Models\TakeOffClimb.cs" />
+    <Compile Include="Models\Transitional.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RwyCenterlineClass.cs" />
+    <Compile Include="Models\RwyClass.cs" />
+    <Compile Include="DBModule.cs" />
+    <Compile Include="GlobalParams.cs" />
+    <Compile Include="InitOmega.cs" />
+    <Compile Include="OmegaService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Enums\RoundType.cs" />
+    <Compile Include="SpatialReferenceOperation.cs" />
+    <Compile Include="Models\Annex14Surfaces.cs" />
+    <Compile Include="ViewModels\ReportViewModel.cs" />
+    <Compile Include="View\AbstactView.xaml.cs">
+      <DependentUpon>AbstactView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\App.xaml.cs" />
+    <Compile Include="View\OmegaMainForm.xaml.cs">
+      <DependentUpon>OmegaMainForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ObstacleReport.cs" />
+    <Compile Include="ViewModels\OLSViewModel.cs" />
+    <Compile Include="ViewModels\ViewModel.cs" />
+    <Compile Include="ViewParams.cs" />
+    <Compile Include="View\Report.xaml.cs">
+      <DependentUpon>Report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Win32Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{BCBBDE4E-098D-45E9-9B72-0A2E6A7CAE6A}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Panda\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14C16238-324E-417A-92F9-684D5D2BB6E9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Panda\Constants\trunk\Aran.Panda.Constants.csproj">
+      <Project>{545B3BDC-7105-4681-85D3-8A77FA78EFBA}</Project>
+      <Name>Aran.Panda.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Panda\Omega_Settings\trunk\Aran.Omega.Settings.csproj">
+      <Project>{C9CFA590-2056-4F89-8D8A-F25C3F181DBC}</Project>
+      <Name>Aran.Omega.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Panda\Settings\trunk\Aran.Panda.Settings.csproj">
+      <Project>{F1CDB4BA-F9BE-40E4-B408-FC8CB678B571}</Project>
+      <Name>Aran.Panda.Settings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184E1F94-ED6F-481E-84FF-2EFD1468CCC6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Queries\Omega\Trunk\Aran.Queries.Omega.csproj">
+      <Project>{B1592DA1-0854-41DD-A505-2C38706D65F8}</Project>
+      <Name>Aran.Queries.Omega</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8E1CA34F-D479-4637-8A0A-3E8E1F23CC9D}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\FeatureInfo\trunk\Aran.Aim.FeatureInfo.csproj">
+      <Project>{C251A63D-BA09-4A5D-B1B4-5279F9A168F0}</Project>
+      <Name>Aran.Aim.FeatureInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Workflow\Interfaces\trunk\Aran.Interfaces.csproj">
+      <Project>{FA1B9FAF-896F-43B8-A58A-D7D98514E897}</Project>
+      <Name>Aran.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Shared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AbstactView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\OmegaMainForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANDA.ico" />
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

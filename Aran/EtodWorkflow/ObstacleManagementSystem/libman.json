@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "files": [
+        "js/bootstrap.min.js",
+        "css/bootstrap.min.css",
+        "css/bootstrap-theme.min.css",
+        "fonts/glyphicons-halflings-regular.woff2",
+        "fonts/glyphicons-halflings-regular.eot",
+        "fonts/glyphicons-halflings-regular.svg",
+        "fonts/glyphicons-halflings-regular.ttf",
+        "fonts/glyphicons-halflings-regular.woff"
+      ],
+      "library": "twitter-bootstrap@3.3.7",
+      "destination": "wwwroot/lib/twitter-bootstrap"
+    },
+    {
+      "library": "bootstrap-datepicker@1.8.0",
+      "destination": "wwwroot/lib/bootstrap-datepicker",
+      "files": ["css/bootstrap-datepicker3.min.css","js/bootstrap-datepicker.min.js"]
+    },
+    {
+      "library": "datatables@1.10.19",
+      "files": [
+        "js/jquery.dataTables.min.js",
+        "css/dataTables.bootstrap4.min.css",
+        "images/sort_asc.png",
+        "images/sort_asc_disabled.png",
+        "images/sort_both.png",
+        "images/sort_desc.png",
+        "images/sort_desc_disabled.png",
+        "js/dataTables.bootstrap4.min.js"
+      ],
+      "destination": "wwwroot/lib/datatables"
+    },
+    {
+      "library": "bootstrap-social@5.1.1",
+      "files": [ "bootstrap-social.min.css" ],
+      "destination": "wwwroot/lib/bootstrap-social/"
+    },
+    {
+      "library": "ionicons@4.3.0",
+      "files": [ "css/ionicons.min.css" ],
+      "destination": "wwwroot/lib/ionicons/"
+    },
+    {
+      "library": "font-awesome@4.7.0",
+      "files": [
+        "css/font-awesome.min.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2",
+        "fonts/FontAwesome.otf"
+      ],
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "pace@1.0.2",
+      "files": [ "pace.min.js" ],
+      "destination": "wwwroot/lib/pace/"
+    },
+    {
+      "library": "fastclick@1.0.6",
+      "files": [ "fastclick.min.js" ],
+      "destination": "wwwroot/lib/fastclick/"
+    },
+    {
+      "library": "jquery@3.3.1",
+      "files": [ "jquery.min.js" ],
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "jquery.inputmask@3.3.4",
+      "files": [ "jquery.inputmask.bundle.js", "jquery.inputmask.bundle.min.js", "css/inputmask.min.css" ],
+      "destination": "wwwroot/lib/inputmask"
+    },
+    {
+      "library": "jquery-validate@1.17.0",
+      "files": [ "jquery.validate.min.js" ],
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "jquery-validation-unobtrusive@3.2.10",
+      "files": [ "jquery.validate.unobtrusive.min.js" ],
+      "destination": "wwwroot/lib/jquery-validation-unobtrusive/"
+    }
+  ]
+}

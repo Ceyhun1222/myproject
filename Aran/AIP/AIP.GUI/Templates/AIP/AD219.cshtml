@@ -1,0 +1,53 @@
+﻿@using System
+@using AIP.GUI
+@if (Model != null && Model.Count > 0)
+{
+<table frame="border" align="center">
+    <colgroup>
+        <col width="14%" />
+        <col width="14%" />
+        <col width="14%" />
+        <col width="14%" />
+        <col width="14%" />
+        <col width="14%" />
+        <col width="16%" />
+    </colgroup>
+	<thead>
+	<tr class="Table-row-type-1">
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_1"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_2"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_3"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_4"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_5"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_6"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD219_7"))</th>
+	</tr>
+	<tr class="Table-row-type-2">
+		<th class="bleft btop bright bbottom">1</th>
+		<th class="bleft btop bright bbottom">2</th>
+		<th class="bleft btop bright bbottom">3</th>
+		<th class="bleft btop bright bbottom">4</th>
+		<th class="bleft btop bright bbottom">5</th>
+		<th class="bleft btop bright bbottom">6</th>
+		<th class="bleft btop bright bbottom">7</th>
+	</tr>
+	</thead>
+	<tbody valign="top">
+	@foreach (var data in Model)
+	{
+		<tr>
+			<td class="bleft btop bright bbottom">@Raw(data.Type)<br/>
+			@foreach(var nav in @data.NavaidEquipment){<text>@Raw(nav["MagneticVariation"])<br/></text>}
+			@data.TypeSupportedOperation
+			</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Designator)</td>
+			<td class="bleft btop bright bbottom">@foreach(var nav in @data.NavaidEquipment){<text>@Raw(nav["Frequency"])<br/></text>}</td>
+			<td class="bleft btop bright bbottom">@Raw(data.HoursOfOperations)</td>
+			<td class="bleft btop bright bbottom">@foreach(var nav in @data.NavaidEquipment){<text>@Raw(nav["PositionOfTransmittingAntenna"])<br/></text>}</td>
+			<td class="bleft btop bright bbottom">@foreach(var nav in @data.NavaidEquipment){<text>@Raw(nav["ElevationOfDME"])<br/></text>}</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Remarks)</td>
+		</tr>
+	}
+	</tbody>
+</table>
+}

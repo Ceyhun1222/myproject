@@ -1,0 +1,47 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 7;
+    int i = 1;
+}
+	<table frame="border" align="center">
+	    <colgroup>
+	        <col width="15%" />
+            <col width="10%" />
+            <col width="15%" />
+            <col width="8%" />
+            <col width="15%" />
+	        <col width="12%" />
+	        <col width="25%" />
+	    </colgroup>
+		<thead>
+		<tr class="Table-row-type-1">
+		    @for (i = 1; i <= Col; i++)
+		    {
+		        <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("ENR36_"+@i))</th>
+		    }
+		</tr>
+		<tr class="Table-row-type-2">
+		@for (i = 1; i <= Col; i++)
+		{
+		    <th class="bleft btop bright bbottom">@i</th>
+		}
+		</tr>
+		</thead>
+		<tbody valign="top">
+		@foreach (var data in Model)
+		{		
+        <tr>
+    		<td class="bleft btop bright bbottom"><strong class="Cell-body">@Raw(data.Name)</strong>
+		        <p class="Cell-body">@if (!String.IsNullOrEmpty(data.Ident)) {@Raw(data.Ident)<br />}@Raw(data.Coordinates)</p>
+		    </td>
+            <td class="bleft btop bright bbottom">@Raw(data.InboundCourse)</td>
+            <td class="bleft btop bright bbottom">@Raw(data.Direction)</td>
+            <td class="bleft btop bright bbottom">@Raw(String.Join("<br />", data.SpeedLimit))</td>
+            <td class="bleft btop bright bbottom">@Raw(String.Join("<br />", data.UpperLowerLimits))</td>
+            <td class="bleft btop bright bbottom">@Raw(String.Join("<br />", data.Duration))</td>
+            <td class="bleft btop bright bbottom">@Raw(String.Join("<br />", data.ControlUnit))<br/>@Raw(String.Join("<br />", data.Frequency))</td>
+        </tr>
+		}
+		</tbody>
+	</table>

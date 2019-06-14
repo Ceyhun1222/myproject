@@ -1,0 +1,52 @@
+﻿<Window x:Class="Aran.Delta.View.Save.SaveSegment"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Save To Database" 
+        Width="280"
+        Height="160"
+        ResizeMode="CanMinimize"
+        >
+    <Grid Margin="10 10 5 5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <!--<RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>-->
+        </Grid.RowDefinitions>
+        <TextBlock Text="Name :" Grid.Column="0"  />
+        <TextBox Width="120" Grid.Column="1" VerticalAlignment="Top"  Height="25" KeyDown="UIElement_OnKeyDown" GotFocus="UIElement_OnGotFocus" Grid.Row="0" Name="TxtName" />
+
+        <TextBlock Text="Designer :" Grid.Column="0" Grid.Row="1"/>
+        <TextBox Width="120" Grid.Column="1" Grid.Row="1" Height="25" KeyDown="UIElement_OnKeyDown" GotFocus="UIElement_OnGotFocus" VerticalAlignment="Top"  Name="TxtDesignerName" />
+
+        <!--<TextBlock Text="True Track :" Grid.Column="0" Grid.Row="2"  />
+        <TextBox Width="120" Grid.Column="1" Grid.Row="2" Height="25" IsEnabled="False" VerticalAlignment="Top"  Name="TxtTrueTrack" />
+        <TextBlock VerticalAlignment="Top" Text="°"  Grid.Row="2" Grid.Column="2"/>
+
+        <TextBlock Text="Reverse True Track :" TextWrapping="WrapWithOverflow"  Grid.Column="0" Grid.Row="3"/>
+        <TextBox Width="120" Grid.Column="1" Grid.Row="3" IsEnabled="False" Height="25" VerticalAlignment="Top"  Name="TxtReverseTrueTrack" />
+        <TextBlock VerticalAlignment="Top" Text="°"  Grid.Row="3" Grid.Column="2"/>-->
+
+        <!--<TextBlock Text="Length :" TextWrapping="WrapWithOverflow"  Grid.Column="0" Grid.Row="4"/>
+        <TextBox Width="120" Grid.Column="1" IsEnabled="False" Grid.Row="4" Height="25" VerticalAlignment="Top"  Name="TxtLength" />
+        <TextBlock VerticalAlignment="Top" Text="km" Name="TxtDistanceUnit" Grid.Row="4" Grid.Column="2"/>
+
+        <TextBlock Text="From Point :" TextWrapping="WrapWithOverflow"  Grid.Column="0" Grid.Row="5"/>
+        <TextBox Width="120" Grid.Column="1" IsEnabled="False" Grid.Row="5" Height="25" VerticalAlignment="Top"  Name="TxtFromPoint" />
+
+        <TextBlock Text="To Point :" TextWrapping="WrapWithOverflow"  Grid.Column="0" Grid.Row="6"/>
+        <TextBox Width="120" Grid.Column="1" IsEnabled="False" Grid.Row="6" Height="25" VerticalAlignment="Top"  Name="TxtToPoint" />-->
+
+        <Button Grid.ColumnSpan="3" Grid.Row="7" Height="23" IsDefault="True" Click="Button_Click_1" HorizontalAlignment="Right" Content="Save" Width="80"  Margin="8 10 8 2"/>
+    </Grid>
+</Window>

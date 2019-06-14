@@ -1,0 +1,16 @@
+﻿<Window x:Class="Aran.Omega.TypeB.View.AbstractView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Width="200"
+             Height="200" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="ToolWindow" IsManipulationEnabled="False" SizeToContent="Manual">
+    
+    <Grid Height="auto" Width="auto">
+            <GroupBox  Name="grpMain" Margin="2" >
+            <StackPanel Margin="5" Name="container">
+            </StackPanel>
+            </GroupBox>
+    </Grid>
+</Window>

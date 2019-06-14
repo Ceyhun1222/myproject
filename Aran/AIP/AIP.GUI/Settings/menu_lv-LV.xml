@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TreeView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ExpandAnimation="None" SpacingBetweenNodes="-1" AllowDragDrop="false" ItemHeight="27" LabelEdit="false" ThemeName="Office2013Light" AllowDrop="false" BackColor="Transparent">
+ <Nodes Name="GEN_" Expanded="true" Text="VISPĀRĪGI NOTEIKUMI (GEN)">
+   <Nodes Name="GEN0" Expanded="true" Text="GEN 0">
+    <Nodes Name="GEN01" Text="GEN 0.1 PRIEKŠVĀRDS" />
+    <Nodes Name="GEN02" Text="GEN 0.2 AIP GROZĪJUMU REĢISTRS" />
+    <Nodes Name="GEN03" Text="GEN 0.3 AIP PAPILDINĀJUMU REĢISTRS" />
+    <Nodes Name="GEN04" Text="GEN 0.4 AIP LAPPUŠU KONTROLSARAKSTS" />
+    <Nodes Name="GEN05" Text="GEN 0.5 AR ROKU IZDARĪTO AIP GROZĪJUMU SARAKSTS" />
+    <Nodes Name="GEN06" Text="GEN 0.6 DAĻAS SATURA RĀDĪTĀJS" />
+   </Nodes>
+   <Nodes Name="GEN1" Expanded="false" Text="GEN 1 VALSTS TIESĪBU AKTI UN PRASĪBAS">
+    <Nodes Name="GEN11" Text="GEN 1.1 NORĀDĪTĀS IESTĀDES" />
+    <Nodes Name="GEN12" Text="GEN 1.2 GAISA KUĢA IELIDOŠANA, TRANZĪTS UN IZLIDOŠANA" />
+    <Nodes Name="GEN13" Text="GEN 1.3 PASAŽIERU UN GAISA KUĢA APKALPES IELIDOŠANA, TRANZĪTS UN IZLIDOŠANA" />
+    <Nodes Name="GEN14" Text="GEN 1.4 KRAVAS IEVEŠANA, TRANZĪTS UN IZVEŠANA" />
+    <Nodes Name="GEN15" Text="GEN 1.5 GAISA KUĢA INSTRUMENTI, APRĪKOJUMS UN LIDOJUMA DOKUMENTĀCIJA" />
+    <Nodes Name="GEN16" Text="GEN 1.6 VALSTS TIESĪBU AKTU UN STARPTAUTISKO NOLĪGUMU/KONVENCIJU KOPSAVILKUMS" />
+    <Nodes Name="GEN17" Text="GEN 1.7 ATŠĶIRĪBAS NO ICAO STANDARTIEM, IETEICAMĀS PRAKSES UN PROCEDŪRĀM" />
+   </Nodes>
+   <Nodes Name="GEN2" Expanded="false" Text="GEN 2 TABULAS UN KODI">
+     <Nodes Name="GEN21" Text="GEN 2.1 MĒRĪŠANAS SISTĒMA, GAISA KUĢU MARĶĒJUMI, BRĪVDIENAS" />
+     <Nodes Name="GEN22" Text="GEN 2.2 AIS PUBLIKĀCIJĀS IZMANTOTĀS ABREVIATŪRAS" />
+     <Nodes Name="GEN23" Text="GEN 2.3 KARŠU SIMBOLI" />
+     <Nodes Name="GEN24" Text="GEN 2.4 ATRAŠANĀS VIETAS INDIKATORI" />
+     <Nodes Name="GEN25" Text="GEN 2.5 RADIONAVIGĀCIJAS LĪDZEKĻU SARAKSTS" />
+     <Nodes Name="GEN26" Text="GEN 2.6 MĒRVIENĪBU PĀRVĒRŠANA" />
+     <Nodes Name="GEN27" Text="GEN 2.7 SAULLĒKTS/SAULRIETS" />
+   </Nodes>
+   <Nodes Name="GEN3" Expanded="false" Text="GEN 3 PAKALPOJUMI">
+     <Nodes Name="GEN31" Text="GEN 3.1 AERONAVIGĀCIJAS INFORMĀCIJAS PAKALPOJUMI" />
+     <Nodes Name="GEN32" Text="GEN 3.2 AERONAVIGĀCIJAS KARTES" />
+     <Nodes Name="GEN33" Text="GEN 3.3 GAISA SATIKSMES PAKALPOJUMI" />
+     <Nodes Name="GEN34" Text="GEN 3.4 SAKARU PAKALPOJUMI" />
+     <Nodes Name="GEN35" Text="GEN 3.5 METEOROLOĢISKIE PAKALPOJUMI" />
+     <Nodes Name="GEN36" Text="GEN 3.6 MEKLĒŠANA UN GLĀBŠANA" />
+   </Nodes>
+   <Nodes Name="GEN4" Expanded="false" Text="GEN 4 MAKSA PAR LIDLAUKU/HELIKOPTERU LIDLAUKU UN AERONAVIGĀCIJAS PAKALPOJUMIEM">
+     <Nodes Name="GEN41" Text="GEN 4.1 LIDLAUKA/HELIKOPTERU LIDLAUKA MAKSAS" />
+     <Nodes Name="GEN42" Text="GEN 4.2 MAKSA PAR AERONAVIGĀCIJAS PAKALPOJUMIEM" />
+   </Nodes>
+ </Nodes>
+ <Nodes Name="ENR_" Expanded="true" Text="MARŠRUTĀ (ENR)">
+   <Nodes Name="ENR0" Text="ENR 0">
+     <Nodes Name="ENR01" Text="ENR 0.1 PRIEKŠVĀRDS" />
+     <Nodes Name="ENR02" Text="ENR 0.2 AIP GROZĪJUMU REĢISTRS" />
+     <Nodes Name="ENR03" Text="ENR 0.3 AIP PAPILDINĀJUMU REĢISTRS" />
+     <Nodes Name="ENR04" Text="ENR 0.4 AIP LAPPUŠU KONTROLSARAKSTS" />
+     <Nodes Name="ENR05" Text="ENR 0.5 AR ROKU IZDARĪTO AIP GROZĪJUMU SARAKSTS" />
+     <Nodes Name="ENR06" Text="ENR 0.6 DAĻAS SATURA RĀDĪTĀJS" />
+   </Nodes>
+  <Nodes Name="ENR1" Text="ENR 1 VISPĀRĪGIE NOTEIKUMI UN PROCEDŪRAS">
+   <Nodes Name="ENR11" Text="ENR 1.1 VISPĀRĪGIE NOTEIKUMI" />
+    <Nodes Name="ENR12" Text="ENR 1.2 VIZUĀLO LIDOJUMU NOTEIKUMI" />
+    <Nodes Name="ENR13" Text="ENR 1.3 INSTRUMENTĀLO LIDOJUMU NOTEIKUMI" />
+    <Nodes Name="ENR14" Text="ENR 1.4 ATS GAISA TELPAS KLASIFIKĀCIJA UN APRAKSTS" />
+    <Nodes Name="ENR15" Text="ENR 1.5 GAIDĪŠANAS, PIEEJAS UN IZLIDOŠANAS PROCEDŪRAS" />
+    <Nodes Name="ENR16" Text="ENR 1.6 ATS NOVĒROŠANAS PAKALPOJUMI UN PROCEDŪRAS" />
+    <Nodes Name="ENR17" Text="ENR 1.7 ALTIMETRA IESTATĪŠANAS PROCEDŪRAS" />
+    <Nodes Name="ENR18" Text="ENR 1.8 REĢIONĀLĀS PAPILDU PROCEDŪRAS" />
+    <Nodes Name="ENR19" Text="ENR 1.9 GAISA SATIKSMES PLŪSMAS VADĪBA UN GAISA TELPAS VADĪBA" />
+    <Nodes Name="ENR110" Text="ENR 1.10 LIDOJUMA PLĀNOŠANA" />
+    <Nodes Name="ENR111" Text="ENR 1.11 LIDOJUMA PLĀNA ZIŅOJUMU ADRESĒŠANA" />
+    <Nodes Name="ENR112" Text="ENR 1.12 CIVILĀ GAISA KUĢA PĀRTVERŠANA" />
+    <Nodes Name="ENR113" Text="ENR 1.13 NELIKUMĪGA PĀRTVERŠANA" />
+    <Nodes Name="ENR114" Text="ENR 1.14 GAISA SATIKSMES INCIDENTI" />
+  </Nodes>
+  <Nodes Name="ENR2" Text="ENR 2 GAISA SATIKSMES PAKALPOJUMU GAISA TELPA">
+    <Nodes Name="ENR21" Text="ENR 2.1 FIR, UIR,TMA UN CTA" />
+    <Nodes Name="ENR22" Text="ENR 2.2 CITAS REGULĒJAMAS GAISA TELPAS" />
+  </Nodes>
+  <Nodes Name="ENR3" Expanded="true" Text="ENR 3 ATS MARŠRUTI">
+   <Nodes Name="ENR31" Text="ENR 3.1 APAKŠĒJIE ATS MARŠRUTI"/>
+   <Nodes Name="ENR32" Text="ENR 3.2 AUGŠĒJIE ATS MARŠRUTI" />
+   <Nodes Name="ENR33" Text="ENR 3.3 ZONĀLĀS NAVIGĀCIJAS MARŠRUTI" />
+   <Nodes Name="ENR34" Text="ENR 3.4 HELIKOPTERU MARŠRUTI" />
+   <Nodes Name="ENR35" Text="ENR 3.5 CITI MARŠRUTI" />
+   <Nodes Name="ENR36" Text="ENR 3.6 GAIDĪŠANA MARŠRUTĀ" />
+  </Nodes>
+  <Nodes Name="ENR4" Text="ENR 4 RADIONAVIGĀCIJAS LĪDZEKĻI/SISTĒMAS" Expanded="true">
+   <Nodes Name="ENR41" Text="ENR 4.1 RADIONAVIGĀCIJAS LĪDZEKĻI - MARŠRUTĀ" />
+   <Nodes Name="ENR42" Text="ENR 4.2 ĪPAŠAS NAVIGĀCIJAS SISTĒMAS" />
+   <Nodes Name="ENR43" Text="ENR 4.3 GLOBĀLĀ SATELĪTU NAVIGĀCIJAS SISTĒMA (GNSS)" />
+   <Nodes Name="ENR44" Text="ENR 4.4 KODĒTI SVARĪGO PUNKTU APZĪMĒJUMI" />
+   <Nodes Name="ENR45" Text="ENR 4.5 AERONAVIGĀCIJAS ZEMES UGUNIS - MARŠRUTĀ" />
+  </Nodes>
+   <Nodes Name="ENR5" Text="ENR 5 NAVIGĀCIJAS BRĪDINĀJUMI">
+     <Nodes Name="ENR51" Text="ENR 5.1 AIZLIEGTĀS, IEROBEŽOTU LIDOJUMU UN BĪSTAMĀS ZONAS" />
+     <Nodes Name="ENR52" Text="ENR 5.2 MILITĀRO MĀCĪBU ZONAS UN PRETGAISA AIZSARDZĪBAS IDENTIFIKĀCIJAS ZONA (ADIZ)" />
+     <Nodes Name="ENR53" Text="ENR 5.3 CITI BĪSTAMI PASĀKUMI UN CITS IESPĒJAMAIS APDRAUDĒJUMS" />
+     <Nodes Name="ENR54" Text="ENR 5.4 AERONAVIGĀCIJAS ŠĶĒRŠĻI" />
+     <Nodes Name="ENR55" Text="ENR 5.5 GAISA SPORTA UN ATPŪTAS AKTIVITĀTES" />
+     <Nodes Name="ENR56" Text="ENR 5.6 PUTNU MIGRĀCIJA UN APGABALI AR JUTĪGU FAUNU" />
+   </Nodes>
+   <Nodes Name="ENR6" Text="ENR 6 MARŠRUTA KARTES">
+   </Nodes>
+ </Nodes>
+ <Nodes Name="AD_" Expanded="true" Text="LIDLAUKI (AD)">
+   <Nodes Name="AD0" Text="AD 0">
+     <Nodes Name="AD01" Text="AD 0.1 PRIEKŠVĀRDS" />
+     <Nodes Name="AD02" Text="AD 0.2 AIP GROZĪJUMU REĢISTRS" />
+     <Nodes Name="AD03" Text="AD 0.3 AIP PAPILDINĀJUMU REĢISTRS" />
+     <Nodes Name="AD04" Text="AD 0.4 AIP LAPPUŠU KONTROLSARAKSTS" />
+     <Nodes Name="AD05" Text="AD 0.5 AR ROKU IZDARĪTO AIP GROZĪJUMU SARAKSTS" />
+     <Nodes Name="AD06" Text="AD 0.6 DAĻAS SATURA RĀDĪTĀJS" />
+   </Nodes>
+   <Nodes Name="AD1" Text="AD 1 LIDLAUKI/HELIKOPTERU LIDLAUKI - IEVADS">
+     <Nodes Name="AD11" Text="AD 1.1 LIDLAUKA/HELIKOPTERU LIDLAUKA PIEEJAMĪBA UN LIETOŠANAS NOSACĪJUMI" />
+     <Nodes Name="AD12" Text="AD 1.2 GLĀBŠANAS UN UGUNSDZĒSĪBAS PAKALPOJUMI UN SNIEGA PLĀNS" />
+     <Nodes Name="AD13" Text="AD 1.3 LIDLAUKU UN HELIKOPTERU LIDLAUKU RĀDĪTĀJS" />
+     <Nodes Name="AD14" Text="AD 1.4 LIDLAUKU UN HELIKOPTERU LIDLAUKU GRUPĒŠANA" />
+     <Nodes Name="AD15" Text="AD 1.5 LIDLAUKU UN HELIKOPTERU LIDLAUKU SERTIFIKĀCIJA" />
+   </Nodes>
+   <Nodes Name="AD2" Text="AD 2 LIDLAUKI">
+   </Nodes>
+   <Nodes Name="AD3" Text="AD 3 HELIKOPTERU LIDLAUKI">
+   </Nodes>
+ </Nodes>
+</TreeView>

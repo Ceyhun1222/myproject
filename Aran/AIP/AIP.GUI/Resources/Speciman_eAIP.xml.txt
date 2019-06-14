@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE e:eAIP PUBLIC "-//EUROCONTROL//eAIP DTD 2.0//EN" "../../../eAIP-pack/dtd/eAIP.dtd" [
+<!ENTITY eAIP-GEN-0.1 SYSTEM "{COUNTRY}-GEN-0.1-{LANG}.xml">
+<!ENTITY eAIP-GEN-0.2 SYSTEM "{COUNTRY}-GEN-0.2-{LANG}.xml">
+<!ENTITY eAIP-GEN-0.3 SYSTEM "{COUNTRY}-GEN-0.3-{LANG}.xml">
+<!ENTITY eAIP-GEN-0.4 SYSTEM "{COUNTRY}-GEN-0.4-{LANG}.xml">
+<!ENTITY eAIP-GEN-0.5 SYSTEM "{COUNTRY}-GEN-0.5-{LANG}.xml">
+<!ENTITY eAIP-GEN-0.6 SYSTEM "{COUNTRY}-GEN-0.6-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.1 SYSTEM "{COUNTRY}-GEN-1.1-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.2 SYSTEM "{COUNTRY}-GEN-1.2-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.3 SYSTEM "{COUNTRY}-GEN-1.3-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.4 SYSTEM "{COUNTRY}-GEN-1.4-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.5 SYSTEM "{COUNTRY}-GEN-1.5-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.6 SYSTEM "{COUNTRY}-GEN-1.6-{LANG}.xml">
+<!ENTITY eAIP-GEN-1.7 SYSTEM "{COUNTRY}-GEN-1.7-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.1 SYSTEM "{COUNTRY}-GEN-2.1-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.2 SYSTEM "{COUNTRY}-GEN-2.2-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.3 SYSTEM "{COUNTRY}-GEN-2.3-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.4 SYSTEM "{COUNTRY}-GEN-2.4-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.5 SYSTEM "{COUNTRY}-GEN-2.5-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.6 SYSTEM "{COUNTRY}-GEN-2.6-{LANG}.xml">
+<!ENTITY eAIP-GEN-2.7 SYSTEM "{COUNTRY}-GEN-2.7-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.1 SYSTEM "{COUNTRY}-GEN-3.1-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.2 SYSTEM "{COUNTRY}-GEN-3.2-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.3 SYSTEM "{COUNTRY}-GEN-3.3-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.4 SYSTEM "{COUNTRY}-GEN-3.4-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.5 SYSTEM "{COUNTRY}-GEN-3.5-{LANG}.xml">
+<!ENTITY eAIP-GEN-3.6 SYSTEM "{COUNTRY}-GEN-3.6-{LANG}.xml">
+<!ENTITY eAIP-GEN-4.1 SYSTEM "{COUNTRY}-GEN-4.1-{LANG}.xml">
+<!ENTITY eAIP-GEN-4.2 SYSTEM "{COUNTRY}-GEN-4.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.1 SYSTEM "{COUNTRY}-ENR-0.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.2 SYSTEM "{COUNTRY}-ENR-0.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.3 SYSTEM "{COUNTRY}-ENR-0.3-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.4 SYSTEM "{COUNTRY}-ENR-0.4-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.5 SYSTEM "{COUNTRY}-ENR-0.5-{LANG}.xml">
+<!ENTITY eAIP-ENR-0.6 SYSTEM "{COUNTRY}-ENR-0.6-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.1 SYSTEM "{COUNTRY}-ENR-1.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.2 SYSTEM "{COUNTRY}-ENR-1.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.3 SYSTEM "{COUNTRY}-ENR-1.3-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.4 SYSTEM "{COUNTRY}-ENR-1.4-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.5 SYSTEM "{COUNTRY}-ENR-1.5-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.6 SYSTEM "{COUNTRY}-ENR-1.6-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.7 SYSTEM "{COUNTRY}-ENR-1.7-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.8 SYSTEM "{COUNTRY}-ENR-1.8-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.9 SYSTEM "{COUNTRY}-ENR-1.9-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.10 SYSTEM "{COUNTRY}-ENR-1.10-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.11 SYSTEM "{COUNTRY}-ENR-1.11-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.12 SYSTEM "{COUNTRY}-ENR-1.12-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.13 SYSTEM "{COUNTRY}-ENR-1.13-{LANG}.xml">
+<!ENTITY eAIP-ENR-1.14 SYSTEM "{COUNTRY}-ENR-1.14-{LANG}.xml">
+<!ENTITY eAIP-ENR-2.1 SYSTEM "{COUNTRY}-ENR-2.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-2.2 SYSTEM "{COUNTRY}-ENR-2.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.1 SYSTEM "{COUNTRY}-ENR-3.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.2 SYSTEM "{COUNTRY}-ENR-3.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.3 SYSTEM "{COUNTRY}-ENR-3.3-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.4 SYSTEM "{COUNTRY}-ENR-3.4-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.5 SYSTEM "{COUNTRY}-ENR-3.5-{LANG}.xml">
+<!ENTITY eAIP-ENR-3.6 SYSTEM "{COUNTRY}-ENR-3.6-{LANG}.xml">
+<!ENTITY eAIP-ENR-4.1 SYSTEM "{COUNTRY}-ENR-4.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-4.2 SYSTEM "{COUNTRY}-ENR-4.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-4.3 SYSTEM "{COUNTRY}-ENR-4.3-{LANG}.xml">
+<!ENTITY eAIP-ENR-4.4 SYSTEM "{COUNTRY}-ENR-4.4-{LANG}.xml">
+<!ENTITY eAIP-ENR-4.5 SYSTEM "{COUNTRY}-ENR-4.5-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.1 SYSTEM "{COUNTRY}-ENR-5.1-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.2 SYSTEM "{COUNTRY}-ENR-5.2-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.3 SYSTEM "{COUNTRY}-ENR-5.3-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.4 SYSTEM "{COUNTRY}-ENR-5.4-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.5 SYSTEM "{COUNTRY}-ENR-5.5-{LANG}.xml">
+<!ENTITY eAIP-ENR-5.6 SYSTEM "{COUNTRY}-ENR-5.6-{LANG}.xml">
+<!ENTITY eAIP-ENR-6 SYSTEM "{COUNTRY}-ENR-6-{LANG}.xml">
+<!ENTITY eAIP-AD-0.1 SYSTEM "{COUNTRY}-AD-0.1-{LANG}.xml">
+<!ENTITY eAIP-AD-0.2 SYSTEM "{COUNTRY}-AD-0.2-{LANG}.xml">
+<!ENTITY eAIP-AD-0.3 SYSTEM "{COUNTRY}-AD-0.3-{LANG}.xml">
+<!ENTITY eAIP-AD-0.4 SYSTEM "{COUNTRY}-AD-0.4-{LANG}.xml">
+<!ENTITY eAIP-AD-0.5 SYSTEM "{COUNTRY}-AD-0.5-{LANG}.xml">
+<!ENTITY eAIP-AD-0.6 SYSTEM "{COUNTRY}-AD-0.6-{LANG}.xml">
+<!ENTITY eAIP-AD-1.1 SYSTEM "{COUNTRY}-AD-1.1-{LANG}.xml">
+<!ENTITY eAIP-AD-1.2 SYSTEM "{COUNTRY}-AD-1.2-{LANG}.xml">
+<!ENTITY eAIP-AD-1.3 SYSTEM "{COUNTRY}-AD-1.3-{LANG}.xml">
+<!ENTITY eAIP-AD-1.4 SYSTEM "{COUNTRY}-AD-1.4-{LANG}.xml">
+<!ENTITY eAIP-AD-1.5 SYSTEM "{COUNTRY}-AD-1.5-{LANG}.xml">
+<!ENTITY eAIP-AD-EADD SYSTEM "{COUNTRY}-AD-EADD-{LANG}.xml">
+<!ENTITY eAIP-AD-EADH SYSTEM "{COUNTRY}-AD-EADH-{LANG}.xml">
+]>
+<?xml-stylesheet href="../xslt/html-content.xslt" type="text/xsl"?>
+<?eAIP-locales ../{COUNTRY}-locales.xml?>
+<e:eAIP Edition="eAIP 2.0 Specimen Edition (NOT FOR OPERATIONAL USE)" Effective-date="{EFDATE}"
+	ICAO-country-code="{COUNTRY}" Publication-date="{PUBDATE}" Publishing-organisation="{COMPANY}" State="Specimen" Toc="No"
+	Version="2.0" id="eAIP" xml:lang="{LANG}" xmlns:e="http://www.eurocontrol.int/xmlns/AIM/eAIP">
+	<e:GEN Number="Part 1" Toc="No" id="GEN">
+		<e:Title Updated="No">General (GEN)</e:Title>
+		<e:GEN-0 Number="GEN 0" Toc="No" id="GEN-0">
+			<!-- Need this for numbering-->
+			<e:Title Updated="No"/> &eAIP-GEN-0.1; &eAIP-GEN-0.2; &eAIP-GEN-0.3; &eAIP-GEN-0.4; &eAIP-GEN-0.5;
+			&eAIP-GEN-0.6; </e:GEN-0>
+		<e:GEN-1 Number="GEN 1" Toc="Yes" id="GEN-1">
+			<e:Title Updated="No">National Regulations and Requirements</e:Title> &eAIP-GEN-1.1; &eAIP-GEN-1.2;
+			&eAIP-GEN-1.3; &eAIP-GEN-1.4; &eAIP-GEN-1.5; &eAIP-GEN-1.6; &eAIP-GEN-1.7; </e:GEN-1>
+		<e:GEN-2 Number="GEN 2" Toc="Yes" id="GEN-2">
+			<e:Title Updated="No">Tables and Codes</e:Title> &eAIP-GEN-2.1; &eAIP-GEN-2.2; &eAIP-GEN-2.3; &eAIP-GEN-2.4;
+			&eAIP-GEN-2.5; &eAIP-GEN-2.6; &eAIP-GEN-2.7; </e:GEN-2>
+		<e:GEN-3 Number="GEN 3" Toc="Yes" id="GEN-3">
+			<e:Title Updated="No">Services</e:Title> &eAIP-GEN-3.1; &eAIP-GEN-3.2; &eAIP-GEN-3.3; &eAIP-GEN-3.4;
+			&eAIP-GEN-3.5; &eAIP-GEN-3.6; </e:GEN-3>
+		<e:GEN-4 Number="GEN 4" Toc="Yes" id="GEN-4">
+			<e:Title Updated="No">Charges for Aerodromes/Heliports and Air Navigation Services</e:Title> &eAIP-GEN-4.1;
+			&eAIP-GEN-4.2; </e:GEN-4>
+	</e:GEN>
+	<e:ENR Number="Part 2" Toc="No" id="ENR">
+		<e:Title Updated="No">En-route (ENR)</e:Title>
+		<e:ENR-0 Number="ENR 0" Toc="No" id="ENR-0">
+			<e:Title Updated="No">�</e:Title> &eAIP-ENR-0.1; &eAIP-ENR-0.2; &eAIP-ENR-0.3; &eAIP-ENR-0.4; &eAIP-ENR-0.5;
+			&eAIP-ENR-0.6; </e:ENR-0>
+		<e:ENR-1 Number="ENR 1" Toc="Yes" id="ENR-1">
+			<e:Title Updated="No">General Rules and Procedures</e:Title> &eAIP-ENR-1.1; &eAIP-ENR-1.2; &eAIP-ENR-1.3;
+			&eAIP-ENR-1.4; &eAIP-ENR-1.5; &eAIP-ENR-1.6; &eAIP-ENR-1.7; &eAIP-ENR-1.8; &eAIP-ENR-1.9; &eAIP-ENR-1.10;
+			&eAIP-ENR-1.11; &eAIP-ENR-1.12; &eAIP-ENR-1.13; &eAIP-ENR-1.14; </e:ENR-1>
+		<e:ENR-2 Number="ENR 2" Toc="Yes" id="ENR-2">
+			<e:Title Updated="No">Air Traffic Services Airspace</e:Title> &eAIP-ENR-2.1; &eAIP-ENR-2.2; </e:ENR-2>
+		<e:ENR-3 Number="ENR 3" Toc="Yes" id="ENR-3">
+			<e:Title Updated="No">
+				<e:Abbreviation Ref="ABBR-ATS" Updated="No"/> Routes</e:Title> &eAIP-ENR-3.1; &eAIP-ENR-3.2; &eAIP-ENR-3.3;
+			&eAIP-ENR-3.4; &eAIP-ENR-3.5; &eAIP-ENR-3.6; </e:ENR-3>
+		<e:ENR-4 Number="ENR 4" Toc="Yes" id="ENR-4">
+			<e:Title Updated="No">Radio Navigation Aids/Systems</e:Title> &eAIP-ENR-4.1; &eAIP-ENR-4.2;
+			&eAIP-ENR-4.3;&eAIP-ENR-4.4; &eAIP-ENR-4.5; </e:ENR-4>
+		<e:ENR-5 Number="ENR 5" Toc="Yes" id="ENR-5">
+			<e:Title Updated="No">Navigation Warnings</e:Title> &eAIP-ENR-5.1; &eAIP-ENR-5.2; &eAIP-ENR-5.3; &eAIP-ENR-5.4;
+			&eAIP-ENR-5.5; &eAIP-ENR-5.6; </e:ENR-5> &eAIP-ENR-6; </e:ENR>
+	<e:AD Number="Part 3" Toc="No" id="AD">
+		<e:Title Updated="No">Aerodromes (AD)</e:Title>
+		<e:AD-0 Number="AD 0" Toc="No" id="AD-0">
+			<e:Title Updated="No">�</e:Title> &eAIP-AD-0.1; &eAIP-AD-0.2; &eAIP-AD-0.3; &eAIP-AD-0.4; &eAIP-AD-0.5;
+			&eAIP-AD-0.6; </e:AD-0>
+		<e:AD-1 Number="AD 1" Toc="Yes" id="AD-1">
+			<e:Title Updated="No">Aerodromes/Heliports � Introduction</e:Title> &eAIP-AD-1.1; &eAIP-AD-1.2; &eAIP-AD-1.3;
+			&eAIP-AD-1.4; &eAIP-AD-1.5; </e:AD-1>
+		<e:AD-2 Number="AD 2" Toc="Yes" id="AD-2">
+			<e:Title Updated="No">Aerodromes</e:Title> &eAIP-AD-EADD; </e:AD-2>
+		<e:AD-3 Number="AD 3" Toc="Yes" id="AD-3">
+			<e:Title Updated="No">Heliports</e:Title> &eAIP-AD-EADH; </e:AD-3>
+	</e:AD>
+</e:eAIP>

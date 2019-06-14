@@ -1,0 +1,47 @@
+﻿@using System
+@using AIP.GUI
+@if (Model != null && Model.Count > 0)
+{
+	<table frame="border" align="center">
+	    <colgroup>
+	        <col width="10%" />
+	        <col width="10%" />
+	        <col width="10%" />
+	        <col width="10%" />
+	        <col width="60%" />
+	    </colgroup>
+		<thead>
+		<tr class="Table-row-type-1">
+			<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD218_1"))</th>
+			<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD218_2"))</th>
+			<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD218_3"))</th>
+			<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD218_4"))</th>
+			<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("AD218_5"))</th>
+		</tr>
+		<tr class="Table-row-type-2">
+			<th class="bleft btop bright bbottom">1</th>
+			<th class="bleft btop bright bbottom">2</th>
+			<th class="bleft btop bright bbottom">3</th>
+			<th class="bleft btop bright bbottom">4</th>
+			<th class="bleft btop bright bbottom">5</th>
+		</tr>
+		</thead>
+		<tbody valign="top">
+		@foreach (var data in Model)
+		{
+			<tr>
+				<td class="bleft btop bright bbottom">@Raw(data.ServiceDesignation)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.CallSign)</td>
+				<td class="bleft btop bright bbottom">@foreach (var channel in data.RadioCommunicationChannel)
+				                                      {
+					                                      <text>
+					                                          @Raw(channel["FrequencyTransmission"]), @Raw(channel["Logon"]) <br/>
+					                                      </text>
+				                                      }</td>
+				<td class="bleft btop bright bbottom">@Raw(data.ServiceOperationalHours)</td>
+				<td class="bleft btop bright bbottom">@Raw(data.Remarks)</td>
+			</tr>
+		}
+		</tbody>
+	</table>
+}

@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ChartTypeA.View.ChartParamsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+               Width="600"
+             Height="470">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="210"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Horizontal Scale : " HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBlock Text="1:" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding HorScale}" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        
+        <TextBlock Grid.Row="0" Grid.Column="3" Text="Vertical Scale : " HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBlock Text="1:" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="0" Grid.Column="4" Text="{Binding VerScale}" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Horizontal Grid Interval : " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding HorGridInterval}" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding DistanceUnit}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+      
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Vertical Grid Interval : " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBox Grid.Row="1" Grid.Column="4" Text="{Binding VerGridInterval}" HorizontalAlignment="Left" IsEnabled="False" VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="{Binding Unit}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Map Chart Width: " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding MapChartWidth}" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="sm" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="3" Text="Map Chart Height: " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBlock Grid.Row="2" Grid.Column="4" Text="{Binding MapChartHeight}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        <TextBlock Grid.Row="2" Grid.Column="5" Text="sm" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+        
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Suggested Paper size: " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding PaperSize}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15 8 0 7"  Width="100" FontSize="12"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="RunwayCenterLine Slope : " TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Center"  FontSize="12"/>
+        <TextBox Grid.Row="3" Grid.Column="4" Text="{Binding CenterLineSlope}" HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="15 8 0 7"  Width="100" FontSize="12"/>
+        <TextBlock Grid.Row="3" Grid.Column="5" Text="%" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12"/>
+
+        <DataGrid  VerticalAlignment="Top" Height="175" Grid.ColumnSpan="6" Grid.Row="4" ItemsSource="{Binding Path=ProfileCenterLines}" 
+                      Margin="5" AutoGenerateColumns="False" SelectionMode="Single" SelectionUnit="FullRow" SelectedItem="{Binding Path=SelecteProfileCenterLine}" 
+                               Background="#AECBCBCB" BorderBrush="Black" BorderThickness="0.6">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridCell" x:Key="cellStyle">
+                    <Setter Property="FontSize" Value="12"/>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Index" IsReadOnly="True"  Binding="{Binding Path=Index }" CellStyle="{StaticResource ResourceKey=cellStyle}" Width="100"/>
+                <DataGridTextColumn Header="From Elevation" IsReadOnly="True" Binding="{Binding StartElev}" CellStyle="{StaticResource ResourceKey=cellStyle}" Width="100"/>
+                <DataGridTextColumn Header="To Elevation" IsReadOnly="True" Binding="{Binding EndElev}" CellStyle="{StaticResource ResourceKey=cellStyle}" Width="100"/>
+                <DataGridTextColumn Header="Slope (%)" IsReadOnly="True" Binding="{Binding Percent}" CellStyle="{StaticResource ResourceKey=cellStyle}" Width="80"/>
+                <DataGridTextColumn Header="Length (m)" IsReadOnly="True" Binding="{Binding Length}" CellStyle="{StaticResource ResourceKey=cellStyle}" Width="80"/>
+             
+                <!--<DataGridTextColumn Header="Distance" IsReadOnly="True" Binding="{Binding Distance}" Width="60" CellStyle="{StaticResource ResourceKey=cellStyle}"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</UserControl>

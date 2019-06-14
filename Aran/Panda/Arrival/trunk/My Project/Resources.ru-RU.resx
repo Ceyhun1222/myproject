@@ -1,0 +1,2491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="str00001" xml:space="preserve">
+    <value>Неточный заход</value>
+  </data>
+  <data name="str00002" xml:space="preserve">
+    <value>Точный заход</value>
+  </data>
+  <data name="str00003" xml:space="preserve">
+    <value>Начальный участок</value>
+  </data>
+  <data name="str00004" xml:space="preserve">
+    <value>Профиль захода на посадку</value>
+  </data>
+  <data name="str00010" xml:space="preserve">
+    <value>км/час</value>
+  </data>
+  <data name="str00011" xml:space="preserve">
+    <value>мин</value>
+  </data>
+  <data name="str00013" xml:space="preserve">
+    <value>м/мин</value>
+  </data>
+  <data name="str00014" xml:space="preserve">
+    <value>°/сек</value>
+  </data>
+  <data name="str00015" xml:space="preserve">
+    <value>сек</value>
+  </data>
+  <data name="str00016" xml:space="preserve">
+    <value>фт/мин</value>
+  </data>
+  <data name="str00017" xml:space="preserve">
+    <value>Узлы</value>
+  </data>
+  <data name="str00018" xml:space="preserve">
+    <value>фт</value>
+  </data>
+  <data name="str00019" xml:space="preserve">
+    <value>км</value>
+  </data>
+  <data name="str00020" xml:space="preserve">
+    <value>м.м</value>
+  </data>
+  <data name="str00021" xml:space="preserve">
+    <value>м</value>
+  </data>
+  <data name="str00080" xml:space="preserve">
+    <value>PANDA  -  Заход на посадку</value>
+  </data>
+  <data name="str00090" xml:space="preserve">
+    <value>Заход на посадку</value>
+  </data>
+  <data name="str00101" xml:space="preserve">
+    <value>Визуальный маневр</value>
+  </data>
+  <data name="str00102" xml:space="preserve">
+    <value>ВПП и тип захода</value>
+  </data>
+  <data name="str00103" xml:space="preserve">
+    <value>Курс конечного участка</value>
+  </data>
+  <data name="str00104" xml:space="preserve">
+    <value>Конечный участок</value>
+  </data>
+  <data name="str00105" xml:space="preserve">
+    <value>Промежуточный участок</value>
+  </data>
+  <data name="str00106" xml:space="preserve">
+    <value>над средством</value>
+  </data>
+  <data name="str00107" xml:space="preserve">
+    <value>Тип схемы</value>
+  </data>
+  <data name="str00108" xml:space="preserve">
+    <value>КТ снижения</value>
+  </data>
+  <data name="str00109" xml:space="preserve">
+    <value>MAPt</value>
+  </data>
+  <data name="str00110" xml:space="preserve">
+    <value>Уход с разворотом</value>
+  </data>
+  <data name="str00111" xml:space="preserve">
+    <value>OCH</value>
+  </data>
+  <data name="str00112" xml:space="preserve">
+    <value>Параметры разворота</value>
+  </data>
+  <data name="str00113" xml:space="preserve">
+    <value>Направление ухода</value>
+  </data>
+  <data name="str00114" xml:space="preserve">
+    <value>Зоны разворота</value>
+  </data>
+  <data name="str00115" xml:space="preserve">
+    <value>Дополнительная зона</value>
+  </data>
+  <data name="str00116" xml:space="preserve">
+    <value>Завершение ухода</value>
+  </data>
+  <data name="str00150" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="str00151" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="str00152" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="str00153" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="str00154" xml:space="preserve">
+    <value>Отчет</value>
+  </data>
+  <data name="str00155" xml:space="preserve">
+    <value>Профиль</value>
+  </data>
+  <data name="str00156" xml:space="preserve">
+    <value>Сохранить файлы...</value>
+  </data>
+  <data name="str00157" xml:space="preserve">
+    <value>Неточный</value>
+  </data>
+  <data name="str00158" xml:space="preserve">
+    <value>Точный</value>
+  </data>
+  <data name="str00159" xml:space="preserve">
+    <value>Начальный участок</value>
+  </data>
+  <data name="str00160" xml:space="preserve">
+    <value>Линия пути счисления</value>
+  </data>
+  <data name="str00201" xml:space="preserve">
+    <value>ВПП и параметры ILS</value>
+  </data>
+  <data name="str00202" xml:space="preserve">
+    <value>Точный участок</value>
+  </data>
+  <data name="str00203" xml:space="preserve">
+    <value>Промежуточный участок</value>
+  </data>
+  <data name="str00210" xml:space="preserve">
+    <value>Допустимый диапазон:</value>
+  </data>
+  <data name="str00220" xml:space="preserve">
+    <value>Рекомендуемый диапазон:</value>
+  </data>
+  <data name="str00221" xml:space="preserve">
+    <value> от </value>
+  </data>
+  <data name="str00222" xml:space="preserve">
+    <value> до </value>
+  </data>
+  <data name="str00223" xml:space="preserve">
+    <value>Абс. высота</value>
+  </data>
+  <data name="str00224" xml:space="preserve">
+    <value>Отн. высота</value>
+  </data>
+  <data name="str00225" xml:space="preserve">
+    <value>Правый</value>
+  </data>
+  <data name="str00226" xml:space="preserve">
+    <value>Левый</value>
+  </data>
+  <data name="str00227" xml:space="preserve">
+    <value>Радиал:</value>
+  </data>
+  <data name="str00228" xml:space="preserve">
+    <value>Пеленг:</value>
+  </data>
+  <data name="str00229" xml:space="preserve">
+    <value>DME расстояние:</value>
+  </data>
+  <data name="str00230" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str00231" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str00232" xml:space="preserve">
+    <value>Истинный курс:</value>
+  </data>
+  <data name="str00233" xml:space="preserve">
+    <value>Отсутствует</value>
+  </data>
+  <data name="str00234" xml:space="preserve">
+    <value>Абс. высота</value>
+  </data>
+  <data name="str00300" xml:space="preserve">
+    <value>Исходные данные о ВПП ошибочные</value>
+  </data>
+  <data name="str00301" xml:space="preserve">
+    <value>Невозможно создать пересечение.</value>
+  </data>
+  <data name="str00302" xml:space="preserve">
+    <value> заполнено некорректно.</value>
+  </data>
+  <data name="str00303" xml:space="preserve">
+    <value>Решение не существует.</value>
+  </data>
+  <data name="str00304" xml:space="preserve">
+    <value>Нет подходящего средства для создания FIX.</value>
+  </data>
+  <data name="str00305" xml:space="preserve">
+    <value>Приложение 'PANDA' не подключено.</value>
+  </data>
+  <data name="str00500" xml:space="preserve">
+    <value>OCH больше высоты FAF. Увеличьте высоту FAF.</value>
+  </data>
+  <data name="str00501" xml:space="preserve">
+    <value>Высота IAF меньше чем минимальная безопасная высота полета в схеме.</value>
+  </data>
+  <data name="str00502" xml:space="preserve">
+    <value>Неокругленное значение:</value>
+  </data>
+  <data name="str00503" xml:space="preserve">
+    <value>Выберите один из вариантов.</value>
+  </data>
+  <data name="str00504" xml:space="preserve">
+    <value>Поднимите высоту FAF.</value>
+  </data>
+  <data name="str00505" xml:space="preserve">
+    <value>До пересечения с радиалом </value>
+  </data>
+  <data name="str00506" xml:space="preserve">
+    <value>Оптимальная длина конечного участка </value>
+  </data>
+  <data name="str00507" xml:space="preserve">
+    <value>До пересечения с пеленгом </value>
+  </data>
+  <data name="str00508" xml:space="preserve">
+    <value>До пересечения с расстоянием </value>
+  </data>
+  <data name="str00509" xml:space="preserve">
+    <value>Прямой сегмент до высоты</value>
+  </data>
+  <data name="str00510" xml:space="preserve">
+    <value>Прямой сегмент до WPT </value>
+  </data>
+  <data name="str00511" xml:space="preserve">
+    <value>Перехват курса </value>
+  </data>
+  <data name="str00512" xml:space="preserve">
+    <value> отсутствует в базе</value>
+  </data>
+  <data name="str00513" xml:space="preserve">
+    <value>РНС пересечения </value>
+  </data>
+  <data name="str00514" xml:space="preserve">
+    <value>Нет средства пересечения.</value>
+  </data>
+  <data name="str00515" xml:space="preserve">
+    <value>Нет средства наведения.</value>
+  </data>
+  <data name="str00516" xml:space="preserve">
+    <value>На данную точку маршрута не возможно выйти в зтом направлении.</value>
+  </data>
+  <data name="str00517" xml:space="preserve">
+    <value>На данную точку маршрута не возможно выйти из других направлений.</value>
+  </data>
+  <data name="str00518" xml:space="preserve">
+    <value>База данных 'Definitions' отсутствует.</value>
+  </data>
+  <data name="str00519" xml:space="preserve">
+    <value>Слой 'APP_FIX' не найден.</value>
+  </data>
+  <data name="str00520" xml:space="preserve">
+    <value>Высота FAP не позволяет обеспечить минимальный
+запас высоты над препятствиями для безопасного
+снижения в пределах промежуточного участка.</value>
+  </data>
+  <data name="str00521" xml:space="preserve">
+    <value>Точка начала </value>
+  </data>
+  <data name="str00522" xml:space="preserve">
+    <value>Точка выхода из </value>
+  </data>
+  <data name="str00523" xml:space="preserve">
+    <value> разворота</value>
+  </data>
+  <data name="str00524" xml:space="preserve">
+    <value>Конечная точка процедуры ухода на второй круг</value>
+  </data>
+  <data name="str00525" xml:space="preserve">
+    <value>: вне лицензированной зоны.</value>
+  </data>
+  <data name="str00526" xml:space="preserve">
+    <value>База данных ILS пуст.</value>
+  </data>
+  <data name="str00527" xml:space="preserve">
+    <value>OCH больше высоты SDF. Увеличте высоту SDF.</value>
+  </data>
+  <data name="str00528" xml:space="preserve">
+    <value>OCH больше высоты начала ЛПП. Увеличте высоту начала ЛПП.</value>
+  </data>
+  <data name="str00531" xml:space="preserve">
+    <value>Тип средства не известен.</value>
+  </data>
+  <data name="str00601" xml:space="preserve">
+    <value>Страница 1 - </value>
+  </data>
+  <data name="str00602" xml:space="preserve">
+    <value>    Список ВПП участвующих в формировании зоны:</value>
+  </data>
+  <data name="str00603" xml:space="preserve">
+    <value>    Кат.ВС :              </value>
+  </data>
+  <data name="str00604" xml:space="preserve">
+    <value>    Скорость ВС :         </value>
+  </data>
+  <data name="str00605" xml:space="preserve">
+    <value>    Угол крена :          </value>
+  </data>
+  <data name="str00606" xml:space="preserve">
+    <value>    Угловая скорость :    </value>
+  </data>
+  <data name="str00607" xml:space="preserve">
+    <value>    TAS+Ветер :           </value>
+  </data>
+  <data name="str00608" xml:space="preserve">
+    <value>    Радиус разворота :    </value>
+  </data>
+  <data name="str00609" xml:space="preserve">
+    <value>    Прямой участок :      </value>
+  </data>
+  <data name="str00610" xml:space="preserve">
+    <value>    Радиус от порога ВПП: </value>
+  </data>
+  <data name="str00611" xml:space="preserve">
+    <value>    Высота Аэродрома :    </value>
+  </data>
+  <data name="str00612" xml:space="preserve">
+    <value>    MOC :                 </value>
+  </data>
+  <data name="str00613" xml:space="preserve">
+    <value>MOCA :</value>
+  </data>
+  <data name="str00614" xml:space="preserve">
+    <value>    OCH :                 </value>
+  </data>
+  <data name="str00615" xml:space="preserve">
+    <value>    OCA :                 </value>
+  </data>
+  <data name="str00616" xml:space="preserve">
+    <value>    Препятствие определяющее OCH:</value>
+  </data>
+  <data name="str00621" xml:space="preserve">
+    <value>Страница 2 - </value>
+  </data>
+  <data name="str00622" xml:space="preserve">
+    <value>    ВПП:                        </value>
+  </data>
+  <data name="str00623" xml:space="preserve">
+    <value>    Средство наведения :            </value>
+  </data>
+  <data name="str00624" xml:space="preserve">
+    <value>    Расстояние от порога ВПП до РНС:</value>
+  </data>
+  <data name="str00625" xml:space="preserve">
+    <value>    Заход на посадку            </value>
+  </data>
+  <data name="str00626" xml:space="preserve">
+    <value>    Магнитный курс :                   </value>
+  </data>
+  <data name="str00627" xml:space="preserve">
+    <value>Сектор</value>
+  </data>
+  <data name="str00628" xml:space="preserve">
+    <value>    Истинный курс :                   </value>
+  </data>
+  <data name="str00631" xml:space="preserve">
+    <value>Страница 3 - </value>
+  </data>
+  <data name="str00632" xml:space="preserve">
+    <value>    Интервалы ИК :                           </value>
+  </data>
+  <data name="str00633" xml:space="preserve">
+    <value>    ИК конечного этапа :                   </value>
+  </data>
+  <data name="str00634" xml:space="preserve">
+    <value>    MК конечного этапа :                   </value>
+  </data>
+  <data name="str00635" xml:space="preserve">
+    <value>    Мин. OCH :                               </value>
+  </data>
+  <data name="str00636" xml:space="preserve">
+    <value>    Мин. OCH ВЗП :                           </value>
+  </data>
+  <data name="str00637" xml:space="preserve">
+    <value>IF: </value>
+  </data>
+  <data name="str00638" xml:space="preserve">
+    <value>FAF:</value>
+  </data>
+  <data name="str00641" xml:space="preserve">
+    <value>Страница 4 - </value>
+  </data>
+  <data name="str00642" xml:space="preserve">
+    <value>    Расстояние FAF-порог ВПП:             </value>
+  </data>
+  <data name="str00643" xml:space="preserve">
+    <value>    Градиент снижения:                    </value>
+  </data>
+  <data name="str00644" xml:space="preserve">
+    <value>    Конечный участок. OCH, пределы расстояний FAF-порога ВПП для заданного OCH:</value>
+  </data>
+  <data name="str00645" xml:space="preserve">
+    <value>    OCH:                                  </value>
+  </data>
+  <data name="str00646" xml:space="preserve">
+    <value>    Препятствие обуславливающее OCH:      </value>
+  </data>
+  <data name="str00647" xml:space="preserve">
+    <value>    Средство:                             </value>
+  </data>
+  <data name="str00648" xml:space="preserve">
+    <value>    Расстояние от порога ВПП до препятствия:</value>
+  </data>
+  <data name="str00649" xml:space="preserve">
+    <value>    Промежуточный участок:</value>
+  </data>
+  <data name="str00650" xml:space="preserve">
+    <value>    Угол разворота  в КТ IF:              </value>
+  </data>
+  <data name="str00651" xml:space="preserve">
+    <value>    Минимальная длина линии пути:         </value>
+  </data>
+  <data name="str00656" xml:space="preserve">
+    <value>Страница 5 - </value>
+  </data>
+  <data name="str00657" xml:space="preserve">
+    <value>    Расстояние FAF-IF:           </value>
+  </data>
+  <data name="str00658" xml:space="preserve">
+    <value>    Градиент снижения:           </value>
+  </data>
+  <data name="str00659" xml:space="preserve">
+    <value>    Горизонтальная площадка:     </value>
+  </data>
+  <data name="str00660" xml:space="preserve">
+    <value>    Минимальная высота снижения: </value>
+  </data>
+  <data name="str00661" xml:space="preserve">
+    <value>    Определяющее препятствие:    </value>
+  </data>
+  <data name="str00662" xml:space="preserve">
+    <value>    Расстояние от FAF:           </value>
+  </data>
+  <data name="str00663" xml:space="preserve">
+    <value>    Определение IF</value>
+  </data>
+  <data name="str00664" xml:space="preserve">
+    <value>    Средство:                    </value>
+  </data>
+  <data name="str00665" xml:space="preserve">
+    <value>    Наклонная дальность:         </value>
+  </data>
+  <data name="str00671" xml:space="preserve">
+    <value>Страница 6 - </value>
+  </data>
+  <data name="str00672" xml:space="preserve">
+    <value>    Абс. высота IAF : </value>
+  </data>
+  <data name="str00673" xml:space="preserve">
+    <value>    Отн. высота IAF : </value>
+  </data>
+  <data name="str00681" xml:space="preserve">
+    <value>Страница 7 - </value>
+  </data>
+  <data name="str00682" xml:space="preserve">
+    <value>    Параметры схемы</value>
+  </data>
+  <data name="str00683" xml:space="preserve">
+    <value>    Разворот :    </value>
+  </data>
+  <data name="str00684" xml:space="preserve">
+    <value>    Высота IAF :  </value>
+  </data>
+  <data name="str00685" xml:space="preserve">
+    <value>    T :           </value>
+  </data>
+  <data name="str00686" xml:space="preserve">
+    <value>    IAS :         </value>
+  </data>
+  <data name="str00687" xml:space="preserve">
+    <value>    Тип схемы     </value>
+  </data>
+  <data name="str00688" xml:space="preserve">
+    <value>    Скор. снижения по линии удаления :  </value>
+  </data>
+  <data name="str00689" xml:space="preserve">
+    <value>    Скорость снижения на кон. участке : </value>
+  </data>
+  <data name="str00691" xml:space="preserve">
+    <value>        Линия пути удаления</value>
+  </data>
+  <data name="str00692" xml:space="preserve">
+    <value>    Достигаемая высота снижения :       </value>
+  </data>
+  <data name="str00693" xml:space="preserve">
+    <value>    Минимальная высота пролета :        </value>
+  </data>
+  <data name="str00694" xml:space="preserve">
+    <value>    Обуславливающее препятствие :       </value>
+  </data>
+  <data name="str00695" xml:space="preserve">
+    <value>        Конечный участок</value>
+  </data>
+  <data name="str00696" xml:space="preserve">
+    <value>    Высота над THR:                     </value>
+  </data>
+  <data name="str00697" xml:space="preserve">
+    <value>    OCH :                               </value>
+  </data>
+  <data name="str00698" xml:space="preserve">
+    <value>    OCA :                               </value>
+  </data>
+  <data name="str00699" xml:space="preserve">
+    <value>    Обуславливающее препятствие:        </value>
+  </data>
+  <data name="str00700" xml:space="preserve">
+    <value>    Фактическое время полёта:           </value>
+  </data>
+  <data name="str00701" xml:space="preserve">
+    <value>    MOC:                                </value>
+  </data>
+  <data name="str00711" xml:space="preserve">
+    <value>Страница 8 - </value>
+  </data>
+  <data name="str00712" xml:space="preserve">
+    <value>    Создать КТ снижения</value>
+  </data>
+  <data name="str00713" xml:space="preserve">
+    <value>    Градиент снижения :          </value>
+  </data>
+  <data name="str00714" xml:space="preserve">
+    <value>    Абс. высота :                </value>
+  </data>
+  <data name="str00715" xml:space="preserve">
+    <value>    Отн. высота :                </value>
+  </data>
+  <data name="str00716" xml:space="preserve">
+    <value>    Расстояние от THR :          </value>
+  </data>
+  <data name="str00717" xml:space="preserve">
+    <value>    Средство:                    </value>
+  </data>
+  <data name="str00718" xml:space="preserve">
+    <value>    Длина горизонтальной площадки: </value>
+  </data>
+  <data name="str00719" xml:space="preserve">
+    <value>    OCH :                        </value>
+  </data>
+  <data name="str00720" xml:space="preserve">
+    <value>    MOC :                        </value>
+  </data>
+  <data name="str00721" xml:space="preserve">
+    <value>    Обуславливающее препятствие : </value>
+  </data>
+  <data name="str00722" xml:space="preserve">
+    <value>    Высота препятствия:          </value>
+  </data>
+  <data name="str00731" xml:space="preserve">
+    <value>Страница 9 - </value>
+  </data>
+  <data name="str00732" xml:space="preserve">
+    <value>    Средство:                                 </value>
+  </data>
+  <data name="str00733" xml:space="preserve">
+    <value>Конечная точка пути захода на посадку</value>
+  </data>
+  <data name="str00741" xml:space="preserve">
+    <value>Страница 10 - </value>
+  </data>
+  <data name="str00751" xml:space="preserve">
+    <value>Страница 11 - </value>
+  </data>
+  <data name="str00761" xml:space="preserve">
+    <value>Страница 12 - </value>
+  </data>
+  <data name="str00762" xml:space="preserve">
+    <value>    Разворот на заданной ТР</value>
+  </data>
+  <data name="str00763" xml:space="preserve">
+    <value>    Средство   : </value>
+  </data>
+  <data name="str00764" xml:space="preserve">
+    <value>    Разворот на заданной высоте</value>
+  </data>
+  <data name="str00771" xml:space="preserve">
+    <value>Страница 13 - </value>
+  </data>
+  <data name="str00772" xml:space="preserve">
+    <value>    Курс следующего сегмента :      </value>
+  </data>
+  <data name="str00773" xml:space="preserve">
+    <value>    Угол разворота:                 </value>
+  </data>
+  <data name="str00781" xml:space="preserve">
+    <value>Страница 14 - </value>
+  </data>
+  <data name="str00782" xml:space="preserve">
+    <value>    Требуемый угол расширения зоны на внутренней стороне разворота :</value>
+  </data>
+  <data name="str00783" xml:space="preserve">
+    <value>    Требуемый угол расширения зоны на внешней стороне разворота : </value>
+  </data>
+  <data name="str00791" xml:space="preserve">
+    <value>Страница 15 - </value>
+  </data>
+  <data name="str00801" xml:space="preserve">
+    <value>Страница 16 - </value>
+  </data>
+  <data name="str00802" xml:space="preserve">
+    <value>    PDG       : </value>
+  </data>
+  <data name="str00803" xml:space="preserve">
+    <value>    OCH       : </value>
+  </data>
+  <data name="str00804" xml:space="preserve">
+    <value>    Макс. PDG : </value>
+  </data>
+  <data name="str00805" xml:space="preserve">
+    <value>    ОП        : </value>
+  </data>
+  <data name="str00811" xml:space="preserve">
+    <value>Геометрия схемы</value>
+  </data>
+  <data name="str00812" xml:space="preserve">
+    <value>Неточный заход - Геометрия схемы</value>
+  </data>
+  <data name="str00813" xml:space="preserve">
+    <value>Дата создания: </value>
+  </data>
+  <data name="str00814" xml:space="preserve">
+    <value>Общая протяженность схемы неточного захода</value>
+  </data>
+  <data name="str00815" xml:space="preserve">
+    <value>Отчет по препятствиям</value>
+  </data>
+  <data name="str00816" xml:space="preserve">
+    <value>Неточный заход - Протокол рассчетов</value>
+  </data>
+  <data name="str00817" xml:space="preserve">
+    <value>Файл 'Log'</value>
+  </data>
+  <data name="str00818" xml:space="preserve">
+    <value>PANDA Версия: 3.01</value>
+  </data>
+  <data name="str00819" xml:space="preserve">
+    <value>Картографический материал ESRI:  </value>
+  </data>
+  <data name="str00820" xml:space="preserve">
+    <value>Заход на посадку</value>
+  </data>
+  <data name="str00821" xml:space="preserve">
+    <value>Название процедуры:  </value>
+  </data>
+  <data name="str00822" xml:space="preserve">
+    <value>ВПП:  </value>
+  </data>
+  <data name="str00823" xml:space="preserve">
+    <value>Категория ВС: до </value>
+  </data>
+  <data name="str00824" xml:space="preserve">
+    <value>Время создания: </value>
+  </data>
+  <data name="str00825" xml:space="preserve">
+    <value>Расстояния в </value>
+  </data>
+  <data name="str00826" xml:space="preserve">
+    <value>Превышения и высоты в </value>
+  </data>
+  <data name="str00827" xml:space="preserve">
+    <value>Расчетная OCA - </value>
+  </data>
+  <data name="str00828" xml:space="preserve">
+    <value>OCA округленная по правилам PANS-OPS - </value>
+  </data>
+  <data name="str00829" xml:space="preserve">
+    <value>Публикуемая OCA - </value>
+  </data>
+  <data name="str00830" xml:space="preserve">
+    <value>Уровень отсчета OCH - </value>
+  </data>
+  <data name="str00831" xml:space="preserve">
+    <value>Расчетная OCH - </value>
+  </data>
+  <data name="str00832" xml:space="preserve">
+    <value>OCH округленная по правилам PANS-OPS - </value>
+  </data>
+  <data name="str00833" xml:space="preserve">
+    <value>Публикуемая OCH - </value>
+  </data>
+  <data name="str00834" xml:space="preserve">
+    <value>Градиент ухода на второй круг - </value>
+  </data>
+  <data name="str00835" xml:space="preserve">
+    <value>Неточный заход - Файл 'Log'</value>
+  </data>
+  <data name="str00836" xml:space="preserve">
+    <value>ВПП:</value>
+  </data>
+  <data name="str00837" xml:space="preserve">
+    <value>Сопряжение: </value>
+  </data>
+  <data name="str00838" xml:space="preserve">
+    <value> от: </value>
+  </data>
+  <data name="str00839" xml:space="preserve">
+    <value> до: </value>
+  </data>
+  <data name="str00840" xml:space="preserve">
+    <value>Курс</value>
+  </data>
+  <data name="str00841" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="str00842" xml:space="preserve">
+    <value>Долгота</value>
+  </data>
+  <data name="str00843" xml:space="preserve">
+    <value>Широта центра окружности</value>
+  </data>
+  <data name="str00844" xml:space="preserve">
+    <value>Долгота центра окружности</value>
+  </data>
+  <data name="str00845" xml:space="preserve">
+    <value>Радиус разворота</value>
+  </data>
+  <data name="str00846" xml:space="preserve">
+    <value>Направление разворота</value>
+  </data>
+  <data name="str00847" xml:space="preserve">
+    <value>Истинный курс</value>
+  </data>
+  <data name="str00848" xml:space="preserve">
+    <value>Расстояние до следующей точки</value>
+  </data>
+  <data name="str00849" xml:space="preserve">
+    <value>Длина дуги разворота</value>
+  </data>
+  <data name="str00850" xml:space="preserve">
+    <value>Конечная точка процедуры вылета</value>
+  </data>
+  <data name="str00851" xml:space="preserve">
+    <value>Общая протяженность схемы точного захода</value>
+  </data>
+  <data name="str00852" xml:space="preserve">
+    <value>Общая протяженность схемы начальный участок</value>
+  </data>
+  <data name="str01001" xml:space="preserve">
+    <value>Не обеспечена необходимая высота над торцом ВПП.</value>
+  </data>
+  <data name="str10101" xml:space="preserve">
+    <value>Категория ВС:</value>
+  </data>
+  <data name="str10102" xml:space="preserve">
+    <value>Скорость ВС:</value>
+  </data>
+  <data name="str10103" xml:space="preserve">
+    <value>Угол крена:</value>
+  </data>
+  <data name="str10104" xml:space="preserve">
+    <value>Угловая скорость:</value>
+  </data>
+  <data name="str10105" xml:space="preserve">
+    <value>Высота Аэродрома:</value>
+  </data>
+  <data name="str10106" xml:space="preserve">
+    <value>MOC:</value>
+  </data>
+  <data name="str10107" xml:space="preserve">
+    <value>Аэродром: </value>
+  </data>
+  <data name="str10109" xml:space="preserve">
+    <value>TAS+Ветер:</value>
+  </data>
+  <data name="str10110" xml:space="preserve">
+    <value>Радиус разворота:</value>
+  </data>
+  <data name="str10111" xml:space="preserve">
+    <value>Прямолинейный участок:</value>
+  </data>
+  <data name="str10112" xml:space="preserve">
+    <value>Радиус от порога ВПП:</value>
+  </data>
+  <data name="str10113" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10114" xml:space="preserve">
+    <value>Min OCH:</value>
+  </data>
+  <data name="str10115" xml:space="preserve">
+    <value>Препятствие определяющее OCH:</value>
+  </data>
+  <data name="str10118" xml:space="preserve">
+    <value>OCA:</value>
+  </data>
+  <data name="str10201" xml:space="preserve">
+    <value>ВПП:</value>
+  </data>
+  <data name="str10202" xml:space="preserve">
+    <value>ИК:</value>
+  </data>
+  <data name="str10203" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str10204" xml:space="preserve">
+    <value>Ближайшее расстояние от РНС до порога ВПП:</value>
+  </data>
+  <data name="str10205" xml:space="preserve">
+    <value>Заход на посадку</value>
+  </data>
+  <data name="str10206" xml:space="preserve">
+    <value>С прямой</value>
+  </data>
+  <data name="str10207" xml:space="preserve">
+    <value>По кругу</value>
+  </data>
+  <data name="str10208" xml:space="preserve">
+    <value>МК:</value>
+  </data>
+  <data name="str10209" xml:space="preserve">
+    <value>Ближайшее расстояние от РНС до КТА:</value>
+  </data>
+  <data name="str10210" xml:space="preserve">
+    <value>Расположено на аэродроме</value>
+  </data>
+  <data name="str10211" xml:space="preserve">
+    <value>Расположено вне аэродрома</value>
+  </data>
+  <data name="str10212" xml:space="preserve">
+    <value>OCH определяется относительно превышения аэродрома</value>
+  </data>
+  <data name="str10213" xml:space="preserve">
+    <value>OCH определяется относительно уровня порога ВПП</value>
+  </data>
+  <data name="str10214" xml:space="preserve">
+    <value>OCH ограничивается</value>
+  </data>
+  <data name="str10215" xml:space="preserve">
+    <value>OCH не ограничивается</value>
+  </data>
+  <data name="str10217" xml:space="preserve">
+    <value>По кругу</value>
+  </data>
+  <data name="str10218" xml:space="preserve">
+    <value>идеальный</value>
+  </data>
+  <data name="str10219" xml:space="preserve">
+    <value>желательный</value>
+  </data>
+  <data name="str10220" xml:space="preserve">
+    <value>максимальный</value>
+  </data>
+  <data name="str10221" xml:space="preserve">
+    <value>Всенаправленный</value>
+  </data>
+  <data name="str10222" xml:space="preserve">
+    <value>Расстояние РНС от ближайщей поверхности ВПП:</value>
+  </data>
+  <data name="str10223" xml:space="preserve">
+    <value>Сопряжение</value>
+  </data>
+  <data name="str10224" xml:space="preserve">
+    <value>GEO от</value>
+  </data>
+  <data name="str10225" xml:space="preserve">
+    <value>GEO до</value>
+  </data>
+  <data name="str10226" xml:space="preserve">
+    <value>Параметры ВС</value>
+  </data>
+  <data name="str10227" xml:space="preserve">
+    <value>OCH ограничивается</value>
+  </data>
+  <data name="str10228" xml:space="preserve">
+    <value>OCH не ограничивается</value>
+  </data>
+  <data name="str10301" xml:space="preserve">
+    <value>Интервал ИК:</value>
+  </data>
+  <data name="str10302" xml:space="preserve">
+    <value>Удаление точки сопряжения от порога ВПП</value>
+  </data>
+  <data name="str10303" xml:space="preserve">
+    <value>Угол сопряжения линий пути</value>
+  </data>
+  <data name="str10304" xml:space="preserve">
+    <value>Смещение трека на удалении </value>
+  </data>
+  <data name="str10305" xml:space="preserve">
+    <value>OCH Визуального маневрирования:</value>
+  </data>
+  <data name="str10306" xml:space="preserve">
+    <value>Мин. OCH по условиям сопряжения:</value>
+  </data>
+  <data name="str10307" xml:space="preserve">
+    <value>Схема с FAF</value>
+  </data>
+  <data name="str10308" xml:space="preserve">
+    <value>Схема без FAF</value>
+  </data>
+  <data name="str10309" xml:space="preserve">
+    <value>РНС, расположенные вдоль захода:</value>
+  </data>
+  <data name="str10310" xml:space="preserve">
+    <value> до порога ВПП</value>
+  </data>
+  <data name="str10312" xml:space="preserve">
+    <value>Высота над THR:</value>
+  </data>
+  <data name="str10313" xml:space="preserve">
+    <value>Высота над ближашей точкой ВПП:</value>
+  </data>
+  <data name="str10314" xml:space="preserve">
+    <value> влево</value>
+  </data>
+  <data name="str10315" xml:space="preserve">
+    <value> вправо</value>
+  </data>
+  <data name="str10316" xml:space="preserve">
+    <value>Расст. от порога ВПП</value>
+  </data>
+  <data name="str10317" xml:space="preserve">
+    <value>GEO от</value>
+  </data>
+  <data name="str10318" xml:space="preserve">
+    <value>GEO до</value>
+  </data>
+  <data name="str10319" xml:space="preserve">
+    <value>Вариант дизайна</value>
+  </data>
+  <data name="str10401" xml:space="preserve">
+    <value>Расстояние
+FAF-порог ВПП:</value>
+  </data>
+  <data name="str10404" xml:space="preserve">
+    <value>Конечный участок. OCH, пределы расстояний FAF-порога ВПП для заданного OCH</value>
+  </data>
+  <data name="str10405" xml:space="preserve">
+    <value>ID Препятствия:</value>
+  </data>
+  <data name="str10406" xml:space="preserve">
+    <value>Средство наведения:</value>
+  </data>
+  <data name="str10408" xml:space="preserve">
+    <value>Расстояние препятствия от порога ВПП:</value>
+  </data>
+  <data name="str10409" xml:space="preserve">
+    <value>Промежуточный участок</value>
+  </data>
+  <data name="str10410" xml:space="preserve">
+    <value>Угол разворота  в КТ IF:</value>
+  </data>
+  <data name="str10411" xml:space="preserve">
+    <value>Минимальная длина сегмента:</value>
+  </data>
+  <data name="str10412" xml:space="preserve">
+    <value>Следующий OCH:</value>
+  </data>
+  <data name="str10413" xml:space="preserve">
+    <value>Расстояние cледующего препятствия от порога ВПП:</value>
+  </data>
+  <data name="str10414" xml:space="preserve">
+    <value>Следующее препятствие определяющее OCH:</value>
+  </data>
+  <data name="str10415" xml:space="preserve">
+    <value>Рекомендуемый интервал расстояний от FAF:</value>
+  </data>
+  <data name="str10416" xml:space="preserve">
+    <value>Абс. высота FAF</value>
+  </data>
+  <data name="str10417" xml:space="preserve">
+    <value>Отн. высота FAF</value>
+  </data>
+  <data name="str10501" xml:space="preserve">
+    <value>Расстояние FAF-IF:</value>
+  </data>
+  <data name="str10502" xml:space="preserve">
+    <value>Абс. выс. IF:</value>
+  </data>
+  <data name="str10503" xml:space="preserve">
+    <value>Градиент снижения:</value>
+  </data>
+  <data name="str10504" xml:space="preserve">
+    <value>Абс. выс. FAF:</value>
+  </data>
+  <data name="str10505" xml:space="preserve">
+    <value>Горизонтальная площадка:</value>
+  </data>
+  <data name="str10506" xml:space="preserve">
+    <value>Минимальная высота снижения</value>
+  </data>
+  <data name="str10507" xml:space="preserve">
+    <value>Препятствие, определяющее абс. высоту пром-го участка:</value>
+  </data>
+  <data name="str10508" xml:space="preserve">
+    <value>Расстояние от FAF:</value>
+  </data>
+  <data name="str10509" xml:space="preserve">
+    <value>Формирование КТ IF</value>
+  </data>
+  <data name="str10510" xml:space="preserve">
+    <value>Средство:</value>
+  </data>
+  <data name="str10511" xml:space="preserve">
+    <value>Наклонная дальность:</value>
+  </data>
+  <data name="str10512" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str10513" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str10514" xml:space="preserve">
+    <value>Рекоменд. интервал:</value>
+  </data>
+  <data name="str10515" xml:space="preserve">
+    <value> FAF</value>
+  </data>
+  <data name="str10516" xml:space="preserve">
+    <value>IF designator:</value>
+  </data>
+  <data name="str10517" xml:space="preserve">
+    <value>Выбор FAF из списка:</value>
+  </data>
+  <data name="str10518" xml:space="preserve">
+    <value>Угол снижения:</value>
+  </data>
+  <data name="str10603" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="str10604" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="str10605" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="str10606" xml:space="preserve">
+    <value>Абс. высота MSA</value>
+  </data>
+  <data name="str10609" xml:space="preserve">
+    <value>Препятствие обуславливающее OCH:</value>
+  </data>
+  <data name="str10614" xml:space="preserve">
+    <value>Допустимые интервалы радиала входа</value>
+  </data>
+  <data name="str10615" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="str10616" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="str10701" xml:space="preserve">
+    <value>Разворот:</value>
+  </data>
+  <data name="str10704" xml:space="preserve">
+    <value>Обратные схемы</value>
+  </data>
+  <data name="str10705" xml:space="preserve">
+    <value>Ипподром</value>
+  </data>
+  <data name="str10706" xml:space="preserve">
+    <value>Разворот на ПК</value>
+  </data>
+  <data name="str10707" xml:space="preserve">
+    <value>Стандартный раз. 45-180</value>
+  </data>
+  <data name="str10708" xml:space="preserve">
+    <value>Стандартный раз. 80-260</value>
+  </data>
+  <data name="str10709" xml:space="preserve">
+    <value>Отобразить секторы входа</value>
+  </data>
+  <data name="str10710" xml:space="preserve">
+    <value>Вход из сектора 1 запрещён</value>
+  </data>
+  <data name="str10711" xml:space="preserve">
+    <value>Минимальная отн. высота пролета:</value>
+  </data>
+  <data name="str10712" xml:space="preserve">
+    <value>Допустимая отн. высота снижения:</value>
+  </data>
+  <data name="str10713" xml:space="preserve">
+    <value>Линия пути приближения:</value>
+  </data>
+  <data name="str10714" xml:space="preserve">
+    <value>Отн. высота IAF:</value>
+  </data>
+  <data name="str10715" xml:space="preserve">
+    <value>Линия пути удаления</value>
+  </data>
+  <data name="str10717" xml:space="preserve">
+    <value>Минимальная абс. высота пролета:</value>
+  </data>
+  <data name="str10718" xml:space="preserve">
+    <value>Линия пути приближения / Конечный участок</value>
+  </data>
+  <data name="str10719" xml:space="preserve">
+    <value>Допустимая абс. высота снижения:</value>
+  </data>
+  <data name="str10720" xml:space="preserve">
+    <value>ID Обус. препятствия:</value>
+  </data>
+  <data name="str10721" xml:space="preserve">
+    <value>Абс. высота IAF:</value>
+  </data>
+  <data name="str10722" xml:space="preserve">
+    <value>Линия пути удаления:</value>
+  </data>
+  <data name="str10723" xml:space="preserve">
+    <value>Высота над порогом:</value>
+  </data>
+  <data name="str10724" xml:space="preserve">
+    <value>Фактическое время полёта:</value>
+  </data>
+  <data name="str10725" xml:space="preserve">
+    <value>Маг. курс линии пути удаления:</value>
+  </data>
+  <data name="str10726" xml:space="preserve">
+    <value>Длина линии пути удаления:</value>
+  </data>
+  <data name="str10727" xml:space="preserve">
+    <value>Вариант входа</value>
+  </data>
+  <data name="str10728" xml:space="preserve">
+    <value>С прямой</value>
+  </data>
+  <data name="str10729" xml:space="preserve">
+    <value>Весь сектор</value>
+  </data>
+  <data name="str10730" xml:space="preserve">
+    <value>Справа ЛПУ</value>
+  </data>
+  <data name="str10731" xml:space="preserve">
+    <value>Слева ЛПУ</value>
+  </data>
+  <data name="str10732" xml:space="preserve">
+    <value>Опции входа</value>
+  </data>
+  <data name="str10733" xml:space="preserve">
+    <value>Снижение за номинальное время полета в сторону удаления 1 мин</value>
+  </data>
+  <data name="str10801" xml:space="preserve">
+    <value>Создать КТ снижения</value>
+  </data>
+  <data name="str10802" xml:space="preserve">
+    <value>Участок FAF-SDF</value>
+  </data>
+  <data name="str10803" xml:space="preserve">
+    <value>Участок SIL-SDF</value>
+  </data>
+  <data name="str10804" xml:space="preserve">
+    <value>Расстояние FAF-SDF</value>
+  </data>
+  <data name="str10805" xml:space="preserve">
+    <value>Расстояние SIL-SDF</value>
+  </data>
+  <data name="str10806" xml:space="preserve">
+    <value>Градиент снижения:</value>
+  </data>
+  <data name="str10807" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10808" xml:space="preserve">
+    <value>ID Обус. препятствия:</value>
+  </data>
+  <data name="str10809" xml:space="preserve">
+    <value>Длина горизонтальной площадки:</value>
+  </data>
+  <data name="str10811" xml:space="preserve">
+    <value>SDF-MAPt над порогом</value>
+  </data>
+  <data name="str10812" xml:space="preserve">
+    <value>Расстояние от THR:</value>
+  </data>
+  <data name="str10813" xml:space="preserve">
+    <value>Образующее средство:</value>
+  </data>
+  <data name="str10814" xml:space="preserve">
+    <value>над средством</value>
+  </data>
+  <data name="str10815" xml:space="preserve">
+    <value>Наклонная дальность:</value>
+  </data>
+  <data name="str10816" xml:space="preserve">
+    <value>Высота препятствия:</value>
+  </data>
+  <data name="str10817" xml:space="preserve">
+    <value>MOC:</value>
+  </data>
+  <data name="str10818" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str10901" xml:space="preserve">
+    <value>Определение местоположения MAPt</value>
+  </data>
+  <data name="str10902" xml:space="preserve">
+    <value>Контрольной точкой</value>
+  </data>
+  <data name="str10903" xml:space="preserve">
+    <value>Расстоянием от FAF</value>
+  </data>
+  <data name="str10904" xml:space="preserve">
+    <value>Расстояние от THR до/после (+/-):</value>
+  </data>
+  <data name="str10905" xml:space="preserve">
+    <value>Расстояние до ближнего MAPt:</value>
+  </data>
+  <data name="str10906" xml:space="preserve">
+    <value>Расстояние до дальнего MAPt:</value>
+  </data>
+  <data name="str10907" xml:space="preserve">
+    <value>Расстояние от MAPt до SOC:</value>
+  </data>
+  <data name="str10908" xml:space="preserve">
+    <value>Удаление MAPt от DME:</value>
+  </data>
+  <data name="str10909" xml:space="preserve">
+    <value>Наклонная дальность:</value>
+  </data>
+  <data name="str10910" xml:space="preserve">
+    <value>OCH:</value>
+  </data>
+  <data name="str10911" xml:space="preserve">
+    <value>Градиент ухода на второй круг:</value>
+  </data>
+  <data name="str10912" xml:space="preserve">
+    <value>Длина пром. этапа Ухода на 2-ой круг:</value>
+  </data>
+  <data name="str10913" xml:space="preserve">
+    <value>Уход на 2-ой круг зав. на расст. от MAPt:</value>
+  </data>
+  <data name="str10914" xml:space="preserve">
+    <value>ID препятствия обуславливающего OCH:</value>
+  </data>
+  <data name="str10915" xml:space="preserve">
+    <value>ID доминирующего препятствия в зоне ухода на 2-ой круг:</value>
+  </data>
+  <data name="str10916" xml:space="preserve">
+    <value>Перейти к развороту</value>
+  </data>
+  <data name="str10917" xml:space="preserve">
+    <value>Вы завершили формирование процедуры ухода на 2-ой круг по прямой. Для сохранения результатов нажмите OK.</value>
+  </data>
+  <data name="str10918" xml:space="preserve">
+    <value>Расстоянием от SDF</value>
+  </data>
+  <data name="str10919" xml:space="preserve">
+    <value>Опция недоступна</value>
+  </data>
+  <data name="str10920" xml:space="preserve">
+    <value>Enroute MOC:</value>
+  </data>
+  <data name="str11001" xml:space="preserve">
+    <value>Угол крена:</value>
+  </data>
+  <data name="str11002" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str11003" xml:space="preserve">
+    <value>Разворот:</value>
+  </data>
+  <data name="str11004" xml:space="preserve">
+    <value>Категория ВС:</value>
+  </data>
+  <data name="str11005" xml:space="preserve">
+    <value>Тип разворота:</value>
+  </data>
+  <data name="str11006" xml:space="preserve">
+    <value>На абсолютной высоте</value>
+  </data>
+  <data name="str11007" xml:space="preserve">
+    <value>Над FIX</value>
+  </data>
+  <data name="str11008" xml:space="preserve">
+    <value>После MAPt наведение обеспечивается</value>
+  </data>
+  <data name="str11009" xml:space="preserve">
+    <value>Разворот больше 15°</value>
+  </data>
+  <data name="str11043" xml:space="preserve">
+    <value>OCA пролета:</value>
+  </data>
+  <data name="str11044" xml:space="preserve">
+    <value>MDA схемы:</value>
+  </data>
+  <data name="str11051" xml:space="preserve">
+    <value>OCH конечного участка:</value>
+  </data>
+  <data name="str11052" xml:space="preserve">
+    <value>OCH участка ухода на 2-ой круг по прямой:</value>
+  </data>
+  <data name="str11053" xml:space="preserve">
+    <value>OCH пролета:</value>
+  </data>
+  <data name="str11054" xml:space="preserve">
+    <value>MDH схемы:</value>
+  </data>
+  <data name="str11055" xml:space="preserve">
+    <value>Мин. высота разворота:</value>
+  </data>
+  <data name="str11056" xml:space="preserve">
+    <value>Макс. высота разворота:</value>
+  </data>
+  <data name="str11057" xml:space="preserve">
+    <value>ID определяющего препятствия:</value>
+  </data>
+  <data name="str11058" xml:space="preserve">
+    <value>ID препятствия определяющего разворот:</value>
+  </data>
+  <data name="str11059" xml:space="preserve">
+    <value>Мин. расстояние от MAPt:</value>
+  </data>
+  <data name="str11060" xml:space="preserve">
+    <value>Макс. расстояние от MAPt:</value>
+  </data>
+  <data name="str11061" xml:space="preserve">
+    <value>OCH определяется MOC конечного участка</value>
+  </data>
+  <data name="str11062" xml:space="preserve">
+    <value>OCH определяется местоположением MAPt</value>
+  </data>
+  <data name="str11063" xml:space="preserve">
+    <value>OCH определяется сопряжением конечного участка</value>
+  </data>
+  <data name="str11064" xml:space="preserve">
+    <value>OCH определяется препятствием в Зоне Визуального Маневрирования</value>
+  </data>
+  <data name="str11065" xml:space="preserve">
+    <value>OCH определяется препятствием</value>
+  </data>
+  <data name="str11066" xml:space="preserve">
+    <value>Оптимизация ухода на 2-ой круг</value>
+  </data>
+  <data name="str12001" xml:space="preserve">
+    <value>Разворот на заданной высоте</value>
+  </data>
+  <data name="str12002" xml:space="preserve">
+    <value>Средство:</value>
+  </data>
+  <data name="str12005" xml:space="preserve">
+    <value>Доп. тех. пил.</value>
+  </data>
+  <data name="str12006" xml:space="preserve">
+    <value>Допуск на КТ:</value>
+  </data>
+  <data name="str12007" xml:space="preserve">
+    <value>Разворот в заданной ТР</value>
+  </data>
+  <data name="str12012" xml:space="preserve">
+    <value>Высота перевода IAS в TAS:</value>
+  </data>
+  <data name="str13001" xml:space="preserve">
+    <value>На заданный курс</value>
+  </data>
+  <data name="str13002" xml:space="preserve">
+    <value>На курс, проходящий через радиосредство</value>
+  </data>
+  <data name="str13003" xml:space="preserve">
+    <value>На РНС/FIX/WPT</value>
+  </data>
+  <data name="str13004" xml:space="preserve">
+    <value>Угол разворота:</value>
+  </data>
+  <data name="str13005" xml:space="preserve">
+    <value>Магнитный курс:</value>
+  </data>
+  <data name="str13006" xml:space="preserve">
+    <value>Угол сопряжения:</value>
+  </data>
+  <data name="str13007" xml:space="preserve">
+    <value>Номинальный курс не указывается:</value>
+  </data>
+  <data name="str13008" xml:space="preserve">
+    <value>Рекоменд. интервалы курса :</value>
+  </data>
+  <data name="str13009" xml:space="preserve">
+    <value>Минимальная длина DR =</value>
+  </data>
+  <data name="str13010" xml:space="preserve">
+    <value>Длина линии счисления пути:</value>
+  </data>
+  <data name="str13011" xml:space="preserve">
+    <value>РНС</value>
+  </data>
+  <data name="str13012" xml:space="preserve">
+    <value>Время стабилизации:</value>
+  </data>
+  <data name="str13013" xml:space="preserve">
+    <value>РНС/FIX/WPT</value>
+  </data>
+  <data name="str13014" xml:space="preserve">
+    <value>Задать значение курса</value>
+  </data>
+  <data name="str13015" xml:space="preserve">
+    <value>Выбрать ориентирующее РНС/ WPT/ FIX</value>
+  </data>
+  <data name="str13016" xml:space="preserve">
+    <value>Ориентирующее РНС/ WPT/ FIX:</value>
+  </data>
+  <data name="str14001" xml:space="preserve">
+    <value>На внутренней стороне разворота:</value>
+  </data>
+  <data name="str14002" xml:space="preserve">
+    <value>Требуемый угол расширения зоны на внутренней стороне разворота:</value>
+  </data>
+  <data name="str14003" xml:space="preserve">
+    <value>Паралельно конечному курсу:</value>
+  </data>
+  <data name="str14004" xml:space="preserve">
+    <value>Расширить зону на 15° от конечного курса</value>
+  </data>
+  <data name="str14005" xml:space="preserve">
+    <value>Расширить зону средства</value>
+  </data>
+  <data name="str14006" xml:space="preserve">
+    <value>На внешней стороне разворота</value>
+  </data>
+  <data name="str14007" xml:space="preserve">
+    <value>Требуемый угол расширения зоны на внешней стороне разворота:</value>
+  </data>
+  <data name="str15001" xml:space="preserve">
+    <value>Отсечение на внутренней стороне</value>
+  </data>
+  <data name="str15002" xml:space="preserve">
+    <value>По границе зоны захвата наведения</value>
+  </data>
+  <data name="str15003" xml:space="preserve">
+    <value>По правилу о 30°</value>
+  </data>
+  <data name="str15004" xml:space="preserve">
+    <value>По линии РНС-ближняя ТР</value>
+  </data>
+  <data name="str15005" xml:space="preserve">
+    <value>Отсечение на внешней стороне</value>
+  </data>
+  <data name="str15006" xml:space="preserve">
+    <value>По линии РНС-ТВР</value>
+  </data>
+  <data name="str16001" xml:space="preserve">
+    <value>Градиент ухода на 2-ой круг:</value>
+  </data>
+  <data name="str16002" xml:space="preserve">
+    <value>Абс. высота на KK:</value>
+  </data>
+  <data name="str16003" xml:space="preserve">
+    <value>Контрольная точка завершения процедуры</value>
+  </data>
+  <data name="str16004" xml:space="preserve">
+    <value>Вы завершили формирование процедуры.  Для сохранения результатов нажмите OK.</value>
+  </data>
+  <data name="str16005" xml:space="preserve">
+    <value>Требуемая абс. высота полета на маршруте:</value>
+  </data>
+  <data name="str16006" xml:space="preserve">
+    <value>Зона разворота ограничивается расстоянием:</value>
+  </data>
+  <data name="str16007" xml:space="preserve">
+    <value>Абс. высота завершения процедуры:</value>
+  </data>
+  <data name="str16008" xml:space="preserve">
+    <value>Абс. высота разворота:</value>
+  </data>
+  <data name="str16009" xml:space="preserve">
+    <value>Абс. высота в точке завершения:</value>
+  </data>
+  <data name="str16010" xml:space="preserve">
+    <value>Отн. высота разворота:</value>
+  </data>
+  <data name="str20100" xml:space="preserve">
+    <value>Полуразмах крыла ВС меньше стандартной. Произвести корректировку?</value>
+  </data>
+  <data name="str20101" xml:space="preserve">
+    <value>ВПП:</value>
+  </data>
+  <data name="str20102" xml:space="preserve">
+    <value>Категория полета:</value>
+  </data>
+  <data name="str20103" xml:space="preserve">
+    <value>ИК:</value>
+  </data>
+  <data name="str20104" xml:space="preserve">
+    <value>Превышение порога:</value>
+  </data>
+  <data name="str20105" xml:space="preserve">
+    <value>Расстояние КРМ - Порог ВПП:</value>
+  </data>
+  <data name="str20106" xml:space="preserve">
+    <value>Высота опорной точки ILS:</value>
+  </data>
+  <data name="str20107" xml:space="preserve">
+    <value>Полуразмах крыла ВС:</value>
+  </data>
+  <data name="str20108" xml:space="preserve">
+    <value>Градиент ухода на второй круг:</value>
+  </data>
+  <data name="str20109" xml:space="preserve">
+    <value>Категория ВС:</value>
+  </data>
+  <data name="str20110" xml:space="preserve">
+    <value>Запас высоты:</value>
+  </data>
+  <data name="str20111" xml:space="preserve">
+    <value>МК:</value>
+  </data>
+  <data name="str20112" xml:space="preserve">
+    <value>Кат. ILS:</value>
+  </data>
+  <data name="str20113" xml:space="preserve">
+    <value>Угол глиссады:</value>
+  </data>
+  <data name="str20114" xml:space="preserve">
+    <value>Ширина луча на пороге :</value>
+  </data>
+  <data name="str20115" xml:space="preserve">
+    <value>Вертикальный размер ВС:</value>
+  </data>
+  <data name="str20116" xml:space="preserve">
+    <value>Запас по высотомеру:</value>
+  </data>
+  <data name="str20117" xml:space="preserve">
+    <value>Радио</value>
+  </data>
+  <data name="str20118" xml:space="preserve">
+    <value>Барометр</value>
+  </data>
+  <data name="str20119" xml:space="preserve">
+    <value>Вертикальный размер ВС меньше стандартной. Произвести корректировку?</value>
+  </data>
+  <data name="str20120" xml:space="preserve">
+    <value>Отн. высота внутр.
+гор. поверхностьи</value>
+  </data>
+  <data name="str20121" xml:space="preserve">
+    <value>Ширина сектора ILS больше 210 м.</value>
+  </data>
+  <data name="str20201" xml:space="preserve">
+    <value>Расстояние FAP-порог ВПП:</value>
+  </data>
+  <data name="str20202" xml:space="preserve">
+    <value>Высота FAP:</value>
+  </data>
+  <data name="str20203" xml:space="preserve">
+    <value>Положение промежуточного участка без увеличения OCH</value>
+  </data>
+  <data name="str20206" xml:space="preserve">
+    <value>КТ над FAP</value>
+  </data>
+  <data name="str20207" xml:space="preserve">
+    <value>Предельная высота FAP не меняющая OCH:</value>
+  </data>
+  <data name="str20210" xml:space="preserve">
+    <value>Угол разворота  в КТ IF:</value>
+  </data>
+  <data name="str20211" xml:space="preserve">
+    <value>Минимальная длина линии пути:</value>
+  </data>
+  <data name="str20212" xml:space="preserve">
+    <value>Абс.выс.FAP</value>
+  </data>
+  <data name="str20213" xml:space="preserve">
+    <value>Отн.выс. FAP</value>
+  </data>
+  <data name="str20214" xml:space="preserve">
+    <value>Выбор</value>
+  </data>
+  <data name="str20215" xml:space="preserve">
+    <value>Препятсвие обуславливающее ОСН</value>
+  </data>
+  <data name="str20301" xml:space="preserve">
+    <value>Определение IF</value>
+  </data>
+  <data name="str20302" xml:space="preserve">
+    <value>Препятствие проникает зону свободную от препятствий.</value>
+  </data>
+  <data name="str20303" xml:space="preserve">
+    <value>Для подробной информации посмотрите отчет.</value>
+  </data>
+  <data name="str20304" xml:space="preserve">
+    <value>Начальный участок примыкающий к КТ IF</value>
+  </data>
+  <data name="str20305" xml:space="preserve">
+    <value>Длина участка:</value>
+  </data>
+  <data name="str20306" xml:space="preserve">
+    <value>Параметры IF</value>
+  </data>
+  <data name="str20307" xml:space="preserve">
+    <value>Длина гориз.  участка:</value>
+  </data>
+  <data name="str20308" xml:space="preserve">
+    <value>Расстояние от IF до FAP:</value>
+  </data>
+  <data name="str20309" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="str20310" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str20311" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str20312" xml:space="preserve">
+    <value>Рекомендуемый интервал расстояний</value>
+  </data>
+  <data name="str20313" xml:space="preserve">
+    <value>Абс. выс. IF</value>
+  </data>
+  <data name="str20314" xml:space="preserve">
+    <value>Отн. выс. IF</value>
+  </data>
+  <data name="str20315" xml:space="preserve">
+    <value>Градиент снижения</value>
+  </data>
+  <data name="str20316" xml:space="preserve">
+    <value>Абс. высота пролета:</value>
+  </data>
+  <data name="str20402" xml:space="preserve">
+    <value>OCH точного участка:</value>
+  </data>
+  <data name="str20403" xml:space="preserve">
+    <value>OCH этапа ухода  на второй круг:</value>
+  </data>
+  <data name="str20404" xml:space="preserve">
+    <value>Перейти к развороту</value>
+  </data>
+  <data name="str20407" xml:space="preserve">
+    <value>Местоположение SOC относительно порога:</value>
+  </data>
+  <data name="str20408" xml:space="preserve">
+    <value>Вы завершили формирование процедуры по прямой. Для сохранения результатов нажмите OK.</value>
+  </data>
+  <data name="str20501" xml:space="preserve">
+    <value>Угол крена:</value>
+  </data>
+  <data name="str20502" xml:space="preserve">
+    <value>Разворот:</value>
+  </data>
+  <data name="str20503" xml:space="preserve">
+    <value>Разворот больше 15°</value>
+  </data>
+  <data name="str20504" xml:space="preserve">
+    <value>Тип разворота</value>
+  </data>
+  <data name="str20505" xml:space="preserve">
+    <value>На абсолютной высоте</value>
+  </data>
+  <data name="str20506" xml:space="preserve">
+    <value>Над FIX</value>
+  </data>
+  <data name="str20507" xml:space="preserve">
+    <value>Применить уменьшенную ЗНР</value>
+  </data>
+  <data name="str20601" xml:space="preserve">
+    <value>DH схемы:</value>
+  </data>
+  <data name="str20602" xml:space="preserve">
+    <value>Высота существенного препятствия:</value>
+  </data>
+  <data name="str20603" xml:space="preserve">
+    <value>Допустимый интервал расстояний от THR:</value>
+  </data>
+  <data name="str20604" xml:space="preserve">
+    <value>Отсутствует средство для создания КТ разворота.</value>
+  </data>
+  <data name="str20606" xml:space="preserve">
+    <value>Препятствие обуславливающее Min. OCH:</value>
+  </data>
+  <data name="str20607" xml:space="preserve">
+    <value>Препятствие обуславливающее разворот:</value>
+  </data>
+  <data name="str20608" xml:space="preserve">
+    <value>Существенное препятствие в ЗНР:</value>
+  </data>
+  <data name="str20609" xml:space="preserve">
+    <value>Интервалы разворота обеспеченные запасом:</value>
+  </data>
+  <data name="str20610" xml:space="preserve">
+    <value>Допустимый Min. OCH:</value>
+  </data>
+  <data name="str20611" xml:space="preserve">
+    <value>OCH пролета:</value>
+  </data>
+  <data name="str20612" xml:space="preserve">
+    <value>Отн. высота на KK:</value>
+  </data>
+  <data name="str20701" xml:space="preserve">
+    <value>На заданный курс</value>
+  </data>
+  <data name="str20702" xml:space="preserve">
+    <value>Угол разворота</value>
+  </data>
+  <data name="str20703" xml:space="preserve">
+    <value>Курс следующего сегмнта</value>
+  </data>
+  <data name="str20801" xml:space="preserve">
+    <value>На курс проходящий через средство</value>
+  </data>
+  <data name="str20802" xml:space="preserve">
+    <value>Угол сопряжения</value>
+  </data>
+  <data name="str20803" xml:space="preserve">
+    <value>Рекомендуемые интервалы:</value>
+  </data>
+  <data name="str20804" xml:space="preserve">
+    <value>Время стабилизации:</value>
+  </data>
+  <data name="str20805" xml:space="preserve">
+    <value>Длина линии счисления пути:</value>
+  </data>
+  <data name="str20902" xml:space="preserve">
+    <value>Требуемый угол расширения зоны на внутренней стороне разворота:</value>
+  </data>
+  <data name="str20903" xml:space="preserve">
+    <value>Паралельно конечному курсу</value>
+  </data>
+  <data name="str20904" xml:space="preserve">
+    <value>Расширить зону на 15° от конечного курса</value>
+  </data>
+  <data name="str20905" xml:space="preserve">
+    <value>Расширить зону средства</value>
+  </data>
+  <data name="str20907" xml:space="preserve">
+    <value>Требуемый угол расширения зоны на внешней стороне разворота:</value>
+  </data>
+  <data name="str21001" xml:space="preserve">
+    <value>Отсечение на внутренней стороне</value>
+  </data>
+  <data name="str21002" xml:space="preserve">
+    <value>По границе зоны захвата наведения</value>
+  </data>
+  <data name="str21003" xml:space="preserve">
+    <value>По правилу о 30°</value>
+  </data>
+  <data name="str21004" xml:space="preserve">
+    <value>По линии РНС-ближняя ТР</value>
+  </data>
+  <data name="str21005" xml:space="preserve">
+    <value>Отсечение на внешней стороне</value>
+  </data>
+  <data name="str21006" xml:space="preserve">
+    <value>По линии РНС-ТВР</value>
+  </data>
+  <data name="str21101" xml:space="preserve">
+    <value>Недостача высоты:</value>
+  </data>
+  <data name="str21102" xml:space="preserve">
+    <value>Исходные значения</value>
+  </data>
+  <data name="str21103" xml:space="preserve">
+    <value>Вы завершили формирование процедуры.  Для сохранения результатов нажмите OK.</value>
+  </data>
+  <data name="str21104" xml:space="preserve">
+    <value>Удаление MAPt от THR:</value>
+  </data>
+  <data name="str21105" xml:space="preserve">
+    <value>Удаление SOC от THR:</value>
+  </data>
+  <data name="str21106" xml:space="preserve">
+    <value>Требуемые значения</value>
+  </data>
+  <data name="str21107" xml:space="preserve">
+    <value>Отн. высота завершения процедуры:</value>
+  </data>
+  <data name="str21108" xml:space="preserve">
+    <value>Отн. высота на линии KK:</value>
+  </data>
+  <data name="str30000" xml:space="preserve">
+    <value>Отчет по препятствиям</value>
+  </data>
+  <data name="str30001" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="str30002" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="str30003" xml:space="preserve">
+    <value>Зона полета по кругу</value>
+  </data>
+  <data name="str30004" xml:space="preserve">
+    <value>Ипподром / Обратная схема</value>
+  </data>
+  <data name="str30005" xml:space="preserve">
+    <value>Конечный участок</value>
+  </data>
+  <data name="str30006" xml:space="preserve">
+    <value>Промежуточный участок</value>
+  </data>
+  <data name="str30007" xml:space="preserve">
+    <value>Уход на второй круг</value>
+  </data>
+  <data name="str30008" xml:space="preserve">
+    <value>ID препятствий обусл-щих разворот</value>
+  </data>
+  <data name="str30009" xml:space="preserve">
+    <value>Зона ухода на второй круг по прямой</value>
+  </data>
+  <data name="str30010" xml:space="preserve">
+    <value>Зона разворота</value>
+  </data>
+  <data name="str30011" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="str30013" xml:space="preserve">
+    <value>Расстояние от SOC</value>
+  </data>
+  <data name="str30014" xml:space="preserve">
+    <value>Этап</value>
+  </data>
+  <data name="str30015" xml:space="preserve">
+    <value>Отн. высота препятствия над опорным превышением</value>
+  </data>
+  <data name="str30016" xml:space="preserve">
+    <value>MOC 30</value>
+  </data>
+  <data name="str30017" xml:space="preserve">
+    <value>Треб. OCH</value>
+  </data>
+  <data name="str30018" xml:space="preserve">
+    <value>Отн. высота поверхности ухода на второй круг</value>
+  </data>
+  <data name="str30019" xml:space="preserve">
+    <value>Проникновение</value>
+  </data>
+  <data name="str30020" xml:space="preserve">
+    <value>Не учитывается</value>
+  </data>
+  <data name="str30021" xml:space="preserve">
+    <value>Мин. запас высоты пролета препятствия</value>
+  </data>
+  <data name="str30022" xml:space="preserve">
+    <value>MOC 50 по критериям конечного этапа ухода на второй круг</value>
+  </data>
+  <data name="str30023" xml:space="preserve">
+    <value>Треб. мин. относительная высота безопасного пролета над препятствием</value>
+  </data>
+  <data name="str30024" xml:space="preserve">
+    <value>Зона</value>
+  </data>
+  <data name="str30025" xml:space="preserve">
+    <value>Внутренние Приложения 14</value>
+  </data>
+  <data name="str30026" xml:space="preserve">
+    <value>Основные ILS</value>
+  </data>
+  <data name="str30027" xml:space="preserve">
+    <value>OAS</value>
+  </data>
+  <data name="str30028" xml:space="preserve">
+    <value>Точный участок</value>
+  </data>
+  <data name="str30029" xml:space="preserve">
+    <value>Не учитывается, остается под поверхностью с отрицательным наклоном в 15%</value>
+  </data>
+  <data name="str30030" xml:space="preserve">
+    <value>Уход на второй круг</value>
+  </data>
+  <data name="str30031" xml:space="preserve">
+    <value>Препятствия обусл-щие разворот</value>
+  </data>
+  <data name="str30032" xml:space="preserve">
+    <value>Зона начала разворота</value>
+  </data>
+  <data name="str30033" xml:space="preserve">
+    <value>Зоны разворота</value>
+  </data>
+  <data name="str30034" xml:space="preserve">
+    <value>Удаление препятствия</value>
+  </data>
+  <data name="str30035" xml:space="preserve">
+    <value>Отн. высота препятствия над опорным превышением</value>
+  </data>
+  <data name="str30036" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str30037" xml:space="preserve">
+    <value>Треб. мин. отн. высота безопасного пролета препятствия</value>
+  </data>
+  <data name="str30038" xml:space="preserve">
+    <value>Отн. высота поверхности ухода на второй круг</value>
+  </data>
+  <data name="str30039" xml:space="preserve">
+    <value>Недостача запаса пролета препятствия</value>
+  </data>
+  <data name="str30040" xml:space="preserve">
+    <value>Отн. высота безопасного пролета препятствия</value>
+  </data>
+  <data name="str30041" xml:space="preserve">
+    <value>Отн. высота препятствия над превышением аэродрома</value>
+  </data>
+  <data name="str30042" xml:space="preserve">
+    <value>Зона</value>
+  </data>
+  <data name="str30043" xml:space="preserve">
+    <value>Удаление от FAF</value>
+  </data>
+  <data name="str30044" xml:space="preserve">
+    <value>Формируемое OCH</value>
+  </data>
+  <data name="str30045" xml:space="preserve">
+    <value>Недостача запаса пролета</value>
+  </data>
+  <data name="str30046" xml:space="preserve">
+    <value>Макс. расст. обхода</value>
+  </data>
+  <data name="str30047" xml:space="preserve">
+    <value>Мин. угол разворота для обхода</value>
+  </data>
+  <data name="str30048" xml:space="preserve">
+    <value>Отн. высота препятствия над опорным превышением</value>
+  </data>
+  <data name="str30049" xml:space="preserve">
+    <value>Отн. высота поверхности над порогом ВПП</value>
+  </data>
+  <data name="str30050" xml:space="preserve">
+    <value>Отн. высота препятствия над порогом ВПП</value>
+  </data>
+  <data name="str30051" xml:space="preserve">
+    <value>Проникание</value>
+  </data>
+  <data name="str30052" xml:space="preserve">
+    <value>Название поверхности</value>
+  </data>
+  <data name="str30053" xml:space="preserve">
+    <value>Категория ILS</value>
+  </data>
+  <data name="str30054" xml:space="preserve">
+    <value>Удаление от THR</value>
+  </data>
+  <data name="str30200" xml:space="preserve">
+    <value>Отчет начального участка</value>
+  </data>
+  <data name="str30201" xml:space="preserve">
+    <value>Текущие препятствия</value>
+  </data>
+  <data name="str30202" xml:space="preserve">
+    <value>Препятствия сегмента</value>
+  </data>
+  <data name="str30210" xml:space="preserve">
+    <value>Сегмент:</value>
+  </data>
+  <data name="str30211" xml:space="preserve">
+    <value>Высота конца сегмента</value>
+  </data>
+  <data name="str40001" xml:space="preserve">
+    <value>Исходные параметры</value>
+  </data>
+  <data name="str40002" xml:space="preserve">
+    <value>Создание точек снижения/разворота</value>
+  </data>
+  <data name="str40029" xml:space="preserve">
+    <value>Препятствия сегмента</value>
+  </data>
+  <data name="str40031" xml:space="preserve">
+    <value>Отн. высота</value>
+  </data>
+  <data name="str40032" xml:space="preserve">
+    <value>Требуемая отн. высота</value>
+  </data>
+  <data name="str40033" xml:space="preserve">
+    <value>Требуемый градиент</value>
+  </data>
+  <data name="str40034" xml:space="preserve">
+    <value>Зона</value>
+  </data>
+  <data name="str40035" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="str40036" xml:space="preserve">
+    <value>Макс. расстояние до разворота</value>
+  </data>
+  <data name="str40100" xml:space="preserve">
+    <value>Выбор начальной точки</value>
+  </data>
+  <data name="str40101" xml:space="preserve">
+    <value>Название процедуры:</value>
+  </data>
+  <data name="str40102" xml:space="preserve">
+    <value>Начальная точка:</value>
+  </data>
+  <data name="str40103" xml:space="preserve">
+    <value>Диапазон угла пересечения  в IF:</value>
+  </data>
+  <data name="str40106" xml:space="preserve">
+    <value>Абс. Высота:</value>
+  </data>
+  <data name="str40107" xml:space="preserve">
+    <value>Минимальная длина линии пути:</value>
+  </data>
+  <data name="str40108" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str40200" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="str40201" xml:space="preserve">
+    <value>КТ снижения</value>
+  </data>
+  <data name="str40202" xml:space="preserve">
+    <value>Точка разворота</value>
+  </data>
+  <data name="str40203" xml:space="preserve">
+    <value>На расстоянии от текущей точки:</value>
+  </data>
+  <data name="str40204" xml:space="preserve">
+    <value>Допустимый интервал</value>
+  </data>
+  <data name="str40205" xml:space="preserve">
+    <value>Рекомендуемый интервал</value>
+  </data>
+  <data name="str40206" xml:space="preserve">
+    <value>КТ снижения</value>
+  </data>
+  <data name="str40207" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="str40208" xml:space="preserve">
+    <value>Градиент снижения</value>
+  </data>
+  <data name="str40209" xml:space="preserve">
+    <value>Факт. ближный допуск в КТ:</value>
+  </data>
+  <data name="str40210" xml:space="preserve">
+    <value>Максимальный ближный допуск в КТ:</value>
+  </data>
+  <data name="str40211" xml:space="preserve">
+    <value>Расстояние FAF-IF:</value>
+  </data>
+  <data name="str40212" xml:space="preserve">
+    <value>Абс. высота IF:</value>
+  </data>
+  <data name="str40213" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="str40214" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="str40215" xml:space="preserve">
+    <value>Угол разворота:</value>
+  </data>
+  <data name="str40216" xml:space="preserve">
+    <value>Разворот:</value>
+  </data>
+  <data name="str40217" xml:space="preserve">
+    <value>Средство наведения:</value>
+  </data>
+  <data name="str40218" xml:space="preserve">
+    <value>Левый</value>
+  </data>
+  <data name="str40219" xml:space="preserve">
+    <value>Правый</value>
+  </data>
+  <data name="str40220" xml:space="preserve">
+    <value>Точка SDF расположена слишком близко от DME.</value>
+  </data>
+  <data name="str40221" xml:space="preserve">
+    <value>На расстоянии от пред. точки:</value>
+  </data>
+  <data name="str40222" xml:space="preserve">
+    <value>Параметры сегмента</value>
+  </data>
+  <data name="str40223" xml:space="preserve">
+    <value>Местоположение КТ снижения</value>
+  </data>
+  <data name="str40224" xml:space="preserve">
+    <value>Местоположение точки разворота</value>
+  </data>
+  <data name="str50000" xml:space="preserve">
+    <value>Начальный участок по ЛПС</value>
+  </data>
+  <data name="str50100" xml:space="preserve">
+    <value>Исходные параметры</value>
+  </data>
+  <data name="str50101" xml:space="preserve">
+    <value>Выбор номинальной точки IF</value>
+  </data>
+  <data name="str50102" xml:space="preserve">
+    <value>Название процедуры:</value>
+  </data>
+  <data name="str50103" xml:space="preserve">
+    <value>Номинальная точка:</value>
+  </data>
+  <data name="str50104" xml:space="preserve">
+    <value>Средство наведения:</value>
+  </data>
+  <data name="str50105" xml:space="preserve">
+    <value>Полуширина зоны конечного участка:</value>
+  </data>
+  <data name="str50106" xml:space="preserve">
+    <value>Категория ВС:</value>
+  </data>
+  <data name="str50107" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str50108" xml:space="preserve">
+    <value>Радиус разворота</value>
+  </data>
+  <data name="str50109" xml:space="preserve">
+    <value>Тип схемы:</value>
+  </data>
+  <data name="str50110" xml:space="preserve">
+    <value>Мин. длина линии пути счисления:</value>
+  </data>
+  <data name="str50111" xml:space="preserve">
+    <value>Макс. длина линии пути счисления:</value>
+  </data>
+  <data name="str50112" xml:space="preserve">
+    <value>Макс. допуск на КТ IF и ТР:</value>
+  </data>
+  <data name="str50116" xml:space="preserve">
+    <value>Курс:</value>
+  </data>
+  <data name="str50117" xml:space="preserve">
+    <value>Абс. высота FAF/FAP:</value>
+  </data>
+  <data name="str50118" xml:space="preserve">
+    <value>Абс. высота схемы:</value>
+  </data>
+  <data name="str50119" xml:space="preserve">
+    <value>Минимальная длина промежуточного участка:</value>
+  </data>
+  <data name="str50120" xml:space="preserve">
+    <value>Угол сопряжения:</value>
+  </data>
+  <data name="str50121" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str50122" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str50123" xml:space="preserve">
+    <value>Угол крена:</value>
+  </data>
+  <data name="str50124" xml:space="preserve">
+    <value>Направление подхода:</value>
+  </data>
+  <data name="str50125" xml:space="preserve">
+    <value>Мин. длина промежуточного участка:</value>
+  </data>
+  <data name="str50126" xml:space="preserve">
+    <value>Макс. длина промежуточного участка:</value>
+  </data>
+  <data name="str50127" xml:space="preserve">
+    <value>Слева</value>
+  </data>
+  <data name="str50128" xml:space="preserve">
+    <value>Справа</value>
+  </data>
+  <data name="str50200" xml:space="preserve">
+    <value>Создание сегментов</value>
+  </data>
+  <data name="str50201" xml:space="preserve">
+    <value>Параметры управления</value>
+  </data>
+  <data name="str50202" xml:space="preserve">
+    <value>Местоположение IF</value>
+  </data>
+  <data name="str50203" xml:space="preserve">
+    <value>Длина линии DR</value>
+  </data>
+  <data name="str50204" xml:space="preserve">
+    <value>Местоположение TP</value>
+  </data>
+  <data name="str50205" xml:space="preserve">
+    <value>Средство наведения на начальном участке</value>
+  </data>
+  <data name="str50206" xml:space="preserve">
+    <value>На средство</value>
+  </data>
+  <data name="str50207" xml:space="preserve">
+    <value>От средства</value>
+  </data>
+  <data name="str50208" xml:space="preserve">
+    <value>Максимальный угол разворота на линию DR</value>
+  </data>
+  <data name="str50209" xml:space="preserve">
+    <value>Истинный курс подхода</value>
+  </data>
+  <data name="str50210" xml:space="preserve">
+    <value>Задается вручную</value>
+  </data>
+  <data name="str50211" xml:space="preserve">
+    <value>Максимальный угол разворота:</value>
+  </data>
+  <data name="str50212" xml:space="preserve">
+    <value>Истинный курс:</value>
+  </data>
+  <data name="str50213" xml:space="preserve">
+    <value>Проходить через пункт</value>
+  </data>
+  <data name="str50214" xml:space="preserve">
+    <value>КТ IF</value>
+  </data>
+  <data name="str50215" xml:space="preserve">
+    <value>Расстояние IF- FAF/FAP:</value>
+  </data>
+  <data name="str50216" xml:space="preserve">
+    <value>Средство пересечения:</value>
+  </data>
+  <data name="str50217" xml:space="preserve">
+    <value>Длина линии пути DR:</value>
+  </data>
+  <data name="str50218" xml:space="preserve">
+    <value>Точка разворота</value>
+  </data>
+  <data name="str50219" xml:space="preserve">
+    <value>Расстояние ТР-РНС наведения:</value>
+  </data>
+  <data name="str50221" xml:space="preserve">
+    <value>Промежуточный участок</value>
+  </data>
+  <data name="str50222" xml:space="preserve">
+    <value>Зона разворота</value>
+  </data>
+  <data name="str50223" xml:space="preserve">
+    <value>Прямой сегмент</value>
+  </data>
+  <data name="str50224" xml:space="preserve">
+    <value>Название</value>
+  </data>
+  <data name="str50225" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="str50226" xml:space="preserve">
+    <value>Абс. высота препятствия</value>
+  </data>
+  <data name="str50227" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str50228" xml:space="preserve">
+    <value>Треб. абс. высота пролета</value>
+  </data>
+  <data name="str50229" xml:space="preserve">
+    <value>Зона</value>
+  </data>
+  <data name="str50230" xml:space="preserve">
+    <value>До средства</value>
+  </data>
+  <data name="str50231" xml:space="preserve">
+    <value>После средства</value>
+  </data>
+  <data name="str50232" xml:space="preserve">
+    <value>Интервал курса подхода:</value>
+  </data>
+  <data name="str50233" xml:space="preserve">
+    <value>Доступный диапозон значений расстояния FAP(FAF)/IF:</value>
+  </data>
+  <data name="str50234" xml:space="preserve">
+    <value>Доступный диапозон значений длины линии DR:</value>
+  </data>
+  <data name="str50235" xml:space="preserve">
+    <value>Доступный диапозон значений расстояния от РНС:</value>
+  </data>
+  <data name="str50236" xml:space="preserve">
+    <value> до средства</value>
+  </data>
+  <data name="str50237" xml:space="preserve">
+    <value> после средства</value>
+  </data>
+  <data name="str16011" xml:space="preserve">
+    <value>Перейти к созданию дополнительных
+сегментов ухода на второй круг</value>
+  </data>
+  <data name="str40104" xml:space="preserve">
+    <value>Полуширина зоны:</value>
+  </data>
+  <data name="str00907" xml:space="preserve">
+    <value>В пределах сегмента наблюдается курс направленный в сторону исключенного сектора без обеспечения необходимого запаса высоты над ним.
+Продолжить?</value>
+  </data>
+  <data name="str40225" xml:space="preserve">
+    <value>Направление:</value>
+  </data>
+  <data name="str40226" xml:space="preserve">
+    <value>Вход в дугу:</value>
+  </data>
+  <data name="str40227" xml:space="preserve">
+    <value>Снаружи</value>
+  </data>
+  <data name="str40228" xml:space="preserve">
+    <value>Изнутри</value>
+  </data>
+  <data name="str60010" xml:space="preserve">
+    <value>Разворот с курса </value>
+  </data>
+  <data name="str60011" xml:space="preserve">
+    <value>на курс </value>
+  </data>
+  <data name="str60515" xml:space="preserve">
+    <value>на</value>
+  </data>
+  <data name="str60516" xml:space="preserve">
+    <value>от</value>
+  </data>
+  <data name="str60517" xml:space="preserve">
+    <value>На курс </value>
+  </data>
+  <data name="str60518" xml:space="preserve">
+    <value> на </value>
+  </data>
+  <data name="str60519" xml:space="preserve">
+    <value> от </value>
+  </data>
+  <data name="str60520" xml:space="preserve">
+    <value>  проходящий через </value>
+  </data>
+  <data name="str40229" xml:space="preserve">
+    <value>Сохранить процедуру</value>
+  </data>
+  <data name="str40230" xml:space="preserve">
+    <value>Сохранить отчёт</value>
+  </data>
+  <data name="str40231" xml:space="preserve">
+    <value>Серийный номер</value>
+  </data>
+  <data name="str40232" xml:space="preserve">
+    <value>Указатель окончания траектории</value>
+  </data>
+  <data name="str40233" xml:space="preserve">
+    <value>Обозначение точки пути</value>
+  </data>
+  <data name="str40234" xml:space="preserve">
+    <value>Флайовер</value>
+  </data>
+  <data name="str40235" xml:space="preserve">
+    <value>Путевой угол ° M (° T)</value>
+  </data>
+  <data name="str40236" xml:space="preserve">
+    <value>Магнитное склонение</value>
+  </data>
+  <data name="str40237" xml:space="preserve">
+    <value>Расстояние</value>
+  </data>
+  <data name="str40238" xml:space="preserve">
+    <value>Направление разворота</value>
+  </data>
+  <data name="str40239" xml:space="preserve">
+    <value>Абсолютная высота</value>
+  </data>
+  <data name="str40240" xml:space="preserve">
+    <value>Скорость</value>
+  </data>
+  <data name="str40241" xml:space="preserve">
+    <value>Широта</value>
+  </data>
+  <data name="str40242" xml:space="preserve">
+    <value>Долгота</value>
+  </data>
+  <data name="str40109" xml:space="preserve">
+    <value>Разработка нового STAR</value>
+  </data>
+  <data name="str40110" xml:space="preserve">
+    <value>Разработка новой ветви захода на посадку</value>
+  </data>
+  <data name="str20123" xml:space="preserve">
+    <value>Классификфция препятствий
+точного участка</value>
+  </data>
+  <data name="str10320" xml:space="preserve">
+    <value>Игнорировать левый сектор</value>
+  </data>
+  <data name="str10321" xml:space="preserve">
+    <value>Игнорировать правый сектор</value>
+  </data>
+  <data name="str10311" xml:space="preserve">
+    <value>OCH визуального маневрирования не должна быть меньше, чем OCH захода на посадку</value>
+  </data>
+</root>

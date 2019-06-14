@@ -1,0 +1,76 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header header-elements-inline">
+      <h5 class="card-title">Settings - Slots
+        <!-- <a [routerLink]="['/user', 'create']" class=" ml-2" title="Create new user"><i class="icon-plus22"></i></a> -->
+      </h5>
+      <div class="header-elements">
+        <div class="form-group-feedback form-group-feedback-left">
+          <input type="text" class="form-control form-control-lg" value="" placeholder="Search" [(ngModel)]="searchSlot">
+          <div class="form-control-feedback form-control-feedback-lg">
+            <i class="icon-search4 text-muted"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <div class="text-muted text-center" *ngIf="loading"> Loading...</div>
+      <div class="text-muted text-center" *ngIf="!loading && slots.length==0"> Data not found</div>
+
+      <div class="card card-table table-responsive shadow-0 mb-0" [ngClass]="{'table-scrollable': selectedSlot}"
+        *ngIf="slots.length > 0">
+        <table class="table table-bordered table-striped table-xs">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Effective date</th>
+              <th scope="col">Type</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let slot of slots | slotfilter: searchSlot" [ngClass]="{'table-success': selectedSlot && slot.id === selectedSlot.id}">
+              <td class="text-blue cursor-pointer" (click)="selectSlot(slot)" title="Tap to view private slots">{{slot.name}}</td>
+              <td>{{slot.effectiveDate | date: 'yyyy-MM-dd'}}</td>
+              <td>{{slot.type}}</td>
+              <td>{{slot.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card" *ngIf="selectedSlot && selectedSlot.privateSlots && selectedSlot.privateSlots.length > 0">
+    <div class="card-header header-elements-inline">
+      <h5 class="card-title">{{selectedSlot.name}} - Private slots</h5>
+    </div>
+
+    <div class="card-body">
+      <div class="card card-table table-responsive table-scrollable shadow-0 mb-0">
+        <table class="table table-bordered table-striped table-xs">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Creation date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let slot of selectedSlot.privateSlots" [ngClass]="{'table-success': selectedSlot.private && slot.id === selectedSlot.private.id}">
+              <td class="text-blue cursor-pointer" (click)="selectPrivateSlot(slot)" title="Tap to select private slot">{{slot.name}}</td>
+              <td>{{slot.creationDate | date: 'yyyy-MM-dd'}}</td>
+              <td>{{slot.status}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <button class="btn btn-success btn-sm float-right mt-3" (click)="save()">Save</button>
+
+    </div>
+  </div>
+  <!-- <p><a [routerLink]="['/login']">Logout</a> (click)="editUser(slot.id)"</p> -->
+</div>

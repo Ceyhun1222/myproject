@@ -1,0 +1,257 @@
+﻿@model ChartManagerWeb.Models.ViewModel.ChartViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/dataTable")
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row" style="margin-top: 15px">
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.CreatedTimeFrom, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.CreatedTimeFrom, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.CreatedTimeFrom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.CreatedTimeTo, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.CreatedTimeTo, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.CreatedTimeTo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.EffectiveFrom, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.EffectiveFrom, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.EffectiveFrom, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.EffectiveTo, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EditorFor(model => model.EffectiveTo, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.EffectiveTo, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px">
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.UserList, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(model => model.SelectedUser, Model.UserList, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.UserList, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.SelectedChartType, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.EnumDropDownListFor(model => model.SelectedChartType, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.SelectedChartType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.AerodromeList, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(model => model.SelectedAerodrome, Model.AerodromeList, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.AerodromeList, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(model => model.StatusList, htmlAttributes: new { @class = "control-label" })
+                <div>
+                    @Html.DropDownListFor(model => model.SelectedStatus, Model.StatusList, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.StatusList, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label class="control-label"></label>
+                <div>
+                    <input type="submit" value="Search" class="btn btn-primary btn-block btn-success" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div id="loader"></div>
+<hr />
+
+<div class="form-horizontal"  style="margin-top:35px">
+
+    <div class="form-group">
+        <table id="dtChart" class="table table-responsive table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Type
+                    </th>
+                    <th>
+                        Airport
+                    </th>
+                    <th>
+                        Effective date
+                    </th>
+                    <th>
+                        Created at
+                    </th>
+                    <th>
+                        Created by
+                    </th>
+                    <th>
+                        Locked
+                    </th>
+                    <th>
+                        Version
+                    </th>
+                    <th>
+                        Preview
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+                
+            <tbody>
+                @foreach (var item in Model.ChartList)
+                {
+                    var trClass = item.Locked ? "info" : "success";
+                    <tr class="@trClass">
+                        <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Airport)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Effective)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedAt)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreatedBy)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Locked)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Version)
+                        </td>
+                    
+                        <td>
+                        <div>
+                            <img id="myImg" onclick="GetImage(@item.Id,'@item.Name')" src="~/Image/preview.png" alt="Chart manager, preview" width="30" height="30">
+                        </div>
+
+                        <div id="myModal" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                            <div id="caption"></div>
+                        </div>
+                    </td>
+                    
+                        <td>
+                        <div class="dropdown">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+            
+                    </tr>
+                }
+            </tbody>
+</table>
+    </div>
+</div>
+
+
+@section scripts {
+    @Scripts.Render("~/bundles/datatable")
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#dtChart").dataTable();
+        });
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        var loader = document.getElementById("loader");
+
+        function GetImage(id, str) {
+            loader.style.display = "block";
+            $.ajax(
+                {
+                    type: "GET",
+                    url: '@Url.Action("GetImage", "Chart")',
+                    data: { id: id },
+                    cache: false,
+                    success: function (obj) {
+                        loader.style.display = "none";
+                        console.log(obj);
+                        modalImg.src = "data:image/jpg;base64," + obj.preview;
+                        modal.style.display = "block";
+                        captionText.innerHTML = str;
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        loader.style.display = "none";
+                        //some errror, some show err msg to user and log the error
+                        console.log(xhr.responseText);
+                        //alert(xhr.responseText);
+                    }
+                });
+        }
+
+// Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+}

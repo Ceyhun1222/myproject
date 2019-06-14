@@ -1,0 +1,69 @@
+﻿<Controls:MetroWindow x:Class="Aran.Panda.RNAV.RNPAR.UI.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:userControls ="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.View.Procedure"
+        xmlns:views ="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.View"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:ViewModels="clr-namespace:Aran.Panda.RNAV.RNPAR.UI.ViewModel.Procedure"
+        mc:Ignorable="d ignore"
+        Title="RNP AR APCH"
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanMinimize"
+        Width="700"
+        Height="auto"
+        SizeToContent="Height"
+        BorderThickness="0"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        IconOverlayBehavior="Never"
+        WindowTransitionsEnabled="False"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+            <DataTemplate DataType="{x:Type ViewModels:UnitViewModel}">
+                <userControls:InitializationView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:FinalApproachViewModel}">
+                <userControls:FinalApproachView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:IntermediateApproachViewModel}">
+                <userControls:IntermediateApproachView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:InitialApproachViewModel}">
+                <userControls:InitialApproachView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:MissedApproachViewModel}">
+                <userControls:MissedApproachView/>
+            </DataTemplate>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/Common.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel>
+            <GroupBox Header="{Binding ViewModel.Header}"></GroupBox>
+            <ContentControl Content="{Binding ViewModel}" />
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                
+                </Grid.ColumnDefinitions>
+                <Button Command="{Binding ViewModel.BackCommand}" Grid.Column="0" Content="Back"></Button>
+                <Button Command="{Binding ViewModel.NextCommand}" Grid.Column="1" Content="Next"></Button>
+                <Button Command="{Binding ReportCommand}" Grid.Column="4" Content="Report"></Button>
+                <Button Command="{Binding ViewModel.SaveCommand}" Grid.Column="3" Content="Save"></Button>
+            </Grid>
+        </StackPanel>
+        
+    </DockPanel>
+</Controls:MetroWindow>

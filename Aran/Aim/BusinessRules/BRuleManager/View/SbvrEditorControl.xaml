@@ -1,0 +1,151 @@
+﻿<UserControl x:Class="BRuleManager.View.SbvrEditorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BRuleManager"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Name="ui_grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4" />
+            <ColumnDefinition Width="300" />
+        </Grid.ColumnDefinitions>
+                
+        <!--Text Area-->
+        <RichTextBox Name="ui_rtb" Foreground="#339966" >
+            <FlowDocument>
+                <Paragraph>
+                    <TextBlock />
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <!--Splitter-->
+        <GridSplitter Grid.Column="1" Width="4" HorizontalAlignment="Stretch" />
+        
+        <!--Vocabulary-->
+        <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel DataContext="{Binding Vocabulary}">
+            
+                <!--Keywords-->
+                <Expander Header="Keyword" IsExpanded="True" Margin="4">
+                    <StackPanel>
+                        <ItemsControl ItemsSource="{Binding KeywordItems}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Margin="6" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Content="{Binding}" 
+                                            Margin="4" 
+                                            Foreground="#FF9900"
+                                            Background="WhiteSmoke"
+                                            Padding="2"
+                                            BorderThickness="0"
+                                            Click="AddVocabulary_Click" Tag="Keyword" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <Grid Margin="6, 2, 2, 2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding OtherKeyword}" VerticalAlignment="Center" Margin="4,0" KeyUp="TextBlock_KeyUp" Tag="Keyword" />
+                            <TextBlock Grid.Column="2" VerticalAlignment="Center">
+                                <Hyperlink Tag="other-keyword" Click="AddVocabulary_Click">Add</Hyperlink>
+                            </TextBlock>
+                        </Grid>
+                    </StackPanel>
+                </Expander>
+
+                <Separator Height="0.5" />
+
+                <!--Verb-->
+                <Expander Header="Verb" IsExpanded="True" Margin="4">
+                    <StackPanel>
+                        <ItemsControl ItemsSource="{Binding VerbItems}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Margin="6" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Content="{Binding}" 
+                                            Margin="4" 
+                                            Foreground="#0000FF"
+                                            Background="WhiteSmoke"
+                                            Padding="2"
+                                            BorderThickness="0"
+                                            Click="AddVocabulary_Click" Tag="Verb" />
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                        <Grid Margin="6, 2, 2, 2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox Text="{Binding OtherVerb}" VerticalAlignment="Center" Margin="4,0" KeyUp="TextBlock_KeyUp" Tag="Verb" />
+                            <TextBlock Grid.Column="2" VerticalAlignment="Center">
+                                <Hyperlink Tag="other-verb" Click="AddVocabulary_Click">Add</Hyperlink>
+                            </TextBlock>
+                        </Grid>
+
+                    </StackPanel>
+                </Expander>
+
+                <Separator Height="0.5" />
+
+                <!--Noun-->
+                <Expander Header="Noun" IsExpanded="True" Margin="4">
+                    <Grid Margin="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                    
+                        <TextBlock Text="Features" Margin="4,2" VerticalAlignment="Center" />
+                        <ComboBox Name="ui_featuresCB" Grid.Column="1" Margin="4, 6" ItemsSource="{Binding FeatureTypes}" IsEditable="True" KeyUp="ComboBox_KeyUp" Tag="Noun" />
+                        <TextBlock Grid.Column="2" VerticalAlignment="Center" Margin="4,2">
+                            <Hyperlink Click="AddVocabulary_Click" Tag="Noun" DataContext="{Binding ElementName=ui_featuresCB, Path=SelectedItem}">Add</Hyperlink>
+                        </TextBlock>
+
+                        <TextBlock Grid.Row="1" Text="Objects" Margin="4,2"  VerticalAlignment="Center" />
+                        <ComboBox Name="ui_objectsCB" Grid.Row="1" Margin="4, 6" Grid.Column="1" ItemsSource="{Binding ObjectTypes}" IsEditable="True" KeyUp="ComboBox_KeyUp" Tag="Noun" />
+                        <TextBlock Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="4,2" >
+                            <Hyperlink Click="AddVocabulary_Click" Tag="Noun" DataContext="{Binding ElementName=ui_objectsCB, Path=SelectedItem}">Add</Hyperlink>
+                        </TextBlock>
+
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding OtherNoun}" VerticalAlignment="Center" Margin="4,2" KeyUp="TextBlock_KeyUp" Tag="Noun" />
+                        <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="4,2">
+                            <Hyperlink Tag="other-noun" Click="AddVocabulary_Click">Add</Hyperlink>
+                        </TextBlock>
+
+                        <Button Grid.Row="3" Grid.Column="1" Margin="6"
+                                Content="Add Propertry" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Style="{StaticResource r_button}"
+                                Command="{Binding AddPropertyCommand}" />
+                    </Grid>
+                </Expander>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+    
+</UserControl>

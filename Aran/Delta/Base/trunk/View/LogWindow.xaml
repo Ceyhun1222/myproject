@@ -1,0 +1,70 @@
+﻿<Window x:Class="Aran.Delta.View.LogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Title="Delta  Log Viewer"   
+             WindowStartupLocation="CenterScreen" 
+            WindowStyle="SingleBorderWindow"
+            Width="540" 
+            Height="410"
+            ResizeMode="CanMinimize"
+            >
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="true">
+                    <Setter Property="ToolTip"
+                 Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                    Path=(Validation.Errors).CurrentItem.ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <LinearGradientBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFD9F4FF" Offset="0"/>
+            <GradientStop Color="#FF9BDDFB" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="{x:Static SystemColors.ControlBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFEEEDED" Offset="0"/>
+            <GradientStop Color="#FFDDDDDD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+        <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black" />
+
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.8*"/>
+            <RowDefinition Height="45"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Margin="10" BorderThickness="0.6"  BorderBrush="Black" Background="#FFF8F8F8">
+            <!--<ScrollViewer>-->
+                <TextBox  FontSize="12.5" Name="TxtLog" IsReadOnly="True" TextWrapping="Wrap"  Margin="2 3" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" >
+                    <TextBox.Text>
+                        <MultiBinding StringFormat="{}{0}">
+                            <Binding Path="LogText" />
+                        </MultiBinding>
+                    </TextBox.Text>
+                </TextBox>
+            <!--</ScrollViewer>-->
+        </Border>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" Margin="5 1 5 8">
+
+            <Button  Name="BtnDetailInfo"
+                            Width="80" 
+                            Content="Ok"
+                            Margin="10 5 3 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28"
+                            Click="BtnDetailInfo_OnClick"
+                            />
+
+        </StackPanel>
+    </Grid>
+</Window>
+

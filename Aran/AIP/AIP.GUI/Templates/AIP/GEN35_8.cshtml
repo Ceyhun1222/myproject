@@ -1,0 +1,46 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 14;
+    int i = 1;
+}
+@if (Model != null && Model.Count > 0)
+{
+<table frame="border" align="center">
+    <colgroup>
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="20%" />
+        <col width="14%" />
+        <col width="26%" />
+    </colgroup>
+	<thead>
+        <tr class="Table-row-type-1">
+            @for (i = 8; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN35_" + @i))</th>   }
+        </tr>
+        <tr class="Table-row-type-2">
+            @for (i = 8; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@i</th>   }
+        </tr>
+	</thead>
+	<tbody valign="top">
+	@foreach (var data in Model)
+	{
+		<tr>
+			<td class="bleft btop bright bbottom">@Raw(data.Name)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Hours)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.FIRorCTA)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.SigmetValidity)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.SpecificProcedures)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.ATSUnitServed)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.AdditionalInfo)</td>
+		</tr>
+	}
+	</tbody>
+</table>
+}

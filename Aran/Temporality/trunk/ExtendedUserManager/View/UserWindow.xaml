@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="UserManager.View.Extended.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             MinWidth="100" MinHeight="100" mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Extended="clr-namespace:UserManager.ViewModel.Extended" 
+             d:DesignHeight="308" d:DesignWidth="422">
+    <UserControl.DataContext>
+        <Extended:UserModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Name:" VerticalAlignment="Center" Margin="5" />
+                <TextBox Grid.Column="1" Margin="5" MinWidth="100" Text="{Binding Path=CurrentUserName, UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+            <GroupBox Grid.Row="1" Header="Roles" ToolTip="User's roles (special rules allowing user to perform some actions independend of current storage)">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Grid.Row="0" IsChecked="{Binding Path=IsAdmin}"  Content="Can manage users (can not change UserRole) and access rights" Margin="5"/>
+                    <CheckBox Grid.Row="1" IsChecked="{Binding Path=IsSuperAdmin}"  Content="Can manage users (no restrictions) and access right" Margin="5"/>
+                    <CheckBox Grid.Row="2" IsChecked="{Binding Path=IsCreator}"  Content="Can create any storages" Margin="5"/>
+                    <CheckBox Grid.Row="3" IsChecked="{Binding Path=IsDestroyer}"  Content="Can drop any storages" Margin="5"/>
+                    <CheckBox Grid.Row="4" IsChecked="{Binding Path=IsObserver}"  Content="Has read only access to any data" Margin="5"/>
+                    <CheckBox Grid.Row="5" IsChecked="{Binding Path=IsTester}"  Content="Has full access to any data" Margin="5"/>
+
+                </Grid>
+
+            </GroupBox>
+
+           
+
+        </Grid>
+
+
+        <Grid Grid.Row="1" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <WrapPanel Grid.Column="0">
+                <Button Command="{Binding OnDelete}" Content="Delete User"  Margin="1,5,0,5" Width="100"/>
+                <Button Command="{Binding OnResetPassword}" Content="Reset Password" Margin="5" Width="100"/>
+            </WrapPanel>
+
+            <Button Grid.Column="1" HorizontalAlignment="Right" Command="{Binding OnApply}" Content="Apply" Margin="5,5,1,5" Width="100"/>
+        </Grid>
+        
+
+    </Grid>
+    
+    
+</UserControl>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ChartServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ChartServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="UserPrivilege">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ReadOnly" />
+      <xs:enumeration value="Full" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserPrivilege" nillable="true" type="tns:UserPrivilege" />
+  <xs:simpleType name="ChartType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="SID" />
+      <xs:enumeration value="STAR" />
+      <xs:enumeration value="IAC" />
+      <xs:enumeration value="Enroute" />
+      <xs:enumeration value="Aerodrome" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="PAT" />
+      <xs:enumeration value="Area" />
+      <xs:enumeration value="AerodromeElectronicChart" />
+      <xs:enumeration value="AerodromeParkingDockingChart" />
+      <xs:enumeration value="AerodromeGroundMovementChart" />
+      <xs:enumeration value="AerodromeBirdChart" />
+      <xs:enumeration value="AreaMinimumChart" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChartType" nillable="true" type="tns:ChartType" />
+  <xs:simpleType name="ChartCallBackType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Created" />
+      <xs:enumeration value="Deleted" />
+      <xs:enumeration value="Locked" />
+      <xs:enumeration value="Unlocked" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChartCallBackType" nillable="true" type="tns:ChartCallBackType" />
+  <xs:simpleType name="UserCallbackType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ChangedPassword" />
+      <xs:enumeration value="Deleted" />
+      <xs:enumeration value="PrivilegeUp" />
+      <xs:enumeration value="PrivilegeDown" />
+      <xs:enumeration value="Disabled" />
+      <xs:enumeration value="Enabled" />
+      <xs:enumeration value="Updated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserCallbackType" nillable="true" type="tns:UserCallbackType" />
+</xs:schema>

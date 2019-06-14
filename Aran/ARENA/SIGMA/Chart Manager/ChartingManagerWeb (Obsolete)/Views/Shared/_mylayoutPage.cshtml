@@ -1,0 +1,755 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutHomePage.cshtml";
+}
+@model IEnumerable<ChartingManagerWeb.ServiceReference1.ChartUser>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    @*--------------*@
+
+    <style type="text/css">
+        .toggle.ios, .toggle-on.ios, .toggle-off.ios {
+            border-radius: 20px;
+        }
+
+            .toggle.ios .toggle-handle {
+                border-radius: 20px;
+            }
+
+        .gi-5x {
+            font-size: 1.3em;
+        }
+
+        .slow .toggle-group {
+            transition: left 0.7s;
+            -webkit-transition: left 0.7s;
+        }
+
+        .a:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /*.table-hovers tbody tr:hover td {
+            background-color: #c6c6b7;
+        }*/
+
+        .highlighted {
+            background-color: #e2cccc;
+            color: #7c3636;
+        }
+
+        .DisEnableRowAddclass {
+            background-color: #f29191;
+            color: #ffffff;
+        }
+
+
+
+        .popup {
+            border-radius: 52px 52px 52px 52px;
+            -moz-border-radius: 52px 52px 52px 52px;
+            -webkit-border-radius: 52px 52px 52px 52px;
+            border: 1px solid #a392a3;
+            width: 300px;
+            height: 300px;
+            background: #9a8989;
+            color: #d7b6b6;
+            display: none;
+            position: absolute;
+            left: -30px;
+            outline: 0;
+            z-index: 1100 !important;
+            /*cursor: move;*/
+        }
+
+        .border {
+            border: 1px solid #f60000;
+        }
+
+        html, body {
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+            position: fixed;
+            overflow-x: auto;
+        }
+
+        .header {
+            font-weight: bold;
+            background-color: #e8e3e3;
+            color: #dc8b8b;
+            font-size: 1.7em;
+            padding: 1rem;
+            top: 0;
+            text-align: center;
+            text-transform: uppercase;
+            min-width: 900px;
+        }
+
+        tr.spaceUnder > td {
+            padding-bottom: 1em;
+        }
+    </style>
+    <link href="~/MyCssFiles/css/MyBtncssfiles.css" rel="stylesheet" />
+</head>
+<body style="background-color: #ffffff;">
+    <center>
+        <div class="modal fade" id="ModalDelete">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                        <h4 class="modal-title">Do you want to delete <label id="ModalinUserName"></label> user from users list?</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="ModalinDeleteUser" type="button" class="btn btn-danger">Delete</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ModalChangePasswrd">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                        <h4 class="modal-title">User: <label id="ModalinPswUser"></label></h4>
+                        <br />
+                        <table>
+                            <tr id="TrforonlyOldPsw" style="display:none;" class="spaceUnder">
+                                <td><span style="font-weight: bold;width: 100%;float:left;">Old Password:</span></td>
+                                <td>
+                                    <div style="margin-left: 30%;">
+                                        <input id="OldPassword" type="password" class="form-control" placeholder="Old Password" style="width:100%;" />
+                                    </div>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr style="display:block;width:100%;" class="spaceUnder">
+                                <td><span style="font-weight: bold;float:left;">New Password:</span></td>
+                                <td>
+                                    <div style="margin-left: 27%;">
+                                        <input id="NewPassword" type="password" class="form-control" placeholder="New Password" style="width: 100%;" />
+                                    </div>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr style="display:block;" class="spaceUnder">
+                                <td><span style="font-weight: bold;float:left;">Repeat New Password:</span></td>
+                                <td>
+                                    <div style="width: 100%;">
+                                        <input id="RepeatPassword" type="password" class="form-control" placeholder="Repeat New Password" />
+                                        <br />
+                                        <label id="validation" style="display:none;color:red;">incorrect repeat password</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr style="display:block;" class="spaceUnder">
+                                <td>
+                                    <button id="ModalinSaveChangePsw" type="button" class="btn btn-danger">Save Change</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="margin-left: 20%;">Close</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <div class="header" style="padding-top: 60px;width:100%;">Users</div>
+    <br />
+    <table>
+        <tr>
+            <td>&nbsp;&nbsp;&nbsp;<label>Search:</label>&nbsp;&nbsp;</td>
+            <td><input id="SearchUsersList" type="search" class="form-control" onkeyup="FunctionSearch()" placeholder="Search" /></td>
+        </tr>
+    </table>
+    <br />
+
+    <table id="tbl1" class="table" cellspacing="0" style="width: 100%;min-width:900px;">
+        <tbody>
+            <tr style="background-color: #bfc7be;color:#6f6c72;">
+                <th style="text-align:center;"><center><div style="width: 100px;"><label>First Name</label></div></center></th>
+                <th style="text-align:center;"><center><div style="width: 100px;"><label>Last Name</label></div></center></th>
+                <th style="text-align:center;"><center><div style="width: 100px;"><label>User Name</label></div></center></th>
+                <th style="text-align:center;">Position</th>
+                <th style="text-align:center;">Email</th>
+                <th style="text-align:center;width:60px;">Disabled</th>
+                <th style="text-align:center;"><center><div style="width: 120px;">Privilege</div></center></th>
+                <th style="text-align: center;width: 60px;">Delete</th>
+            </tr>
+        </tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td style="display:none;text-align:center;">@item.Id</td>
+                <td style="display:none;text-align:center;">@item.Disabled</td>
+                <td style="text-align:center;">@item.FirstName</td>
+                <td style="text-align:center;">@item.LastName</td>
+                <td style="text-align:center;">@item.UserName</td>
+                <td style="text-align:center;">@item.Position</td>
+                <td style="text-align:center;">@item.Email</td>
+                <td><input id="changedchecked" checked type="checkbox" data-toggle="toggle" data-style="ios slow" data-on="ON" data-off="OFF" data-onstyle="primary" data-offstyle="danger" data-size="small" /></td>
+                <td style="text-align:center;">@item.Privilege</td>
+                <td><a id="DeleteUser" class="glyphicon glyphicon-trash gi-5x a" style="text-decoration:none;"></a></td>
+            </tr>
+        }
+    </table>
+    <div>
+        <br />
+        <div>
+            @*@Html.ActionLink("GetLink", "Load", "Home", new { area = "" }, null)*@
+            @*<a href="@Url.Action(" Load",=Load", ="MyHome" )"=)" target="_blank">Link Text</a>*@
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <input id="NewUserBtn" type="button" value="New" class="btns btn-successs btn-conss" style="width:100px;" />&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <input id="EditUserBtn" type="button" value="Edit" class="btns btn-successs btn-conss" style="width: 100px;" />&nbsp;&nbsp;
+                        </td>
+                        @*<td>
+                                <input id="BtnDelete" type="button" value="Delete" class="btn btn-success" style="width: 100px;display:none;" />&nbsp;&nbsp;
+                            </td>
+                            <td>
+                                <input id="BtnDisable" type="button" value="Disable" class="btn btn-success glyphicon-pencil" style="width: 100px;display:none;" />&nbsp;&nbsp;
+                            </td>*@
+                        <td>
+                            <input id="BtnConfigForUser" type="button" value="Config" class="btns btn-successs btn-conss" style="width: 100px;" />&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <input id="BtnChangedPasword" type="button" value="Change Password" class="btns btn-successs btn-conss" />&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <input id="BtnLogHistory" type="button" value="Log History" class="btns btn-successs btn-conss" style="width: 100px;" />&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var UserSession = '@Session["username"]';
+
+        var SelectedUserID = null;
+        var Firstname = null;
+        var Lastname = null;
+        var UserName = null;
+        var Email = null;
+        var Position = null;
+        var Privilege = null;
+        var Disabled = null;
+        var ClickShowModalID = null;
+
+        //alert("show all ready");
+
+        $("#tbl1 tr").each(function () {
+            //$(this).find("td:eq(5)").css("width", "100px");
+            $(this).find("td").css("height", "53px");
+            if ($(this).find("td").eq(1).text() == "False") {
+                $(this).find("td:eq(7) input[type='checkbox']").bootstrapToggle('off');
+                $(this).closest("tr").find("td").addClass("DisEnableRowAddclass");
+            }
+            if (UserSession != "admin") {
+                $(this).find("td").eq(7).css("display", "none");
+                $("#tbl1 th:nth-child(6)").css("display", "none");
+                $(this).find("td").eq(8).css("display", "none");
+                $("#tbl1 th:nth-child(7)").css("display", "none");
+                $(this).find("td").eq(9).css("display", "none");
+                $("#tbl1 th:nth-child(8)").css("display", "none");
+                $("#NewUserBtn").css("display", "none");
+                $("#BtnConfigForUser").css("display", "none");
+            }
+        });
+
+        $("#ModalinSaveChangePsw").click(function () {
+
+            var oldpassword = $("#OldPassword").val();
+            var newpasswrd = $("#NewPassword").val();
+            var repeatpassword = $("#RepeatPassword").val();
+
+            if (UserSession == "admin") {
+                if (newpasswrd == "") {
+                    $("#NewPassword").addClass("border");
+                }
+                if (newpasswrd != "") {
+                    $("#NewPassword").removeClass("border");
+                }
+                //if (oldpassword == "") {
+                //    $("#OldPassword").addClass("border");
+                //}
+                //if (oldpassword != "") {
+                //    $("#OldPassword").removeClass("border");
+                //}
+                if (repeatpassword == "") {
+                    $("#RepeatPassword").addClass("border");
+                }
+                if (repeatpassword != "") {
+                    $("#RepeatPassword").removeClass("border");
+                }
+                if (/*oldpassword != "" &&*/ newpasswrd != "" && repeatpassword != "") {
+                    if (newpasswrd == repeatpassword) {
+                        $("#validation").css("display", "none");
+                        $.ajax({
+                            type: "POST",
+                            url: "/MyHome/ChangePassword",
+                            data: '{ID:"' + SelectedUserID + '",oldpassw:"",newpassw:"' + $("#NewPassword").val() + '"}',
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (response) {
+                                //alert("Successed");
+                            },
+                            error: function (response) {
+                                alert("Error");
+                            }
+                        });
+
+                        $(this).attr("data-dismiss", "modal");
+                    }
+                    else {
+                        $("#validation").css("display", "block");
+                    }
+                }
+            }
+            else {
+                if (newpasswrd == "") {
+                    $("#NewPassword").addClass("border");
+                }
+                if (newpasswrd != "") {
+                    $("#NewPassword").removeClass("border");
+                }
+                if (oldpassword == "") {
+                    $("#OldPassword").addClass("border");
+                }
+                if (oldpassword != "") {
+                    $("#OldPassword").removeClass("border");
+                }
+                if (repeatpassword == "") {
+                    $("#RepeatPassword").addClass("border");
+                }
+                if (repeatpassword != "") {
+                    $("#RepeatPassword").removeClass("border");
+                }
+                if (oldpassword != "" && newpasswrd != "" && repeatpassword != "") {
+                    if (newpasswrd == repeatpassword) {
+                        $("#validation").css("display", "none");
+                        $.ajax({
+                            type: "POST",
+                            url: "/MyHome/ChangePassword",
+                            data: '{ID:"' + SelectedUserID + '",oldpassw:"",newpassw:"' + $("#NewPassword").val() + '"}',
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (response) {
+                                //alert("Successed");
+                            },
+                            error: function (response) {
+                                alert("Error");
+                            }
+                        });
+
+                        $(this).attr("data-dismiss", "modal");
+                    }
+                    else {
+                        $("#validation").css("display", "block");
+                    }
+                }
+            }
+        });
+
+        $("#tbl1 tr").click(function (e) {
+            $("#tbl1 tr").removeClass("highlighted");
+            //alert($(this).closest("tr").find("td").eq(1).text());
+            SelectedUserID = $(this).closest("tr").find("td").eq(0).text();
+            Firstname = $(this).closest("tr").find("td").eq(2).text();
+            Lastname = $(this).closest("tr").find("td").eq(3).text();
+            Email = $(this).closest("tr").find("td").eq(6).text();
+            Position = $(this).closest("tr").find("td").eq(5).text();
+            UserName = $(this).closest("tr").find("td").eq(4).text();
+            Privilege = $("#SelectPrivelege > option:selected").val();
+            //alert($("#SelectPrivelege > option:selected").val());
+            Disabled = $(this).closest("tr").find("td").eq(1).text();
+            //alert($(this).closest("tr").find("td").eq(1).text());
+
+            if ($(this).closest("tr").find("td").eq(1).text() == "False") {
+                //alert("False");
+                $("#tbl1 tr").each(function () {
+                    if ($(this).find("td").eq(1).text() == "False") {
+                        $(this).closest("tr").find("td").addClass("DisEnableRowAddclass");
+                    }
+                });
+
+                $(this).closest("tr").find("td").removeClass("DisEnableRowAddclass");
+                $(this).addClass("highlighted");
+
+
+            }
+            if ($(this).closest("tr").find("td").eq(1).text() == "True") {
+                $("#tbl1 tr").each(function () {
+                    if ($(this).find("td").eq(1).text() == "False") {
+                        $(this).closest("tr").find("td").addClass("DisEnableRowAddclass");
+                    }
+                });
+                $(this).addClass("highlighted");
+            }
+
+            //$(this).addClass("highlighted");
+
+        });
+
+
+        $("#tbl1 td [id*=changedchecked]").change(function () {
+            if ($(this).is(":checked")) {
+                //alert($(this).closest("tr").find("td").eq(0).text() + "off");
+                $(this).closest("tr").find("td").removeClass("DisEnableRowAddclass");
+                $(this).closest("tr").find("td").eq(1).text("True");
+
+                $.ajax({
+                    type: "POST",
+                    url: "/MyHome/DisableUser",
+                    data: '{ID:"' + SelectedUserID + '",disable:"True"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        //alert("Successed");
+                    },
+                    error: function (response) {
+                        alert("Error");
+                    }
+                });
+
+            }
+            else {
+                //alert($(this).closest("tr").find("td").eq(0).text() + "On");
+                $(this).closest("tr").find("td").addClass("DisEnableRowAddclass");
+                $(this).closest("tr").find("td").eq(1).text("False");
+                $.ajax({
+                    type: "POST",
+                    url: "/MyHome/DisableUser",
+                    data: '{ID:"' + SelectedUserID + '",disable:"False"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        //alert("Successed");
+                    },
+                    error: function (response) {
+                        alert("Error");
+                    }
+                });
+
+            }
+        });
+
+        //function AddClickFunctionDropLists() {
+        //    $("#tbl1 td [id*=SelectPrivelege]").change(function () {
+        //        ////e.preventDefault();
+        //        ////ClickShowModalID = $(this).closest("tr").find("td").eq(0).text();
+        //        ////alert($(this).closest("tr").find("td [id*=FocusModal]").eq(5).html());
+        //        //$("#tbl1 tr").each(function () {
+        //        //    $(this).find("td [id*=FocusModal]").remove();
+        //        //});
+
+        //        //$(this).closest("tr").find("td").eq(3).append("<div id='FocusModal' class='popup' style='left: 75%;width: 300px;'><button id='ModalinDisableUser' type='button' class='btn btn-danger'>Disable</button></div>");
+        //        //$(this).closest("tr").find("td [id*=FocusModal]").fadeIn(200, function () { $(this).closest("tr").find("td").eq(3).focus(); });
+        //        //$("#FocusModal").draggable();
+        //        //$(this).closest("tr").find("td [id*=FocusModal]").draggable();
+        //    });
+        //}
+
+        var PrivilegeForOlySelected = null;
+        $("#tbl1 tr").hover(function () {
+            PrivilegeForOlySelected = $(this).closest("tr").find("td").eq(8).text();
+            $(this).closest("tr").find("td").eq(8).text("");
+            //$(this).closest("tr").find("td").eq(6).append("<select id='SelectPrivelege' class='styDropdown form-control' data-style='btn-default' style='width: 180px;height:30px;' onmousedown='(function (e) { e.preventDefault(); })(event, this)'><option style='display: none;'>Full</option></select>");
+            $(this).closest("tr").find("td").eq(8).append("<center><select id='SelectPrivelege' class='form-control' style='width: 120px;text-align:center;'><option value='Full'>Full</option><option value='ReadOnly'>Read Only</option></select></center>");
+            $(this).closest("tr").find("td [id*=SelectPrivelege]").val(PrivilegeForOlySelected);
+            //$(this).closest("tr").find("td").eq(4).append("<div id='FocusModal' class='popup' style='float:right;'><div><div><div></div><div><button id='ModalinDisableUser' type='button' class='btn btn-danger'>Disable</button></div></div></div></div>");
+            //best drag and drop function AddClickFunctionDropList();
+            //$(this).closest("tr").find("td").eq(1).append("<div id='FocusModal' class='popup' style='float:right;'><div><div><div></div><div><button id='ModalinDisableUser' type='button' class='btn btn-danger'>Disable</button></div></div></div></div>");
+            //$(this).closest("tr").find("td [id*=FocusModal]").eq(1).fadeIn(300, function () { $(this).closest("tr").find("td").eq(1).focus(); });
+
+            //if (ClickShowModalID == $(this).closest("tr").find("td").eq(0).text()) {
+            //    $(this).closest("tr").find("td [id*=FocusModal]").fadeIn(300, function () { $(this).closest("tr").find("td").eq(4).focus(); });
+            //}
+            AddPrivilegeFunction();
+
+        }, function () {
+            //var text = $(this).closest("tr").find("td").eq(9).find("[id*=SelectPrivelege > option:selected]").val();
+            var text = $("#SelectPrivelege > option:selected").val();
+            $(this).closest("tr").find("td").eq(8).text(text);
+
+            //if (ClickShowModalID == $(this).closest("tr").find("td").eq(0).text()) {
+            //    $(this).closest("tr").find("td [id*=FocusModal]").fadeIn(300, function () { $(this).closest("tr").find("td").eq(4).focus(); });
+            //}
+            //AddClickFunctionDropLists();
+            //$(this).closest("tr").find("td").eq(5).find("[id*=SelectPrivelege]").remove();
+            //$(this).closest("tr").find("td").eq(5).find("[id*=FocusModal]").remove();
+        });
+
+        function AddPrivilegeFunction() {
+            $("#tbl1 td [id*=SelectPrivelege]").change(function () {
+                //alert("ID:     " + $(this).closest("tr").find("td").eq(0).text() + "        " + $("#SelectPrivelege > option:selected").val());
+                $.ajax({
+                    type: "POST",
+                    url: "/MyHome/ChangedPrivilege",
+                    data: '{id:"' + SelectedUserID + '",firstname:"' + Firstname + '",lastname:"' + Lastname + '",privilege:"' + $('#SelectPrivelege > option:selected').val() + '",username:"' + UserName + '",email:"' + Email + '",disabled:"' + Disabled + '",position:"' + Position + '"}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        //alert("Successed");
+                    },
+                    error: function (response) {
+                        alert("Error");
+                    }
+                });
+            });
+        }
+
+        $("#tbl1 td [id*=DeleteUser]").click(function () {
+            $("#ModalinUserName").text($(this).closest("tr").find("td").eq(4).text());
+            $(this).attr("data-toggle", "modal");
+            $(this).attr("data-target", "#ModalDelete");
+        });
+        $("#NewUserBtn").click(function () {
+            location.href="@Url.Action("InsertViewLoad", "MyHome")";
+        });
+        $("#ModalinDeleteUser").click(function () {
+            $("#tbl1 td").each(function () {
+                //alert();
+                if ($(this).closest("tr").find("td").eq(0).text() == SelectedUserID) {
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/MyHome/DeleteUser",
+                        data: '{ID:"' + SelectedUserID + '"}',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                            //alert("Successed");
+                        },
+                        error: function (response) {
+                            alert("Error");
+                        }
+                    });
+
+                    $(this).closest("tr").remove();
+                }
+            });
+
+            SelectedUserID = null;
+            $(this).attr("data-dismiss", "modal");
+
+        });
+        $("#EditUserBtn").click(function () {
+            if (SelectedUserID == null) {
+                $(this).attr("title", "Please Select Table Row!");
+                $(this).attr("data-original-title", "Please Select Table Row!");
+                $(this).tooltip({ placement: "top" });
+                $(this).tooltip("show");
+            }
+            else if (SelectedUserID.length > 0) {
+                sessionStorage.setItem("UserID", SelectedUserID);
+                sessionStorage.setItem("Fisrtname", Firstname);
+                sessionStorage.setItem("Lastname", Lastname);
+                sessionStorage.setItem("Email", Email);
+                sessionStorage.setItem("Position", Position);
+                sessionStorage.setItem("Privilege", Privilege);
+                sessionStorage.setItem("UsernameForEdit", UserName);
+                sessionStorage.setItem("Disabled", Disabled);
+                $(this).tooltip("hide");
+                $(this).attr("data-original-title", "");
+                $(this).attr("title", "");
+                @*var link = document.createElement("a");
+            link.href = "@Url.Action("EditLoad", "MyHome")";
+            link.style = "visibility:hidden";
+            //link.target = "_blank";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);*@
+                location.href="@Url.Action("EditLoad", "MyHome")";
+            }
+        }).mouseleave(function () {
+            $(this).tooltip("hide");
+            $(this).attr("data-original-title", "");
+            $(this).attr("title", "");
+        });
+        $("#BtnConfigForUser").click(function () {
+            if (SelectedUserID == null) {
+                $(this).attr("title", "Please Select Table Row!");
+                $(this).attr("data-original-title", "Please Select Table Row!");
+                $(this).tooltip({ placement: "top" });
+                $(this).tooltip("show");
+            }
+            else if (SelectedUserID.length > 0) {
+                //$(this).tooltip("hide");
+                //$(this).attr("data-original-title", "");
+                //$(this).attr("title", "");
+
+
+                //$.createElement = function (name) {
+                //    return $('<' + name + ' />');
+                //};
+                //$.fn.appendNewElement = function (name) {
+                //    this.each(function (i) {
+                //        $(this).append('<' + name + ' />');
+                //    });
+                //    return this;
+                //}
+                //var $root = $('<TextDocument />');
+                //$root.append
+                //    (
+                //    $('<report />' + '\r\n').append
+                //        (
+                //        //$('<submitter />'+'\r\n').append
+                //        //(
+                //        //        $('<name />'+'\r\n').text('John Doe')
+                //        //)
+                //        ).appendNewElement('User')
+                //    );
+
+                //var $report = $root.find('report');
+                //var $students = $report.find('User');
+                ////var $newStudent = $.createElement('student');
+                ////$students.append($('<id />').text());
+                //$students.append($('<Firstname />').text(Firstname));
+                //$students.append($('<Lastname />').text(Lastname));
+                //$students.append($('<Username />').text(UserName));
+                //$students.append($('<Email />').text(Email));
+                //$students.append($('<Disabled />').text(Disabled));
+                //$students.append($('<Privilege />').text(Privilege));
+                ////$students.append($newStudent);
+                ////$newStudent = $.createElement('student');
+                ////$newStudent.append($('<name />').text('Bob'));
+                ////$newStudent.append($('<grade />').text('90'));
+                ////$students.append($newStudent);
+
+                //var url = '' + $root.html() + '';
+                //var anchor = document.createElement('a');
+                //anchor.setAttribute('href', 'data:xml/plain;charset=UTF-8,' + url);
+                //anchor.setAttribute('download', 'UserInformation.xml');
+                //$(anchor)[0].click();
+
+                //alert(SelectedUserID);
+
+
+                window.location = '@Url.Action("SaveConfigFilem", "MyHome")/' + SelectedUserID;
+
+
+
+
+            }
+        }).mouseleave(function () {
+            $(this).tooltip("hide");
+            $(this).attr("data-original-title", "");
+            $(this).attr("title", "");
+        });
+
+        $("#BtnChangedPasword").click(function () {
+            if (SelectedUserID == null) {
+                //alert("Please Select User");
+                $(this).attr("data-toggle", "");
+                $(this).attr("data-target", "");
+                $(this).attr("title", "Please Select Table Row!");
+                $(this).attr("data-original-title", "Please Select Table Row!");
+                $(this).tooltip({ placement: "top" });
+                $(this).tooltip("show");
+            }
+            else {
+                $(this).tooltip("hide");
+                $(this).attr("data-original-title", "");
+                $(this).attr("title", "");
+                $(this).attr("data-toggle", "modal");
+                $(this).attr("data-target", "#ModalChangePasswrd");
+                $("#ModalinPswUser").text(UserName);
+                $("#validation").css("display", "none");
+                if (UserSession == "admin") {
+                    $("#TrforonlyOldPsw").css("display", "none");
+                }
+                else {
+                    $("#TrforonlyOldPsw").css("display", "block");
+                }
+            }
+        }).mouseleave(function () {
+            $(this).tooltip("hide");
+            $(this).attr("data-original-title", "");
+            $(this).attr("title", "");
+            });
+        $("#chengedchecked").change(function () {
+            if ($(this).is(":checked")) {
+                alert("off");
+            }
+            else {
+                alert("on");
+            }
+        });
+
+
+    });
+    function FunctionSearch() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("SearchUsersList");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("tbl1");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+    $(document).ready(function () {
+        //var $dragging = null;
+        //$('body').on("mousedown", "[id*=FocusModal]", function (e) {
+        //    $(this).attr('unselectable', 'on').addClass('draggable');
+        //    var el_w = $('.draggable').outerWidth(),
+        //        el_h = $('.draggable').outerHeight();
+        //    $('body').on("mousemove", function (e) {
+        //        if ($dragging) {
+        //            $dragging.offset({
+        //                top: e.pageY - el_h / 2,
+        //                left: e.pageX - el_w / 2
+        //            });
+        //        }
+        //    });
+        //    $dragging = $(e.target);
+        //}).on("mouseup", ".draggable", function (e) {
+        //    $dragging = null;
+        //    $(this).removeAttr('unselectable').removeClass('draggable');
+        //});
+
+        //$('#FocusModal').draggable();
+
+
+
+    });
+</script>
+<style type="text/css">
+    /*html, body { saxla
+        bottom: 0;
+        right: 0;
+        top: 0;
+        left: 0;
+        position: fixed;
+        overflow-x: auto;
+    }*/
+</style>

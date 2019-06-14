@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PDM.AirportHeliport">
+    <Position X="17" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ApABIAIAABQhQAQgAAAAAARCQAAAIgACQBACAAAAAKA=</HashCode>
+      <FileName>AirportHeliport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.DME">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAAAAAgQAAAAAAAAAAQBAAAAABAAAQAAAA=</HashCode>
+      <FileName>DME.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.PDMObject">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAggAAAAAAAAAEAABgAAACAIAAAAAAEAAA=</HashCode>
+      <FileName>ElementaryObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.GlidePath">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACgAIAAAAAAAAAIAAAAIAEAAAAAAgEAAAAAAAAA=</HashCode>
+      <FileName>GlidePath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.Localizer">
+    <Position X="4.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAOAAIAAAAAAAAAAAIAAEAAAJAEQAIAgAAAAAAAAAA=</HashCode>
+      <FileName>Localizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.NavaidSystem">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIABIAgAAAAgQAAwAAAAAAQABAAAAEBAQIAIAAAAAIA=</HashCode>
+      <FileName>NavaidSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.NDB">
+    <Position X="8.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAIAARAIAAAAAAAQAAAA=</HashCode>
+      <FileName>NDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.Runway">
+    <Position X="15" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAgwAAgAAAAAEBBABAAAEAAhAACAAAAAAA=</HashCode>
+      <FileName>Runway.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.RunwayDirection">
+    <Position X="12.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIADAEoAAAAiAAAgAAACAAAAAAAAQEABQAAAAAAAAAA=</HashCode>
+      <FileName>RunwayDirection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.TACAN">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAgAAAAAAAAAAAABAAAAAAAAAQAAAA=</HashCode>
+      <FileName>TACAN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.VOR">
+    <Position X="10" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAQAAAAAAAAIAQRAIAAAAAAAQAAAA=</HashCode>
+      <FileName>VOR.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PDM.WayPoint">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgIAAAAADgAEAAAAAIAAQAEAAQAAAAQAAAAEAACAM=</HashCode>
+      <FileName>WayPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

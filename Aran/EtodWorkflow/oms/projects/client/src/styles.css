@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.select2-selection.select2-selection--single{
+    padding: .375rem .875rem!important;
+}
+
+   
+ .tooltip{
+    position: absolute!important;
+    white-space: normal!important;
+    padding: 0!important;
+    opacity: .9!important;
+  }
+  .tooltip .tooltip-inner{
+    padding: 5px!important;
+  }

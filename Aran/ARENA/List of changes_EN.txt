@@ -1,0 +1,305 @@
+=============================================================================
+AssemblyVersion("2.2.9.55")] ("Release 1")
+
+ARENA
+- Fixed the bug related to conversion of navaids type “NDB_MKR”
+
+
+SIGMA
+- Support of ArcGIS 10.6
+- Fixed issue generating of airspace annotations type “TMA”
+- Added functionality for generating “non-scale” HoldingPattern for terminal charts
+- Changed the principles of designating annotations in SIGMATOC for elements connected with ProcedureLeg
+- Fixed the issue related to filtering of airspaces when generating terminal charts
+- Added functionality to upload user templates when generating the charts
+- Fixed issue related to generating of ProcedureName type annotations 
+
+=============================================================================
+AssemblyVersion("2.2.9.24")] ("Release 1")
+
+SIGMA
+- Model update
+- Fixed the issue “too long chart name”
+
+=============================================================================
+AssemblyVersion("2.2.8.350")] ("Release 1")
+
+SIGMA
+- Fixed the error with generation of Airspaces list
+- Added availability of selecting Landing Area fir terminal charts
+- Fixed error related to adding HoldingPattern to ready chart
+- Added new menu option “Text Contents Editor”
+- Added new menu option “Length precision”
+- Added new menu option “Flip Text”
+- Added functionality for generating Communication channels after chart generation
+- Double click on selected Node SigmaTOC opens “Text Contents Editor”
+=============================================================================
+
+=============================================================================
+
+AssemblyVersion("2.2.8.289")] ("Release 1")
+
+SIGMA
+- Fixed the bug related to generating of the list RadioCommunicationsChanels
+- Fixed the bug related to moving of height annotations in terminal charts
+- Modified user templates of terminal charts
+- Added tool for generating annotation Navaids for ready charts
+- Added tool for generating annotation Airport for ready charts
+- Added tool for generating annotation HoldingPattern for ready charts
+- Extended functionalities of context menu HideClause. 
+
+=============================================================================
+AssemblyVersion("2.2.8.276")] ("Release 1")
+
+ARENA
+- Fixed the bug related to the conversion of airspace data for compound GeometryComponents
+
+SIGMA
+- Fixed the bug related to adding of a new line in the annotation type DesignatedPoint
+- Fixed the bug related to selection of VerticalStructure data for AreaChart
+- Modified the algorithm of annotating the airspace data of terminal charts
+- Added new utility for generating the annotations of airspaces for ready charts
+- Added functionality for annotating FC type data leg. 
+
+=============================================================================
+AssemblyVersion("2.2.8.266")] ("Release 1")
+
+ARENA
+- Update of model
+- Processing of holding pattern data (feature outboundLegSpan)
+
+SIGMA
+- fixed the bug "ApplyToAllAngleIndication"
+- Added new feature for annotation AngleIndication (Leading) – managing the distance between the text and line
+- Fixed the bug related to generating of IAC when selecting more than one procedure
+- Fixed the bug related to hiding of annotation of holding course type
+- Added functionality for generating the points of “TP” type for terminal charts
+- Added functionality for generating the point outboundLegSpan – EndPoint
+
+
+=============================================================================
+AssemblyVersion("2.2.8.252")] ("Release 1")
+
+SIGMA
+- Fixed the bug related to generating SID and STAR charts
+- Fixed the bug “direction of indicator AngleIndication” when the navigation aid is NDB
+
+=============================================================================
+AssemblyVersion("2.2.8.246")] ("Release 1")
+
+SIGMA
+- Modified the algorithm of annotating AIRSPACES data
+=============================================================================
+AssemblyVersion("2.2.8.241")] ("Release 1")
+
+ARENA
+- update of model
+- Update and follow-up of algorithms related to PERMDELTA processing
+
+SIGMA
+- Update of model
+- Saving of HoldingPattern geometry as a separate layer
+- Deep upgrade of algorithms related to generating of Enroute, SID, STAR charts 
+- Follow-up and fix of "EnrouteChartUpdate" module 
+
+
+=============================================================================
+AssemblyVersion("2.2.8.163")] ("Release 2")
+
+ARENA
+- Fixed bug related to conversion of HoldingPattern data
+
+
+SIGMA
+- Fixed bug annotation of AIRSPACES data
+- Added new utility Sigma Utils Menu => Create Sigma Airspace Bufer
+- Added new utility Sigma Utils Menu => Create Procedure Tabulation
+- Added new utility Sigma Utils Menu => Create VS Annotation
+- Fixed bug annotation of Distance/Radial data
+
+
+=============================================================================
+AssemblyVersion("2.2.8.163")] ("Release 1")
+ARENA
+- Update of the model
+
+
+SIGMA
+•         Update of the model
+•         Functionality to turn off creation filtering when creating annotations VerticalStructure
+•         Fixed the bug related to rounding of Radial-Distance annotation data
+•         Added new functionality to change the sequence of the lines in annotations
+•         Fixed the bug related to work of context menu “ApplyAll” for the annotation DesignatedPoint
+•         Added new feature GAP for the annotation DesignatedPoint
+•         Fixed generation of NDB annotations
+•         Modified algorithm of generating the list of RadioCommunicationChannels
+•         Fixed the functionality SendToNote
+•         Fixed generating of annotations for the courses (enrouteChart)
+•         Fixed the functionality ScaleBreak
+•         Added functionality for generating annotations airspaces localtype = AOR
+•         Added functionality for generating annotations airspaces localtype = TIZ
+•         Added functionality for generating annotations airspaces localtype = TIA
+•         Added functionality for generating annotations airspaces localtype = AMC
+•         Added functionality for generating annotations airspaces TYPE = TMA / TMA_P
+•         Added functionality for generating annotations airspaces TYPE = ATZ / ATZ_P
+•         Added functionality for generating annotations airspaces TYPE = CTR
+•         Added functionality for generating annotations airspaces TYPE = R,D,P
+•         Added functionality for generating annotations airspaces TYPE = TRA
+•         Added functionality for generating annotations airspaces TYPE = TSA
+•         Added functionality for generating annotations airspaces TYPE = PROTECT
+•         Added functionality for creating buffer for all airspace types
+•         Fixed and expanded the list of chart templates
+
+
+=============================================================================
+
+vertical limit separation
+SIGMA
+Wrong Class name (A - G)  No underscore    (1000 FT)  (DOC 8697)
+Should be TMA not TMA_TMA_P 
+FL befrore numbers FT or m after numbers 
+No need for “CH_70x” 
+vertical limit separation
+
+AssemblyVersion("2.2.8.112")] ("Release 1")
+
+ARENA
+- Fixed the issue project save after editing any element on it. 
+- Model update
+- Support of PermDelta
+- Fixed the error in converting of chart types “AERODROME”
+- Fixed converting of CheckPointVor
+- Fixed converting VerticalStructure (polygon obstacles)
+
+SIGMA
+-Fixed the distance FreeAnno
+-Fixed generating CheckPointVor
+AssemblyVersion("2.2.8.40")] ("Release 1")
+
+ARENA
+Support of AtcMap 10.5
+Upgraded algorithm of converting Airspaces and VerticalStructure data from AIXM 5.1 format. 
+Model update
+
+SIGMA
+Support of AtcMap 10.5
+Revised mechanism of chart template creation
+Added functionality for editing elements (ALT + click)
+Fixed error in "Regional Settings"
+Fixed error “Localizer misses in plan view” for IAC (conv. procedures)
+Fixed error “navaid Marker missing”
+
+new module CHART MANAGER
+
+=============================================================================
+AssemblyVersion("2.2.8.15")] ("Release 1")
+
+ARENA
+- model updated
+- Procedure data conversion from AIXM 4.5 model (mdb format ARAN 4.5)
+AIRSPACES)
+- Updated functionality of geometry conversion of “complex” AIRSPACES (geometry of connected reference AIRSPACES)
+
+SIGMA
+-Distance indication for leg type AF
+-Recognizing the minimums of several procedures, filling in the fields CIRCLING table (IAC)
+-Fixed error “update annotation reflection”
+-Added new type of annotation for aerodrome charts (TORA)
+-Updated annotation search functionality
+-Fixed error in profile generation (IAP conv.)
+-Fixed error in generating terminal charts (reference SegmentPoint on NDB)
+-Realization of new PANDA concept (reference SegmentPoint on CenterLinePoint)
+-Updated functionality “ShowOnMap”
+-New tool “SigmaColorSelector”
+-New tool “SigmaSnapping”
+-Upgraded functionality of the tool “VisibilityTools” (possibility of managing ProcedureLeg visibility)
+-Functionality of EO SID chart generating. 
+- New types of generated charts has been added:
+	* ATC SURVEILLANCE MINIMUM ALTITUDE
+
+
+=============================================================================
+AssemblyVersion("2.2.7.325")] ("Release 1")
+
+ARENA
+-  Error in converting of HoldingPattern is fixed
+-  Error in converting ObstacleAreaType is fixed
+
+SIGMA 
+- New types of generated charts has been added:
+	* AreaChart
+	* Aerodrome Electrinic Chart
+	* Aerodrome Chart
+	* Aerodrome Parking Docking Chart
+	* Aerodrome Ground Movement Chart
+	* Aerodrome Bird Chart
+- The functionality "Hide/Unhide Clause" has been enhanced
+
+=============================================================================
+AssemblyVersion("2.2.7.306)] ("Release 1")
+- Added functionalities: separation of obstacles for terminal charts, automated grouping of close by located obstacles 
+- The error in the functionality SIGMA "restore default settings" is fixed
+
+=============================================================================
+AssemblyVersion("2.2.7.194")] ("Release 4")
+Added:
+- automated saving of ActiveView  in graphic format JPG
+- generation of distance values and angles for the annotations DesignatedPoint (Conventional procedures)
+- Obstacle separation for terminal charts
+- The error in the functionality of "Attach/Detach designator text" during its reflection in map frame has been fixed. 
+-The error in converting of Arc3Points type geometry has been fixed
+
+=============================================================================
+           
+AssemblyVersion("2.2.7.194")] ("Release 3")
+
+-Added functionality for calculation of AMA for terminal charts
+ =============================================================================
+    
+AssemblyVersion("2.2.7.194")] ("Release 2")
+
+Sigma
+New menu option -> Sigma Chart Menu ->View Log
+- It contains the information about the changes in textual content of annotations, made by the user manually
+
+The changes related to terminal charts: 
+- Added functionality to reflect in terminal charts “standalone” HoldingPattern that have no connection with the legs of selected procedures. 
+ (The selection is realized on the form of procedure selection – clicking the link "Holdings list")
+- The error “null color” for the elements of RouteSign is fixed
+- The error in font property causing discharge of "underline" and "bold" is fixed 
+- Modernized mechanism for working with “multiframes”:
+-New context menu option "hide annotation reflection"
+- New context menu option "update annotation reflection"  
+-New context menu option "Hide / Unhide this annotations type"
+ (allows hiding annotations of certain type)
+
+On the form “Settings” when selecting data context for all chart types, there is new functionality for showing necessity of generating annotation type “Airspace_Class”.
+
+Arena
+The conversion methods of HoldingPattern data from AIXM 5.1 is changed
+
+====================================================================================================
+AssemblyVersion("2.2.7.194")] ("Release 1")
+
+Sigma
+
+-New chart type PATC added
+-Generation method of Tabulation Document for IAC is completed
+-The error in generation of HeightAnno for interpretation of BETWEEN elevations is fixed
+-Vertical structure – new annotation method added (in previous versions it was as labelling)
+-The error “null color” for SigmaCallout elements is fixed
+-Upgraded the mechanism for working with multi-frames
+
+Arena
+The method of data conversion from AIXM 5.1 is updated. 
+
+
+
+
+
+
+
+
+
+
+

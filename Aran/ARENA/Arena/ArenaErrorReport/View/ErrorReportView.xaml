@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="ArenaErrorReport.View.ErrorReportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:local="clr-namespace:ArenaErrorReport"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="1000" >
+    
+    <UserControl.Resources>
+
+        <xcdg:DataGridCollectionViewSource x:Key="Errors" 
+                                           Source="{Binding ErrorSource}">
+            <xcdg:DataGridCollectionViewSource.GroupDescriptions>
+                <PropertyGroupDescription PropertyName="ErrorType"/>
+            </xcdg:DataGridCollectionViewSource.GroupDescriptions>
+        </xcdg:DataGridCollectionViewSource>
+
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+       
+        <xcdg:DataGridControl ReadOnly="True" Grid.Row="0" SelectedItem="{Binding SelectedError}" ItemsSource="{Binding Source={StaticResource Errors}}" Margin="10,0,0,10" Grid.RowSpan="1" AutoCreateColumns="False">
+
+            <xcdg:DataGridControl.Columns>
+                <xcdg:Column 
+                                                     FieldName="FeatureType" 
+                                                     CellHorizontalContentAlignment="Center"
+                                                     CellVerticalContentAlignment="Center"
+                                                     Title="Feature Type"
+                                                     Width="120"/>
+                <xcdg:Column AllowSort="True" 
+                                                     FieldName="ErrorType" 
+                                                     CellHorizontalContentAlignment="Center"
+                                                     CellVerticalContentAlignment="Center"
+                                                     Title="Error Type"
+                                                     Width="120"
+                                                     IsMainColumn="True"/>
+
+                <xcdg:Column FieldName="Identifier"
+                                                     Title="Identifier"
+                                                     IsMainColumn="True"
+                                                     CellHorizontalContentAlignment="Center"
+                                                     Width="200"
+                                                     CellVerticalContentAlignment="Center"/>
+
+                <xcdg:Column AllowSort="True" 
+                                                     FieldName="PropertyName"
+                                                     Title="Property Name"
+                                                     CellHorizontalContentAlignment="Center"
+                                                     CellVerticalContentAlignment="Center"
+                                                     Width="150"/>
+
+                <xcdg:Column AllowSort="True" 
+                                                     FieldName="ErrorMessage"
+                                                     Title="Error Message"
+                                                     CellHorizontalContentAlignment="Center"
+                                                     CellVerticalContentAlignment="Center" MinWidth="350"
+                                                     Width="*"/>
+
+                <xcdg:Column Visible="False"
+                                                     FieldName="XmlMessage"
+                                                     Title="XmlMessage"
+                                                     />
+
+
+                <xcdg:Column AllowSort="True" 
+                                                     FieldName="Action"
+                                                     Title="Action"
+                                                     CellHorizontalContentAlignment="Center"
+                                                     CellVerticalContentAlignment="Center"
+                                                     Width="*"/>
+
+
+
+            </xcdg:DataGridControl.Columns>
+        </xcdg:DataGridControl>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5 0 15 0" Grid.Row="1">
+
+            <Button Height="30" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0 55 0" Content="Save Report" Command="{Binding SaveCommand}"  ></Button>
+
+            <Button Height="30" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0 5 0" Content="Cancel" IsCancel="True"  Command="{Binding CancelCommand}"></Button>
+
+            <Button Height="30" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5 0 5 0" Content="Continue"  local:ButtonHelper.DialogResult="True" Command="{Binding ContinueCommand}"></Button>
+
+        </StackPanel>
+    
+        <StackPanel Margin="5 0" Grid.Row="2" Orientation="Horizontal">
+            <TextBlock Text="Count:"></TextBlock>
+            <TextBlock Margin="5 0" Text="{Binding ErrorSource.Count}"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

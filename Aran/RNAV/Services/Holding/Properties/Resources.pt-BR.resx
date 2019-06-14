@@ -1,0 +1,1377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="str1" xml:space="preserve">
+    <value>Racetrack</value>
+  </data>
+  <data name="str11" xml:space="preserve">
+    <value>Acima do VOR ou NDB</value>
+  </data>
+  <data name="str21" xml:space="preserve">
+    <value>Nas interseções do VOR</value>
+  </data>
+  <data name="str31" xml:space="preserve">
+    <value>No Fixo do VOR/DME</value>
+  </data>
+  <data name="str101" xml:space="preserve">
+    <value>Espera acima de uma instalação</value>
+  </data>
+  <data name="str102" xml:space="preserve">
+    <value>Auxílio à Navegação</value>
+  </data>
+  <data name="str103" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="str104" xml:space="preserve">
+    <value>VOR</value>
+  </data>
+  <data name="str105" xml:space="preserve">
+    <value>NDB</value>
+  </data>
+  <data name="str106" xml:space="preserve">
+    <value>Indicativo de chamada</value>
+  </data>
+  <data name="str107" xml:space="preserve">
+    <value>Radial</value>
+  </data>
+  <data name="str108" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str109" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="str110" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="str111" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="str112" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="str113" xml:space="preserve">
+    <value>Mais&gt;&gt;</value>
+  </data>
+  <data name="str114" xml:space="preserve">
+    <value>&lt;&lt;Menos</value>
+  </data>
+  <data name="str115" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="str116" xml:space="preserve">
+    <value>Buffer</value>
+  </data>
+  <data name="str117" xml:space="preserve">
+    <value>Área de espera</value>
+  </data>
+  <data name="str118" xml:space="preserve">
+    <value>Esconder</value>
+  </data>
+  <data name="str119" xml:space="preserve">
+    <value>Parâmetros da área</value>
+  </data>
+  <data name="str120" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="str121" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str122" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str123" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str124" xml:space="preserve">
+    <value>IAS atribuído</value>
+  </data>
+  <data name="str125" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="str126" xml:space="preserve">
+    <value>Nó</value>
+  </data>
+  <data name="str127" xml:space="preserve">
+    <value>IAS permitido</value>
+  </data>
+  <data name="str128" xml:space="preserve">
+    <value>Categoria da Aer.</value>
+  </data>
+  <data name="str129" xml:space="preserve">
+    <value>Proteção de entradas</value>
+  </data>
+  <data name="str130" xml:space="preserve">
+    <value>Entradas onidirecionais</value>
+  </data>
+  <data name="str131" xml:space="preserve">
+    <value>Entradas para o setor 1 não são permitidas</value>
+  </data>
+  <data name="str132" xml:space="preserve">
+    <value>Procedimento após a área de espera</value>
+  </data>
+  <data name="str133" xml:space="preserve">
+    <value>Segmento de aproximação inicial</value>
+  </data>
+  <data name="str134" xml:space="preserve">
+    <value>Associado com estruturas de rotas aéreas</value>
+  </data>
+  <data name="str135" xml:space="preserve">
+    <value>Mínimo livre de obstáculos</value>
+  </data>
+  <data name="str136" xml:space="preserve">
+    <value>Plano</value>
+  </data>
+  <data name="str137" xml:space="preserve">
+    <value>terreno elevado</value>
+  </data>
+  <data name="str138" xml:space="preserve">
+    <value>montanhoso</value>
+  </data>
+  <data name="str139" xml:space="preserve">
+    <value>Condições</value>
+  </data>
+  <data name="str140" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="str141" xml:space="preserve">
+    <value>Turbulência</value>
+  </data>
+  <data name="str142" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="str143" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="str144" xml:space="preserve">
+    <value>Parâmetro</value>
+  </data>
+  <data name="str145" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="str146" xml:space="preserve">
+    <value>Salvar relatório</value>
+  </data>
+  <data name="str147" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str148" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="str151" xml:space="preserve">
+    <value>Rumo magnético</value>
+  </data>
+  <data name="str201" xml:space="preserve">
+    <value>Área livre</value>
+  </data>
+  <data name="str202" xml:space="preserve">
+    <value>Altitude de voo não fornece mínimo livre de obstáculo</value>
+  </data>
+  <data name="str203" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera</value>
+  </data>
+  <data name="str204" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str205" xml:space="preserve">
+    <value>ID do obstáculo que forma a altitude de voo absoluta segura</value>
+  </data>
+  <data name="str206" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str207" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str208" xml:space="preserve">
+    <value>Área primária</value>
+  </data>
+  <data name="str209" xml:space="preserve">
+    <value>Área secundária</value>
+  </data>
+  <data name="str210" xml:space="preserve">
+    <value>MHA é formado pelo MOC</value>
+  </data>
+  <data name="str211" xml:space="preserve">
+    <value>ID do obstáculo que tem altitude máxima requerida</value>
+  </data>
+  <data name="str212" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str213" xml:space="preserve">
+    <value>Latitude </value>
+  </data>
+  <data name="str214" xml:space="preserve">
+    <value>Longitude </value>
+  </data>
+  <data name="str215" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str216" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str231" xml:space="preserve">
+    <value>Salvar relatório para…</value>
+  </data>
+  <data name="str232" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="str233" xml:space="preserve">
+    <value>Log de resultado – Área de espera acima do auxílio à navegação</value>
+  </data>
+  <data name="str234" xml:space="preserve">
+    <value>Tipo de auxílio à navegação</value>
+  </data>
+  <data name="str235" xml:space="preserve">
+    <value>VOR</value>
+  </data>
+  <data name="str236" xml:space="preserve">
+    <value>NDB</value>
+  </data>
+  <data name="str237" xml:space="preserve">
+    <value>Indicativo de chamada</value>
+  </data>
+  <data name="str238" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str239" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str240" xml:space="preserve">
+    <value>O procedimento está protegido para a altitude máxima absoluta </value>
+  </data>
+  <data name="str241" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera</value>
+  </data>
+  <data name="str242" xml:space="preserve">
+    <value>MHA forma MOC</value>
+  </data>
+  <data name="str243" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str244" xml:space="preserve">
+    <value>Altitude mínima de voo com recepção de sinal confiável</value>
+  </data>
+  <data name="str245" xml:space="preserve">
+    <value>ID do obstáculo que tem requerida máxima</value>
+  </data>
+  <data name="str246" xml:space="preserve">
+    <value>ID do obstáculo que formam altitude de voo absoluta segura</value>
+  </data>
+  <data name="str247" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str248" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str249" xml:space="preserve">
+    <value>Azimute de trajetória de chegada</value>
+  </data>
+  <data name="str250" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="str251" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str252" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str253" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str254" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str255" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str256" xml:space="preserve">
+    <value>Tempo de voo dentro da perna tangente</value>
+  </data>
+  <data name="str257" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str258" xml:space="preserve">
+    <value>Proteção de entradas</value>
+  </data>
+  <data name="str259" xml:space="preserve">
+    <value>Entradas onidirecionais</value>
+  </data>
+  <data name="str260" xml:space="preserve">
+    <value>Entradas para o Setor 1 não são permitidas</value>
+  </data>
+  <data name="str261" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str262" xml:space="preserve">
+    <value>Tela da janela da área de trabalho do ArcMap</value>
+  </data>
+  <data name="str301" xml:space="preserve">
+    <value>Ocorreu um erro inesperado.</value>
+  </data>
+  <data name="str302" xml:space="preserve">
+    <value>Salvar e recarregar o projeto.</value>
+  </data>
+  <data name="str303" xml:space="preserve">
+    <value>Dados salvos não serão perdidos.</value>
+  </data>
+  <data name="str304" xml:space="preserve">
+    <value>Auxílios navegacionais à rádio não foram encontrados</value>
+  </data>
+  <data name="str305" xml:space="preserve">
+    <value>Enviar mensagem ao desenvolvedor.</value>
+  </data>
+  <data name="str306" xml:space="preserve">
+    <value>Ocorreu erro ¹1 inesperado na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str307" xml:space="preserve">
+    <value>Ocorreu erro ¹2 inesperado na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str501" xml:space="preserve">
+    <value>Espera na interseção dos radiais do VOR</value>
+  </data>
+  <data name="str502" xml:space="preserve">
+    <value>VOR recalada</value>
+  </data>
+  <data name="str503" xml:space="preserve">
+    <value>Indicativo de chamada</value>
+  </data>
+  <data name="str504" xml:space="preserve">
+    <value>Radial (°)</value>
+  </data>
+  <data name="str505" xml:space="preserve">
+    <value>Distância mínima até a tolerância do FIXO </value>
+  </data>
+  <data name="str506" xml:space="preserve">
+    <value>Configurar o mínimo automaticamente</value>
+  </data>
+  <data name="str507" xml:space="preserve">
+    <value>Configurar manualmente</value>
+  </data>
+  <data name="str508" xml:space="preserve">
+    <value>Distância máxima cobrindo a tolerância do FIXO</value>
+  </data>
+  <data name="str509" xml:space="preserve">
+    <value>Configurar o máximo automaticamente</value>
+  </data>
+  <data name="str510" xml:space="preserve">
+    <value>Configurar manualmente</value>
+  </data>
+  <data name="str511" xml:space="preserve">
+    <value>Largura de tolerância do FIXO</value>
+  </data>
+  <data name="str512" xml:space="preserve">
+    <value>Distância para o FIXO</value>
+  </data>
+  <data name="str513" xml:space="preserve">
+    <value>VOR de interseção</value>
+  </data>
+  <data name="str514" xml:space="preserve">
+    <value>Indicativo de chamada</value>
+  </data>
+  <data name="str515" xml:space="preserve">
+    <value>Radial (°)</value>
+  </data>
+  <data name="str516" xml:space="preserve">
+    <value>Diapasão de radial disponível</value>
+  </data>
+  <data name="str517" xml:space="preserve">
+    <value>Distância para o FIXO</value>
+  </data>
+  <data name="str518" xml:space="preserve">
+    <value>Unidade de distância</value>
+  </data>
+  <data name="str519" xml:space="preserve">
+    <value>Km</value>
+  </data>
+  <data name="str520" xml:space="preserve">
+    <value>NM</value>
+  </data>
+  <data name="str521" xml:space="preserve">
+    <value>Mais&gt;&gt;</value>
+  </data>
+  <data name="str522" xml:space="preserve">
+    <value>&lt;&lt;Menos</value>
+  </data>
+  <data name="str523" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="str524" xml:space="preserve">
+    <value>Buffer</value>
+  </data>
+  <data name="str525" xml:space="preserve">
+    <value>Radiais</value>
+  </data>
+  <data name="str526" xml:space="preserve">
+    <value>Área de espera</value>
+  </data>
+  <data name="str527" xml:space="preserve">
+    <value>Esconder</value>
+  </data>
+  <data name="str528" xml:space="preserve">
+    <value>Parâmetros de área</value>
+  </data>
+  <data name="str529" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="str530" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str531" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str532" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str533" xml:space="preserve">
+    <value>Direção</value>
+  </data>
+  <data name="str534" xml:space="preserve">
+    <value>Instalação à frente</value>
+  </data>
+  <data name="str535" xml:space="preserve">
+    <value>Longe da instalação</value>
+  </data>
+  <data name="str536" xml:space="preserve">
+    <value>Tempo</value>
+  </data>
+  <data name="str537" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="str538" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str539" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="str540" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="str541" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str542" xml:space="preserve">
+    <value>Designado</value>
+  </data>
+  <data name="str543" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="str544" xml:space="preserve">
+    <value>Nó</value>
+  </data>
+  <data name="str545" xml:space="preserve">
+    <value>Permitido</value>
+  </data>
+  <data name="str546" xml:space="preserve">
+    <value>AC</value>
+  </data>
+  <data name="str547" xml:space="preserve">
+    <value>Mínimo livre de obstáculo</value>
+  </data>
+  <data name="str548" xml:space="preserve">
+    <value>plano</value>
+  </data>
+  <data name="str549" xml:space="preserve">
+    <value>terreno elevado</value>
+  </data>
+  <data name="str550" xml:space="preserve">
+    <value>montanhoso</value>
+  </data>
+  <data name="str551" xml:space="preserve">
+    <value>Procedimento depois da área de espera</value>
+  </data>
+  <data name="str552" xml:space="preserve">
+    <value>Segmento de aproximação inicial</value>
+  </data>
+  <data name="str553" xml:space="preserve">
+    <value>Associado com estruturas de rota aérea</value>
+  </data>
+  <data name="str554" xml:space="preserve">
+    <value>Proteção de entradas</value>
+  </data>
+  <data name="str555" xml:space="preserve">
+    <value>Proteção da entrada ao longo da trajetória de chegada recíproca</value>
+  </data>
+  <data name="str556" xml:space="preserve">
+    <value>Proteção das entradas ao longo da radial de interseção</value>
+  </data>
+  <data name="str557" xml:space="preserve">
+    <value>Condições</value>
+  </data>
+  <data name="str558" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="str559" xml:space="preserve">
+    <value>Turbulência</value>
+  </data>
+  <data name="str560" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="str561" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="str562" xml:space="preserve">
+    <value>Parâmetro</value>
+  </data>
+  <data name="str563" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="str564" xml:space="preserve">
+    <value>Salvar relatório</value>
+  </data>
+  <data name="str565" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str701" xml:space="preserve">
+    <value>Área livre</value>
+  </data>
+  <data name="str702" xml:space="preserve">
+    <value>Altitude de voo não fornece mínimo livre de obstáculo</value>
+  </data>
+  <data name="str703" xml:space="preserve">
+    <value>Interseção</value>
+  </data>
+  <data name="str704" xml:space="preserve">
+    <value>Área de espera interceptando o cone do VOR de recalada</value>
+  </data>
+  <data name="str705" xml:space="preserve">
+    <value>Buffer da área de espera interceptando o cone do VOR de recalada</value>
+  </data>
+  <data name="str706" xml:space="preserve">
+    <value>Área de espera intercepta o cone do VOR de interseção</value>
+  </data>
+  <data name="str707" xml:space="preserve">
+    <value>Buffer da área de espera que intercepta o cone de interseção do VOR</value>
+  </data>
+  <data name="str708" xml:space="preserve">
+    <value>Excedente</value>
+  </data>
+  <data name="str709" xml:space="preserve">
+    <value>Área de espera excede a cobertura do VOR de recalada</value>
+  </data>
+  <data name="str710" xml:space="preserve">
+    <value>Buffer da área de espera excede a cobertura do VOR de recalada</value>
+  </data>
+  <data name="str711" xml:space="preserve">
+    <value>A área de espera excede a cobertura do VOR de interseção</value>
+  </data>
+  <data name="str712" xml:space="preserve">
+    <value>Buffer da área de espera excede a cobertura do VOR de interseção</value>
+  </data>
+  <data name="str713" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera </value>
+  </data>
+  <data name="str714" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str715" xml:space="preserve">
+    <value>Altitude mínima de voo com recepção de sinal confiável</value>
+  </data>
+  <data name="str716" xml:space="preserve">
+    <value>ID do obstáculo que forma altitude de voo absoluta segura</value>
+  </data>
+  <data name="str717" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str718" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str719" xml:space="preserve">
+    <value>Área primária</value>
+  </data>
+  <data name="str720" xml:space="preserve">
+    <value>Área secundária</value>
+  </data>
+  <data name="str721" xml:space="preserve">
+    <value>MHA é formado pelo MOC</value>
+  </data>
+  <data name="str722" xml:space="preserve">
+    <value>ID do obstáculo que tem altitude máxima requerida</value>
+  </data>
+  <data name="str723" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str724" xml:space="preserve">
+    <value>Latitude de </value>
+  </data>
+  <data name="str725" xml:space="preserve">
+    <value>Longitude de</value>
+  </data>
+  <data name="str726" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str727" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str731" xml:space="preserve">
+    <value>Salvar relatório para…</value>
+  </data>
+  <data name="str732" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="str733" xml:space="preserve">
+    <value>Log de resultado – Procedimento na interseção das radiais do VOR</value>
+  </data>
+  <data name="str734" xml:space="preserve">
+    <value>Procedimento</value>
+  </data>
+  <data name="str735" xml:space="preserve">
+    <value>Longe da instalação</value>
+  </data>
+  <data name="str736" xml:space="preserve">
+    <value>Em direção a instalação</value>
+  </data>
+  <data name="str737" xml:space="preserve">
+    <value>Indicativo de chamada do VOR de recalada</value>
+  </data>
+  <data name="str738" xml:space="preserve">
+    <value>Indicativo de chamada do VOR de interseção</value>
+  </data>
+  <data name="str739" xml:space="preserve">
+    <value>Latitude </value>
+  </data>
+  <data name="str740" xml:space="preserve">
+    <value>Longitude </value>
+  </data>
+  <data name="str741" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str742" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str743" xml:space="preserve">
+    <value>O procedimento está protegido pela altitude absoluta máxima</value>
+  </data>
+  <data name="str744" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera</value>
+  </data>
+  <data name="str745" xml:space="preserve">
+    <value>MHA que forma MOC</value>
+  </data>
+  <data name="str746" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str747" xml:space="preserve">
+    <value>Altitude mínima de voo com recepção de sinal confiável</value>
+  </data>
+  <data name="str748" xml:space="preserve">
+    <value>ID do obstáculo que tem altitude máxima requerida</value>
+  </data>
+  <data name="str749" xml:space="preserve">
+    <value>ID do obstáculo que forma a altitude de voo absoluta segura</value>
+  </data>
+  <data name="str750" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str751" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str752" xml:space="preserve">
+    <value>Radial do VOR de recalada</value>
+  </data>
+  <data name="str753" xml:space="preserve">
+    <value>Radial do VOR de interseção</value>
+  </data>
+  <data name="str754" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="str755" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str756" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str757" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str758" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str759" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str760" xml:space="preserve">
+    <value>Tempo de voo dentro da perna tangente</value>
+  </data>
+  <data name="str761" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str762" xml:space="preserve">
+    <value>Proteção da entrada ao longo da trajetória de chegada recíproca</value>
+  </data>
+  <data name="str763" xml:space="preserve">
+    <value>Proteção das entradas ao longo da radial de interseção</value>
+  </data>
+  <data name="str764" xml:space="preserve">
+    <value>Fornecido</value>
+  </data>
+  <data name="str765" xml:space="preserve">
+    <value>Não fornecido</value>
+  </data>
+  <data name="str766" xml:space="preserve">
+    <value>Tela da janela do espaço de trabalho do ArcMap</value>
+  </data>
+  <data name="str801" xml:space="preserve">
+    <value>Não existe nem dois auxílios de navegação a rádio VOR.</value>
+  </data>
+  <data name="str802" xml:space="preserve">
+    <value>A distância disponível de interseção de dois radiais VOR é muito pequena.</value>
+  </data>
+  <data name="str803" xml:space="preserve">
+    <value>Enviar mensagem para o desenvolvedor</value>
+  </data>
+  <data name="str804" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹1 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str805" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹2 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str806" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹3 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str807" xml:space="preserve">
+    <value>Radial de interseção não pode ser restaurado para '</value>
+  </data>
+  <data name="str808" xml:space="preserve">
+    <value>' valor. Será ajustado para '</value>
+  </data>
+  <data name="str1001" xml:space="preserve">
+    <value>Espera no fixo VOR/DME</value>
+  </data>
+  <data name="str1002" xml:space="preserve">
+    <value>Parâmetros de RNA</value>
+  </data>
+  <data name="str1003" xml:space="preserve">
+    <value>Indicativo de chamada</value>
+  </data>
+  <data name="str1004" xml:space="preserve">
+    <value>Frequência</value>
+  </data>
+  <data name="str1005" xml:space="preserve">
+    <value>VAR</value>
+  </data>
+  <data name="str1006" xml:space="preserve">
+    <value>Elevação</value>
+  </data>
+  <data name="str1007" xml:space="preserve">
+    <value>RNA disponível para FIXO designado</value>
+  </data>
+  <data name="str1008" xml:space="preserve">
+    <value>Parâmetros do FIXO</value>
+  </data>
+  <data name="str1009" xml:space="preserve">
+    <value>Criar</value>
+  </data>
+  <data name="str1010" xml:space="preserve">
+    <value>Selecionar</value>
+  </data>
+  <data name="str1011" xml:space="preserve">
+    <value>Radial (°)</value>
+  </data>
+  <data name="str1012" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str1013" xml:space="preserve">
+    <value>m</value>
+  </data>
+  <data name="str1014" xml:space="preserve">
+    <value>ft</value>
+  </data>
+  <data name="str1015" xml:space="preserve">
+    <value>Distância nominal</value>
+  </data>
+  <data name="str1016" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="str1017" xml:space="preserve">
+    <value>NM</value>
+  </data>
+  <data name="str1018" xml:space="preserve">
+    <value>FIXO disponível para a RNA designada</value>
+  </data>
+  <data name="str1019" xml:space="preserve">
+    <value>Mais&gt;&gt;</value>
+  </data>
+  <data name="str1020" xml:space="preserve">
+    <value>&lt;&lt;Menos</value>
+  </data>
+  <data name="str1021" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="str1022" xml:space="preserve">
+    <value>Buffer</value>
+  </data>
+  <data name="str1023" xml:space="preserve">
+    <value>Radial</value>
+  </data>
+  <data name="str1024" xml:space="preserve">
+    <value>Área de espera</value>
+  </data>
+  <data name="str1025" xml:space="preserve">
+    <value>Esconder</value>
+  </data>
+  <data name="str1026" xml:space="preserve">
+    <value>Parâmetros de Área</value>
+  </data>
+  <data name="str1027" xml:space="preserve">
+    <value>Saída</value>
+  </data>
+  <data name="str1028" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str1029" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str1030" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str1031" xml:space="preserve">
+    <value>Direção</value>
+  </data>
+  <data name="str1032" xml:space="preserve">
+    <value>Instalação a frente</value>
+  </data>
+  <data name="str1033" xml:space="preserve">
+    <value>Longe da instalação</value>
+  </data>
+  <data name="str1034" xml:space="preserve">
+    <value>Parâmetros da perna tangente</value>
+  </data>
+  <data name="str1035" xml:space="preserve">
+    <value>Distância de limitação</value>
+  </data>
+  <data name="str1036" xml:space="preserve">
+    <value>Tempo de voo</value>
+  </data>
+  <data name="str1037" xml:space="preserve">
+    <value>min</value>
+  </data>
+  <data name="str1038" xml:space="preserve">
+    <value>Comprimento da perna</value>
+  </data>
+  <data name="str1039" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str1040" xml:space="preserve">
+    <value>Designado</value>
+  </data>
+  <data name="str1041" xml:space="preserve">
+    <value>km/h</value>
+  </data>
+  <data name="str1042" xml:space="preserve">
+    <value>nó </value>
+  </data>
+  <data name="str1043" xml:space="preserve">
+    <value>Permitido</value>
+  </data>
+  <data name="str1044" xml:space="preserve">
+    <value>Categoria da Aeronave</value>
+  </data>
+  <data name="str1045" xml:space="preserve">
+    <value>Mínimo livre de obstáculo</value>
+  </data>
+  <data name="str1046" xml:space="preserve">
+    <value>plano</value>
+  </data>
+  <data name="str1047" xml:space="preserve">
+    <value>terreno elevado</value>
+  </data>
+  <data name="str1048" xml:space="preserve">
+    <value>montanhoso</value>
+  </data>
+  <data name="str1049" xml:space="preserve">
+    <value>Procedimento depois da área de espera</value>
+  </data>
+  <data name="str1050" xml:space="preserve">
+    <value>Segmento de aproximação inicial</value>
+  </data>
+  <data name="str1051" xml:space="preserve">
+    <value>Associado com as estruturas de rota aérea</value>
+  </data>
+  <data name="str1052" xml:space="preserve">
+    <value>Proteção de entradas para o FIXO na perna de chegada</value>
+  </data>
+  <data name="str1053" xml:space="preserve">
+    <value>Setor 1</value>
+  </data>
+  <data name="str1054" xml:space="preserve">
+    <value>Setor 2</value>
+  </data>
+  <data name="str1055" xml:space="preserve">
+    <value>Proteção das entradas para o FIXO na perna de afastamento</value>
+  </data>
+  <data name="str1056" xml:space="preserve">
+    <value>Proteção</value>
+  </data>
+  <data name="str1057" xml:space="preserve">
+    <value>Entrar o radial  (°)</value>
+  </data>
+  <data name="str1058" xml:space="preserve">
+    <value>Condições</value>
+  </data>
+  <data name="str1059" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="str1060" xml:space="preserve">
+    <value>Turbulência</value>
+  </data>
+  <data name="str1061" xml:space="preserve">
+    <value>Radial limitante</value>
+  </data>
+  <data name="str1062" xml:space="preserve">
+    <value>RL (°)</value>
+  </data>
+  <data name="str1063" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="str1064" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="str1065" xml:space="preserve">
+    <value>Parâmetros</value>
+  </data>
+  <data name="str1066" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="str1067" xml:space="preserve">
+    <value>Salvar relatório</value>
+  </data>
+  <data name="str1068" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str1069" xml:space="preserve">
+    <value>Nome padrão</value>
+  </data>
+  <data name="str1201" xml:space="preserve">
+    <value>Área livre</value>
+  </data>
+  <data name="str1202" xml:space="preserve">
+    <value>Altitude de voo não fornece mínimo livre de obstáculo</value>
+  </data>
+  <data name="str1203" xml:space="preserve">
+    <value>Interseção</value>
+  </data>
+  <data name="str1204" xml:space="preserve">
+    <value>Área de espera que intercepta o cone do VOR / DME</value>
+  </data>
+  <data name="str1205" xml:space="preserve">
+    <value>Buffer da área de espera que intercepta o cone VOR / DME</value>
+  </data>
+  <data name="str1206" xml:space="preserve">
+    <value>Excedente</value>
+  </data>
+  <data name="str1207" xml:space="preserve">
+    <value>Área de espera excede a cobertura do VOR / DME</value>
+  </data>
+  <data name="str1208" xml:space="preserve">
+    <value>Buffer da área de espera excede a cobertura do VOR / DME</value>
+  </data>
+  <data name="str1209" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera</value>
+  </data>
+  <data name="str1210" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str1211" xml:space="preserve">
+    <value>Altitude mínima de voo com recepção de sinal confiável</value>
+  </data>
+  <data name="str1212" xml:space="preserve">
+    <value>ID do obstáculo que forma altitude de voo absoluta segura</value>
+  </data>
+  <data name="str1213" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str1214" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str1215" xml:space="preserve">
+    <value>Área primária</value>
+  </data>
+  <data name="str1216" xml:space="preserve">
+    <value>Área secundária</value>
+  </data>
+  <data name="str1217" xml:space="preserve">
+    <value>MHA é formado pelo MOC</value>
+  </data>
+  <data name="str1218" xml:space="preserve">
+    <value>ID do obstáculo que tem altitude requerida máxima</value>
+  </data>
+  <data name="str1219" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str1220" xml:space="preserve">
+    <value>Latitude de</value>
+  </data>
+  <data name="str1221" xml:space="preserve">
+    <value>Longitude de</value>
+  </data>
+  <data name="str1222" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str1223" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str1231" xml:space="preserve">
+    <value>Salvar relatório para…</value>
+  </data>
+  <data name="str1232" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="str1233" xml:space="preserve">
+    <value>Log de resultado – procedimento VOR/DME</value>
+  </data>
+  <data name="str1234" xml:space="preserve">
+    <value>Procedimento VOR/DME acima do FIXO -</value>
+  </data>
+  <data name="str1235" xml:space="preserve">
+    <value>Procedimento</value>
+  </data>
+  <data name="str1236" xml:space="preserve">
+    <value>Longe da instalação</value>
+  </data>
+  <data name="str1237" xml:space="preserve">
+    <value>Em direção a instalação</value>
+  </data>
+  <data name="str1238" xml:space="preserve">
+    <value>Indicativo de chamada do VOR/DME </value>
+  </data>
+  <data name="str1239" xml:space="preserve">
+    <value>Frequência do VOR/DME </value>
+  </data>
+  <data name="str1240" xml:space="preserve">
+    <value>Variação do VOR/DME </value>
+  </data>
+  <data name="str1241" xml:space="preserve">
+    <value>Elevação do VOR/DME </value>
+  </data>
+  <data name="str1242" xml:space="preserve">
+    <value>Latitude do FIXO</value>
+  </data>
+  <data name="str1243" xml:space="preserve">
+    <value>Longitude do FIXO</value>
+  </data>
+  <data name="str1244" xml:space="preserve">
+    <value>Radial do VOR/DME </value>
+  </data>
+  <data name="str1245" xml:space="preserve">
+    <value>°</value>
+  </data>
+  <data name="str1246" xml:space="preserve">
+    <value>O procedimento está protegido para altitude absoluta máxima</value>
+  </data>
+  <data name="str1247" xml:space="preserve">
+    <value>Altitude mínima de voo absoluta segura dentro da área de espera</value>
+  </data>
+  <data name="str1248" xml:space="preserve">
+    <value>MHA forma MOC</value>
+  </data>
+  <data name="str1249" xml:space="preserve">
+    <value>Altitude de voo requerida dentro da área de espera</value>
+  </data>
+  <data name="str1250" xml:space="preserve">
+    <value>Altitude mínima de voo com recepção de sinal confiável</value>
+  </data>
+  <data name="str1251" xml:space="preserve">
+    <value>ID do obstáculo que tem altitude requerida máxima</value>
+  </data>
+  <data name="str1252" xml:space="preserve">
+    <value>ID do obstáculo que forma a altitude de voo absoluta segura</value>
+  </data>
+  <data name="str1253" xml:space="preserve">
+    <value>MOC acima do obstáculo</value>
+  </data>
+  <data name="str1254" xml:space="preserve">
+    <value>O obstáculo está dentro</value>
+  </data>
+  <data name="str1255" xml:space="preserve">
+    <value>Curva</value>
+  </data>
+  <data name="str1256" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="str1257" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="str1258" xml:space="preserve">
+    <value>IAS</value>
+  </data>
+  <data name="str1259" xml:space="preserve">
+    <value>TAS</value>
+  </data>
+  <data name="str1260" xml:space="preserve">
+    <value>Distância nominal</value>
+  </data>
+  <data name="str1261" xml:space="preserve">
+    <value>Distância limitante</value>
+  </data>
+  <data name="str1262" xml:space="preserve">
+    <value>Tempo de voo dentro da perna tangente</value>
+  </data>
+  <data name="str1263" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str1264" xml:space="preserve">
+    <value>Proteção do setor de entrada 1</value>
+  </data>
+  <data name="str1265" xml:space="preserve">
+    <value>Proteção do setor de entrada 2</value>
+  </data>
+  <data name="str1266" xml:space="preserve">
+    <value>Proteção da área de entrada para uma entrada direta recíproca para um ponto secundário</value>
+  </data>
+  <data name="str1267" xml:space="preserve">
+    <value>Fornecido</value>
+  </data>
+  <data name="str1268" xml:space="preserve">
+    <value>Não fornecido</value>
+  </data>
+  <data name="str1269" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str1270" xml:space="preserve">
+    <value>Tela da janela do espaço de trabalho do ArcMap</value>
+  </data>
+  <data name="str1301" xml:space="preserve">
+    <value>Os auxílios de navegação a rádio VOR/DME não foram encontrados.</value>
+  </data>
+  <data name="str1302" xml:space="preserve">
+    <value>A entrada Setor 1 ao longo do arco DME não é permitida.</value>
+  </data>
+  <data name="str1303" xml:space="preserve">
+    <value>O programa não pode encontrar interseção.</value>
+  </data>
+  <data name="str1304" xml:space="preserve">
+    <value>Construção da área de espera com base no VOR/DME na altitude atual não é possível.</value>
+  </data>
+  <data name="str1305" xml:space="preserve">
+    <value>Enviar mensagem para o desenvolvedor</value>
+  </data>
+  <data name="str1306" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹1 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str1307" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹2 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str1308" xml:space="preserve">
+    <value>Ocorreu erro inesperado ¹3 na função ‘ChangeParameters’</value>
+  </data>
+  <data name="str1309" xml:space="preserve">
+    <value>Chamada errada da função 'LimDistRounding'.</value>
+  </data>
+  <data name="str1310" xml:space="preserve">
+    <value>O programa não pode encontrar uma interseção no ponto - 'C10'</value>
+  </data>
+  <data name="str1311" xml:space="preserve">
+    <value>Aumente a altitude.</value>
+  </data>
+  <data name="str1312" xml:space="preserve">
+    <value>Construção da área de espera com base no VOR/DME em direção a instalação não é possível.</value>
+  </data>
+  <data name="str1313" xml:space="preserve">
+    <value>Tente aumentar a altitude para</value>
+  </data>
+  <data name="str1314" xml:space="preserve">
+    <value>metros.</value>
+  </data>
+  <data name="str1315" xml:space="preserve">
+    <value>Construção da área de espera com base no VOR/DME longe da instalação não é possível.</value>
+  </data>
+  <data name="str1316" xml:space="preserve">
+    <value>Resultado negativo durante a procura do ponto - 'C14'.</value>
+  </data>
+  <data name="str1317" xml:space="preserve">
+    <value>Proteção da entrada do setor 2 é impossível devido a ausência de interseção C7.</value>
+  </data>
+  <data name="str1501" xml:space="preserve">
+    <value>Lista de obstáculos</value>
+  </data>
+  <data name="str1502" xml:space="preserve">
+    <value>Acima da instalação</value>
+  </data>
+  <data name="str1503" xml:space="preserve">
+    <value>Nas interseções do VOR</value>
+  </data>
+  <data name="str1504" xml:space="preserve">
+    <value>No fixo VOR/DME</value>
+  </data>
+  <data name="str1505" xml:space="preserve">
+    <value>Salvar relatório</value>
+  </data>
+  <data name="str1506" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="str1701" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="str1702" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="str1703" xml:space="preserve">
+    <value>Altu. abs.</value>
+  </data>
+  <data name="str1704" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str1705" xml:space="preserve">
+    <value>Altu. requerida</value>
+  </data>
+  <data name="str1706" xml:space="preserve">
+    <value>dH penetrante</value>
+  </data>
+  <data name="str2001" xml:space="preserve">
+    <value>Salvar no layer</value>
+  </data>
+  <data name="str2002" xml:space="preserve">
+    <value>Salvar a Área de Espera no layer 'HoldingArea'</value>
+  </data>
+  <data name="str2003" xml:space="preserve">
+    <value>Salvar o FIXO no layer 'WPT_FIX'</value>
+  </data>
+  <data name="str2004" xml:space="preserve">
+    <value>Nome da Área de Espera salva (5 símbolos)</value>
+  </data>
+  <data name="str2005" xml:space="preserve">
+    <value>Nome do FIXO salvo (5 símbolos)</value>
+  </data>
+  <data name="str2006" xml:space="preserve">
+    <value>Nome do FIXO selecionado</value>
+  </data>
+  <data name="str2007" xml:space="preserve">
+    <value>Ajuda</value>
+  </data>
+  <data name="str2008" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="str2009" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="str2101" xml:space="preserve">
+    <value>Área de Espera com o nome '</value>
+  </data>
+  <data name="str2102" xml:space="preserve">
+    <value>FIXO com o nome '</value>
+  </data>
+  <data name="str2103" xml:space="preserve">
+    <value>' existe no banco de dados</value>
+  </data>
+  <data name="str2104" xml:space="preserve">
+    <value>Entre com outro nome</value>
+  </data>
+  <data name="str2105" xml:space="preserve">
+    <value>O FIXO que você criou existe no banco de dados com o nome</value>
+  </data>
+</root>

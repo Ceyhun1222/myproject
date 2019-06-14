@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="HIDE_INFO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\play.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SHOW_INFO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rev_play.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="str00030" xml:space="preserve">
+    <value>PBN Arrival</value>
+  </data>
+  <data name="str00031" xml:space="preserve">
+    <value>Arrival...</value>
+  </data>
+  <data name="str00039" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str00100" xml:space="preserve">
+    <value>Procedure name: </value>
+  </data>
+  <data name="str00101" xml:space="preserve">
+    <value>Creation date</value>
+  </data>
+  <data name="str00102" xml:space="preserve">
+    <value>Creation time</value>
+  </data>
+  <data name="str00103" xml:space="preserve">
+    <value>Distances are in </value>
+  </data>
+  <data name="str00104" xml:space="preserve">
+    <value>Elevations and heights are in </value>
+  </data>
+  <data name="str00105" xml:space="preserve">
+    <value>Speeds are in </value>
+  </data>
+  <data name="str00106" xml:space="preserve">
+    <value>Aerodrome:</value>
+  </data>
+  <data name="str00107" xml:space="preserve">
+    <value>The procedure geometry</value>
+  </data>
+  <data name="str00108" xml:space="preserve">
+    <value>The arrival procedure overall length</value>
+  </data>
+  <data name="str00109" xml:space="preserve">
+    <value>Report on Obstacles.</value>
+  </data>
+  <data name="str00110" xml:space="preserve">
+    <value>Latitude</value>
+  </data>
+  <data name="str00111" xml:space="preserve">
+    <value>Longitude</value>
+  </data>
+  <data name="str00112" xml:space="preserve">
+    <value>Latitude of the circle center</value>
+  </data>
+  <data name="str00113" xml:space="preserve">
+    <value>Longitude of the circle center</value>
+  </data>
+  <data name="str00114" xml:space="preserve">
+    <value>Altitude</value>
+  </data>
+  <data name="str00115" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="str00116" xml:space="preserve">
+    <value>True course</value>
+  </data>
+  <data name="str00117" xml:space="preserve">
+    <value>Turning radius</value>
+  </data>
+  <data name="str00118" xml:space="preserve">
+    <value>Turn direction</value>
+  </data>
+  <data name="str00119" xml:space="preserve">
+    <value>to right</value>
+  </data>
+  <data name="str00120" xml:space="preserve">
+    <value>to left</value>
+  </data>
+  <data name="str00121" xml:space="preserve">
+    <value>Angle of the turn</value>
+  </data>
+  <data name="str00122" xml:space="preserve">
+    <value>Turn arc length</value>
+  </data>
+  <data name="str00123" xml:space="preserve">
+    <value>Distance to the next point</value>
+  </data>
+  <data name="str00124" xml:space="preserve">
+    <value>Log file.</value>
+  </data>
+  <data name="str01000" xml:space="preserve">
+    <value>Initial parameters</value>
+  </data>
+  <data name="str01001" xml:space="preserve">
+    <value>Arrival legs</value>
+  </data>
+  <data name="str01002" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="str01003" xml:space="preserve">
+    <value>&amp;Prev</value>
+  </data>
+  <data name="str01004" xml:space="preserve">
+    <value>&amp;Next</value>
+  </data>
+  <data name="str01005" xml:space="preserve">
+    <value>&amp;Report</value>
+  </data>
+  <data name="str01006" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="str01007" xml:space="preserve">
+    <value>&amp;Cancel</value>
+  </data>
+  <data name="str01050" xml:space="preserve">
+    <value>WPT</value>
+  </data>
+  <data name="str01101" xml:space="preserve">
+    <value>Route:</value>
+  </data>
+  <data name="str01102" xml:space="preserve">
+    <value>Segment lenght:</value>
+  </data>
+  <data name="str01103" xml:space="preserve">
+    <value>Segment direction:</value>
+  </data>
+  <data name="str01104" xml:space="preserve">
+    <value>Segment leaving
+direction:</value>
+  </data>
+  <data name="str01105" xml:space="preserve">
+    <value>Sensor Type:</value>
+  </data>
+  <data name="str01106" xml:space="preserve">
+    <value>Segments:</value>
+  </data>
+  <data name="str01107" xml:space="preserve">
+    <value>Segment
+true course:</value>
+  </data>
+  <data name="str01108" xml:space="preserve">
+    <value>Leaving altitude:</value>
+  </data>
+  <data name="str01109" xml:space="preserve">
+    <value>Aircraft category:</value>
+  </data>
+  <data name="str01110" xml:space="preserve">
+    <value>PBN type:</value>
+  </data>
+  <data name="str01111" xml:space="preserve">
+    <value>Arrival start point position</value>
+  </data>
+  <data name="str01112" xml:space="preserve">
+    <value>WPT name:</value>
+  </data>
+  <data name="str01113" xml:space="preserve">
+    <value>Distance from
+Segment Start:</value>
+  </data>
+  <data name="str01114" xml:space="preserve">
+    <value>WPT:</value>
+  </data>
+  <data name="str01115" xml:space="preserve">
+    <value> Segment direction defined by </value>
+  </data>
+  <data name="str01116" xml:space="preserve">
+    <value> Segment end WPT position defined by </value>
+  </data>
+  <data name="str01117" xml:space="preserve">
+    <value> Segment end WPT construction parameters </value>
+  </data>
+  <data name="str01118" xml:space="preserve">
+    <value>True course:</value>
+  </data>
+  <data name="str01119" xml:space="preserve">
+    <value>WPT:</value>
+  </data>
+  <data name="str01120" xml:space="preserve">
+    <value>Distance from
+current WPT:</value>
+  </data>
+  <data name="str01121" xml:space="preserve">
+    <value>More than 2 DME</value>
+  </data>
+  <data name="str01122" xml:space="preserve">
+    <value>Add segment</value>
+  </data>
+  <data name="str01123" xml:space="preserve">
+    <value>Delete last</value>
+  </data>
+  <data name="str01124" xml:space="preserve">
+    <value>Turn to:</value>
+  </data>
+  <data name="str01125" xml:space="preserve">
+    <value>IAS:</value>
+  </data>
+  <data name="str01126" xml:space="preserve">
+    <value>TAS:</value>
+  </data>
+  <data name="str01127" xml:space="preserve">
+    <value>WPT Altitude:</value>
+  </data>
+  <data name="str01128" xml:space="preserve">
+    <value>Desc. Grd:</value>
+  </data>
+  <data name="str01129" xml:space="preserve">
+    <value>Bank angle:</value>
+  </data>
+  <data name="str01130" xml:space="preserve">
+    <value>Planned
+max turn:</value>
+  </data>
+  <data name="str01131" xml:space="preserve">
+    <value>Sensor Type:</value>
+  </data>
+  <data name="str01132" xml:space="preserve">
+    <value>Fly mode:</value>
+  </data>
+  <data name="str01133" xml:space="preserve">
+    <value>Next leg PBN type:</value>
+  </data>
+  <data name="str01134" xml:space="preserve">
+    <value>P &amp;&amp; T:</value>
+  </data>
+  <data name="str01135" xml:space="preserve">
+    <value>Enroute
+MOC:</value>
+  </data>
+  <data name="str01200" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01201" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01202" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01203" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01204" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01205" xml:space="preserve">
+    <value />
+  </data>
+  <data name="str01210" xml:space="preserve">
+    <value>Nr</value>
+  </data>
+  <data name="str01211" xml:space="preserve">
+    <value>P/T</value>
+  </data>
+  <data name="str01212" xml:space="preserve">
+    <value>Start WPT name</value>
+  </data>
+  <data name="str01213" xml:space="preserve">
+    <value>End WPT name</value>
+  </data>
+  <data name="str01214" xml:space="preserve">
+    <value>Course  (°True)</value>
+  </data>
+  <data name="str01215" xml:space="preserve">
+    <value>Turn direction</value>
+  </data>
+  <data name="str01216" xml:space="preserve">
+    <value>ALT at KK line</value>
+  </data>
+  <data name="str01217" xml:space="preserve">
+    <value>Length</value>
+  </data>
+  <data name="str02000" xml:space="preserve">
+    <value>Arrival report</value>
+  </data>
+  <data name="str02001" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="str02002" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="str02003" xml:space="preserve">
+    <value>Segments info</value>
+  </data>
+  <data name="str02004" xml:space="preserve">
+    <value>Current leg obstacles</value>
+  </data>
+  <data name="str02005" xml:space="preserve">
+    <value>All legs obstacles info</value>
+  </data>
+  <data name="str02018" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="str02019" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="str02020" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="str02021" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="str02022" xml:space="preserve">
+    <value>Elevation</value>
+  </data>
+  <data name="str02023" xml:space="preserve">
+    <value>MOC</value>
+  </data>
+  <data name="str02024" xml:space="preserve">
+    <value>MOCA</value>
+  </data>
+  <data name="str02025" xml:space="preserve">
+    <value>Hor. accuracy</value>
+  </data>
+  <data name="str02026" xml:space="preserve">
+    <value>Ver. accuracy</value>
+  </data>
+  <data name="str02027" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="str02030" xml:space="preserve">
+    <value>Primary</value>
+  </data>
+  <data name="str02031" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+</root>

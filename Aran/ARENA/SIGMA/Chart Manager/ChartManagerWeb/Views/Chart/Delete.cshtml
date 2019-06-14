@@ -1,0 +1,111 @@
+﻿@model ChartManagerWeb.ChartServiceReference.Chart
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure to delete this chart?</h3>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div>
+            <hr/>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Airport)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Airport)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BeginEffectiveDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.BeginEffectiveDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedAt)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreatedAt)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.EndEffectiveDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EndEffectiveDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Identifier)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Identifier)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsLocked)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IsLocked)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Organization)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Organization)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RunwayDirection)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RunwayDirection)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Version)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Version)
+                </dd>
+
+            </dl>
+
+
+            <div class="form-actions no-color">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Delete" class="btn btn-success"/>
+                </div>
+            </div>
+        </div>
+    }
+
+<div>
+    @Html.ActionLink("Back", "Index", null, new { @class = "btn btn-success" })
+</div>

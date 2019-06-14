@@ -1,0 +1,171 @@
+<form class="login-form p-3" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input [ngClass]="{'border-danger' : submitted &&  (f.userName.invalid || duplicateUser === f.userName.value)}"
+      type="text" class="form-control" placeholder="Username" [readonly]="userDetail && userDetail.id > 0"
+      formControlName="userName" name="userName" (blur)="!f.userName.invalid && userDuplicateCheck()">
+
+    <div *ngIf="submitted && f.userName.invalid">
+      <span *ngIf="f.userName.errors.required" class="form-text text-danger"> Username is required</span>
+      <span *ngIf="f.userName.errors.minlength" class="form-text text-danger"> Username must be at least 5
+        characters</span>
+    </div>
+    <span *ngIf="submitted && !f.userName.invalid && duplicateUser === f.userName.value" class="form-text text-danger">
+      This username is already taken</span>
+  </div>
+
+  <div class="form-group">
+    <input [ngClass]="{'border-danger' : submitted &&  (f.email.invalid || duplicateEmail === f.email.value)}" type="email"
+      class="form-control" placeholder="Your email" formControlName="email" autocomplete="auto" (blur)="!f.email.invalid && emailDuplicateCheck()">
+
+    <div *ngIf="submitted && f.email.invalid">
+      <span *ngIf="f.email.errors.required" class="form-text text-danger"> Email is required</span>
+      <span *ngIf="f.email.errors.email" class="form-text text-danger"> Email must be a valid email address</span>
+              </div>
+  </div>
+  <span *ngIf="submitted && !f.email.invalid && duplicateEmail === f.email.value" class="form-text text-danger"> This
+    email is already taken</span>
+
+  <div class="form-group">
+    <input [ngClass]="{'border-danger' : submitted &&  f.firstName.invalid}" type="text" class="form-control"
+      placeholder="First name" formControlName="firstName">
+
+    <div *ngIf="submitted && f.firstName.invalid">
+      <span *ngIf="f.firstName.errors.required" class="form-text text-danger"> First name is required</span>
+      <span *ngIf="f.firstName.errors.minlength" class="form-text text-danger"> First name must be at least 2
+        characters</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <input [ngClass]="{'border-danger' : submitted &&  f.lastName.invalid}" type="text" class="form-control"
+      placeholder="Last name" formControlName="lastName">
+
+    <div *ngIf="submitted && f.lastName.invalid">
+      <span *ngIf="f.lastName.errors.required" class="form-text text-danger"> Last name is required</span>
+      <span *ngIf="f.lastName.errors.minlength" class="form-text text-danger"> Last name must be at least 2
+        characters</span>
+    </div>
+  </div>
+
+  <div [hidden]="userDetail && userDetail.id > 0" class="form-group form-group-feedback form-group-feedback-right">
+    <input [type]="passwordShow ? 'text' : 'password'" [ngClass]="{'border-danger' : submitted &&  f.password.invalid}"
+      class="form-control" placeholder="New password" formControlName="password">
+
+    <div *ngIf="!(f.password.invalid && f.password.errors.required)" class="form-control-feedback" (click)="passwordShow =  !passwordShow">
+      <a href="javascript:void(0)"><i class="icon-eye" [class.text-muted]="!passwordShow"></i></a>
+    </div>
+    <div *ngIf="submitted && f.password.invalid">
+      <span *ngIf="f.password.errors.required" class="form-text text-danger"> Password is required</span>
+      <span *ngIf="f.password.errors.minlength" class="form-text text-danger"> Password must be at least 6
+        characters</span>
+              </div>
+  </div>
+
+  <div [hidden]="userDetail && userDetail.id > 0" class="form-group form-group-feedback form-group-feedback-right">
+    <input [type]="confirmPasswordShow ? 'text' : 'password'" [ngClass]="{'border-danger' : submitted &&  f.confirmPassword.invalid}"
+      class="form-control" placeholder="Confirm password" formControlName="confirmPassword" (keyup)="passwordMatchValidator()">
+
+    <div *ngIf="!(f.confirmPassword.invalid && f.confirmPassword.errors.required)" class="form-control-feedback"
+      (click)="confirmPasswordShow =  !confirmPasswordShow">
+      <a href="javascript:void(0)"><i class="icon-eye" [class.text-muted]="!confirmPasswordShow"></i></a>
+    </div>
+    <div *ngIf="submitted">
+      <span *ngIf="f.confirmPassword.invalid && f.confirmPassword.errors.required" class="form-text text-danger">
+        Confirm password is required</span>
+      <span *ngIf="!f.confirmPassword.invalid && passwordNotSame" class="form-text text-danger"> Confirm
+        password
+        does not match</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="d-block font-weight-semibold text-muted">Mobile number</label>
+    <div class="input-group">
+      <span class="input-group-prepend">
+        <span class="input-group-text">+994</span>
+      </span>
+      <input id="user-phone-number-pattern" type="text" [ngClass]="{'border-danger' : submitted &&  f.phoneNumber.invalid}" class="form-control" placeholder="51 000 00 00" formControlName="phoneNumber"
+        (keyup)="formatPhoneNumber($event)">
+    </div>
+    <div *ngIf="submitted && f.phoneNumber.invalid">
+      <span *ngIf="f.phoneNumber.errors.required" class="form-text text-danger"> Mobile number is
+        required</span>
+      <span *ngIf="f.phoneNumber.errors.minlength" class="form-text text-danger"> Mobile number must be
+        at least 8 characters</span>
+      <span *ngIf="f.phoneNumber.errors.maxlength" class="form-text text-danger"> Mobile number should be max 12
+        characters</span>
+    </div>
+  </div>
+
+  <div class="form-group form-group-feedback form-group-feedback-left">
+    <label class="d-block font-weight-semibold text-muted">Date of birth</label>
+    <div class="input-group">
+      <select class="form-control form-control-sm mr-3 pl-2" formControlName="month" (change)="loadDays()">
+        <option selected value="">Month</option>
+        <option *ngFor="let month of months" [ngValue]="month.val">{{month.short}}</option>
+      </select>
+
+      <select class="form-control form-control-sm mr-3 pl-2" formControlName="day">
+        <option selected value="">Day</option>
+        <option *ngFor="let day of days;" [ngValue]="day">{{day}}</option>
+      </select>
+
+      <select class="form-control form-control-sm pl-2" formControlName="year" (change)="loadDays()">
+        <option selected value="">Year</option>
+        <option *ngFor="let year of years;" [ngValue]="year">{{year}}</option>
+      </select>
+    </div>
+    <div *ngIf="submitted && (f.year.invalid || f.month.invalid || f.day.invalid)">
+      <span class="form-text text-danger"> Select your birthday</span>
+    </div>
+  </div>
+
+  <div class="form-group form-group-feedback form-group-feedback-left">
+    <label class="d-block font-weight-semibold text-muted">Gender</label>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="gender" value="Male" formControlName="gender">
+        Male
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="gender" value="Female" formControlName="gender">
+        Female
+      </label>
+    </div>
+    <div *ngIf="submitted && f.gender.invalid">
+      <span *ngIf="f.gender.errors.required" class="form-text text-danger"> Choose gender. </span>
+    </div>
+  </div>
+
+  <div *ngIf="f.id && f.id.value > 0" class="form-group form-group-feedback form-group-feedback-left">
+    <label class="d-block font-weight-semibold text-muted">Status</label>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input [attr.disabled]="true" type="radio" class="form-check-input" name="status" value="Pending" formControlName="status">
+        Pending
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="status" value="Accepted" formControlName="status">
+        Accepted
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="status" value="Declined" formControlName="status">
+        Declined 
+      </label>
+    </div>
+    <div *ngIf="submitted && f.gender.invalid">
+      <span *ngIf="f.gender.errors.required" class="form-text text-danger"> Choose status. </span>
+    </div>
+  </div>
+
+  <!-- <button [routerLink]="['/users']" type="button" class="btn bg-transparent text-danger-400 border-danger-400 ml-1 legitRipple float-right">Cancel</button> -->
+  <!-- <button [disabled]="loading" type="submit" class="btn btn-outline bg-success-400 text-success-400 border-success-400 legitRipple float-right">Save</button> -->
+  <button [disabled]="loading" type="submit" class="btn bg-blue btn-block">Save</button>
+  <!-- <a [routerLink]="['/login']" class="btn float-right mt-2">Cancel</a> -->
+</form>

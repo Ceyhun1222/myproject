@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="TOSSM.View.Control.AnnotationLanguageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:annotationLanguage="clr-namespace:TOSSM.ViewModel.Control.AnnotationLanguage">
+    <ComboBox SelectedItem="{Binding Path=SelectedLanguage}" 
+              Width="40" 
+              Style="{StaticResource ToolBarComboboxStyle}"
+              ItemsSource="{Binding Path=LanguageList}" >
+    </ComboBox>
+</UserControl>

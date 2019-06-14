@@ -1,0 +1,133 @@
+﻿@model IEnumerable<ChartManagerWeb.ChartServiceReference.ChartUser>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/dataTable")
+
+<h2>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+</h2>
+
+<hr />
+
+<div class="form-horizontal" style="margin-top:35px">
+
+    <div class="form-group">
+
+        <table id="dtUser" class="table table-responsive table-bordered table-hover">
+
+            <thead>
+                <tr>
+                    <th>Full name</th>
+
+                    <th>
+                        User name
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Position)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Disabled)
+                    </th>
+
+                    <th>
+                        Administrator
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Privilege)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    var trClass = "info";
+                    if (item.IsAdmin)
+                    {
+                        trClass = "success";
+                    }
+
+                    <tr class="@trClass">
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Position)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Disabled)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IsAdmin)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Privilege)
+                        </td>
+
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Reset password", "ResetPassword", new { id = item.Id })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                    </li>
+                                    <li>
+                                        @Html.ActionLink("Download config", "Download", new { id = item.Id })
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+      
+
+@section scripts 
+    {
+            
+    @Scripts.Render("~/bundles/datatable")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#dtUser").dataTable();
+        });
+    </script>
+    }

@@ -1,0 +1,13 @@
+﻿<Window x:Class="ReferenceConfigurator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:View1="clr-namespace:Aran.Temporality.CommonUtil.View;assembly=Aran.Temporality.CommonUtil"
+        Title="Feature Dependency Editor" Height="350" Width="525" 
+        ShowActivated="True"
+        ShowInTaskbar="True"
+        Icon="config.ico"
+        UseLayoutRounding="True" 
+        WindowStartupLocation="CenterScreen" 
+        WindowState="Maximized">
+<View1:ReferenceConfiguratorView />
+</Window>

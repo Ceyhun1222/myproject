@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Chart Manager</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @if (ViewBag.IsAuthenticated == null || !ViewBag.IsAuthenticated)
+                {
+                    @Html.ActionLink("Chart Manager", "Login", "Account", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    @Html.ActionLink("Chart Manager", "Index", "Chart", new { area = "" }, new { @class = "navbar-brand" })
+                }
+
+            </div>
+            <div class="navbar-collapse collapse">
+                @if (ViewBag.IsAuthenticated != null & ViewBag.IsAuthenticated)
+                {
+                    <ul class="nav navbar-nav">
+                        @if (ViewBag.IsAdmin != null && ViewBag.IsAdmin)
+                        {
+                            <li>@Html.ActionLink("Users", "Index", "User")</li>
+                        }
+                        <li>@Html.ActionLink("Charts", "Index", "Chart")</li>
+                        @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    </ul>
+                }
+                <ul class="nav navbar-nav navbar-right">
+
+                    @if (ViewBag.IsAuthenticated != null && ViewBag.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink($"Hello {ViewBag.Username}", "Edit", "User", new { id = ViewBag.UserId }, null)</li>
+                        <li>@Html.ActionLink("Log out", "Logout", "Account")</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @{
+            Html.RenderPartial("_Alerts");
+        }
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 1993 - @DateTime.Now.Year, R.I.S.K. Company - All rights reserved</p>
+        </footer>
+    </div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,146 @@
+﻿@using  ObstacleManagementSystem.ViewModels.UserViewModels
+
+@model UserWithRoleViewModel
+
+@{
+    ViewData["Title"] = "Ətraflı";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Istifadəçi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Fathername)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Fathername)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Birthday)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Birthday)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Gender)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.PasswordChanged)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.PasswordChanged)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.DateRegistered)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.DateRegistered)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.NormalizedUserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.NormalizedUserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.NormalizedEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.NormalizedEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.EmailConfirmed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.EmailConfirmed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.PasswordHash)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.PasswordHash)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.SecurityStamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.SecurityStamp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.ConcurrencyStamp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.ConcurrencyStamp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.PhoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.PhoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.PhoneNumberConfirmed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.PhoneNumberConfirmed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.TwoFactorEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.TwoFactorEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.LockoutEnd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.LockoutEnd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.LockoutEnabled)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.LockoutEnabled)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.User.AccessFailedCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.User.AccessFailedCount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="Model.User.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

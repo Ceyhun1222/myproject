@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:sdd="http://www.teamead.com/ws/sdd" elementFormDefault="qualified" targetNamespace="http://www.teamead.com/ws/sdd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:documentation>Data types for SDD WS</xs:documentation>
+  </xs:annotation>
+  <xs:simpleType name="StatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QUEUED" />
+      <xs:enumeration value="PROCESSING" />
+      <xs:enumeration value="FINISHED" />
+      <xs:enumeration value="FAILED" />
+      <xs:enumeration value="CANCELED" />
+      <xs:enumeration value="PAUSED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AttachedFileType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="name" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The name of the file</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="checksum" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Hex MD5 signature of the file content</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" fixed="text/xml" name="mimetype" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The mime type of the uncomressed file content</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmime:expectedContentTypes="application/zip" minOccurs="1" maxOccurs="1" name="content" type="xs:base64Binary">
+        <xs:annotation>
+          <xs:documentation>The content of an AIXM 5.1 XML file compressed using ZIP and base 64 encoded</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetDownload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="downloadFileId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DownloadType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="id" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="scheduledDate" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="effectiveDate" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="queryDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DownloadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="status" type="sdd:StatusType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="log" type="sdd:AttachedFileType" />
+        <xs:element minOccurs="0" maxOccurs="1" name="download" type="sdd:AttachedFileType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="status" type="sdd:StatusType" />
+        <xs:element minOccurs="1" maxOccurs="1" name="parameterSetName" type="xs:string" />
+        <xs:element name="parameterSetId" type="xs:string" />
+        <xs:element name="downloadFileId" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ParameterSetNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" default="QUEUED" name="status" type="sdd:StatusType" />
+        <xs:element minOccurs="1" maxOccurs="1" name="parameterSetName" type="xs:string" />
+        <xs:element name="parameterSetId" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="unbounded" name="download" type="sdd:DownloadType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

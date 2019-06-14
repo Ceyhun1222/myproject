@@ -1,0 +1,49 @@
+﻿@using System
+@using AIP.GUI
+
+@if(Model != null && Model.Count > 0) {
+<table frame="border" align="center">
+    <colgroup>
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+    </colgroup>
+    <thead>
+        <tr class="Table-row-type-1">
+            <th class="bleft btop bright bbottom" rowspan = "2">@Raw(@Tpl.Text("AD13_1"))</th>
+            <th class="bleft btop bright bbottom" colspan = "3">@Raw(@Tpl.Text("AD13_2"))</th>
+            <th class="bleft btop bright bbottom" rowspan = "2">@Raw(@Tpl.Text("AD13_3"))</th>
+        </tr>
+		<tr class="Table-row-type-2">
+            <th colspan="1" class="bleft btop bright bbottom" rowspan="1">@Raw(@Tpl.Text("AD13_4"))</th>
+            <th colspan="1" class="bleft btop bright bbottom" rowspan="1">@Raw(@Tpl.Text("AD13_5"))</th>
+            <th colspan="1" class="bleft btop bright bbottom" rowspan="1">@Raw(@Tpl.Text("AD13_6"))e</th>
+        </tr>
+        <tr class="Table-row-type-2">
+            <th class="bleft btop bright bbottom">1</th>
+            <th class="bleft btop bright bbottom">2</th>
+            <th class="bleft btop bright bbottom">3</th>
+            <th class="bleft btop bright bbottom">4</th>
+            <th class="bleft btop bright bbottom">5</th>
+        </tr>
+    </thead>
+    <tbody valign="top">
+    @foreach (var data in Model) {
+        <tr>
+            <td class="bleft btop bright bbottom" colspan="5"><strong class = "Cell-body">@Raw(data.type)</strong></td>
+        </tr>
+	    foreach (var subdata in data.Row) {
+        <tr>
+            <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["Name"])<br />@Raw(subdata["LocationIndicatorICAO"])</td>
+            <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["TrafficType_NTL"])</td>
+            <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["TrafficType_IFR"])</td>
+            <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["TrafficType_Sch"])</td>
+            <td class="bleft btop bright bbottom" colspan="1">@Raw(subdata["LocationIndicatorICAO_URL"])</td>
+        </tr>
+		}
+	}
+    </tbody>
+</table>
+}

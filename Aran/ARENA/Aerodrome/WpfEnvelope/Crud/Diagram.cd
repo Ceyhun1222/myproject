@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="Library Interface">
+    <Position X="20.706" Y="22.264" Height="0.263" Width="12.066" />
+  </Comment>
+  <Comment CommentText="Visual Controls">
+    <Position X="34.037" Y="15.376" Height="0.263" Width="10.927" />
+  </Comment>
+  <Class Name="Technewlogic.Crud.Controls.CrudDisplay">
+    <Position X="34.5" Y="9.75" Width="4" />
+    <Members>
+      <Field Name="_crudManager" Hidden="true" />
+      <Field Name="_masterView" Hidden="true" />
+      <Field Name="MasterDefaultTemplateProperty" Hidden="true" />
+      <Field Name="MasterTemplateDefinitionsProperty" Hidden="true" />
+      <Method Name="OnApplyTemplate" Hidden="true" />
+      <Method Name="OnPropertySetException" Hidden="true" />
+      <Method Name="OnUnhandledRuntimeException" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_entityPanel" Type="System.Windows.Controls.Panel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.413" Y="0.047" Height="0.16" Width="1.182" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_breadcrumpList" Type="System.Windows.Controls.Panel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.27" Y="0.034" Height="0.16" Width="1.325" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_detailsPanel" Type="Technewlogic.Crud.Controls.DetailsPanel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.359" Y="0.073" Height="0.16" Width="1.236" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_modificationPanel" Type="Technewlogic.Crud.Controls.ModificationPanel">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.184" Y="0.073" Height="0.16" Width="1.411" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CrudManager" Type="Technewlogic.Crud.CrudManager">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.936" Y="0.021" Height="0.16" Width="1.03" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IABAAACIAAFMAAAggQAAAgAACQAAEAIAZgBAEAkAAgA=</HashCode>
+      <FileName>Controls\CrudDisplay.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_entityPanel" />
+      <Field Name="_breadcrumpList" />
+      <Field Name="_detailsPanel" />
+      <Field Name="_modificationPanel" />
+      <Property Name="CrudManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.BreadcrumpElement">
+    <Position X="14.75" Y="4.25" Width="2" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <AssociationLine Name="ViewModel" Type="Technewlogic.Crud.Framework.ViewModel">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.129" Y="0.037" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\BreadcrumpElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ViewModel" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.MethodManager">
+    <Position X="5.75" Y="16.25" Width="3" />
+    <Members>
+      <Method Name="MethodManager" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABIABBAAAAAAAAEBAAAAAYAAAAAAAACQAUCAAQAAAAA=</HashCode>
+      <FileName>Framework\MethodManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.NavigationManager" BaseTypeListCollapsed="true">
+    <Position X="15" Y="7" Width="3.75" />
+    <Members>
+      <Field Name="_currentModel" Hidden="true" />
+      <Method Name="OnBreadcrumpListChanged" Hidden="true" />
+      <Method Name="OnNavigated" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_navigationHistory" Type="Technewlogic.Crud.Framework.NavigationStack">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.692" Y="2.527" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CurrentModel" Type="Technewlogic.Crud.Framework.ViewModel">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.239" Y="0.071" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Breadcrump" Type="Technewlogic.Crud.Framework.BreadcrumpElement">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.574" Y="0.811" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAgABAAAAAIAAAAAAACBQAIAIAAAAAAAAgAQAAAAAAA=</HashCode>
+      <FileName>Framework\NavigationManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_navigationHistory" />
+      <Property Name="CurrentModel" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Breadcrump" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.NavigationStack">
+    <Position X="17.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Framework\NavigationStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.ViewModel" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="4.5" Width="3.25" />
+    <Members>
+      <Field Name="_editedItem" Hidden="true" />
+      <Field Name="_selectedItem" Hidden="true" />
+      <Field Name="_typeRegistration" Hidden="true" />
+      <Method Name="OnPropertyChanged" Hidden="true" />
+      <Method Name="OnSelectedItemChanged" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_userMode" Type="Technewlogic.Crud.Framework.UserMode">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.506" Y="0.472" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TypeRegistration" Type="Technewlogic.Crud.MetaTypeRegistration" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.125" Y="8.381" />
+        <Point X="11.125" Y="12.442" />
+        <Point X="15.25" Y="12.442" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.68" Y="2.983" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAIAAACBAABAIACAAIAAgQAJIBAAAFCEAgEQAEA=</HashCode>
+      <FileName>Framework\ViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_userMode" />
+      <Property Name="TypeRegistration" />
+    </ShowAsAssociation>
+    <Lollipop Position="1.471" />
+  </Class>
+  <Class Name="Technewlogic.Crud.BaseConfiguration">
+    <Position X="23.25" Y="14.25" Width="2.25" />
+    <Members>
+      <Method Name="BaseConfiguration" Hidden="true" />
+    </Members>
+    <AssociationLine Name="_mtr" Type="Technewlogic.Crud.MetaTypeRegistration">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="3.754" Y="0.062" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>BaseConfiguration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_mtr" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.CrudManager">
+    <Position X="23" Y="11.5" Width="3.5" />
+    <Members>
+      <Field Name="_registeredTyes" Hidden="true" />
+      <Method Name="CrudManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="RegisteredTypes" Type="Technewlogic.Crud.MetaTypeRegistration">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.001" Y="0.066" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="NavigationManager" Type="Technewlogic.Crud.Framework.NavigationManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="5.369" Y="-2.825" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAAACA=</HashCode>
+      <FileName>CrudManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NavigationManager" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RegisteredTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.Framework.DataSourceManager">
+    <Position X="9.25" Y="16.25" Width="3" />
+    <Members>
+      <Field Name="_dataSourceGetMethod" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Framework\DataSourceManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.MetaTypeRegistration">
+    <Position X="15.25" Y="11.75" Width="3.5" />
+    <Members>
+      <Field Name="_childRegistrations" Hidden="true" />
+      <Field Name="_collectionPropertyRegistrations" Hidden="true" />
+      <Field Name="_crudProperties" Hidden="true" />
+      <Field Name="_dataSourceManager" Hidden="true" />
+      <Field Name="_description" Hidden="true" />
+      <Field Name="_methodManager" Hidden="true" />
+      <Field Name="_parent" Hidden="true" />
+      <Field Name="_propertyMethodManager" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <AssociationLine Name="MethodManager" Type="Technewlogic.Crud.Framework.MethodManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="13.256" />
+        <Point X="7.25" Y="13.256" />
+        <Point X="7.25" Y="16.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-7.721" Y="2.244" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PropertyMethodManager" Type="Technewlogic.Crud.Framework.MethodManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="13.541" />
+        <Point X="8.031" Y="13.541" />
+        <Point X="8.031" Y="16.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-7.153" Y="1.848" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DataSourceManager" Type="Technewlogic.Crud.Framework.DataSourceManager" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="14.07" />
+        <Point X="10.75" Y="14.07" />
+        <Point X="10.75" Y="16.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-4.492" Y="0.989" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ChildRegistrations" Type="Technewlogic.Crud.MetaTypeRegistration">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.195" Y="0.316" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAICAAAkAAAgCAAUQAACQABQCAAAAJEAASAIAABAIAA=</HashCode>
+      <FileName>MetaTypeRegistration.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MethodManager" />
+      <Property Name="PropertyMethodManager" />
+      <Property Name="DataSourceManager" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ChildRegistrations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Technewlogic.Crud.PropertyCollectionConfiguration&lt;TParent, T&gt;">
+    <Position X="28.5" Y="17.5" Width="4.5" />
+    <Members>
+      <Method Name="PropertyCollectionConfiguration" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Technewlogic.Crud.BaseConfiguration" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.25" Y="15.231" />
+        <Point X="24.25" Y="16.254" />
+        <Point X="29.625" Y="16.254" />
+        <Point X="29.625" Y="17.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>PropertyCollectionConfiguration_2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.TypeConfiguration&lt;T&gt;">
+    <Position X="21" Y="20.25" Width="3.25" />
+    <Members>
+      <Method Name="TypeConfiguration" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAAAAAAAEAAAAAAAAAAAAAAACQAAAAAAAAAAA=</HashCode>
+      <FileName>TypeConfiguration_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.TypeConfiguration&lt;TParent, T&gt;">
+    <Position X="25.25" Y="20.25" Width="3.75" />
+    <Members>
+      <Method Name="TypeConfiguration" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAAAAAAAEAAAAAAAAAAAAAAACQAAAAAAAAAAA=</HashCode>
+      <FileName>TypeConfiguration_2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Windows.Controls.Panel" Collapsed="true">
+    <Position X="40" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Technewlogic.Crud.Controls.DetailsPanel" Collapsed="true">
+    <Position X="40" Y="11.5" Width="1.5" />
+    <InheritanceLine Type="Technewlogic.Crud.Controls.PanelBase" FixedToPoint="true">
+      <Path>
+        <Point X="43.75" Y="10.13" />
+        <Point X="43.75" Y="11.875" />
+        <Point X="41.5" Y="11.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAIBAACAAAAEABAAABAgAAQACAAAAAAAAQhA=</HashCode>
+      <FileName>Controls\DetailsPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.Controls.ModificationPanel" Collapsed="true">
+    <Position X="40" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAQABAAAAAAAAAAAAQAIAAAQAAAAABBAAAABA=</HashCode>
+      <FileName>Controls\ModificationPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.Controls.PanelBase" Collapsed="true">
+    <Position X="43" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAABAACAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\PanelBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Technewlogic.Crud.Controls.TemplatedControl" Collapsed="true">
+    <Position X="43" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\TemplatedControl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Technewlogic.Crud.BaseTypeConfiguration&lt;T&gt;">
+    <Position X="21.75" Y="17.25" Width="5.25" />
+    <Members>
+      <Method Name="BaseTypeConfiguration" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Technewlogic.Crud.BaseConfiguration" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.25" Y="15.231" />
+        <Point X="24.25" Y="17.126" />
+        <Point X="24.25" Y="17.126" />
+        <Point X="24.25" Y="17.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAQCAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>BaseConfiguration_1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Technewlogic.Crud.Framework.UserMode" Collapsed="true">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAABAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\UserMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

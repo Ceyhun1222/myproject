@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.AIRPORT_AIRTRACK">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAQACAAAgCAAAAAAAAEAAAAAQAAAAAAAAAg=</HashCode>
+      <FileName>AIRTRACK_Objects\AIRPORT GROUP\AIRPORT_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.ILS_AIRTRACK">
+    <Position X="11.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>AIRTRACK_Objects\AIRPORT GROUP\ILS_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.RunWay_THR_AIRTRACK">
+    <Position X="9.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BQAAQAAAAAAAAAAJEAAEACAAFQCAgAAIQAmAAgAAAAE=</HashCode>
+      <FileName>AIRTRACK_Objects\AIRPORT GROUP\RunWay_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.RunWay_AIRTRACK">
+    <Position X="7.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAAAAAAgAIAAAAAAAAAAAABCAAAAAAAQAAAQA=</HashCode>
+      <FileName>AIRTRACK_Objects\AIRPORT GROUP\RunWay_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.Object_AIRTRACK">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACMAgAAAAAAAAAAAAAAAAAAQAAAgAAAAAAAgAABAAA=</HashCode>
+      <FileName>AIRTRACK_Objects\Object_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARINC_DECODER_CORE.AIRTRACK_Objects.Shape_AIRTRACK">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAABAAAEAAAAAAAAAAAAACAAAAAAAAgAE=</HashCode>
+      <FileName>AIRTRACK_Objects\Object_AIRTRACK.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

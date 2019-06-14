@@ -1,0 +1,207 @@
+<div class="container p-0 m-0" style="max-width: 100vw;">
+  <div class="row p-0 m-0" style="width: inherit;">
+    <div class="col-lg-3 col-md-4 col-sm-12 p-0 pb-1 m-0">
+      <div class="card" [ngClass]="{'mt-2':collapseIconRotate}">
+        <div class="card-header header-elements-inline bg-light py-sm-0 py-1">
+          <h6 class="card-title font-weight-bold mr-1">Request details</h6>
+          <div class="header-elements">
+            <div class="list-icons">
+              <!-- <a class="list-icons-item" data-action="collapse"></a> -->
+              <a class="list-icons-item" title="Collapse" href="javascript:void(0)" data-toggle="collapse" data-target="#demo"
+                (click)="collapseIconRotate = !collapseIconRotate">
+                <i class="icon-arrow-down22 icon-2x" [ngClass]="{'rotate-180': collapseIconRotate}"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-2 collapse show" id="demo">
+          <span class="text-muted font-weight-semibold m-5" [hidden]="requestData?.id">Loading...</span>
+          <ul class="list list-unstyled" *ngIf="requestData?.id">
+            <li class="text-info-700 cursor-pointer" [routerLink]="['/user', requestData.userId]">
+              <span>User: </span>
+              <span> {{requestData.userFullname}}</span>
+            </li>
+            <li>
+              <span>Designator: </span>
+              <span> {{requestData.designator}}</span>
+            </li>
+            <li>
+              <span>Airport: </span>
+              <span> {{requestData.airportName}}</span>
+            </li>
+            <li>
+              <span>Created: </span>
+              <span> {{requestData.createdAt}}</span>
+            </li>
+            <li>
+              <span>Site elevation MSL: </span>
+              <span> {{requestData.elevation}} m</span>
+            </li>
+            <li>
+              <span>Height: </span>
+              <span> {{requestData.height}} m</span>
+            </li>
+            <li>
+              <span>Vertical Accuracy: </span>
+              <span> {{requestData.verticalAccuracy}} m</span>
+            </li>
+            <li>
+              <span>Horizontal Accuracy: </span>
+              <span> {{requestData.horizontalAccuracy}} m</span>
+            </li>
+            <li>
+              <span>Obstruction type: </span>
+              <span> {{requestData.obstructionType}}</span>
+            </li>
+            <li>
+              <span>Type: </span>
+              <span> {{requestData.type}}</span>
+            </li>
+            <li>
+              <span>Duration: </span>
+              <span> {{requestData.duration}}</span>
+            </li>
+            <li>
+              <span>Beginning date: </span>
+              <span> {{requestData.beginningDate}}</span>
+            </li>
+            <li>
+              <span>End date: </span>
+              <span> {{requestData.endDate}}</span>
+            </li>
+
+            <li class="cursor-pointer dropdown-toggle" [class.dropdown-toggle]="requestData.submitted2Aixm" data-toggle="collapse"
+              data-target="#submitted2Aixm">
+              <span>Submitted to Aixm: </span>
+              <span class="text-info-800"> {{requestData.submitted2Aixm ? 'Yes': 'No'}}</span>
+            </li>
+            <div id="submitted2Aixm" class="collapse" *ngIf="requestData.submitted2Aixm">
+              <ul class="list-group p-0">
+                <li class="list-group-item p-1" title="Submitted at"><span>Submitted at: &nbsp; </span>
+                  {{requestData.submitted2AixmAt}}</li>
+                <li class="list-group-item p-1" title="Public slot"><span>Public slot: &nbsp; </span>{{requestData.submitted2AixmPublicSlotName}}</li>
+                <li class="list-group-item p-1" title="Private slot"><span>Private slot: &nbsp; </span>{{requestData.submitted2AixmPrivateSlotName}}</li>
+              </ul>
+            </div>
+
+            <li class="cursor-pointer dropdown-toggle" data-toggle="collapse" data-target="#geometryType">
+              <span>Geometry type: </span>
+              <span class="text-info-800"> {{requestData.geometryType}}</span>
+            </li>
+            <div id="geometryType" class="collapse">
+              <ul class="list-group p-0">
+                <li class="list-group-item p-1" title="latitude, longitude" *ngFor="let coordinate of requestData.coordinates">{{projService.googleToDmsString(coordinate)}}</li>
+              </ul>
+            </div>
+            <li>
+                <span>Image: </span>
+                <span *ngIf="attachmentStr == null" class="text-muted font-weight-semibold"> {{attachmentLoading ? 'Loading...' : 'Not found'}}</span>
+                <span *ngIf="attachmentStr?.length > 0" class="cursor-pointer text-info-800" (click)="swalInternet.show();"><i class="icon-file-picture text-info-600"></i> Show</span>
+              <swal #swalInternet imageUrl="{{attachmentStr}}" (confirm)="picDownload(requestData.id, requestData.designator)" confirmButtonText="Download" showCancelButton="true" cancelButtonText="Close"></swal>
+            </li>
+            <li class="mt-2" *ngIf="requestData?.checked">
+              <button class="btn btn-success btn-sm" (click)="downloadReport(requestData.id, requestData.userFullname + '-'+requestData.designator)">Report
+                download</button>
+            </li>
+            <li class="mt-2" *ngIf="!requestData?.submitted2Aixm && requestData?.id > 0 && requestData.checked">
+              <button [disabled]="submit2AixmLoading" class="btn btn-success btn-sm" (click)="submit2Aixm()">Submit to Aixm</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--  -->
+      <div class="card mt-2">
+        <div class="card-header bg-light header-elements-inline py-sm-0 py-1">
+          <span class="card-title font-weight-bold mr-1">Layers</span>
+          <div class="header-elements">
+            <div class="list-icons">
+              <a class="list-icons-item" title="Collapse" href="javascript:void(0)" data-toggle="collapse" data-target="#oms-map-filter-collapse"
+                (click)="collapseIconRotateLayers = !collapseIconRotateLayers">
+                <i class="icon-arrow-down22 icon-2x" [ngClass]="{'rotate-180': collapseIconRotateLayers}"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body p-2 collapse" id="oms-map-filter-collapse">
+          <!-- <ngx-treeview [config]="config" [items]="items"  (selectedChange)="values = $event" [disabled]="!dropdownEnabled"
+            [ngxDisabledOnSelector]="'button.dropdown-toggle'" (filterChange)="onFilterChange($event)">
+          </ngx-treeview> -->
+          <ngx-treeview [config]="config" [items]="reportTreeItems" (selectedChange)="onFilterChange($event)"
+            (filterChange)="onFilterChange($event)">
+          </ngx-treeview>
+        </div>
+      </div>
+
+      <div *ngIf="false" class="card mt-2">
+        <div class="card-header bg-light header-elements-inline py-sm-0 py-1">
+          <span class="card-title font-weight-bold mr-1">Style</span>
+          <div class="header-elements">
+            <div class="list-icons">
+              <a class="list-icons-item" title="Collapse" href="javascript:void(0)" data-toggle="collapse" data-target="#oms-request-style"
+                (click)="collapseIconRotateStyle = !collapseIconRotateStyle">
+                <i class="icon-arrow-down22 icon-2x" [ngClass]="{'rotate-180': collapseIconRotateStyle}"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-2 collapse" id="oms-request-style">
+          <div class="form-group">
+            <label for="fill" class="font-weight-bold mr-4">Fill:</label>
+            <input [value]="styles.fill" [cpOutputFormat]="'rgba'" [(colorPicker)]="styles.fill" [style.background]="styles.fill"
+              [cpPosition]="'bottom'" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']"
+              (colorPickerChange)="styleChanged()" />
+          </div>
+          <div class="form-group">
+            <label for="stroke" class="font-weight-bold mr-2">Stroke:</label>
+            <input [value]="styles.stroke" [cpOutputFormat]="'rgba'" [(colorPicker)]="styles.stroke" [style.background]="styles.stroke"
+              [cpPosition]="'bottom'" [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']"
+              (colorPickerChange)="styleChanged()" />
+          </div>
+          <div class="form-group">
+            <label for="stroke" class="font-weight-bold mr-2">Radius:</label>
+            <input type="range" required [(ngModel)]="styles.radius" name="radius" #radius="ngModel" min="1" max="10"
+              (change)="styleChanged()">
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="resultShow" class="card mt-2">
+        <div class="card-header bg-light header-elements-inline py-sm-0 py-1">
+          <span class="card-title font-weight-bold mr-1">Result</span>
+          <div class="header-elements">
+            <div class="list-icons">
+              <a class="list-icons-item" title="Collapse" href="javascript:void(0)" data-toggle="collapse" data-target="#oms-request-result"
+                (click)="collapseIconRotateResult = !collapseIconRotateResult">
+                <i class="icon-arrow-down22 icon-2x" [ngClass]="{'rotate-180': collapseIconRotateResult}"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-2 collapse show" id="oms-request-result">
+          <span [hidden]="resultList?.length > 0" class="text-center text-muted">
+            Obstacle not found
+          </span>
+          <ul class="list list-unstyled" *ngFor="let result of resultList | sort:'penetrate'">
+            <li class="cursor-pointer" (click)="onFilterChange2(result.surfaceIdentifier)">
+              <span><ins>Surface name:</ins></span>
+              <span> {{result.surfaceName.split("OTHER_").pop()}}</span>
+            </li>
+            <li>
+              <span>Penetrate: </span>
+              <span [ngClass]="{'text-danger':result.penetrate > 0}">
+                {{publicService.penetrateFixedTo(result.penetrate)}} metr</span>
+            </li>
+            <li>
+              <span>Runway direction: </span>
+              <span> {{result.runwayDirection}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button [disabled]="checkLoading" type="button" class="btn btn-success btn-sm float-right mr-2" (click)="check()">Check</button>
+      <!--  -->
+    </div>
+
+    <div class="col-lg-9 col-md-8 col-sm-12 p-0 m-0">
+      <app-map></app-map>
+    </div>
+  </div>
+</div>

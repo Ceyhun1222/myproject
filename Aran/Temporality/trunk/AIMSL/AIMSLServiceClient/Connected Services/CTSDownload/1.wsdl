@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.teamead.com/ws/sdd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:aimsl="http://www.teamead.com/ws/aimsl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wssutil="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:sdd="http://www.teamead.com/ws/sdd" targetNamespace="http://www.teamead.com/ws/sdd" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsingPolicy wssutil:Required="true" />
+  <ns0:Policy xmlns:ns0="http://schemas.xmlsoap.org/ws/2004/09/policy" wssutil:Id="SignatureRequired">
+    <ns0:ExactlyOne>
+      <ns0:All>
+        <ns1:AsymmetricBinding xmlns:ns1="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <ns0:Policy>
+            <ns1:InitiatorToken>
+              <ns0:Policy>
+                <ns1:X509Token ns1:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <ns0:Policy>
+                    <ns1:WssX509V3Token10 />
+                  </ns0:Policy>
+                </ns1:X509Token>
+              </ns0:Policy>
+            </ns1:InitiatorToken>
+            <ns1:RecipientToken>
+              <ns0:Policy>
+                <ns1:X509Token ns1:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator">
+                  <ns0:Policy>
+                    <ns1:WssX509V3Token10 />
+                  </ns0:Policy>
+                </ns1:X509Token>
+              </ns0:Policy>
+            </ns1:RecipientToken>
+            <ns1:AlgorithmSuite>
+              <ns0:Policy>
+                <ns1:TripleDesRsa15 />
+              </ns0:Policy>
+            </ns1:AlgorithmSuite>
+            <ns1:Layout>
+              <ns0:Policy>
+                <ns1:Strict />
+              </ns0:Policy>
+            </ns1:Layout>
+            <ns1:IncludeTimestamp />
+          </ns0:Policy>
+        </ns1:AsymmetricBinding>
+        <ns1:SignedParts xmlns:ns1="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <ns1:Body />
+        </ns1:SignedParts>
+      </ns0:All>
+    </ns0:ExactlyOne>
+  </ns0:Policy>
+  <ns0:Policy xmlns:ns0="http://schemas.xmlsoap.org/ws/2004/09/policy" wssutil:Id="Mtom.xml">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+  </ns0:Policy>
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="../xsd/sdd-ws/sdd-ws-download.xsd" namespace="http://www.teamead.com/ws/sdd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDownload">
+    <wsdl:part name="body" element="sdd:GetDownload" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResponse">
+    <wsdl:part name="body" element="sdd:DownloadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SDDDownloandPortType">
+    <wsdl:operation name="downloadAixmMessageFile">
+      <wsdl:documentation>Retrieves a specific download AIXM 5.1 XML file</wsdl:documentation>
+      <wsdl:input name="DownloadAixmMessageFileInput" message="sdd:GetDownload" />
+      <wsdl:output name="DownloadAixmMessageFileOutput" message="sdd:DownloadResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SDDBinding" type="sdd:SDDDownloandPortType">
+    <wsp:PolicyReference URI="#Mtom.xml" />
+    <wsp:PolicyReference URI="#SignatureRequired" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="downloadAixmMessageFile">
+      <wsdl:input name="DownloadAixmMessageFileInput">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownloadAixmMessageFileOutput">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SDDDownloadWebService">
+    <wsdl:documentation>SDD AIXM 5.1 Download Web Service</wsdl:documentation>
+    <wsdl:port name="SDDWebServicePort" binding="sdd:SDDBinding">
+      <soap:address location="https://vead03.cts.ead-itp.com:4443/aimsl/SDDDownloadWebService/1.0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

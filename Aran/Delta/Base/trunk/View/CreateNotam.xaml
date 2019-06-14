@@ -1,0 +1,100 @@
+﻿<Window x:Class="Aran.Delta.View.CreateNotam"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:tool="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Airspace from text format"
+        Height="280"
+        Width="390"
+        Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}">
+    <Window.Resources>
+
+        <Color x:Key="detailMark">#FFA1A9B3</Color>
+        <SolidColorBrush x:Key="detailMarkBrush" Color="{StaticResource ResourceKey=detailMark}" />
+        <Style x:Key="flatTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Rectangle  Stroke="{StaticResource ResourceKey=detailMarkBrush}" StrokeThickness="1"/>
+                            <TextBox Margin="1" Text="{TemplateBinding Text}" BorderThickness="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0 0 20 0"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontStretch" Value="UltraExpanded"></Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="80"></Setter>
+        </Style>
+        <LinearGradientBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFD9F4FF" Offset="0"/>
+            <GradientStop Color="#FF9BDDFB" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="{x:Static SystemColors.ControlBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFEEEDED" Offset="0"/>
+            <GradientStop Color="#FFDDDDDD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+        <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black" />
+
+    </Window.Resources>
+    <Grid>
+        <Grid Margin="5 6 5 2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="170"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Point List">
+                <TextBox Text="{Binding NotamPoints}" TextAlignment="Left" VerticalAlignment="Top" Height="160" HorizontalContentAlignment="Stretch" MaxLines="7" Width="350" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"  HorizontalAlignment="Left"   Margin="2"></TextBox>
+            </GroupBox>
+            <GroupBox Header="Vertical Limits" Grid.Row="1"  Visibility="Collapsed">
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" Margin="0 3">
+                        <TextBlock Text="Lower Limit :"></TextBlock>
+                        <TextBox Text="{Binding MinAltitude}" Width="160"></TextBox>
+                        <ComboBox ItemsSource="{Binding DistanceVerticalList}" Width="60" Margin="10 0" SelectedItem="{Binding SelectedMinDistanceParam}"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Margin="0 3">
+                        <StackPanel Orientation="Horizontal" Margin="0 3">
+                            <TextBlock Text="Upper Limit :"></TextBlock>
+                            <TextBox Text="{Binding MaxAltitude}" Width="160"></TextBox>
+                            <ComboBox ItemsSource="{Binding DistanceVerticalList}" Width="60" Margin="10 0" SelectedItem="{Binding SelectedMaxDistanceParam}"></ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <!--<GroupBox Header="Notam Activation Date" Grid.Row="2">
+                <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+                    <StackPanel Orientation="Horizontal" Margin="0 3">
+                        <TextBlock Text="Start Date :   "></TextBlock>
+                        <tool:DateTimePicker  Format="Custom"  FormatString="yyyy-MM-dd HH:mm:ss"   Width="205" Height="24" Value="{Binding StartDate,Mode=TwoWay}"></tool:DateTimePicker>
+                        <TextBlock Text="UTC" Margin="8 0"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0 3">
+                        <StackPanel Orientation="Horizontal" Margin="0 3">
+                            <TextBlock Text="End Date :    "></TextBlock>
+                            <tool:DateTimePicker  Width="205" Format="Custom"  FormatString="yyyy-MM-dd HH:mm:ss" Height="24" Value="{Binding StopDate,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock Text="UTC" Margin="8 0"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>-->
+
+            <StackPanel Grid.Row="2" VerticalAlignment="Bottom" Margin="0 5" Orientation="Horizontal">
+                <Button Margin="0,0" Command="{Binding ClearCommand}" Content="Clear"  Width="70" Height="24"/>
+                <Button  Command="{Binding DrawCommand}" Margin="144 2 3 2" Width="70"  Height="24" Content="Apply"></Button>
+                <Button Margin="4 3 3 3" Content="Ok" Command="{Binding SaveCommand}" Width="70" Height="24"/>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

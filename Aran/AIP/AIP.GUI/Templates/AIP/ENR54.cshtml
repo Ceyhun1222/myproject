@@ -1,0 +1,46 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 5;
+    int i = 1;
+}
+@if (!string.IsNullOrEmpty(Model.Notes))
+{
+    <em>@Raw(Model.Notes)</em>
+}
+
+<table frame="border" align="center">
+    <colgroup>
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+        <col width="20%" />
+    </colgroup>
+    <thead>
+    <tr class="Table-row-type-1">
+        @for (i = 1; i <= Col; i++)
+        {
+            <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("ENR54_"+@i))</th>
+        }
+    </tr>
+    <tr class="Table-row-type-2">
+        @for (i = 1; i <= Col; i++)
+        {
+            <th class="bleft btop bright bbottom">@i</th>
+        }
+    </tr>
+    </thead>
+    <tbody valign="top">
+    @foreach (var Row in Model.Row)
+    {
+        <tr>
+            <td class="bleft btop bright bbottom">@Raw(Row["Name"])</td>
+            <td class="bleft btop bright bbottom">@Raw(Row["Type"])</td>
+            <td class="bleft btop bright bbottom">@Raw(Row["Coordinates"])</td>
+            <td class="bleft btop bright bbottom">@Raw(Row["Elevation"])</td>
+            <td class="bleft btop bright bbottom">@Raw(Row["LightingColor"]) @Raw(Row["LightingType"])</td>
+        </tr>
+    }
+    </tbody>
+</table>

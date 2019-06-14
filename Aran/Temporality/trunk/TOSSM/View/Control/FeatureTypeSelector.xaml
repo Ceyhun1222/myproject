@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="TOSSM.View.Control.FeatureTypeSelector"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:control="clr-namespace:Aran.Temporality.CommonUtil.Control;assembly=Aran.Temporality.CommonUtil"
+             xmlns:control1="clr-namespace:TOSSM.Control"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <control:BetterAutoFilteredComboBox MinWidth="200" 
+              x:Name="FeatureTypeComboBox"
+              Focusable="True"
+              StaysOpenOnEdit="True"
+              IsTextSearchEnabled="True"
+              IsTextSearchCaseSensitive="False"
+              VerticalAlignment="Center"
+              IsEditable="True" 
+              SelectedItem="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=MySelectedItem, UpdateSourceTrigger=PropertyChanged}"
+              PreviewKeyDown="FeatureTypeComboBoxPreviewKeyDown"
+              Style="{StaticResource ToolBarComboboxStyle}"
+              ItemsSource="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=FeatureList}">
+        
+    </control:BetterAutoFilteredComboBox>
+</UserControl>

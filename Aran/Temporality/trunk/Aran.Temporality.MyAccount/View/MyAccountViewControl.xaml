@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="Aran.Temporality.MyAccount.View.MyAccountViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:View="clr-namespace:Aran.Temporality.UserManager.View;assembly=Aran.Temporality.UserManager"
+             xmlns:ViewModel1="clr-namespace:Aran.Temporality.MyAccount.ViewModel" mc:Ignorable="d" 
+             x:Name="MyAccountControl"
+             Background="Lavender"
+             d:DesignHeight="232" d:DesignWidth="784">
+    <UserControl.DataContext>
+        <ViewModel1:MyAccountViewModel/>
+    </UserControl.DataContext>
+
+    <TabControl Background="Lavender">
+            <TabItem Header="Access">
+                <View:EasyUserViewControl Grid.Row="0" 
+                                          Margin="5" 
+                                          DataContext="{Binding Path=EasyUserViewModel}"
+                                          HorizontalAlignment="Stretch" 
+                                          VerticalAlignment="Stretch" />
+            </TabItem>
+        <TabItem Header="Settings">
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center"> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Margin="5" Grid.Row="0" Text="Old password:" VerticalAlignment="Center"/>
+                <PasswordBox Grid.Column="1" 
+                             Margin="5" 
+                             Grid.Row="0" 
+                             Width="120" 
+                             VerticalAlignment="Center"
+                             Name="OldPasswordBox" />
+            
+                <TextBlock Grid.Column="0" Margin="5" Grid.Row="1" Text="New password:" VerticalAlignment="Center"/>
+
+                <PasswordBox Grid.Column="1" 
+                             Margin="5" 
+                             Grid.Row="1" 
+                             Width="120" 
+                             VerticalAlignment="Center"
+                             Name="NewPasswordBox" />
+                
+                <TextBlock Grid.Column="0" Margin="5" Grid.Row="2" Text="Repeat new password:" VerticalAlignment="Center"/>
+
+                <PasswordBox Grid.Column="1" 
+                             Margin="5" 
+                             Grid.Row="2" 
+                             Width="120" 
+                             VerticalAlignment="Center"
+                             Name="NewPasswordBox2" />
+                
+                <Button Grid.Column="1" 
+                        Margin="5" 
+                        Grid.Row="3" 
+                        Width="120" 
+                        Command="{Binding Path=ResetPasswordCommand}"
+                        CommandParameter="{Binding ElementName=MyAccountControl}"
+                        HorizontalAlignment="Right" 
+                        Content="Reset Password" 
+                        VerticalAlignment="Center"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+      
+      
+        
+</UserControl>

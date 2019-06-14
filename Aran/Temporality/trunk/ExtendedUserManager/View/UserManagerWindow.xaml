@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="UserManager.View.Extended.UserManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Extended="clr-namespace:UserManager.ViewModel.Extended"
+             xmlns:Extended1="clr-namespace:UserManager.View.Extended" d:DesignHeight="433" d:DesignWidth="574">
+    <UserControl.DataContext>
+        <Extended:UserManagerModel />
+    </UserControl.DataContext>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Grid.Row="1"  Grid.Column="0" Header="Users">
+                <ListBox SelectedItem="{Binding Path=SelectedUser}"
+                         ItemsSource="{Binding Path=UserListFiltered}" 
+                         DisplayMemberPath="DisplayName"
+                         HorizontalAlignment="Stretch" 
+                         VerticalAlignment="Stretch" 
+                         MinWidth="100" />
+            </GroupBox>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto"  />
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Header="User Filter" Grid.Column="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Text="{Binding Path=UserFilter, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Command="{Binding OnClearFilter}" 
+                            Grid.Column="1" Width="25" 
+                            Visibility="{Binding Path=FilterEmptyButtonVisibility}"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" 
+                            Content="{StaticResource BackButtonIcon}" 
+                            Focusable="False" />
+                    </Grid>
+                </GroupBox>
+
+                <Button ToolTip="Create new user"  
+                        Grid.Column="1" 
+                        Command="{Binding OnAddUser}"
+                        Content="{StaticResource AddButtonIcon}" 
+                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"  
+                        Width="25" 
+                        Height="25" 
+                        Margin="5,15,5,5" 
+                        Focusable="False" />
+            </Grid>
+              
+
+
+        </Grid>
+        <GroupBox Grid.Column="1" Header="Selected User" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+            <Extended1:UserWindow 
+            IsEnabled="{Binding Path=IsUIEnable, FallbackValue=false}" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch" 
+            DataContext="{Binding Path=SelectedUser}"  />
+        </GroupBox>
+        
+    </Grid>
+</UserControl>

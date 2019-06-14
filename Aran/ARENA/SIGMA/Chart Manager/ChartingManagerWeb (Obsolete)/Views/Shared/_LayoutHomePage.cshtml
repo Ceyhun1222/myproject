@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title></title>
+    <link href="~/MyCssFiles/MyLayoutPage/css/mys.css" rel='stylesheet' type='text/css' />
+    <link href="~/MyCssFiles/MyLayoutPage/css/font-awesome.css" rel="stylesheet" />
+    <script src="~/MyCssFiles/MyLayoutPage/js/jquery-1.11.1.min.js"></script>
+    @*-----------------------------------------------------------------------------------------------*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    @*---------------*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <link href="~/Content/bootstrapmm.css" rel="stylesheet" />
+    <link href="~/Content/Sitesm.css" rel="stylesheet" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" />
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    @*---------------*@
+    @*@RenderSection("head", false)*@
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var UserSession = '@Session["username"]';
+
+            if (UserSession == "admin") {
+                //$("#profilpict").attr("src", "/MyCssFiles/MyLayoutPage/images/admin.jpg");
+            }
+            else {
+                //$("#profilpict").attr("src", "/MyCssFiles/MyLayoutPage/images/user.jpg");
+                $("#ChgPsw").css("display", "none");
+            }
+
+
+            $("#UserOrAdminName").text(UserSession);
+
+            $("#LnkLogout").click(function () {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/MyHome/SessionAbandon",
+                    data: '{}',
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (response) {
+                        //alert("Successed");
+                    },
+                    error: function (response) {
+                        //alert("Error");
+                    }
+                });
+
+                location.href = "@Url.Action("LoadLogin", "MyHome")";
+                //sessionStorage.getItem("username") = null;
+                sessionStorage.clear();
+
+            });
+            $("#ChgPsw").click(function () {
+                location.href = "@Url.Action("PswChanegLink", "MyHome")";
+            });
+        });
+    </script>
+</head>
+<body>
+    @*@Html.ActionLink("Home", "LoadPage", "MyHome");
+        @Html.ActionLink("Contact", "ContactLoad", "MyHome");*@
+    <div class="sticky-header header-section" style="background-color: #d1d1d1;">
+        <div class="header-right" style="background-color: #2cb9d3;border-radius: 100px 10px 0px 100px;-moz-border-radius: 100px 10px 0px 100px;-webkit-border-radius: 100px 10px 0px 100px;border: 2px solid #ad9696;">
+            <!--notification menu end -->
+            <div class="profile_details">
+                <ul>
+                    <li class="dropdown profile_details_drop">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <div class="profile_img">
+                                <span class="prfil-img">
+                                    <label id="UserOrAdminName" style="width: 140px;margin-right: 10%;color:#f6f3f3;"></label>
+                                    @*<span id="UserOrAdminName" style="color: #f6f3f3;width: 120px;margin-right: 10%;">Administrator</span>*@
+                                </span>
+                                <div class="user-name">
+                                    @*<span id="UserOrAdminNames" style="color: #f6f3f3;margin-right: 10%;width:120px;"></span>*@
+                                </div>
+                                <i class="fa fa-angle-down lnr" style="color: aliceblue;"></i>
+                                <i class="fa fa-angle-up lnr" style="color: aliceblue;"></i>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu drp-mnu">
+                            @*<li><a href="#"><i class="fa fa-cog"></i>Settings</a> </li>*@
+                            <li><a id="ChgPsw" href="#"><i class="fa fa-edit"></i>Change Password</a> </li>
+                            <li><a id="LnkLogout" href="#"><i class="fa fa-sign-out"></i>Logout</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <br />
+    @RenderBody()
+    <br />
+</body>
+</html>

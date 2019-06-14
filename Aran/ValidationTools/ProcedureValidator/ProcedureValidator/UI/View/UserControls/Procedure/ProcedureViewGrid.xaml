@@ -1,0 +1,60 @@
+﻿<DataGrid x:Class="PVT.UI.View.UserControls.ProcedureViewGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PVT.UI.View.UserControls"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:mvvm="http://www.galasoft.ch/mvvmlight"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+            SelectionMode="Extended" SelectionUnit="FullRow"
+            AutoGenerateColumns="False" IsReadOnly="True" Margin="1,0,-1.4,0"  ScrollViewer.CanContentScroll="True" 
+            ScrollViewer.VerticalScrollBarVisibility="Auto">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="SelectionChanged">
+            <mvvm:EventToCommand
+                    Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=SelectCommand, Mode=OneWay}"
+                    PassEventArgsToCommand="True" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <!--<DataGrid.RowStyle>
+        <Style TargetType="DataGridRow">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding NotValid}" Value="True">
+                    <Setter Property="Background" Value="Khaki" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </DataGrid.RowStyle>-->
+    <DataGrid.Columns>
+        <DataGridTemplateColumn DisplayIndex="0">
+            <DataGridTemplateColumn.CellTemplate>
+                <DataTemplate>
+                    <Button  Content="Details">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <mvvm:EventToCommand
+                    Command="{Binding Path=OpenCommand, RelativeSource={RelativeSource FindAncestor,
+  AncestorType={x:Type DataGrid}}}"
+                    PassEventArgsToCommand="True" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
+                </DataTemplate>
+            </DataGridTemplateColumn.CellTemplate>
+        </DataGridTemplateColumn>
+        <DataGridTextColumn Header="Begin Date" Binding="{Binding BeginDate, StringFormat='dd/MM/yyyy'}"/>
+        <DataGridTextColumn Header="End Date" Binding="{Binding EndDate, TargetNullValue='', StringFormat='dd/MM/yyyy'}"/>
+        <DataGridTextColumn Header="ID" Binding="{Binding Identifier}"/>
+        <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+        <DataGridTextColumn Header="Designator" Binding="{Binding Designator}"/>
+        <!--<DataGridCheckBoxColumn Header="Invalid" Binding="{Binding NotValid, Mode=OneWay}" />-->
+        <DataGridTextColumn Header="Aerodrome" Binding="{Binding Aerodrome.FullName}" />
+        <DataGridTextColumn Header="Runway" Binding="{Binding RunwayDirection.FullName}" />
+        <DataGridCheckBoxColumn Header="RNAV" Binding="{Binding RNAV, Mode=OneWay}"  />
+        <DataGridTextColumn Header="Design Criteria" Binding="{Binding DesignCriteria}" />
+        <DataGridTextColumn Header="Coding Standard" Binding="{Binding CodingStandard}" />
+        <DataGridTextColumn Header="Transition Number" Binding="{Binding TransitionNumber}" />
+    </DataGrid.Columns>
+</DataGrid>

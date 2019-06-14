@@ -1,0 +1,38 @@
+<div class="oms-map-obstacle" dragging>
+  <div class="card m-0">
+    <div class="card-header bg-transparent header-elements-inline py-1">
+      <span class="card-title font-weight-bold mr-1">Obstacle check</span>
+      <div class="header-elements">
+        <div class="list-icons">
+          <a class="list-icons-item" title="Collapse" href="javascript:void(0)" data-toggle="collapse" data-target="#demo" (click)="collapseIconRotate = !collapseIconRotate">
+            <i class="icon-arrow-down22 icon-2x" [ngClass]="{'rotate-180': collapseIconRotate}"></i></a>
+          <a class="list-icons-item" title="Close" [routerLink]="['/map']"><i class="icon-cross2"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body collapse show" id="demo">
+      <form action="#">
+        <div class="form-group">
+          <label>Longitude <span class="text-muted"> (x)</span></label>
+          <input type="text" class="form-control" placeholder="Longitude">
+        </div>
+
+        <div class="form-group">
+          <label>Latitude <span class="text-muted"> (y)</span></label>
+          <input type="text" class="form-control" placeholder="Latitude">
+        </div>
+
+        <div class="form-group">
+          <label>Altitude <span class="text-muted"> (Metr)</span></label>
+          <input type="number" class="form-control" placeholder="Altitude">
+        </div>
+
+        <div class="mt-4">
+          <button type="submit" class="btn btn-sm bg-blue float-right">Submit </button>
+          <button type="submit" class="btn btn-sm">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

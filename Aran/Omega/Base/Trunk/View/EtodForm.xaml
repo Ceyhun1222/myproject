@@ -1,0 +1,280 @@
+﻿<controls:MetroWindow  xmlns:my="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"  x:Class="Aran.Omega.View.EtodForm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+            xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls" 
+            xmlns:local="clr-namespace:Aran.Omega.View"
+            xmlns:models="clr-namespace:Aran.Omega.Models"
+            xmlns:uiConverters="clr-namespace:Aran.Omega.UIConverters"
+            xmlns:wpfExtension="clr-namespace:WpfExtensions.Controls;assembly=WpfLoadExtensions"
+                       Title="{Binding Title}"
+            WindowStartupLocation="CenterScreen" 
+            WindowStyle="SingleBorderWindow"
+            ResizeMode="NoResize"
+            Width="720" Height="400" 
+            Cursor="{Binding CurrCursor}"
+            BorderThickness="2"
+            BorderBrush="Aqua">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/EtodResource.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <models:BindingProxy x:Key="Proxy" Data="{Binding}" />
+            <BooleanToVisibilityConverter x:Key="visibilityConverter"></BooleanToVisibilityConverter>
+            <uiConverters:UIDistanceConverter x:Key="UiDistanceConverter"/>
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+    <Grid Margin="5" IsEnabled="{Binding GridIsEnabled}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="102*" />
+            <ColumnDefinition Width="381*" />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="lstbSurfaces"
+                 ItemsSource="{Binding Path=AvailableSurfaceList}"
+                 ItemTemplate="{StaticResource xs}"
+                 Margin="0,0,4,0" Grid.RowSpan="2"
+                 BorderThickness="0.6 0.6 1.6 1.0"
+                 BorderBrush="Black"
+                 SelectionMode="Multiple"
+                 Background="#FFF8F8F8"  Foreground="Black" >
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="ContextMenu">
+                        <Setter.Value>
+                            <ContextMenu>
+                                <MenuItem Header="Parameters" 
+                                          CommandParameter="{Binding}"
+                                          Command="{Binding Source={StaticResource Proxy},Path=Data.InfoCommand}"/>
+                                <Separator  Visibility="{Binding Source={StaticResource Proxy},Path=Data.SaveIsEnabled,
+                                            Converter={StaticResource visibilityConverter}}"/>
+                                <MenuItem Header="Export To Geo Database"
+                                          CommandParameter="{Binding}"
+                                          Command="{Binding Source={StaticResource Proxy},Path=Data.ExportSurface}"
+                                          Visibility="{Binding Source={StaticResource Proxy},Path=Data.SaveIsEnabled,
+                                            Converter={StaticResource visibilityConverter}}"/>
+                                <Separator  Visibility="{Binding Source={StaticResource Proxy},Path=Data.SaveIsEnabled,
+                                            Converter={StaticResource visibilityConverter}}"/>
+                                <MenuItem Header="Export all surfaces to Geo Database"
+                                          CommandParameter="{Binding}"
+                                          Command="{Binding Source={StaticResource Proxy},Path=Data.ExportCommand}"
+                                          Visibility="{Binding Source={StaticResource Proxy},Path=Data.SaveIsEnabled,
+                                            Converter={StaticResource visibilityConverter}}"/>
+
+                                <Separator Visibility="{Binding Source={StaticResource Proxy},Path=Data.ExportAsEtodIsVisible,
+                                            Converter={StaticResource visibilityConverter}}"/>
+                                <MenuItem Header="Export as Etod format"
+                                          CommandParameter="{Binding}"
+                                          Command="{Binding Source={StaticResource Proxy},Path=Data.ExportAsEtodCommand}"
+                                          Visibility="{Binding Source={StaticResource Proxy},Path=Data.ExportAsEtodIsVisible,
+                                            Converter={StaticResource visibilityConverter}}"/>
+                            </ContextMenu>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="IsSelected" Value="{Binding IsSelected}"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+
+        </ListBox>
+
+        <Button Grid.Row="2" Content="Clear" Margin="1 1 4 1" Command="{Binding ClearCommand}"/>
+        <DataGrid Name="dGridRwy" Grid.Column="2" RowHeight="20" ItemsSource="{Binding RwyClassList}"  Margin="4,0,0,4" AutoGenerateColumns="False" Background="#AECBCBCB" BorderBrush="Black" BorderThickness="0.6" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <RadioButton GroupName="Test" IsChecked="{Binding Checked,UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<datagrid Header=""  Binding="{Binding Checked,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" MaxWidth="30" MinWidth="30">
+                    <DataGridCheckBoxColumn.ElementStyle>
+                        <Style TargetType="RadioButton">
+                            <Setter Property="VerticalAlignment" Value="Center" />
+                            <Setter Property="HorizontalAlignment" Value="Center" />
+                        </Style>
+                    </DataGridCheckBoxColumn.ElementStyle>
+                </datagrid>-->
+                <DataGridTextColumn Header="RWY" IsReadOnly="True"  Binding="{Binding Name}" Width="150"/>
+                <DataGridTextColumn Header="CODE" IsReadOnly="True" Binding="{Binding CodeNumber}" Width="100"/>
+                <DataGridTextColumn  Header="Length(m)" IsReadOnly="True" Binding="{Binding Length}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Row="1" Grid.Column="2" Margin="4,4,0,4" BorderThickness="0.6" BorderBrush="Black" Background="#FFF8F8F8" Grid.ColumnSpan="2">
+            <Grid Margin="4 6 4 4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Margin="0 10 4 0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Name="lblClassification" Content="RWY classification :" Width="115" />
+                    <ComboBox Name="cmbClassifaction" Grid.Column="1"
+                            ItemsSource="{Binding ClassificationList}"
+                            DisplayMemberPath="Name"
+                            SelectedItem="{Binding SelectedClassification}"/>
+                </Grid>
+
+                <Grid Grid.Column="1" Margin="4 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Name="lblCategory" Content="Category:"/>
+                    <ComboBox Name="cmbCategory" Grid.Column="1"
+                              ItemsSource="{Binding CategoryList,Mode=OneTime}"
+                              DisplayMemberPath="Name"
+                              SelectedItem="{Binding SelectedCategory}"
+                              IsEnabled="{Binding CategoryIsEnabled}"/>
+                </Grid>
+
+                <Grid Grid.Row="1" Margin="0 10 4 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label  Content="Runway Direction : "  />
+                    <ComboBox  Grid.Column="1" 
+                        ItemsSource="{Binding Path=RwyDirClassList}"
+                        DisplayMemberPath="Name"
+                        SelectedItem="{Binding SelectedRwyDirection}" />
+
+                </Grid>
+
+                <Grid  Grid.Row="1" Grid.Column="1" Margin="4 20 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition  />
+                    </Grid.ColumnDefinitions>
+                    <Label  Content="Airspace(FIR):"/>
+                    <ComboBox Grid.Column="1"
+                              ItemsSource="{Binding FirAirspaceList,Mode=OneTime}"
+                              DisplayMemberPath="Designator"
+                              SelectedItem="{Binding SelectedFirAirspace}"
+                              />
+                    
+                </Grid>
+
+                <wpfExtension:LoadingPanel HorizontalAlignment="Center"  Height="50" Width="80"
+                                                       VerticalAlignment="Center"
+                                                        Grid.Row="1"
+                                                        Grid.ColumnSpan="2"
+                                                       IsLoading="{Binding IsLoading}"/>
+
+                <Grid  Grid.Row="2" Margin="0 10 4 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Name="TxtBlInnerEdgeLength" Text="Length of inner edge(m):"  TextWrapping="Wrap"/>
+                    <TextBox  Grid.Column="1"
+                              PreviewTextInput="TxtBlInnerEdgeLength_OnPreviewTextInput"
+                              Text="{Binding LengthOffInnerEdge,Converter={StaticResource UiDistanceConverter}}"
+                              Height="22"/>
+                </Grid>
+            </Grid>
+
+        </Border>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="70" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+            <Button  
+                            Grid.Column="0" Width="60" 
+                            Content="Help"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28" />
+            <Button  
+                            Grid.Column="1" Width="85" 
+                            Content="Construct"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28"
+                            Command="{Binding CalculateCommand}"
+                            />
+
+            <Button 
+                            Grid.Column="2" Width="85" 
+                            Content="Calculate"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28" 
+                            IsEnabled="{Binding ReportIsEnabled}"
+                            Command="{Binding ReportCommand}"/>
+
+            <Button  
+                            Grid.Column="3" Width="70" 
+                            Content="Save"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28"
+                            IsEnabled="{Binding SaveIsEnabled}"
+                            Command="{Binding SaveCommand}"
+                            />
+
+
+            <Button  
+                            Grid.Column="4" Width="112" 
+                            Content="Validation Report"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Command="{Binding ValidationReport}"
+                            IsEnabled="{Binding SaveIsEnabled}"
+                            Height="28" 
+                            />
+
+            <Button  
+                            Grid.Column="5" Width="100" 
+                            Content="Obstacle Input"
+                            Margin="0 5 5 0"
+                            VerticalAlignment="Bottom"
+                            HorizontalAlignment="Right"
+                            Height="28"
+                            IsEnabled="{Binding ReportIsEnabled}"
+                            Command="{Binding ObstacleInputCommand}"
+                            />
+
+
+
+        </Grid>
+
+    </Grid>
+</controls:MetroWindow>

@@ -1,0 +1,118 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+
+
+<html>
+<head>
+	<style type="text/css">
+		body{
+		background:#eee;
+		}
+		
+	    h2 {
+		font-size: 2em;
+		color: #036;
+		margin: 0;
+		padding-top: 1em;
+		font-weight: normal;
+		}
+		.MainTable {
+		border:1px solid #042F52;
+		margin-top:50px;
+		}
+		.HeaderCell {
+		font-size: 1.25em;
+		color:#fff;
+		background-color: #036;
+		margin: 5px;
+		padding: 5px;
+		}
+		.RowCell0 {
+		font-size: 1em;
+		background-color: #C8D7E3;
+		margin: 5px;
+		padding: 5px;
+		color:#036;
+		font-weight: normal;
+		}
+		.RowCell1 {
+		font-size: 1em;
+		background-color: #8FBEE3;
+		color:#036;
+		margin: 5px;
+		padding: 5px;
+		font-weight: normal;
+		}
+		.TotalCell {
+		font-size: 1em;
+		background-color: #F59B87;
+		color:#036;
+		margin: 5px;
+		padding: 5px;
+		font-weight: normal;
+		}
+		.Module {
+		font-size: 0.75em;
+		border: 1px solid #042F52;
+		background: #E8E4F5; 
+		padding-left:5px;
+		padding-right:5px;
+		padding-top:2px;
+		padding-bottom:2px;
+		font-family:verdana;
+		margin-left:5px;
+		margin-top:2px;
+		margin-bottom:2px;
+		}
+	</style>
+	
+	<title>User Report generated at <#= Date.ToString("dd/MM/yyyy") #></title>
+</head>
+
+<body>
+<h2>User Report generated  at <#= Date.ToString("dd/MM/yyyy") #></h2>
+
+<table class="MainTable">
+
+  <tr>
+		<td class="HeaderCell"> User Name </td>
+		<td class="HeaderCell"> User Group </td>
+		<td class="HeaderCell"> Available Modules </td>
+  </tr>
+
+<# 
+	int i=0;
+	if (Users!=null)
+	{
+		foreach (var user in Users) 
+		{
+		i++;
+    #>
+     <tr>
+		<td class="RowCell<#= i%2 #>"><#= user.User.Name #></td>
+		<td class="RowCell<#= i%2 #>"><#= (user.User.UserGroup==null?"":user.User.UserGroup.Name) #></td>
+		<td class="RowCell<#= i%2 #>">
+		<# 
+		if (user.Modules!=null)
+		{
+			foreach(var module in user.Modules)
+			{
+				if (module.IsAllowed)
+				{
+					 #><span class="Module"><#= module.ModuleName #></span><#
+				}
+			}
+		}
+		#>
+		</td>
+	 </tr>
+<#		}// end of foreach
+	} 
+#>
+
+</table>
+
+</body></html>

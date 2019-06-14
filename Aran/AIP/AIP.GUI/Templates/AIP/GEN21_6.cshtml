@@ -1,0 +1,26 @@
+﻿@using System
+@using AIP.GUI
+@if (Model != null && Model.Count > 0)
+{
+<table frame="border" align="center">
+    <colgroup>
+        <col width="50%" />
+        <col width="50%" />
+    </colgroup>
+	<thead>
+	<tr class="Table-row-type-1">
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN21_1"))</th>
+		<th class="bleft btop bright bbottom">@Raw(@Tpl.Text("GEN21_2"))</th>
+	</tr>
+	</thead>
+	<tbody valign="top">
+	@foreach (var data in Model)
+	{
+		<tr>
+			<td class="bleft btop bright bbottom">@Raw(data.Name)</td>
+			<td class="bleft btop bright bbottom">@Raw(data.Date)</td>
+		</tr>
+	}
+	</tbody>
+</table>
+}

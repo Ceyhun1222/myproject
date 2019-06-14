@@ -1,0 +1,116 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using ObstacleManagementSystem.Views.Manage
+@using ObstacleManagementSystem.ViewModels.Manage
+@using ObstacleManagementSystem.Models
+
+
+@model IEnumerable<ApplicationUser>
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = "İstifadəçilər";
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/datatables/css/dataTables.bootstrap4.min.css" />
+</environment>
+
+
+<h4>@ViewData["Title"]</h4>
+<div class="box">
+    <div class="box-body table-responsive">
+        <table class="table table-bordered table-hover text-center" id="userTable" cellspacing="0" align="center">
+            <thead>
+                <tr>
+                    <th>
+                        @Localizer["Full name"]
+                    </th>
+
+                    <th>
+                        @Localizer["User name"]
+                    </th>
+
+                    <th>
+                        @Localizer["Gender"]
+                    </th>
+
+                    <th>
+                        @Localizer["Email"]
+                    </th>
+
+                    <th>
+                        @Localizer["Mobile no."]
+                    </th>
+
+                    <th>
+                        @Localizer["Registered date"]
+                    </th>
+
+                    <th>
+                        @Localizer["Birthday"]
+                    </th>
+
+                    <th>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Firstname) @Html.DisplayFor(modelItem => item.Lastname) @Html.DisplayFor(modelItem => item.Fathername)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateRegistered)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Birthday)
+                    </td>
+
+                    <td>
+                        <a class=" btn btn-primary" asp-area="" asp-controller="User" asp-action="Details" asp-route-id="@item.Id">Ətraflı</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <environment include="Development">
+        <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+        <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+    </environment>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#userTable").dataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/1.10.18/i18n/Azerbaijan.json"
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,46 @@
+﻿@using System
+@using AIP.GUI
+@{
+    int Col = 3;
+    int i = 1;
+}
+
+@foreach (var data in Model)
+{
+    <table frame="border" align="center">
+        <colgroup>
+            <col width="45%" />
+            <col width="10%" />
+            <col width="45%" />
+        </colgroup>
+        <thead>
+        <tr class="Table-row-type-1">
+            @for (i = 1; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@Raw(@Tpl.Text("ENR51_"+@i))</th>
+            }
+        </tr>
+        <tr class="Table-row-type-2">
+            @for (i = 1; i <= Col; i++)
+            {
+                <th class="bleft btop bright bbottom">@i</th>
+            }
+        </tr>
+        </thead>
+        <tbody valign="top">
+        <tr>
+            <td class="bleft btop bright bbottom" colspan="3"><strong>@Raw(data.type)</strong></td>
+        </tr>
+        @foreach (var Row in data.Row)
+        {
+            <tr>
+                <td class="bleft btop bright bbottom">@Raw(Row["Identification"]) @Raw(Row["Name"])
+                    <br/>@Raw(Row["Coordinates"])</td>
+                <td class="bleft btop bright bbottom">@Raw(Row["limit"])</td>
+                <td class="bleft btop bright bbottom">@Raw(Row["notes"])</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    <p class="Body"></p>
+}

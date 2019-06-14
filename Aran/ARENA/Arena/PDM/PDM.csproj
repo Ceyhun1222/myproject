@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8627D4A-3F1F-486E-AA5C-16D78EA74278}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDM</RootNamespace>
+    <AssemblyName>PDM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\BIN\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.8.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\RefFiles\Extended WPF Toolkit Binaries\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aerodrome\AircraftStand.cs" />
+    <Compile Include="Aerodrome\AirportHeliportProtectionArea.cs" />
+    <Compile Include="Aerodrome\AirportHotSpot.cs" />
+    <Compile Include="Aerodrome\ApronElement.cs" />
+    <Compile Include="Aerodrome\ApronLightSystem.cs" />
+    <Compile Include="Aerodrome\ApronMarking.cs" />
+    <Compile Include="Aerodrome\Checkpoint\CheckpointINS.cs" />
+    <Compile Include="Aerodrome\Checkpoint\CheckpointVOR.cs" />
+    <Compile Include="Aerodrome\Checkpoint\NavigationSystemCheckpoint.cs" />
+    <Compile Include="Aerodrome\DeicingArea.cs" />
+    <Compile Include="Aerodrome\DeicingAreaMarking.cs" />
+    <Compile Include="Aerodrome\GuidanceLine.cs" />
+    <Compile Include="Aerodrome\GuidanceLineLightSystem.cs" />
+    <Compile Include="Aerodrome\GuidanceLineMarking.cs" />
+    <Compile Include="Aerodrome\Marking\Marking_Curve.cs" />
+    <Compile Include="Aerodrome\Marking\Marking_Point.cs" />
+    <Compile Include="Aerodrome\Marking\Marking_Surface.cs" />
+    <Compile Include="Aerodrome\Marking\Marking.cs" />
+    <Compile Include="Aerodrome\Marking\MarkingElement.cs" />
+    <Compile Include="Aerodrome\NonMovementArea.cs" />
+    <Compile Include="Aerodrome\RadioFrequencyArea.cs" />
+    <Compile Include="Aerodrome\Road.cs" />
+    <Compile Include="Aerodrome\RunwayMarking.cs" />
+    <Compile Include="Aerodrome\RunwayProtectArea.cs" />
+    <Compile Include="Aerodrome\RunwayProtectAreaLightSystem.cs" />
+    <Compile Include="Aerodrome\RunwayVisualRange.cs" />
+    <Compile Include="Aerodrome\StandMarking.cs" />
+    <Compile Include="Aerodrome\SurfaceCharacteristics.cs" />
+    <Compile Include="Aerodrome\TaxiHoldingPosition.cs" />
+    <Compile Include="Aerodrome\TaxiHoldingPositionLightSystem.cs" />
+    <Compile Include="Aerodrome\TaxiHoldingPositionMarking.cs" />
+    <Compile Include="Aerodrome\TaxiwayLightSystem.cs" />
+    <Compile Include="Aerodrome\TaxiwayMarking.cs" />
+    <Compile Include="Aerodrome\TouchDownLiftOff.cs" />
+    <Compile Include="Aerodrome\TouchDownLiftOffLightSystem.cs" />
+    <Compile Include="Aerodrome\TouchDownLiftOffMarking.cs" />
+    <Compile Include="Aerodrome\TouchDownLiftOffSafeArea.cs" />
+    <Compile Include="Aerodrome\Unit.cs" />
+    <Compile Include="Aerodrome\VisualGlideSlopeIndicator.cs" />
+    <Compile Include="Aerodrome\WorkArea.cs" />
+    <Compile Include="AirportRunwayGroup\AirportHeliport.cs" />
+    <Compile Include="Aerodrome\Apron.cs" />
+    <Compile Include="AirportRunwayGroup\ApproachLightingSystem.cs" />
+    <Compile Include="AirportRunwayGroup\GroundLightSystem.cs" />
+    <Compile Include="AirportRunwayGroup\RadioCommunicationChanel.cs" />
+    <Compile Include="AirportRunwayGroup\RunwayCenterLinePoint.cs" />
+    <Compile Include="AirportRunwayGroup\Taxiway.cs" />
+    <Compile Include="Airspace\Airspace.cs" />
+    <Compile Include="Airspace\AirspaceVolume.cs" />
+    <Compile Include="AREA_PDM.cs" />
+    <Compile Include="Core\FeatureMetadata.cs" />
+    <Compile Include="Core\GeoProperties.cs" />
+    <Compile Include="Core\TimePeriod.cs" />
+    <Compile Include="GeoBorder.cs" />
+    <Compile Include="Navaids\DME.cs" />
+    <Compile Include="Core\ElementaryObject.cs" />
+    <Compile Include="Enroute\Enrote.cs" />
+    <Compile Include="Enroute\RouteSegment.cs" />
+    <Compile Include="Enroute\RouteSegmentPoint.cs" />
+    <Compile Include="Navaids\GlidePath.cs" />
+    <Compile Include="Navaids\Localizer.cs" />
+    <Compile Include="Navaids\Marker.cs" />
+    <Compile Include="Navaids\NavaidSystem.cs" />
+    <Compile Include="Navaids\NDB.cs" />
+    <Compile Include="Core\PDM_Enum.cs" />
+    <Compile Include="Core\PDM_ObjectsList.cs" />
+    <Compile Include="Procedure\AircraftCharacteristic.cs" />
+    <Compile Include="Procedure\AngleIndication.cs" />
+    <Compile Include="Procedure\ApproachCondition.cs" />
+    <Compile Include="Procedure\ApproachProfileEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procedure\ApproachProfileEditorForm.Designer.cs">
+      <DependentUpon>ApproachProfileEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Procedure\DistanceIndication.cs" />
+    <Compile Include="Procedure\FacilityMakeUp.cs" />
+    <Compile Include="Procedure\FinalLeg.cs" />
+    <Compile Include="Procedure\HoldingPattern.cs" />
+    <Compile Include="Procedure\InstrunentApproachProcedure.cs" />
+    <Compile Include="Procedure\MissaedApproachLeg.cs" />
+    <Compile Include="Procedure\ObstacleAssessmentArea.cs" />
+    <Compile Include="Procedure\Obstruction.cs" />
+    <Compile Include="Procedure\Procedure.cs" />
+    <Compile Include="Procedure\ProcedureLeg.cs" />
+    <Compile Include="Procedure\ProcedureLegSegmentPoint.cs" />
+    <Compile Include="Procedure\ProcedureTransition.cs" />
+    <Compile Include="Procedure\StandardInstrumentArrival.cs" />
+    <Compile Include="Procedure\StandardInstrumentDeparture.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyExtension\MandatoryFlagAttribute.cs" />
+    <Compile Include="PropertyExtension\PropertySorter.cs" />
+    <Compile Include="PropertyExtension\ReadOnlyPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AirportRunwayGroup\Runway.cs" />
+    <Compile Include="AirportRunwayGroup\RunwayDirection.cs" />
+    <Compile Include="Navaids\TACAN.cs" />
+    <Compile Include="Navaids\VOR.cs" />
+    <Compile Include="Navaids\WayPoint.cs" />
+    <Compile Include="SafeAltitudeArea.cs" />
+    <Compile Include="Version.cs">
+      <DependentUpon>Version.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="VerticalStructure\VerticalStructure.cs" />
+    <Compile Include="VerticalStructure\VerticalStructurePart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core\PDM_ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AranSupport\AranSupport.csproj">
+      <Project>{A099BE8A-B446-4933-9179-2ABFDFF726B2}</Project>
+      <Name>AranSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ArenaStatic\ArenaStatic.csproj">
+      <Project>{88BD92AA-9053-4A66-8695-BB8995232C87}</Project>
+      <Name>ArenaStatic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Procedure\ApproachProfileEditorForm.resx">
+      <DependentUpon>ApproachProfileEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Version.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Version.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

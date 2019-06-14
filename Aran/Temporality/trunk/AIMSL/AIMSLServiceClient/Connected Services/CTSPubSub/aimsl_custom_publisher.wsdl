@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wstop="http://docs.oasis-open.org/wsn/t-1" xmlns:aimsl="http://www.teamead.com/ws/aimsl/pubsub" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsrf-bf="http://docs.oasis-open.org/wsrf/bf-2" xmlns:wssutil="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsn-br="http://docs.oasis-open.org/wsn/br-2" xmlns:wsn-b="http://docs.oasis-open.org/wsn/b-2" xmlns:wsn-brw="http://docs.oasis-open.org/wsn/brw-2" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wsn-bw="http://docs.oasis-open.org/wsn/bw-2" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsrf-rw="http://docs.oasis-open.org/wsrf/rw-2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="aimsl_custom_publisher" targetNamespace="http://www.teamead.com/ws/aimsl/pubsub" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:UsingPolicy wssutil:Required="true" />
+  <ns0:Policy xmlns:ns0="http://schemas.xmlsoap.org/ws/2004/09/policy" wssutil:Id="SignatureRequired">
+    <ns0:ExactlyOne>
+      <ns0:All>
+        <ns1:AsymmetricBinding xmlns:ns1="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <ns0:Policy>
+            <ns1:InitiatorToken>
+              <ns0:Policy>
+                <ns1:X509Token ns1:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToRecipient">
+                  <ns0:Policy>
+                    <ns1:WssX509V3Token10 />
+                  </ns0:Policy>
+                </ns1:X509Token>
+              </ns0:Policy>
+            </ns1:InitiatorToken>
+            <ns1:RecipientToken>
+              <ns0:Policy>
+                <ns1:X509Token ns1:IncludeToken="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/IncludeToken/AlwaysToInitiator">
+                  <ns0:Policy>
+                    <ns1:WssX509V3Token10 />
+                  </ns0:Policy>
+                </ns1:X509Token>
+              </ns0:Policy>
+            </ns1:RecipientToken>
+            <ns1:AlgorithmSuite>
+              <ns0:Policy>
+                <ns1:TripleDesRsa15 />
+              </ns0:Policy>
+            </ns1:AlgorithmSuite>
+            <ns1:Layout>
+              <ns0:Policy>
+                <ns1:Strict />
+              </ns0:Policy>
+            </ns1:Layout>
+            <ns1:IncludeTimestamp />
+          </ns0:Policy>
+        </ns1:AsymmetricBinding>
+        <ns1:SignedParts xmlns:ns1="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <ns1:Body />
+        </ns1:SignedParts>
+      </ns0:All>
+    </ns0:ExactlyOne>
+  </ns0:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.teamead.com/ws/aimsl/pubsub">
+      <xsd:import schemaLocation="../xsd/aimsl_pubsub/bf-2.xsd" namespace="http://docs.oasis-open.org/wsrf/bf-2" />
+      <xsd:import schemaLocation="../xsd/aimsl_pubsub/b-2.xsd" namespace="http://docs.oasis-open.org/wsn/b-2" />
+      <xsd:import schemaLocation="../xsd/aimsl_pubsub/t-1.xsd" namespace="http://docs.oasis-open.org/wsn/t-1" />
+      <xsd:complexType name="TopicNamespaceFilterType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="TopicNamespaceFilter" type="xsd:anyURI" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="GetAllTopics" type="aimsl:TopicNamespaceFilterType" />
+      <xsd:element name="GetAllSubscriptions" type="aimsl:TopicNamespaceFilterType" />
+      <xsd:element name="RemoveAllSubscriptions">
+        <xsd:complexType>
+          <xsd:complexContent mixed="false">
+            <xsd:restriction base="xsd:anyType" />
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="AcknowledgeType">
+        <xsd:sequence>
+          <xsd:element name="AckId" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Acknowledge" type="aimsl:AcknowledgeType" />
+      <xsd:element name="Accepted">
+        <xsd:complexType>
+          <xsd:complexContent mixed="false">
+            <xsd:restriction base="xsd:anyType" />
+          </xsd:complexContent>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="SubscriptionListType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="Subscription">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="wsn-b:SubscriptionReference" />
+                <xsd:element name="MatchingTopics" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="SubscriptionList" type="aimsl:SubscriptionListType" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllTopicsRequest">
+    <wsdl:part name="GetAllTopics" element="aimsl:GetAllTopics" />
+  </wsdl:message>
+  <wsdl:message name="GetAllSubscriptionsRequest">
+    <wsdl:part name="GetAllSubscriptions" element="aimsl:GetAllSubscriptions" />
+  </wsdl:message>
+  <wsdl:message name="RemoveAllSubscriptionsRequest">
+    <wsdl:part name="RemoveAllSubscriptions" element="aimsl:RemoveAllSubscriptions" />
+  </wsdl:message>
+  <wsdl:message name="AcknowledgeRequest">
+    <wsdl:part name="Acknowledge" element="aimsl:Acknowledge" />
+  </wsdl:message>
+  <wsdl:message name="TopicSetResponse">
+    <wsdl:part name="TopicNamespace" element="wstop:TopicSet" />
+  </wsdl:message>
+  <wsdl:message name="SubscriptionListResponse">
+    <wsdl:part name="Subscriptions" element="aimsl:SubscriptionList" />
+  </wsdl:message>
+  <wsdl:message name="AcceptedResponse">
+    <wsdl:part name="Accepted" element="aimsl:Accepted" />
+  </wsdl:message>
+  <wsdl:portType name="AIMSLPubSubExtConsumer">
+    <wsdl:operation name="GetAllTopics">
+      <wsdl:input message="aimsl:GetAllTopicsRequest" />
+      <wsdl:output message="aimsl:TopicSetResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSubscriptions">
+      <wsdl:input message="aimsl:GetAllSubscriptionsRequest" />
+      <wsdl:output message="aimsl:SubscriptionListResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllSubscriptions">
+      <wsdl:input message="aimsl:RemoveAllSubscriptionsRequest" />
+      <wsdl:output message="aimsl:AcceptedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Acknowledge">
+      <wsdl:input message="aimsl:AcknowledgeRequest" />
+      <wsdl:output message="aimsl:AcceptedResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AIMSLPubSubExtConsumerBinding" type="aimsl:AIMSLPubSubExtConsumer">
+    <wsp:PolicyReference URI="#SignatureRequired" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllTopics">
+      <soap:operation soapAction="http://www.teamead.com/ws/aimsl/pubsub/GetAllTopics" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSubscriptions">
+      <soap:operation soapAction="http://www.teamead.com/ws/aimsl/pubsub/GetAllSubscriptions" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllSubscriptions">
+      <soap:operation soapAction="http://www.teamead.com/ws/aimsl/pubsub/RemoveAllSubscriptions" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Acknowledge">
+      <soap:operation soapAction="http://www.teamead.com/ws/aimsl/pubsub/Acknowledge" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AIMSLPubSubExtConsumer">
+    <wsdl:port name="AIMSLPubSubExtConsumerPort" binding="aimsl:AIMSLPubSubExtConsumerBinding">
+      <soap:address location="https://vead03.cts.ead-itp.com:4443/aimsl/AIMSLPubSubExtConsumer/1.0" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

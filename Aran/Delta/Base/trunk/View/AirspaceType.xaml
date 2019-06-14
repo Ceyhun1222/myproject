@@ -1,0 +1,62 @@
+﻿<Window x:Class="Aran.Delta.View.AirspaceType"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AirspaceType"
+        Width="230"
+        Height="150"
+        WindowStyle="SingleBorderWindow"
+        Closing="AirspaceType_OnClosing">
+    <Window.Resources>
+
+        <Color x:Key="detailMark">#FFA1A9B3</Color>
+        <SolidColorBrush x:Key="detailMarkBrush" Color="{StaticResource ResourceKey=detailMark}" />
+        <Style x:Key="flatTextBox" TargetType="{x:Type TextBox}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <Rectangle  Stroke="{StaticResource ResourceKey=detailMarkBrush}" StrokeThickness="1"/>
+                            <TextBox Margin="1" BorderThickness="0"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <LinearGradientBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFD9F4FF" Offset="0"/>
+            <GradientStop Color="#FF9BDDFB" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="{x:Static SystemColors.ControlBrushKey}" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFEEEDED" Offset="0"/>
+            <GradientStop Color="#FFDDDDDD" Offset="1"/>
+        </LinearGradientBrush>
+        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="Black" />
+        <SolidColorBrush x:Key="{x:Static SystemColors.ControlTextBrushKey}" Color="Black" />
+
+    </Window.Resources>
+    <Grid Height="auto">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="5" VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Horizontal">
+            <RadioButton Content="Snap to Border" IsChecked="True" Checked="RdbSnap_OnChecked" Name="RdbSnap" GroupName="CalculationType"/>
+            <RadioButton Content="Create Arc" Name="RdbArc" Checked="RdbArc_OnChecked" HorizontalAlignment="Right" Margin="40 0 0 0"  GroupName="CalculationType" />
+          
+        </StackPanel>
+
+        <StackPanel Name="StackArc" VerticalAlignment="Top"  Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal">
+            <TextBlock Text="Radius"  Margin="5 8 5 5"/>
+            <TextBox TextChanged="TextBoxBase_OnTextChanged" Name="TxtRadius" Margin="5 5 5 5" Width="80"/>
+            <TextBlock Text="{Binding DistanceUnit}"  Margin="5 5 5 5"/>
+            <CheckBox Content="IsCw" Margin="20 5" IsChecked="True" Checked="RdbIsCw_OnChecked"  Name="RdbIsCw" />
+        </StackPanel>
+        
+        <StackPanel Name="StackButton" Height="auto" VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Name="btnCancel" Click="BtnCancel_OnClick" Height="25" Content="Clear" Margin="5" Width="80"></Button>
+            <Button Name="btnAdd" Click="BtnAdd_OnClick" Height="25" Content="Add" Margin="5" Width="80"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

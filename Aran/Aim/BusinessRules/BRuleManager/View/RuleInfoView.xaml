@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="BRuleManager.View.RuleInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BRuleManager.View"
+             xmlns:conv="clr-namespace:BRuleManager.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Name="ui_main">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel>
+            <StackPanel.Resources>
+                <!--Label Style-->
+                <Style x:Key="r_label" TargetType="TextBlock">
+                    <Setter Property="FontWeight" Value="DemiBold" />
+                    <Setter Property="Margin" Value="4, 8, 4, 4" />
+                </Style>
+
+                <!--Value Style-->
+                <Style x:Key="r_Value" TargetType="TextBlock">
+                    <Setter Property="Margin" Value="20, 0, 4, 4" />
+                    <Setter Property="TextWrapping" Value="Wrap" />
+                </Style>
+
+                <conv:TaggedDescriptionItemsConverter x:Key="r_taggedDescConv" />
+            </StackPanel.Resources>
+
+            <!--Uid, Edit and Delete Panel-->
+            <Grid>
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Visible" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Hidden" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <!--UID-->
+                <TextBlock Text="{Binding Uid}" Style="{StaticResource r_Value}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                
+                <!--Edit-->
+                <TextBlock Name="ui_editLink" Grid.Column="1" Margin="4,0" VerticalAlignment="Center" >
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Visible" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=ui_main, Path=IsReadOnly}" Value="True">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                    <Hyperlink Command="{Binding EditCommand, ElementName=ui_main}" CommandParameter="edit">Edit</Hyperlink>
+                </TextBlock>
+                
+                <!--Delete-->
+                <TextBlock Grid.Column="2" Margin="4,0,10,0" VerticalAlignment="Center" 
+                           Visibility="{Binding ElementName=ui_editLink, Path=Visibility}">
+                    <Hyperlink Command="{Binding DeleteCommand, ElementName=ui_main}">Delete</Hyperlink>
+                </TextBlock>
+            </Grid>
+
+            <!--IsActive-->
+            <StackPanel Orientation="Horizontal" Margin="4, 8, 4, 12">
+                <TextBlock Text="Active" FontWeight="DemiBold" VerticalAlignment="Center" />
+                <CheckBox FontWeight="DemiBold" IsChecked="{Binding IsActive}" VerticalAlignment="Center" Margin="20, 0">
+                    <CheckBox.Style>
+                        <Style TargetType="CheckBox">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsReadOnly, ElementName=ui_main}" Value="True">
+                                    <Setter Property="IsEnabled" Value="False" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </CheckBox.Style>
+                </CheckBox>
+            </StackPanel>
+
+            <!--Name-->
+            <TextBlock Text="Name" Style="{StaticResource r_label}" />
+            <TextBlock Text="{Binding Name}" Style="{StaticResource r_Value}" />
+
+            <!--Profile-->
+            <TextBlock Text="Profile" Style="{StaticResource r_label}" />
+            <TextBlock Text="{Binding Profile}" Style="{StaticResource r_Value}" />
+
+            <!--Source-->
+            <TextBlock Text="Source" Style="{StaticResource r_label}" />
+            <TextBlock Text="{Binding Source}" Style="{StaticResource r_Value}" />
+
+            <!--Category-->
+            <TextBlock Text="Category" Style="{StaticResource r_label}" />
+            <TextBlock Text="{Binding Category}" Style="{StaticResource r_Value}" />
+
+            <!--Comment-->
+            <TextBlock Text="Comment" Style="{StaticResource r_label}" />
+            <TextBlock Text="{Binding Comment}" Style="{StaticResource r_Value}" />
+
+            <!--TaggedDescription-->
+            <TextBlock Text="SBVR" Style="{StaticResource r_label}" />
+            <local:SbvrViewControl Margin="20, 0, 4, 4" DataContext="{Binding TaggedDescription, Converter={StaticResource r_taggedDescConv}}" />
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

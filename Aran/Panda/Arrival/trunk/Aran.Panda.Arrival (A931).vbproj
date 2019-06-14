@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>Windows</MyType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83F3A015-9070-4487-A6B6-370C7845C934}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>Aran.Panda.Arrival</AssemblyName>
+    <OutputType>Library</OutputType>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>1</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>0</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>R.I.S.K.</AssemblyCompanyName>
+    <StartWithIE>2</StartWithIE>
+    <RootNamespace>Aran.Panda.Arrival</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <StartAction>Program</StartAction>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True, _DEBUG__ = False, ADD_NET =TRUE</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <DebugType>full</DebugType>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>DEBUG__ = 0 : Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <DebugType>none</DebugType>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PANDA.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>Win32=True, _DEBUG__ = False, ADD_NET =TRUE</DefineConstants>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Debug\Aran.PANDA.Arrival.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>DEBUG__ = 0 : Win32=True</DefineConstants>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Release\Aran.PANDA.Arrival.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog" />
+    <Reference Include="ESRI.ArcGIS.Controls, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DotNet\ESRI.ArcGIS.DataSourcesGDB.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase" />
+    <Reference Include="ESRI.ArcGIS.Geometry" />
+    <Reference Include="ESRI.ArcGIS.System, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=9.3.0.1770, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AranPlugin.vb" />
+    <Compile Include="Forms\AddVisualReferencePoints.Designer.vb">
+      <DependentUpon>AddVisualReferencePoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddVisualReferencePoints.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Arrival.Designer.vb">
+      <DependentUpon>Arrival.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Arrival.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArrivalProfile.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>ArrivalProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArrivalProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Forms\InitialApproach.Designer.vb">
+      <DependentUpon>InitialApproach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InitialApproach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\CirclingAreaPage.Designer.vb">
+      <DependentUpon>CirclingAreaPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\CirclingAreaPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\PrescribedTrackPage.Designer.vb">
+      <DependentUpon>PrescribedTrackPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\PrescribedTrackPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\RWYNavaidPage.Designer.vb">
+      <DependentUpon>RWYNavaidPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Visual Manoeuvring Pages\RWYNavaidPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringForm.Designer.vb">
+      <DependentUpon>VisualManoeuvringForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringReport.Designer.vb">
+      <DependentUpon>VisualManoeuvringReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringTrackConstructor.Designer.vb">
+      <DependentUpon>VisualManoeuvringTrackConstructor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VisualManoeuvringTrackConstructor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Categories_DATABase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Converters.vb" />
+    <Compile Include="Modules\CRC32.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\DBModule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\DeadApproachReport.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>DeadApproachReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DeadApproachReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\DecoderCode.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\DistanceCalculator.vb" />
+    <Compile Include="Modules\Functions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\GlobalVars.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\Info.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Info.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InitialDeadApproach.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>InitialDeadApproach.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InitialDeadApproach.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InitialReports.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>InitialReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InitialReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\LogModule.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\NativeMethods.vb" />
+    <Compile Include="Modules\Support.vb" />
+    <Compile Include="Modules\Navaids_DataBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\NonPrecReport.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>NonPrecReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NonPrecReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\PANS_OPS_Core_DataBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\PANS_OPS_DataBase.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\PolyCut.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Forms\Precision.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>Precision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Precision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrecReport.Designer.vb">
+      <SubType>Code</SubType>
+      <DependentUpon>PrecReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrecReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\ReportFile.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Shablons.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\TypeDefinitions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DeadRekconingCMD.vb" />
+    <Compile Include="UserInterface\InitialAreaCMD.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\NonPrecArrivalCMD.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PANDAArrivalMenu.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PANDAArrivalToolbar.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PrecArrivalCMD.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserInterface\VisualManoeuvringCMD.vb" />
+    <Compile Include="Visual Manoeuvring Files\TrackConstructor.vb" />
+    <Compile Include="Visual Manoeuvring Files\VisualManoeuvringDBTool.vb" />
+    <EmbeddedResource Include="Forms\AddVisualReferencePoints.resx">
+      <DependentUpon>AddVisualReferencePoints.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Arrival.resx">
+      <DependentUpon>Arrival.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArrivalProfile.resX">
+      <DependentUpon>ArrivalProfile.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeadApproachReport.resX">
+      <DependentUpon>DeadApproachReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info.resX">
+      <DependentUpon>Info.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InitialApproach.resX">
+      <DependentUpon>InitialApproach.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InitialDeadApproach.resX">
+      <DependentUpon>InitialDeadApproach.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InitialReports.resX">
+      <DependentUpon>InitialReports.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Visual Manoeuvring Pages\CirclingAreaPage.resx">
+      <DependentUpon>CirclingAreaPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Visual Manoeuvring Pages\PrescribedTrackPage.resx">
+      <DependentUpon>PrescribedTrackPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Visual Manoeuvring Pages\RWYNavaidPage.resx">
+      <DependentUpon>RWYNavaidPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VisualManoeuvringForm.resx">
+      <DependentUpon>VisualManoeuvringForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VisualManoeuvringReport.resx">
+      <DependentUpon>VisualManoeuvringReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VisualManoeuvringTrackConstructor.resx">
+      <DependentUpon>VisualManoeuvringTrackConstructor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.pt-BR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.ru-RU.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NonPrecReport.resX">
+      <DependentUpon>NonPrecReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Precision.resX">
+      <DependentUpon>Precision.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrecReport.resX">
+      <DependentUpon>PrecReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PANDA.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Aim\Base\trunk\Aran.Aim.csproj">
+      <Project>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</Project>
+      <Name>Aran.Aim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Aim\Data\DbProvider\trunk\Aran.Aim.Data.DbProvider.csproj">
+      <Project>{799AD2BF-BD65-4584-8B84-BFFE4B5ABCB0}</Project>
+      <Name>Aran.Aim.Data.DbProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
+      <Project>{21A653C3-8EC0-433F-B876-7CC588AC9A8B}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterGeom\trunk\Aran.Converters.ConverterGeom.csproj">
+      <Project>{9524BF09-DD69-4A72-A213-D6A69701144D}</Project>
+      <Name>Aran.Converters.ConverterGeom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Converters\ConverterSI\trunk\Aran.Converters.ConverterSI.csproj">
+      <Project>{BCBBDE4E-098D-45E9-9B72-0A2E6A7CAE6A}</Project>
+      <Name>Aran.Converters.ConverterSI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Base\trunk\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Geometries\Operators\trunk\Aran.Geometries.Operators.csproj">
+      <Project>{38B5708A-8C3D-40EF-BF53-819B03E8E9F6}</Project>
+      <Name>Aran.Geometries.Operators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Other\Aran.Controls\trunk\Aran.Controls.csproj">
+      <Project>{0AA869D1-4E97-4391-A1FB-C6D7299B308D}</Project>
+      <Name>Aran.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Package\trunk\Aran.Package.csproj">
+      <Project>{C796C154-348A-4F4F-8843-807FBFA0456C}</Project>
+      <Name>Aran.Package</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Common\trunk\Aran.Queries.Common.csproj">
+      <Project>{184E1F94-ED6F-481E-84FF-2EFD1468CCC6}</Project>
+      <Name>Aran.Queries.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Queries\Panda\trunk\Aran.Queries.Panda.csproj">
+      <Project>{8238C02F-87E7-4FAD-99A0-32D4C5CDAB73}</Project>
+      <Name>Aran.Queries.Panda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\AranEnvironment\trunk\Aran.AranEnvironment.csproj">
+      <Project>{8E1CA34F-D479-4637-8A0A-3E8E1F23CC9D}</Project>
+      <Name>Aran.AranEnvironment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Workflow\Interfaces\trunk\Aran.Interfaces.csproj">
+      <Project>{FA1B9FAF-896F-43B8-A58A-D7D98514E897}</Project>
+      <Name>Aran.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\trunk\Aran.Panda.Common.csproj">
+      <Project>{14C16238-324E-417A-92F9-684D5D2BB6E9}</Project>
+      <Name>Aran.Panda.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Aran" />
+    <Import Include="Aran.PANDA" />
+    <Import Include="Aran.PANDA.Arrival" />
+    <Import Include="Aran.PANDA.Arrival.My" />
+    <Import Include="Aran.PANDA.Arrival.My.Resources" />
+    <Import Include="ESRI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <StartProgram>..\..\..\..\bin\Debug\MapEnv.exe</StartProgram>
+  </PropertyGroup>
+</Project>

@@ -125,11 +125,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Temporality\trunk\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
+      <HintPath>..\..\..\..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Temporality\trunk\packages\EsriSystem.1.0.4\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
+      <HintPath>..\..\..\..\packages\EsriSystem.1.0.5\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -153,9 +153,6 @@
     <Content Include="PANDA.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Base\trunk\Aran.csproj">
       <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
       <Name>Aran</Name>
@@ -164,6 +161,9 @@
       <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
       <Name>Aran.Geometries</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,7 +42,8 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>PANDA.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -125,10 +126,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aran.1.0.6\lib\net451\Aran.dll</HintPath>
+      <HintPath>..\packages\Aran.1.0.9\lib\net451\Aran.dll</HintPath>
     </Reference>
     <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aran.Geometries.1.0.1\lib\net451\Aran.Geometries.dll</HintPath>
+      <HintPath>..\packages\Aran.Geometries.1.0.3\lib\net451\Aran.Geometries.dll</HintPath>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <HintPath>..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
@@ -156,9 +157,6 @@
     <Compile Include="ConvertFromEsriGeom.cs" />
     <Compile Include="ConvertToEsriGeom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PANDA.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

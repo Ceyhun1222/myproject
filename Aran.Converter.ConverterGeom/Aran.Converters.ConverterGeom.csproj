@@ -125,20 +125,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aran.1.1.10\lib\net451\Aran.dll</HintPath>
-    </Reference>
-    <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aran.Geometries.1.0.3\lib\net451\Aran.Geometries.dll</HintPath>
-    </Reference>
-    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="ESRI.ArcGIS.System, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\EsriSystem.1.0.5\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -157,9 +143,6 @@
     <Compile Include="ConvertFromEsriGeom.cs" />
     <Compile Include="ConvertToEsriGeom.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To  modify your build process, add your task inside one of the targets below and uncomment it. 

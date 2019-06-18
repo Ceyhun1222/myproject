@@ -126,7 +126,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Aran.1.0.9\lib\net451\Aran.dll</HintPath>
+      <HintPath>..\packages\Aran.1.1.10\lib\net451\Aran.dll</HintPath>
     </Reference>
     <Reference Include="Aran.Geometries, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Aran.Geometries.1.0.3\lib\net451\Aran.Geometries.dll</HintPath>

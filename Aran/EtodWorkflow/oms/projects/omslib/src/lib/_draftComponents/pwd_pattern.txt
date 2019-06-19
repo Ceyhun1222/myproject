@@ -1,6 +1,0 @@
-
-pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,20}$"
-<!-- <span *ngIf="password.errors?.pattern">{{lang.get('Password must be at least one uppercase letter, one lowercase letter, one special character and one number')}}</span> -->
-
-pattern="^(?=.*?[A-Za-z])(?=.*?[0-9]).{6,15}$"
-interval 6-15 and (A or a)

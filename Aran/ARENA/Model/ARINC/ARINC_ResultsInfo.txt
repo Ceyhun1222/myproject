@@ -1,4 +1,0 @@
-Country	Airport	Section decription	Section	Count
-FA	FA	Airspace	UC	35675
-FA	FA	Airspace	UF	50519
-FA	FA	Airspace	UR	12073

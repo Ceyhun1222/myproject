@@ -1,8 +1,0 @@
-version: '3.4'
-
-services:
-  omegaobstaclechecker:
-    image: ${DOCKER_REGISTRY}omegaobstaclechecker
-    build:
-      context: .
-      dockerfile: OmegaObstacleChecker.API/Dockerfile

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran", "Aran\Aran.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Geometries", "Aran.Geometries\Aran.Geometries.csproj", "{4BA3D2B3-B3ED-414E-896C-B233152C5860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aran.Converters.ConverterGeom", "Aran.Converter.Geom\Aran.Converters.ConverterGeom.csproj", "{9524BF09-DD69-4A72-A213-D6A69701144D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		ComCompile|Any CPU = ComCompile|Any CPU
@@ -85,26 +83,6 @@ Global
 		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|Any CPU.Build.0 = Release|Any CPU
 		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|x86.ActiveCfg = Release|x86
 		{4BA3D2B3-B3ED-414E-896C-B233152C5860}.Riga|x86.Build.0 = Release|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComCompile|Any CPU.ActiveCfg = ComSoft|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComCompile|Any CPU.Build.0 = ComSoft|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComCompile|x86.ActiveCfg = ComSoft|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComCompile|x86.Build.0 = ComSoft|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|Any CPU.ActiveCfg = ComSoft|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|Any CPU.Build.0 = ComSoft|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|x86.ActiveCfg = ComSoft|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.ComSoft|x86.Build.0 = ComSoft|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|x86.ActiveCfg = Debug|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Debug|x86.Build.0 = Debug|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|x86.ActiveCfg = Release|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Release|x86.Build.0 = Release|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|Any CPU.ActiveCfg = Riga|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|Any CPU.Build.0 = Riga|Any CPU
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|x86.ActiveCfg = Riga|x86
-		{9524BF09-DD69-4A72-A213-D6A69701144D}.Riga|x86.Build.0 = Riga|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

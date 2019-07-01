@@ -14,6 +14,19 @@
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Package" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
+  <files>
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Package.csproj" target="Aran.Package.csproj" />
+    <file src="ARAN.Package.sln" target="ARAN.Package.sln" />
+    <file src="Aran.Package.snk" target="Aran.Package.snk" />
+    <file src="BinaryPackageReader.cs" target="BinaryPackageReader.cs" />
+    <file src="BinaryPackageWriter.cs" target="BinaryPackageWriter.cs" />
+    <file src="IPackable.cs" target="IPackable.cs" />
+    <file src="PackageReader.cs" target="PackageReader.cs" />
+    <file src="PackageWriter.cs" target="PackageWriter.cs" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+  </files>
 </package>

@@ -19,4 +19,15 @@
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
+  <files>
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.csproj" target="Aran.csproj" />
+    <file src="Aran.sln" target="Aran.sln" />
+    <file src="Aran.snk" target="Aran.snk" />
+    <file src="AranObject.cs" target="AranObject.cs" />
+    <file src="AranObjectList.cs" target="AranObjectList.cs" />
+    <file src="IAranCloneable.cs" target="IAranCloneable.cs" />
+    <file src="nuget.exe" target="nuget.exe" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+  </files>
 </package>

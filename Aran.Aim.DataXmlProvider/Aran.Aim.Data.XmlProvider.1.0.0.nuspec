@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aran.Aim.Data.XmlProvider</id>
+    <version>1.0.0</version>
+    <title>empty</title>
+    <authors>Risk</authors>
+    <owners>Risk</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My Description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Tag1 Tag2</tags>
+    <serviceable>true</serviceable>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Aim.Data.XmlProvider" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Aim.Data.XmlProvider.csproj" target="Aran.Aim.Data.XmlProvider.csproj" />
+    <file src="Aran.Aim.Data.XmlProvider.csproj.user" target="Aran.Aim.Data.XmlProvider.csproj.user" />
+    <file src="Aran.Aim.Data.XmlProvider.sln" target="Aran.Aim.Data.XmlProvider.sln" />
+    <file src="XmlDbProvider.cs" target="XmlDbProvider.cs" />
+    <file src="XmlDbProviderFactory.cs" target="XmlDbProviderFactory.cs" />
+  </files>
+</package>

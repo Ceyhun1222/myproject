@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aran.Geometries.Operators</id>
+    <version>1.0.0</version>
+    <title>empty</title>
+    <authors>Risk</authors>
+    <owners>Risk</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My Description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Tag1 Tag2</tags>
+    <serviceable>true</serviceable>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Geometries.Operators" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Geometries.Operators.csproj" target="Aran.Geometries.Operators.csproj" />
+    <file src="ArcGisInitializer.cs" target="ArcGisInitializer.cs" />
+    <file src="Ellipsoid.cs" target="Ellipsoid.cs" />
+    <file src="Enums.cs" target="Enums.cs" />
+    <file src="GeometryOperators.cs" target="GeometryOperators.cs" />
+    <file src="IGeometryOperators.cs" target="IGeometryOperators.cs" />
+    <file src="JtsGeometryOperators.cs" target="JtsGeometryOperators.cs" />
+    <file src="packages.config" target="packages.config" />
+    <file src="SpatialReference.cs" target="SpatialReference.cs" />
+    <file src="SpatialReferenceParam.cs" target="SpatialReferenceParam.cs" />
+    <file src="SpatRefConverter.cs" target="SpatRefConverter.cs" />
+  </files>
+</package>

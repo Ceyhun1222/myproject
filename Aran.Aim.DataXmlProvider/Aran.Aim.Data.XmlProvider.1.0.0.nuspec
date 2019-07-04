@@ -23,7 +23,6 @@
   <files>
     <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
     <file src="Aran.Aim.Data.XmlProvider.csproj" target="Aran.Aim.Data.XmlProvider.csproj" />
-    <file src="Aran.Aim.Data.XmlProvider.csproj.user" target="Aran.Aim.Data.XmlProvider.csproj.user" />
     <file src="Aran.Aim.Data.XmlProvider.sln" target="Aran.Aim.Data.XmlProvider.sln" />
     <file src="XmlDbProvider.cs" target="XmlDbProvider.cs" />
     <file src="XmlDbProviderFactory.cs" target="XmlDbProviderFactory.cs" />

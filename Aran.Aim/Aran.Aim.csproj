@@ -98,11 +98,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\AimMetadata\AimClassInfo.cs" />
@@ -546,10 +549,9 @@
       <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
       <Name>Aran.Geometries</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Aran.Package\Aran.Package.csproj">
-      <Project>{c796c154-348a-4f4f-8843-807fbfa0456c}</Project>
-      <Name>Aran.Package</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

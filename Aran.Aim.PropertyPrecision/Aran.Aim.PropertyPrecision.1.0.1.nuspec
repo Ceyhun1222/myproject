@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Aran.Aim.Metadata.UI</id>
-    <version>1.0.0</version>
+    <id>Aran.Aim.PropertyPrecision</id>
+    <version>1.0.1</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -17,19 +17,7 @@
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
-      <frameworkAssembly assemblyName="Aran.Aim.Metadata.UI" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Aim.PropertyPrecision" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Aim.Metadata.UI.csproj" target="Aran.Aim.Metadata.UI.csproj" />
-    <file src="Aran.Aim.Metadata.UI.sln" target="Aran.Aim.Metadata.UI.sln" />
-    <file src="Aran.Aim.Metadata.UI.snk" target="Aran.Aim.Metadata.UI.snk" />
-    <file src="GlobalFunctions.cs" target="GlobalFunctions.cs" />
-    <file src="UIClassInfo.cs" target="UIClassInfo.cs" />
-    <file src="UIMetadata.cs" target="UIMetadata.cs" />
-    <file src="UIMetadataExtension.cs" target="UIMetadataExtension.cs" />
-    <file src="UIPropInfo.cs" target="UIPropInfo.cs" />
-    <file src="UIUtilities.cs" target="UIUtilities.cs" />
-  </files>
 </package>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Aran.Geometries.Operators</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -20,18 +20,4 @@
       <frameworkAssembly assemblyName="Aran.Geometries.Operators" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Geometries.Operators.csproj" target="Aran.Geometries.Operators.csproj" />
-    <file src="ArcGisInitializer.cs" target="ArcGisInitializer.cs" />
-    <file src="Ellipsoid.cs" target="Ellipsoid.cs" />
-    <file src="Enums.cs" target="Enums.cs" />
-    <file src="GeometryOperators.cs" target="GeometryOperators.cs" />
-    <file src="IGeometryOperators.cs" target="IGeometryOperators.cs" />
-    <file src="JtsGeometryOperators.cs" target="JtsGeometryOperators.cs" />
-    <file src="packages.config" target="packages.config" />
-    <file src="SpatialReference.cs" target="SpatialReference.cs" />
-    <file src="SpatialReferenceParam.cs" target="SpatialReferenceParam.cs" />
-    <file src="SpatRefConverter.cs" target="SpatRefConverter.cs" />
-  </files>
 </package>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Aran.ConverterGeom</id>
-    <version>1.0.3</version>
+    <id>Aran.Aim.AixmMessage</id>
+    <version>1.0.1</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -17,17 +17,7 @@
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
-      <frameworkAssembly assemblyName="Aran.Converters.ConverterGeom" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Aim.AixmMessage" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Converters.ConverterGeom.csproj" target="Aran.Converters.ConverterGeom.csproj" />
-    <file src="Aran.Converters.ConverterGeom.sln" target="Aran.Converters.ConverterGeom.sln" />
-    <file src="Aran.Converters.ConverterGeom.snk" target="Aran.Converters.ConverterGeom.snk" />
-    <file src="ConvertFromEsriGeom.cs" target="ConvertFromEsriGeom.cs" />
-    <file src="ConvertToEsriGeom.cs" target="ConvertToEsriGeom.cs" />
-    <file src="packages.config" target="packages.config" />
-    <file src="PANDA.ico" target="PANDA.ico" />
-  </files>
 </package>

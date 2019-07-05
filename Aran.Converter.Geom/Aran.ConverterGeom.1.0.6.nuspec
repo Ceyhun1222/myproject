@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Aran.Aim.GmlParser</id>
-    <version>1.0.0</version>
+    <id>Aran.ConverterGeom</id>
+    <version>1.0.6</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -17,13 +17,7 @@
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
-      <frameworkAssembly assemblyName="Aran.Aim.GmlParser" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Converters.ConverterGeom" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Aim.GmlParser.csproj" target="Aran.Aim.GmlParser.csproj" />
-    <file src="AranMathFunctions.cs" target="AranMathFunctions.cs" />
-    <file src="ComplexGeomParser.cs" target="ComplexGeomParser.cs" />
-  </files>
 </package>

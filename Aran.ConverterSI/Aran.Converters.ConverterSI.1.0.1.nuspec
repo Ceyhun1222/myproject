@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Aran.Converters.ConverterSI</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -20,13 +20,4 @@
       <frameworkAssembly assemblyName="Aran.Converters.ConverterSI" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Converters.ConverterSI.csproj" target="Aran.Converters.ConverterSI.csproj" />
-    <file src="Aran.Converters.ConverterSI.sln" target="Aran.Converters.ConverterSI.sln" />
-    <file src="Aran.Converters.ConverterSI.snk" target="Aran.Converters.ConverterSI.snk" />
-    <file src="ConverterFromSI.cs" target="ConverterFromSI.cs" />
-    <file src="ConverterToSI.cs" target="ConverterToSI.cs" />
-    <file src="PANDA.ico" target="PANDA.ico" />
-  </files>
 </package>

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>Aran.Geometries.IO</id>
-    <version>1.0.0</version>
+    <id>Aran.Aim</id>
+    <version>1.0.1</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -17,16 +17,7 @@
       <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
       <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
-      <frameworkAssembly assemblyName="Aran.Geometries.IO" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Aim" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Geometries.IO.csproj" target="Aran.Geometries.IO.csproj" />
-    <file src="Aran.Geometries.IO.sln" target="Aran.Geometries.IO.sln" />
-    <file src="Aran.Geometries.IO.snk" target="Aran.Geometries.IO.snk" />
-    <file src="ByteOrder.cs" target="ByteOrder.cs" />
-    <file src="GeometryWKBReader.cs" target="GeometryWKBReader.cs" />
-    <file src="GeometryWKBWriter.cs" target="GeometryWKBWriter.cs" />
-  </files>
 </package>

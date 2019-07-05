@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Aran.Package</id>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <title>Package</title>
     <authors>JeyhunHasanov</authors>
     <owners>JeyhunHasanov</owners>
@@ -17,16 +17,4 @@
       <frameworkAssembly assemblyName="Aran.Package" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
-  <files>
-    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
-    <file src="Aran.Package.csproj" target="Aran.Package.csproj" />
-    <file src="ARAN.Package.sln" target="ARAN.Package.sln" />
-    <file src="Aran.Package.snk" target="Aran.Package.snk" />
-    <file src="BinaryPackageReader.cs" target="BinaryPackageReader.cs" />
-    <file src="BinaryPackageWriter.cs" target="BinaryPackageWriter.cs" />
-    <file src="IPackable.cs" target="IPackable.cs" />
-    <file src="PackageReader.cs" target="PackageReader.cs" />
-    <file src="PackageWriter.cs" target="PackageWriter.cs" />
-    <file src="PANDA.ico" target="PANDA.ico" />
-  </files>
 </package>

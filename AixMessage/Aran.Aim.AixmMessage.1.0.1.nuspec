@@ -21,8 +21,8 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-    <file src="lib\net451\bin\Debug\Aran.Aim.AixmMessage.dll" target="lib\net451\bin\Debug\Aran.Aim.AixmMessage.dll" />
-    <file src="lib\net451\bin\Debug\Aran.Aim.AixmMessage.pdb" target="lib\net451\bin\Debug\Aran.Aim.AixmMessage.pdb" />
+    <file src="lib\net451\Aran.Aim.AixmMessage.dll" target="lib\net451\Aran.Aim.AixmMessage.dll" />
+    <file src="lib\net451\Aran.Aim.AixmMessage.pdb" target="lib\net451\Aran.Aim.AixmMessage.pdb" />
     <file src="obj\Debug\Aran.Aim.AixmMessage.csproj.CopyComplete" target="obj\Debug\Aran.Aim.AixmMessage.csproj.CopyComplete" />
     <file src="obj\Debug\Aran.Aim.AixmMessage.csproj.CoreCompileInputs.cache" target="obj\Debug\Aran.Aim.AixmMessage.csproj.CoreCompileInputs.cache" />
     <file src="obj\Debug\Aran.Aim.AixmMessage.csproj.FileListAbsolute.txt" target="obj\Debug\Aran.Aim.AixmMessage.csproj.FileListAbsolute.txt" />

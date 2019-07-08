@@ -31,7 +31,6 @@
     <file src="AixmFeatureWriter.cs" target="AixmFeatureWriter.cs" />
     <file src="AixmMessageGlobal.cs" target="AixmMessageGlobal.cs" />
     <file src="Aran.Aim.AixmMessage.csproj" target="Aran.Aim.AixmMessage.csproj" />
-    <file src="Aran.Aim.AixmMessage.pdb" target="Aran.Aim.AixmMessage.pdb" />
     <file src="Aran.Aim.AixmMessage.sln" target="Aran.Aim.AixmMessage.sln" />
     <file src="AranAixmReader.cs" target="AranAixmReader.cs" />
     <file src="AranAixmWriter.cs" target="AranAixmWriter.cs" />

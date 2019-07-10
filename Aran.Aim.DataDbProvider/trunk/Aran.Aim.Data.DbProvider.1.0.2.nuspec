@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Aran.Aim.Data.DbProvider</id>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -31,7 +31,7 @@
     <file src="Filter\SpatialOps.cs" target="Filter\SpatialOps.cs" />
     <file src="Filter\TimeSliceFilter.cs" target="Filter\TimeSliceFilter.cs" />
     <file src="Filter\Within.cs" target="Filter\Within.cs" />
-    <file src="lib\net451\Aran.Aim.CawProvider.dll" target="lib\net451\Aran.Aim.CawProvider.dll" />
+    <file src="lib\net451\Aran.Aim.Data.DbProvider.dll" target="lib\net451\Aran.Aim.Data.DbProvider.dll" />
     <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
     <file src="ResultTypes\BaseDbResult.cs" target="ResultTypes\BaseDbResult.cs" />
     <file src="ResultTypes\GettingResult.cs" target="ResultTypes\GettingResult.cs" />

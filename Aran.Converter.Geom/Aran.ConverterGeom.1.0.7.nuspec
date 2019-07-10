@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Aran.ConverterGeom</id>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <title>empty</title>
     <authors>Risk</authors>
     <owners>Risk</owners>
@@ -20,4 +20,15 @@
       <frameworkAssembly assemblyName="Aran.Converters.ConverterGeom" targetFramework=".NETFramework4.5.1" />
     </frameworkAssemblies>
   </metadata>
+  <files>
+    <file src="lib\net451\Aran.Converters.ConverterGeom.dll" target="lib\net451\Aran.Converters.ConverterGeom.dll" />
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Converters.ConverterGeom.csproj" target="Aran.Converters.ConverterGeom.csproj" />
+    <file src="Aran.Converters.ConverterGeom.sln" target="Aran.Converters.ConverterGeom.sln" />
+    <file src="Aran.Converters.ConverterGeom.snk" target="Aran.Converters.ConverterGeom.snk" />
+    <file src="ConvertFromEsriGeom.cs" target="ConvertFromEsriGeom.cs" />
+    <file src="ConvertToEsriGeom.cs" target="ConvertToEsriGeom.cs" />
+    <file src="packages.config" target="packages.config" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+  </files>
 </package>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aran.Converters.ConverterSI</id>
+    <version>1.0.2</version>
+    <title>empty</title>
+    <authors>Risk</authors>
+    <owners>Risk</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My Description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Tag1 Tag2</tags>
+    <serviceable>true</serviceable>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Converters.ConverterSI" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="lib\net451\Aran.Converters.ConverterSI.dll" target="lib\net451\Aran.Converters.ConverterSI.dll" />
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Converters.ConverterSI.csproj" target="Aran.Converters.ConverterSI.csproj" />
+    <file src="Aran.Converters.ConverterSI.sln" target="Aran.Converters.ConverterSI.sln" />
+    <file src="Aran.Converters.ConverterSI.snk" target="Aran.Converters.ConverterSI.snk" />
+    <file src="ConverterFromSI.cs" target="ConverterFromSI.cs" />
+    <file src="ConverterToSI.cs" target="ConverterToSI.cs" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+  </files>
+</package>

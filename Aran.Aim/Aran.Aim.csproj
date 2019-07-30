@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32F3CE80-0590-4881-8614-1CDDF8BD052E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aran.Aim</RootNamespace>
+    <AssemblyName>Aran.Aim</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_QATAR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Debug\Aran.Aim.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\..\..\bin\Release\Aran.Aim.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ComSoft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ComSoft|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\ComSoft\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\AimMetadata\AimClassInfo.cs" />
+    <Compile Include="Model\AimMetadata\AimDescriptionLoader.cs" />
+    <Compile Include="Model\AimMetadata\AimEnumInfo.cs" />
+    <Compile Include="Model\AimMetadata\AimMetadata.cs" />
+    <Compile Include="Model\Attribute\LinkedFeatureAttribute.cs" />
+    <Compile Include="Model\Common\AimSerializableErrorHandler.cs" />
+    <Compile Include="Model\Common\DeserializedErrorInfo.cs" />
+    <Compile Include="Model\Common\DeserializeLastException.cs" />
+    <Compile Include="Model\Common\GeomConverterFromXml.cs" />
+    <Compile Include="Model\Common\IAimNotifyPropertyChanged.cs" />
+    <Compile Include="Model\Common\IAimObject.cs" />
+    <Compile Include="Model\Common\IAimProperty.cs" />
+    <Compile Include="Model\EditedClasses\Curve.cs" />
+    <Compile Include="Model\EditedClasses\Surface.cs" />
+    <Compile Include="Model\Enum\AllAimObjectType.cs" />
+    <Compile Include="Model\Extention\ICRCExtension.cs" />
+    <Compile Include="Model\Extention\SurfaceExtension.cs" />
+    <Compile Include="Model\Extention\CurveExtension.cs" />
+    <Compile Include="Model\Extention\PointExtension.cs" />
+    <Compile Include="Model\FeatureRef\AbstractFeatureRefObject.cs" />
+    <Compile Include="Model\Common\AObjectList.cs" />
+    <Compile Include="Model\Common\AimField.cs" />
+    <Compile Include="Model\Common\AimObjectFactory_gen.cs" />
+    <Compile Include="Model\AimMetadata\AimPropInfo.cs" />
+    <Compile Include="Model\FeatureRef\AbstractFeatureRef.cs" />
+    <Compile Include="Model\Common\AimListSerialization.cs" />
+    <Compile Include="Model\Common\AimSerialization.cs" />
+    <Compile Include="Model\Common\IAixmSerializable.cs" />
+    <Compile Include="Model\Common\XmlContext.cs" />
+    <Compile Include="Model\FeatureRef\AbstractAirportGroundServiceRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractAirportHeliportProtectionAreaRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractApproachLegRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractGroundLightSystemRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractMarkingRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractNavaidEquipmentRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractNavigationSystemCheckpointRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractProcedureRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractRadarEquipmentRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractSegmentLegRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractServiceRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractSurveillanceRadarRef.cs" />
+    <Compile Include="Model\FeatureRef\AbstractTrafficSeparationServiceRef.cs" />
+    <Compile Include="Model\FeatureRef\FeatureRef.cs" />
+    <Compile Include="Model\DataType_\TextNote.cs" />
+    <Compile Include="Model\DataType_\TimePeriod.cs" />
+    <Compile Include="Model\DataType_\TimeSlice.cs" />
+    <Compile Include="Model\DataType_\ValDepth.cs" />
+    <Compile Include="Model\DataType_\ValDistance.cs" />
+    <Compile Include="Model\DataType_\ValDistanceSigned.cs" />
+    <Compile Include="Model\DataType_\ValDistanceVertical.cs" />
+    <Compile Include="Model\DataType_\ValDuration.cs" />
+    <Compile Include="Model\DataType_\ValFL.cs" />
+    <Compile Include="Model\DataType_\ValFrequency.cs" />
+    <Compile Include="Model\DataType_\ValLightIntensity.cs" />
+    <Compile Include="Model\DataType_\ValPressure.cs" />
+    <Compile Include="Model\DataType_\ValSpeed.cs" />
+    <Compile Include="Model\DataType_\ValTemperature.cs" />
+    <Compile Include="Model\DataType_\ValWeight.cs" />
+    <Compile Include="Model\EditedClasses\AixmPoint.cs" />
+    <Compile Include="Model\Enum\Enums.cs" />
+    <Compile Include="Model\Enum\OtherEnums.cs" />
+    <Compile Include="Model\Feature\AerialRefuelling.cs" />
+    <Compile Include="Model\Feature\AeronauticalGroundLight.cs" />
+    <Compile Include="Model\Feature\AircraftGroundService.cs" />
+    <Compile Include="Model\Feature\AircraftStand.cs" />
+    <Compile Include="Model\Feature\AirportClearanceService.cs" />
+    <Compile Include="Model\Feature\AirportGroundService.cs" />
+    <Compile Include="Model\Feature\AirportHeliport.cs" />
+    <Compile Include="Model\Feature\AirportHeliportCollocation.cs" />
+    <Compile Include="Model\Feature\AirportHeliportProtectionArea.cs" />
+    <Compile Include="Model\Feature\AirportHotSpot.cs" />
+    <Compile Include="Model\Feature\AirportProtectionAreaMarking.cs" />
+    <Compile Include="Model\Feature\AirportSuppliesService.cs" />
+    <Compile Include="Model\Feature\Airspace.cs" />
+    <Compile Include="Model\Feature\AirspaceBorderCrossing.cs" />
+    <Compile Include="Model\Feature\AirTrafficControlService.cs" />
+    <Compile Include="Model\Feature\AirTrafficManagementService.cs" />
+    <Compile Include="Model\Feature\AltimeterSource.cs" />
+    <Compile Include="Model\Feature\AngleIndication.cs" />
+    <Compile Include="Model\Feature\ApproachLeg.cs" />
+    <Compile Include="Model\Feature\ApproachLightingSystem.cs" />
+    <Compile Include="Model\Feature\Apron.cs" />
+    <Compile Include="Model\Feature\ApronElement.cs" />
+    <Compile Include="Model\Feature\ApronLightSystem.cs" />
+    <Compile Include="Model\Feature\ApronMarking.cs" />
+    <Compile Include="Model\Feature\ArrestingGear.cs" />
+    <Compile Include="Model\Feature\ArrivalFeederLeg.cs" />
+    <Compile Include="Model\Feature\ArrivalLeg.cs" />
+    <Compile Include="Model\Feature\AuthorityForAirspace.cs" />
+    <Compile Include="Model\Feature\Azimuth.cs" />
+    <Compile Include="Model\Feature\ChangeOverPoint.cs" />
+    <Compile Include="Model\Feature\CheckpointINS.cs" />
+    <Compile Include="Model\Feature\CheckpointVOR.cs" />
+    <Compile Include="Model\Feature\CirclingArea.cs" />
+    <Compile Include="Model\Feature\DeicingArea.cs" />
+    <Compile Include="Model\Feature\DeicingAreaMarking.cs" />
+    <Compile Include="Model\Feature\DepartureLeg.cs" />
+    <Compile Include="Model\Feature\DesignatedPoint.cs" />
+    <Compile Include="Model\Feature\DirectionFinder.cs" />
+    <Compile Include="Model\Feature\DistanceIndication.cs" />
+    <Compile Include="Model\Feature\DME.cs" />
+    <Compile Include="Model\Feature\Elevation.cs" />
+    <Compile Include="Model\Feature\FinalLeg.cs" />
+    <Compile Include="Model\Feature\FireFightingService.cs" />
+    <Compile Include="Model\Feature\FlightRestriction.cs" />
+    <Compile Include="Model\Feature\FloatingDockSite.cs" />
+    <Compile Include="Model\Feature\GeoBorder.cs" />
+    <Compile Include="Model\Feature\Glidepath.cs" />
+    <Compile Include="Model\Feature\GroundLightSystem.cs" />
+    <Compile Include="Model\Feature\GroundTrafficControlService.cs" />
+    <Compile Include="Model\Feature\GuidanceLine.cs" />
+    <Compile Include="Model\Feature\GuidanceLineLightSystem.cs" />
+    <Compile Include="Model\Feature\GuidanceLineMarking.cs" />
+    <Compile Include="Model\Feature\HoldingAssessment.cs" />
+    <Compile Include="Model\Feature\HoldingPattern.cs" />
+    <Compile Include="Model\Feature\InformationService.cs" />
+    <Compile Include="Model\Feature\InitialLeg.cs" />
+    <Compile Include="Model\Feature\InstrumentApproachProcedure.cs" />
+    <Compile Include="Model\Feature\IntermediateLeg.cs" />
+    <Compile Include="Model\Feature\Localizer.cs" />
+    <Compile Include="Model\Feature\MarkerBeacon.cs" />
+    <Compile Include="Model\Feature\Marking.cs" />
+    <Compile Include="Model\Feature\MarkingBuoy.cs" />
+    <Compile Include="Model\Feature\MissedApproachLeg.cs" />
+    <Compile Include="Model\Feature\Navaid.cs" />
+    <Compile Include="Model\Feature\NavaidEquipment.cs" />
+    <Compile Include="Model\Feature\NavigationArea.cs" />
+    <Compile Include="Model\Feature\NavigationAreaRestriction.cs" />
+    <Compile Include="Model\Feature\NavigationSystemCheckpoint.cs" />
+    <Compile Include="Model\Feature\NDB.cs" />
+    <Compile Include="Model\Feature\NonMovementArea.cs" />
+    <Compile Include="Model\Feature\ObstacleArea.cs" />
+    <Compile Include="Model\Feature\OrganisationAuthority.cs" />
+    <Compile Include="Model\Feature\PassengerLoadingBridge.cs" />
+    <Compile Include="Model\Feature\PassengerService.cs" />
+    <Compile Include="Model\Feature\PilotControlledLighting.cs" />
+    <Compile Include="Model\Feature\PrecisionApproachRadar.cs" />
+    <Compile Include="Model\Feature\PrimarySurveillanceRadar.cs" />
+    <Compile Include="Model\Feature\Procedure.cs" />
+    <Compile Include="Model\Feature\ProcedureDME.cs" />
+    <Compile Include="Model\Feature\RadarEquipment.cs" />
+    <Compile Include="Model\Feature\RadarSystem.cs" />
+    <Compile Include="Model\Feature\RadioCommunicationChannel.cs" />
+    <Compile Include="Model\Feature\RadioFrequencyArea.cs" />
+    <Compile Include="Model\Feature\Road.cs" />
+    <Compile Include="Model\Feature\Route.cs" />
+    <Compile Include="Model\Feature\RouteDME.cs" />
+    <Compile Include="Model\Feature\RouteSegment.cs" />
+    <Compile Include="Model\Feature\RulesProcedures.cs" />
+    <Compile Include="Model\Feature\Runway.cs" />
+    <Compile Include="Model\Feature\RunwayBlastPad.cs" />
+    <Compile Include="Model\Feature\RunwayCentrelinePoint.cs" />
+    <Compile Include="Model\Feature\RunwayDirection.cs" />
+    <Compile Include="Model\Feature\RunwayDirectionLightSystem.cs" />
+    <Compile Include="Model\Feature\RunwayElement.cs" />
+    <Compile Include="Model\Feature\RunwayMarking.cs" />
+    <Compile Include="Model\Feature\RunwayProtectArea.cs" />
+    <Compile Include="Model\Feature\RunwayProtectAreaLightSystem.cs" />
+    <Compile Include="Model\Feature\RunwayVisualRange.cs" />
+    <Compile Include="Model\Feature\SafeAltitudeArea.cs" />
+    <Compile Include="Model\Feature\SDF.cs" />
+    <Compile Include="Model\Feature\SeaplaneLandingArea.cs" />
+    <Compile Include="Model\Feature\SeaplaneRampSite.cs" />
+    <Compile Include="Model\Feature\SearchRescueService.cs" />
+    <Compile Include="Model\Feature\SecondarySurveillanceRadar.cs" />
+    <Compile Include="Model\Feature\SegmentLeg.cs" />
+    <Compile Include="Model\Feature\Service.cs" />
+    <Compile Include="Model\Feature\SignificantPointInAirspace.cs" />
+    <Compile Include="Model\Feature\SpecialDate.cs" />
+    <Compile Include="Model\Feature\SpecialNavigationStation.cs" />
+    <Compile Include="Model\Feature\SpecialNavigationSystem.cs" />
+    <Compile Include="Model\Feature\StandardInstrumentArrival.cs" />
+    <Compile Include="Model\Feature\StandardInstrumentDeparture.cs" />
+    <Compile Include="Model\Feature\StandardLevelColumn.cs" />
+    <Compile Include="Model\Feature\StandardLevelSector.cs" />
+    <Compile Include="Model\Feature\StandardLevelTable.cs" />
+    <Compile Include="Model\Feature\StandMarking.cs" />
+    <Compile Include="Model\Feature\SurveillanceRadar.cs" />
+    <Compile Include="Model\Feature\SurveyControlPoint.cs" />
+    <Compile Include="Model\Feature\TACAN.cs" />
+    <Compile Include="Model\Feature\TaxiHoldingPosition.cs" />
+    <Compile Include="Model\Feature\TaxiHoldingPositionLightSystem.cs" />
+    <Compile Include="Model\Feature\TaxiHoldingPositionMarking.cs" />
+    <Compile Include="Model\Feature\Taxiway.cs" />
+    <Compile Include="Model\Feature\TaxiwayElement.cs" />
+    <Compile Include="Model\Feature\TaxiwayLightSystem.cs" />
+    <Compile Include="Model\Feature\TaxiwayMarking.cs" />
+    <Compile Include="Model\Feature\TerminalArrivalArea.cs" />
+    <Compile Include="Model\Feature\TouchDownLiftOff.cs" />
+    <Compile Include="Model\Feature\TouchDownLiftOffLightSystem.cs" />
+    <Compile Include="Model\Feature\TouchDownLiftOffMarking.cs" />
+    <Compile Include="Model\Feature\TouchDownLiftOffSafeArea.cs" />
+    <Compile Include="Model\Feature\TrafficSeparationService.cs" />
+    <Compile Include="Model\Feature\Unit.cs" />
+    <Compile Include="Model\Feature\UnplannedHolding.cs" />
+    <Compile Include="Model\Feature\VerticalStructure.cs" />
+    <Compile Include="Model\Feature\VisualGlideSlopeIndicator.cs" />
+    <Compile Include="Model\Feature\VOR.cs" />
+    <Compile Include="Model\Feature\WorkArea.cs" />
+    <Compile Include="Model\Common\CommonFunctions.cs" />
+    <Compile Include="Model\Common\AimObjectFactory.cs" />
+    <Compile Include="Model\Common\ChoiceClass.cs" />
+    <Compile Include="Model\Common\ADataType.cs" />
+    <Compile Include="Model\Common\ValClass.cs" />
+    <Compile Include="Model\Common\DBEntity.cs" />
+    <Compile Include="Model\DB\IDataListener.cs" />
+    <Compile Include="Model\Enum\PackedTypeInfo.cs" />
+    <Compile Include="Model\Geometry\IAranGeometry.cs" />
+    <Compile Include="Model\Common\AimObject.cs" />
+    <Compile Include="Model\Common\AObject.cs" />
+    <Compile Include="Model\Common\Feature.cs" />
+    <Compile Include="Model\FeatureRef\AbstractAirportGroundServiceRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractAirportHeliportProtectionAreaRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractApproachLegRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractGroundLightSystemRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractMarkingRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractNavaidEquipmentRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractNavigationSystemCheckpointRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractProcedureRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractRadarEquipmentRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractSegmentLegRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractServiceRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractSurveillanceRadarRefObject.cs" />
+    <Compile Include="Model\FeatureRef\AbstractTrafficSeparationServiceRefObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\CIAddress.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\CICitation.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\CIContact.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\CIDate.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\CIResponsibleParty.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\Citiation.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\Contact.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\DataQuality.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\DataQualityElement.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\FeatureMetadata.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\FeatureTimeSliceMetadata.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\IdentificationFeature.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\IdentificationMessage.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\IdentificationTimesliceFeature.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtAbstractObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtAbstractTimePrimitive.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtDateTime.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtString.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtTimePeriod.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\BtTimePosition.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiAddress.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiCitation.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiContact.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiOnlineResource.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiPresentationFormCodeObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiResponsibleParty.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiSeries.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\CiTelephone.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqAbstractElement.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqAbstractElementObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqAbstractResult.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqAbstractResultObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqDataQuality.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqQuantitativeAttributeAccuracy.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\DqQuantitativeResult.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\ExExtent.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\ExTemporalExtent.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\ExVerticalExtent.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\LiLineage.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\LiProcessStep.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\LiSource.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdAbstractIdentification.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdAbstractIdentificationObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdConstraintsObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdDataIdentification.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdIdentifier.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdLegalConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdMetadata.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdProgressCodeObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdRestrictionCodeObject.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\MdSecurityConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ISO\RsIdentifier.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\LegalConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MDConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MDIdentification.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MDLegalConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MDMetadata.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MDSecurityConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\MessageMetadata.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\ResponsibleParty.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\SecurityConstraints.cs" />
+    <Compile Include="Model\MD_Metadata\Metadata\Telephone.cs" />
+    <Compile Include="Model\Object\AerialRefuellingAnchor.cs" />
+    <Compile Include="Model\Object\AerialRefuellingPoint.cs" />
+    <Compile Include="Model\Object\AerialRefuellingTrack.cs" />
+    <Compile Include="Model\Object\AircraftCharacteristic.cs" />
+    <Compile Include="Model\Object\AircraftStandContamination.cs" />
+    <Compile Include="Model\Object\AirportHeliportAvailability.cs" />
+    <Compile Include="Model\Object\AirportHeliportContamination.cs" />
+    <Compile Include="Model\Object\AirportHeliportResponsibilityOrganisation.cs" />
+    <Compile Include="Model\Object\AirportHeliportUsage.cs" />
+    <Compile Include="Model\Object\AirspaceActivation.cs" />
+    <Compile Include="Model\Object\AirspaceGeometryComponent.cs" />
+    <Compile Include="Model\Object\AirspaceLayer.cs" />
+    <Compile Include="Model\Object\AirspaceLayerClass.cs" />
+    <Compile Include="Model\Object\AirspaceVolume.cs" />
+    <Compile Include="Model\Object\AirspaceVolumeDependency.cs" />
+    <Compile Include="Model\Object\AixmPoint.cs" />
+    <Compile Include="Model\Object\AltimeterSourceStatus.cs" />
+    <Compile Include="Model\Object\AltitudeAdjustment.cs" />
+    <Compile Include="Model\Object\AngleUse.cs" />
+    <Compile Include="Model\Object\ApproachAltitudeTable.cs" />
+    <Compile Include="Model\Object\ApproachCondition.cs" />
+    <Compile Include="Model\Object\ApproachDistanceTable.cs" />
+    <Compile Include="Model\Object\ApproachTimingTable.cs" />
+    <Compile Include="Model\Object\ApronAreaAvailability.cs" />
+    <Compile Include="Model\Object\ApronAreaUsage.cs" />
+    <Compile Include="Model\Object\ApronContamination.cs" />
+    <Compile Include="Model\Object\ArrestingGearExtent.cs" />
+    <Compile Include="Model\Object\AuthorityForAerialRefuelling.cs" />
+    <Compile Include="Model\Object\AuthorityForNavaidEquipment.cs" />
+    <Compile Include="Model\Object\AuthorityForSpecialNavigationStation.cs" />
+    <Compile Include="Model\Object\AuthorityForSpecialNavigationSystem.cs" />
+    <Compile Include="Model\Object\CallsignDetail.cs" />
+    <Compile Include="Model\Object\CircleSector.cs" />
+    <Compile Include="Model\Object\CirclingRestriction.cs" />
+    <Compile Include="Model\Object\City.cs" />
+    <Compile Include="Model\Object\ConditionCombination.cs" />
+    <Compile Include="Model\Object\ContactInformation.cs" />
+    <Compile Include="Model\Object\Curve.cs" />
+    <Compile Include="Model\Object\DepartureArrivalCondition.cs" />
+    <Compile Include="Model\Object\DirectFlight.cs" />
+    <Compile Include="Model\Object\DirectFlightSegment.cs" />
+    <Compile Include="Model\Object\ElevatedCurve.cs" />
+    <Compile Include="Model\Object\ElevatedPoint.cs" />
+    <Compile Include="Model\Object\ElevatedSurface.cs" />
+    <Compile Include="Model\Object\EnRouteSegmentPoint.cs" />
+    <Compile Include="Model\Object\EquipmentChoice.cs" />
+    <Compile Include="Model\Object\EquipmentUnavailableAdjustment.cs" />
+    <Compile Include="Model\Object\EquipmentUnavailableAdjustmentColumn.cs" />
+    <Compile Include="Model\Object\FASDataBlock.cs" />
+    <Compile Include="Model\FeatureRef\FeatureRefObject.cs" />
+    <Compile Include="Model\Object\FinalProfile.cs" />
+    <Compile Include="Model\Object\FlightCharacteristic.cs" />
+    <Compile Include="Model\Object\FlightConditionCircumstance.cs" />
+    <Compile Include="Model\Object\FlightConditionCombination.cs" />
+    <Compile Include="Model\Object\FlightConditionElement.cs" />
+    <Compile Include="Model\Object\FlightConditionElementChoice.cs" />
+    <Compile Include="Model\Object\FlightRestrictionLevel.cs" />
+    <Compile Include="Model\Object\FlightRestrictionRoute.cs" />
+    <Compile Include="Model\Object\FlightRoutingElement.cs" />
+    <Compile Include="Model\Object\FlightRoutingElementChoice.cs" />
+    <Compile Include="Model\Object\Fuel.cs" />
+    <Compile Include="Model\Object\GroundLightingAvailability.cs" />
+    <Compile Include="Model\Object\GuidanceService.cs" />
+    <Compile Include="Model\Object\HoldingPatternDistance.cs" />
+    <Compile Include="Model\Object\HoldingPatternDuration.cs" />
+    <Compile Include="Model\Object\HoldingPatternLength.cs" />
+    <Compile Include="Model\Object\HoldingUse.cs" />
+    <Compile Include="Model\Object\LandingTakeoffAreaCollection.cs" />
+    <Compile Include="Model\Object\LightActivation.cs" />
+    <Compile Include="Model\Object\LightElement.cs" />
+    <Compile Include="Model\Object\LightElementStatus.cs" />
+    <Compile Include="Model\Object\LinguisticNote.cs" />
+    <Compile Include="Model\Object\ManoeuvringAreaAvailability.cs" />
+    <Compile Include="Model\Object\ManoeuvringAreaUsage.cs" />
+    <Compile Include="Model\Object\MarkingElement.cs" />
+    <Compile Include="Model\Object\MarkingExtent.cs" />
+    <Compile Include="Model\Object\Meteorology.cs" />
+    <Compile Include="Model\Object\Minima.cs" />
+    <Compile Include="Model\Object\MissedApproachGroup.cs" />
+    <Compile Include="Model\Object\NavaidComponent.cs" />
+    <Compile Include="Model\Object\NavaidEquipmentDistance.cs" />
+    <Compile Include="Model\Object\NavaidEquipmentMonitoring.cs" />
+    <Compile Include="Model\Object\NavaidOperationalStatus.cs" />
+    <Compile Include="Model\Object\NavigationAreaSector.cs" />
+    <Compile Include="Model\Object\Nitrogen.cs" />
+    <Compile Include="Model\Object\Note.cs" />
+    <Compile Include="Model\Object\ObstacleAreaOrigin.cs" />
+    <Compile Include="Model\Object\ObstacleAssessmentArea.cs" />
+    <Compile Include="Model\Object\ObstaclePlacement.cs" />
+    <Compile Include="Model\Object\Obstruction.cs" />
+    <Compile Include="Model\Object\Oil.cs" />
+    <Compile Include="Model\Object\OnlineContact.cs" />
+    <Compile Include="Model\Object\OrganisationAuthorityAssociation.cs" />
+    <Compile Include="Model\Object\Oxygen.cs" />
+    <Compile Include="Model\Object\PointReference.cs" />
+    <Compile Include="Model\Object\PostalAddress.cs" />
+    <Compile Include="Model\Object\ProcedureAvailability.cs" />
+    <Compile Include="Model\Object\ProcedureTransition.cs" />
+    <Compile Include="Model\Object\ProcedureTransitionLeg.cs" />
+    <Compile Include="Model\Object\PropertiesWithSchedule.cs" />
+    <Compile Include="Model\Object\RadarComponent.cs" />
+    <Compile Include="Model\Object\RadioCommunicationOperationalStatus.cs" />
+    <Compile Include="Model\Object\Reflector.cs" />
+    <Compile Include="Model\Object\Ridge.cs" />
+    <Compile Include="Model\Object\RouteAvailability.cs" />
+    <Compile Include="Model\Object\RoutePortion.cs" />
+    <Compile Include="Model\Object\RunwayContamination.cs" />
+    <Compile Include="Model\Object\RunwayDeclaredDistance.cs" />
+    <Compile Include="Model\Object\RunwayDeclaredDistanceValue.cs" />
+    <Compile Include="Model\Object\RunwaySectionContamination.cs" />
+    <Compile Include="Model\Object\SafeAltitudeAreaSector.cs" />
+    <Compile Include="Model\Object\SectorDesign.cs" />
+    <Compile Include="Model\Object\SegmentPoint.cs" />
+    <Compile Include="Model\Object\ServiceOperationalStatus.cs" />
+    <Compile Include="Model\Object\SignificantPoint.cs" />
+    <Compile Include="Model\Object\SpecialNavigationStationStatus.cs" />
+    <Compile Include="Model\Object\StandardLevel.cs" />
+    <Compile Include="Model\Object\Surface.cs" />
+    <Compile Include="Model\Object\SurfaceCharacteristics.cs" />
+    <Compile Include="Model\Object\SurfaceContamination.cs" />
+    <Compile Include="Model\Object\SurfaceContaminationLayer.cs" />
+    <Compile Include="Model\Object\SurveillanceGroundStation.cs" />
+    <Compile Include="Model\Object\TaxiwayContamination.cs" />
+    <Compile Include="Model\Object\TelephoneContact.cs" />
+    <Compile Include="Model\Object\TerminalArrivalAreaSector.cs" />
+    <Compile Include="Model\Object\TerminalSegmentPoint.cs" />
+    <Compile Include="Model\Object\Timesheet.cs" />
+    <Compile Include="Model\Object\TouchDownLiftOffContamination.cs" />
+    <Compile Include="Model\Object\UnitAvailability.cs" />
+    <Compile Include="Model\Object\UnitDependency.cs" />
+    <Compile Include="Model\Object\UsageCondition.cs" />
+    <Compile Include="Model\Object\VerticalStructureLightingStatus.cs" />
+    <Compile Include="Model\Object\VerticalStructurePart.cs" />
+    <Compile Include="Model\Object\VerticalStructurePartGeometry.cs" />
+    <Compile Include="Model\Object\WorkareaActivity.cs" />
+    <Compile Include="Model\Package\AranPackageReader.cs" />
+    <Compile Include="Model\Package\AranPackageWriter.cs" />
+    <Compile Include="Model\Utilities\AimMetadataUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Filter\AObjectFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aran.Aim.GmlParser\Aran.Aim.GmlParser.csproj">
+      <Project>{ef3b0084-9ec7-4a32-b9c3-b2d513ed4e4d}</Project>
+      <Name>Aran.Aim.GmlParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aran\Aran.csproj">
+      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
+      <Name>Aran</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aran.Geometries\Aran.Geometries.csproj">
+      <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
+      <Name>Aran.Geometries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

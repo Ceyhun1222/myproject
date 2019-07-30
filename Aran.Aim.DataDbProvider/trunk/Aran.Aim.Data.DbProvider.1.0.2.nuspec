@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aran.Aim.Data.DbProvider</id>
+    <version>1.0.2</version>
+    <title>empty</title>
+    <authors>Risk</authors>
+    <owners>Risk</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My Description</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Tag1 Tag2</tags>
+    <serviceable>true</serviceable>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Aim.Data.DbProvider" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="Filter\ComparisonOps.cs" target="Filter\ComparisonOps.cs" />
+    <file src="Filter\DWithin.cs" target="Filter\DWithin.cs" />
+    <file src="Filter\Filter.cs" target="Filter\Filter.cs" />
+    <file src="Filter\InExtend.cs" target="Filter\InExtend.cs" />
+    <file src="Filter\LogicOps.cs" target="Filter\LogicOps.cs" />
+    <file src="Filter\OperationChoice.cs" target="Filter\OperationChoice.cs" />
+    <file src="Filter\PropInfoParser.cs" target="Filter\PropInfoParser.cs" />
+    <file src="Filter\SpatialOps.cs" target="Filter\SpatialOps.cs" />
+    <file src="Filter\TimeSliceFilter.cs" target="Filter\TimeSliceFilter.cs" />
+    <file src="Filter\Within.cs" target="Filter\Within.cs" />
+    <file src="lib\net451\Aran.Aim.Data.DbProvider.dll" target="lib\net451\Aran.Aim.Data.DbProvider.dll" />
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="ResultTypes\BaseDbResult.cs" target="ResultTypes\BaseDbResult.cs" />
+    <file src="ResultTypes\GettingResult.cs" target="ResultTypes\GettingResult.cs" />
+    <file src="ResultTypes\InsertingResult.cs" target="ResultTypes\InsertingResult.cs" />
+    <file src="Aran.Aim.Data.DbProvider.csproj" target="Aran.Aim.Data.DbProvider.csproj" />
+    <file src="Aran.Aim.Data.DbProvider.sln" target="Aran.Aim.Data.DbProvider.sln" />
+    <file src="ChangeIdentifier.cs" target="ChangeIdentifier.cs" />
+    <file src="DbProvider.cs" target="DbProvider.cs" />
+    <file src="DbProviderFactory.cs" target="DbProviderFactory.cs" />
+    <file src="DbUtility.cs" target="DbUtility.cs" />
+    <file src="IUserManagement.cs" target="IUserManagement.cs" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+    <file src="Projection.cs" target="Projection.cs" />
+    <file src="User.cs" target="User.cs" />
+  </files>
+</package>

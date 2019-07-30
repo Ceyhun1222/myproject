@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aran.Package</id>
+    <version>1.1.0</version>
+    <title>Package</title>
+    <authors>JeyhunHasanov</authors>
+    <owners>JeyhunHasanov</owners>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Description</description>
+    <copyright>Copyright ©  2011</copyright>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Xml" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="System.Xml.Serialization" targetFramework=".NETFramework4.5.1" />
+      <frameworkAssembly assemblyName="Aran.Package" targetFramework=".NETFramework4.5.1" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="lib\net451\Aran.Package.dll" target="lib\net451\Aran.Package.dll" />
+    <file src="Properties\AssemblyInfo.cs" target="Properties\AssemblyInfo.cs" />
+    <file src="Aran.Package.csproj" target="Aran.Package.csproj" />
+    <file src="ARAN.Package.sln" target="ARAN.Package.sln" />
+    <file src="Aran.Package.snk" target="Aran.Package.snk" />
+    <file src="BinaryPackageReader.cs" target="BinaryPackageReader.cs" />
+    <file src="BinaryPackageWriter.cs" target="BinaryPackageWriter.cs" />
+    <file src="IPackable.cs" target="IPackable.cs" />
+    <file src="PackageReader.cs" target="PackageReader.cs" />
+    <file src="PackageWriter.cs" target="PackageWriter.cs" />
+    <file src="PANDA.ico" target="PANDA.ico" />
+  </files>
+</package>

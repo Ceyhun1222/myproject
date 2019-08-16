@@ -541,10 +541,6 @@
       <Project>{ef3b0084-9ec7-4a32-b9c3-b2d513ed4e4d}</Project>
       <Name>Aran.Aim.GmlParser</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Aran\Aran.csproj">
-      <Project>{21a653c3-8ec0-433f-b876-7cc588ac9a8b}</Project>
-      <Name>Aran</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Aran.Geometries\Aran.Geometries.csproj">
       <Project>{4BA3D2B3-B3ED-414E-896C-B233152C5860}</Project>
       <Name>Aran.Geometries</Name>

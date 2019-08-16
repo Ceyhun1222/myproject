@@ -98,10 +98,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aran, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Aran\bin\Debug\Aran.dll</HintPath>
-    </Reference>
     <Reference Include="Aran.Package, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />

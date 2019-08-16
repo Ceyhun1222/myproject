@@ -1,3 +1,6 @@
 [submodule "for-git-testing"]
 	path = for-git-testing
 	url = https://github.com/Ceyhun1222/for-git-testing.git
+[submodule "myproject"]
+	path = myproject
+	url = https://github.com/Ceyhun1222/myproject.git

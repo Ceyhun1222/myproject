@@ -108,15 +108,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
+      <HintPath>..\packages\ESRI.ArcGIS.Geometry.2.0.0\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\EsriSystem.1.0.5\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
+      <HintPath>..\packages\ESRI.ArcGIS.System.2.0.0\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.Version, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\EsriVersion.1.0.0\lib\net451\ESRI.ArcGIS.Version.dll</HintPath>
+      <HintPath>..\packages\ESRI.ArcGIS.Version.2.0.0\lib\net451\ESRI.ArcGIS.Version.dll</HintPath>
     </Reference>
     <Reference Include="GeoAPI">
       <HintPath>..\RefFiles\GeoAPI.dll</HintPath>
@@ -164,9 +164,6 @@
       <Project>{4ba3d2b3-b3ed-414e-896c-b233152c5860}</Project>
       <Name>Aran.Geometries</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

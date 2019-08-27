@@ -125,11 +125,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\GeometryEsrI.1.0.3\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
+      <HintPath>..\packages\ESRI.ArcGIS.Geometry.2.0.0\lib\net451\ESRI.ArcGIS.Geometry.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="ESRI.ArcGIS.System, Version=10.6.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
-      <HintPath>..\packages\EsriSystem.1.0.5\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
+      <HintPath>..\packages\ESRI.ArcGIS.System.2.0.0\lib\net451\ESRI.ArcGIS.System.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
@@ -138,11 +138,13 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertFromEsriGeom.cs" />

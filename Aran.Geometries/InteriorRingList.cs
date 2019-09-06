@@ -8,7 +8,7 @@ namespace Aran.Geometries
 	//public class InteriorRingList : // GeometryList<Ring>
 	//{
 	//    public InteriorRingList ( )
-	//    {
+	//    { 
 	//        _lengthCalculated = false;
 	//        _areaCalculated = false;
 	//    }

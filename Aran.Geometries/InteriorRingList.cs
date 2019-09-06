@@ -13,7 +13,7 @@ namespace Aran.Geometries
 	//        _areaCalculated = false;
 	//    }
 
-	//    public double Length
+	//    public double Length  
 	//    {
 	//        get
 	//        {

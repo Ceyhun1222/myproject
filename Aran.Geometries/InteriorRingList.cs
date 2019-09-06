@@ -9,7 +9,7 @@ namespace Aran.Geometries
 	//{
 	//    public InteriorRingList ( )
 	//    { 
-	//        _lengthCalculated = false;
+	//        _lengthCalculated = false; 
 	//        _areaCalculated = false;
 	//    }
 

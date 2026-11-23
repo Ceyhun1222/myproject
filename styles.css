@@ -261,7 +261,47 @@ body {
 .bio-prompt { margin: 8px 0 0; font-size: 14px; color: var(--text-muted); }
 .bio-spacer { flex: 1; min-height: 16px; }
 
-.scanner { position: relative; display: grid; place-items: center; width: 320px; height: 320px; margin: 0 auto; }
+.scanner { position: relative; display: grid; place-items: center; }
+
+.camera-stage {
+  position: relative;
+  width: 300px; height: 380px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--grad-card-inactive);
+  box-shadow: var(--shadow-card);
+}
+.camera-stage video {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+.oval-shade {
+  position: absolute; inset: 0;
+  background: rgba(15, 68, 86, 0.55);
+  -webkit-mask-image: radial-gradient(ellipse 120px 160px at 50% 50%, transparent 0 97%, #000 100%);
+  mask-image: radial-gradient(ellipse 120px 160px at 50% 50%, transparent 0 97%, #000 100%);
+}
+.oval-outline {
+  position: absolute; top: 50%; left: 50%;
+  width: 240px; height: 320px;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  box-shadow: 0 0 24px rgba(0, 194, 209, 0.35), inset 0 0 24px rgba(0, 0, 0, 0.15);
+}
+.scan-line {
+  position: absolute; left: 34px; right: 34px; height: 2px;
+  background: linear-gradient(90deg, transparent, #7FFFD4, transparent);
+  animation: scan-sweep 1.8s ease-in-out infinite;
+}
+@keyframes scan-sweep {
+  0%, 100% { top: 84px; opacity: 0.25; }
+  50% { top: 296px; opacity: 1; }
+}
+
+.scanner-fallback { position: relative; display: grid; place-items: center; width: 320px; height: 320px; }
 .ring {
   position: absolute; border-radius: 50%;
   border: 2px solid rgba(0, 194, 209, 0.35);

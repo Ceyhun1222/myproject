@@ -120,6 +120,7 @@ function handleBack() {
   if (active.id === "screen-bio") {
     if (state.scanning) return;
     state.scanToken++;
+    stopCamera();
     showScreen("add");
   } else if (active.id === "screen-add") {
     showScreen("home");
@@ -313,6 +314,47 @@ function startBiometricFlow() {
   showHint(null);
   applyFaceCopy();
   showScreen("bio");
+  startCamera().then((ok) => {
+    if (!ok) showHint("Kamera əlçatmazdır — simulyasiya ilə davam edilir");
+  });
+}
+
+/* ---------------- camera (face framing, SIMA Imza style) ---------------- */
+
+let cameraStream = null;
+
+function stopCamera() {
+  if (cameraStream) {
+    cameraStream.getTracks().forEach((track) => track.stop());
+    cameraStream = null;
+  }
+  const video = $("#camera");
+  if (video) video.srcObject = null;
+  $("#camera-stage").classList.add("hidden");
+  $("#scanner-fallback").classList.remove("hidden");
+  $("#scan-line").classList.add("hidden");
+}
+
+async function startCamera() {
+  stopCamera();
+  const video = $("#camera");
+  if (!navigator.mediaDevices || typeof navigator.mediaDevices.getUserMedia !== "function") {
+    return false;
+  }
+  try {
+    cameraStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "user", width: { ideal: 720 }, height: { ideal: 960 } },
+      audio: false,
+    });
+    video.srcObject = cameraStream;
+    await video.play().catch(() => {});
+    $("#camera-stage").classList.remove("hidden");
+    $("#scanner-fallback").classList.add("hidden");
+    return true;
+  } catch {
+    stopCamera();
+    return false;
+  }
 }
 
 function applyFaceCopy() {
@@ -326,6 +368,7 @@ function setScanning(on) {
   state.scanning = on;
   $("#scan-spinner").classList.toggle("hidden", !on);
   $("#scan-label").textContent = on ? "Skan edilir..." : FACE_COPY.cta;
+  $("#scan-line").classList.toggle("hidden", !on);
   $("#btn-scan").disabled = on;
   $("#btn-bio-back").disabled = on;
 }
@@ -451,6 +494,7 @@ async function runFaceAuth() {
 }
 
 function finishFlow() {
+  stopCamera();
   const pending = state.pending;
   if (!pending) {
     showScreen("home");
@@ -491,6 +535,7 @@ $("#btn-add-back").addEventListener("click", () => showScreen("home"));
 $("#btn-bio-back").addEventListener("click", () => {
   if (state.scanning) return;
   state.scanToken++;
+  stopCamera();
   showScreen("add");
 });
 

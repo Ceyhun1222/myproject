@@ -358,18 +358,40 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
    stands in when the app runs outside Telegram or on an older client. */
 
 function telegramBiometric() {
+  const fail = (code, message) => Object.assign(new Error(message), { code });
   return new Promise((resolve, reject) => {
     const bm = tg.BiometricManager;
     const reason = "Kartı aktivləşdirmək üçün üz tanınması";
+    let settled = false;
+    let watchdog = null;
+
+    const ok = () => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(watchdog);
+      resolve();
+    };
+    const err = (code, message) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(watchdog);
+      reject(fail(code, message));
+    };
+
+    // Some clients define BiometricManager but never answer init().
+    watchdog = setTimeout(() => err("unavailable", "Biometriya cavab vermədi"), 5000);
+
     bm.init(() => {
+      clearTimeout(watchdog);
+      if (settled) return;
       if (!bm.isBiometricAvailable) {
-        reject(new Error("Bu cihazda biometriya mövcud deyil"));
+        err("unavailable", "Bu cihazda biometriya mövcud deyil");
         return;
       }
       const authenticate = () => {
         bm.authenticate({ reason }, (success) => {
-          if (success) resolve();
-          else reject(new Error("Tanınma uğursuz oldu"));
+          if (success) ok();
+          else err("failed", "Tanınma uğursuz oldu");
         });
       };
       if (bm.isAccessGranted) {
@@ -377,7 +399,7 @@ function telegramBiometric() {
       } else {
         bm.requestAccess({ reason }, (granted) => {
           if (granted) authenticate();
-          else reject(new Error("Biometriya icazəsi verilmədi"));
+          else err("denied", "Biometriya icazəsi verilmədi");
         });
       }
     });
@@ -403,9 +425,16 @@ async function runFaceAuth() {
       await telegramBiometric();
     } catch (err) {
       if (token !== state.scanToken) return;
-      showError(err && err.message ? err.message : "Tanınma uğursuz oldu");
-      hapticNotify("error");
-      return;
+      if (err && err.code === "unavailable") {
+        // Desktop/web Telegram has no Face ID — keep the demo flowing.
+        showHint("Bu cihazda biometriya yoxdur — simulyasiya edilir");
+        await delay(1500);
+        if (token !== state.scanToken) return;
+      } else {
+        showError(err && err.message ? err.message : "Tanınma uğursuz oldu");
+        hapticNotify("error");
+        return;
+      }
     }
   } else {
     showHint(isInsideTelegram()

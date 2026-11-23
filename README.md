@@ -26,8 +26,9 @@ telegram-miniapp/
 
 - Бот: **@SIMApaydemo_bot**
 - Ссылка на приложение: https://t.me/SIMApaydemo_bot/SIMApaydemo
+- Сайт (прод): **https://ceyhun1222.github.io/myproject/**
 
-Ссылка откроет приложение, только если в BotFather указан публичный HTTPS-URL, где лежат файлы из этой папки (см. «Деплой на GitHub Pages»).
+В BotFather (**/myapps → SIMApaydemo → Edit Web App URL**) должен стоять адрес прода: `https://ceyhun1222.github.io/myproject/`.
 
 ## Локальный запуск
 
@@ -39,18 +40,30 @@ npx -y http-server -p 8765 -c-1
 
 Можно открыть и просто `index.html` двойным кликом — сборка не нужна, зависимостей нет.
 
-## Деплой на GitHub Pages
+## Деплой (автоматический)
 
-1. Запушьте репозиторий на GitHub.
-2. **Settings → Pages → Source: Deploy from a branch → Branch: `main` / folder: `/ (root)`** → Save.
-3. Через минуту приложение доступно по адресу
-   `https://<ваш-логин>.github.io/<репозиторий>/telegram-miniapp/`
-   (Telegram требует **HTTPS** — Pages его даёт бесплатно).
+Приложение хостится на GitHub Pages репозитория **Ceyhun1222/myproject**:
+ветка `master`, корень репозитория, Pages → *Deploy from a branch → master / (root)*.
+**Любой пуш в `master` автоматически пересобирает сайт** (обычно меньше минуты), отдельный workflow не нужен.
+
+Выкатить текущую версию из этой папки:
+
+```bash
+bash scripts/deploy-miniapp.sh "что изменилось"
+```
+
+Скрипт: синхронизирует `telegram-miniapp/` с корнем репозитория (лишние файлы удаляет),
+коммитит и пушит по SSH-ключу `~/.ssh/simapay_github` через `ssh.github.com:443`
+(порт 22 в этой сети закрыт). Если изменений нет — ничего не делает.
+
+Кэш: GitHub Pages отдаёт HTML с `Cache-Control: max-age=600`, поэтому новая версия может
+появиться в Telegram с задержкой до ~10 минут. Чтобы увидеть сразу — полностью закройте
+мини-апп (свайп вверх) и откройте снова.
 
 ## Подключение к Telegram
 
 1. В Telegram откройте **@BotFather** → `/newbot` → придумайте имя и username.
-2. Создайте Mini App: `/newapp` → выберите бота → название → иконку (можно пропустить) → GIF (пропустить) → **URL** из шага выше → short name.
+2. Создайте Mini App: `/newapp` → выберите бота → название → иконку (можно пропустить) → GIF (пропустить) → **URL прода** → short name.
 3. Либо проще: `/setmenubutton` → бот → вставьте URL — приложение откроется кнопкой меню бота.
 4. Откройте бота и нажмите кнопку меню.
 

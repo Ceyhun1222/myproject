@@ -33,31 +33,37 @@
   <section id="screen-home" class="screen is-active">
     <header class="home-header">
       <img src="assets/logo.png" alt="SIMA Pay" class="logo logo-md">
-      <button class="avatar" aria-label="Profil"><svg class="icon"><use href="#i-person"/></svg></button>
+      <div class="home-actions">
+        <div class="lang-switch" id="lang-switch" role="group" aria-label="Dil / Язык">
+          <button type="button" class="lang-btn" data-lang="az">AZ</button>
+          <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <button class="avatar" aria-label="Profil" data-i18n-aria="avatarAria"><svg class="icon"><use href="#i-person"/></svg></button>
+      </div>
     </header>
 
-    <p class="greeting">Salam 👋</p>
-    <h1 class="headline">Ödənişlər<br>biometriya ilə təhlükəsiz</h1>
+    <p class="greeting" data-i18n="greeting">Salam 👋</p>
+    <h1 class="headline" data-i18n-html="headline">Ödənişlər<br>biometriya ilə təhlükəsiz</h1>
 
     <div id="home-empty" class="empty">
       <div class="empty-icon"><svg class="icon"><use href="#i-creditcard"/></svg></div>
-      <h2 class="empty-title">Hələ kart əlavə etməmisiniz</h2>
-      <p class="empty-sub">Bank kartınızı əlavə edin və biometriya ilə<br>təhlükəsiz aktivləşdirin</p>
+      <h2 class="empty-title" data-i18n="emptyTitle">Hələ kart əlavə etməmisiniz</h2>
+      <p class="empty-sub" data-i18n-html="emptySub">Bank kartınızı əlavə edin və biometriya ilə<br>təhlükəsiz aktivləşdirin</p>
       <button class="btn btn-primary" id="btn-add">
         <svg class="icon"><use href="#i-plus"/></svg>
-        <span>Bank kartı əlavə et</span>
+        <span data-i18n="addCard">Bank kartı əlavə et</span>
       </button>
       <div class="features">
-        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-touchid"/></svg></div><span class="feature-title">Biometrik</span><span class="feature-sub">Üz tanınması</span></div>
-        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-shield-check"/></svg></div><span class="feature-title">Təhlükəsiz</span><span class="feature-sub">3D Secure</span></div>
-        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-bolt"/></svg></div><span class="feature-title">Sürətli</span><span class="feature-sub">1-tap ödəniş</span></div>
+        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-touchid"/></svg></div><span class="feature-title" data-i18n="featBiometric">Biometrik</span><span class="feature-sub" data-i18n="featBiometricSub">Üz tanınması</span></div>
+        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-shield-check"/></svg></div><span class="feature-title" data-i18n="featSecure">Təhlükəsiz</span><span class="feature-sub" data-i18n="featSecureSub">3D Secure</span></div>
+        <div class="feature"><div class="feature-icon"><svg class="icon"><use href="#i-bolt"/></svg></div><span class="feature-title" data-i18n="featFast">Sürətli</span><span class="feature-sub" data-i18n="featFastSub">1-tap ödəniş</span></div>
       </div>
     </div>
 
     <div id="home-cards" class="cards hidden">
       <div class="cards-head">
-        <h2 class="cards-title">Kartlarım</h2>
-        <button class="btn-chip" id="btn-add-2"><svg class="icon"><use href="#i-plus"/></svg><span>Yeni kart</span></button>
+        <h2 class="cards-title" data-i18n="cardsTitle">Kartlarım</h2>
+        <button class="btn-chip" id="btn-add-2"><svg class="icon"><use href="#i-plus"/></svg><span data-i18n="newCard">Yeni kart</span></button>
       </div>
       <div id="cards-list"></div>
     </div>
@@ -66,14 +72,14 @@
   <!-- ============ ADD CARD ============ -->
   <section id="screen-add" class="screen">
     <header class="topbar">
-      <button class="btn-round" id="btn-add-back" aria-label="Geri"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
+      <button class="btn-round" id="btn-add-back" aria-label="Geri" data-i18n-aria="back"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
       <img src="assets/logo.png" alt="" class="logo logo-sm">
       <span class="btn-round-spacer"></span>
     </header>
 
     <div class="add-body">
-      <h1 class="page-title">Yeni kart</h1>
-      <p class="page-sub">Kart məlumatlarını daxil edin</p>
+      <h1 class="page-title" data-i18n="pageTitle">Yeni kart</h1>
+      <p class="page-sub" data-i18n="pageSub">Kart məlumatlarını daxil edin</p>
 
       <div id="preview" class="card-preview is-inactive">
         <div class="card-blob"></div>
@@ -85,7 +91,7 @@
           <div class="card-number" id="preview-number">•••• •••• •••• ••••</div>
           <div class="card-bottom">
             <div>
-              <div class="card-label">BİTMƏ</div>
+              <div class="card-label" data-i18n="cardExpiryLabel">BİTMƏ</div>
               <div class="card-expiry" id="preview-expiry">AA/İİ</div>
             </div>
             <svg class="icon card-nfc"><use href="#i-nfc"/></svg>
@@ -95,7 +101,7 @@
 
       <div class="fields">
         <label class="field">
-          <span class="field-title">Kart nömrəsi</span>
+          <span class="field-title" data-i18n="fieldNumber">Kart nömrəsi</span>
           <div class="field-box">
             <svg class="icon field-icon"><use href="#i-creditcard"/></svg>
             <input id="inp-number" type="tel" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" maxlength="19">
@@ -103,14 +109,14 @@
         </label>
         <div class="field-row">
           <label class="field">
-            <span class="field-title">Bitmə tarixi</span>
+            <span class="field-title" data-i18n="fieldExpiry">Bitmə tarixi</span>
             <div class="field-box">
               <svg class="icon field-icon"><use href="#i-calendar"/></svg>
-              <input id="inp-expiry" type="tel" inputmode="numeric" autocomplete="cc-exp" placeholder="AA/İİ" maxlength="5">
+              <input id="inp-expiry" type="tel" inputmode="numeric" autocomplete="cc-exp" placeholder="AA/İİ" data-i18n-placeholder="expiryPlaceholder" maxlength="5">
             </div>
           </label>
           <label class="field">
-            <span class="field-title">CVV</span>
+            <span class="field-title" data-i18n="fieldCvv">CVV</span>
             <div class="field-box">
               <svg class="icon field-icon"><use href="#i-lock"/></svg>
               <input id="inp-cvv" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="•••" maxlength="3">
@@ -121,11 +127,11 @@
 
       <div class="notice">
         <svg class="icon notice-icon"><use href="#i-shield-check"/></svg>
-        <span>Növbəti addımda biometrik təsdiqləmə tələb olunur</span>
+        <span data-i18n="notice">Növbəti addımda biometrik təsdiqləmə tələb olunur</span>
       </div>
 
       <button class="btn btn-primary btn-cta" id="btn-continue" disabled>
-        <span>Davam et</span>
+        <span data-i18n="continue">Davam et</span>
         <svg class="icon"><use href="#i-arrow-right"/></svg>
       </button>
     </div>
@@ -134,14 +140,14 @@
   <!-- ============ BIOMETRIC FLOW ============ -->
   <section id="screen-bio" class="screen">
     <header class="topbar">
-      <button class="btn-round" id="btn-bio-back" aria-label="Geri"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
+      <button class="btn-round" id="btn-bio-back" aria-label="Geri" data-i18n-aria="back"><svg class="icon"><use href="#i-chevron-left"/></svg></button>
       <img src="assets/logo.png" alt="" class="logo logo-sm">
       <span class="btn-round-spacer"></span>
     </header>
 
     <div class="bio-body">
-      <h1 class="bio-title" id="bio-title">Üz tanınması</h1>
-      <p class="bio-prompt" id="bio-prompt">Üzünüzü çərçivəyə yerləşdirin</p>
+      <h1 class="bio-title" id="bio-title" data-i18n="bioTitle">Üz tanınması</h1>
+      <p class="bio-prompt" id="bio-prompt" data-i18n="bioPrompt">Üzünüzü çərçivəyə yerləşdirin</p>
 
       <div class="bio-spacer"></div>
 
@@ -168,7 +174,7 @@
 
       <button class="btn btn-primary btn-cta" id="btn-scan">
         <span class="spinner hidden" id="scan-spinner"></span>
-        <span id="scan-label">Üz tanınmasına başla</span>
+        <span id="scan-label" data-i18n="scanCta">Üz tanınmasına başla</span>
       </button>
       <p class="bio-hint hidden" id="bio-hint"></p>
     </div>

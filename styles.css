@@ -55,6 +55,47 @@ body {
 
 .hidden { display: none !important; }
 
+/* ---------- splash ---------- */
+.splash {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: #FFFFFF;
+  padding: calc(var(--safe-top) + 24px) 24px calc(var(--safe-bottom) + 24px);
+}
+.splash-logo {
+  width: 168px; height: auto;
+  opacity: 1;
+  animation: splash-logo-in 900ms cubic-bezier(.22,.61,.36,1) 150ms both;
+}
+.splash-btn {
+  width: 220px;
+  margin-top: 56px;
+  opacity: 1;
+  animation: splash-btn-in 620ms cubic-bezier(.22,.61,.36,1) 1150ms both;
+}
+body.splash-active, html.splash-active { overflow: hidden; }
+@keyframes splash-logo-in {
+  from { opacity: 0; transform: translateY(10px) scale(.94); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes splash-btn-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.splash.is-leaving {
+  animation: splash-out 420ms ease forwards;
+  pointer-events: none;
+}
+@keyframes splash-out {
+  to { opacity: 0; visibility: hidden; }
+}
+.splash.is-gone { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-logo, .splash-btn { animation-duration: 1ms; animation-delay: 0ms; }
+  .splash.is-leaving { animation-duration: 1ms; }
+}
 /* ---------- screens ---------- */
 .screen {
   display: none;

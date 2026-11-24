@@ -14,6 +14,7 @@ const STRINGS = {
   az: {
     avatarAria: "Profil",
     back: "Geri",
+    start: "Başla",
     greeting: "Salam 👋",
     headline: "Ödənişlər<br>biometriya ilə təhlükəsiz",
     emptyTitle: "Hələ kart əlavə etməmisiniz",
@@ -57,6 +58,7 @@ const STRINGS = {
   ru: {
     avatarAria: "Профиль",
     back: "Назад",
+    start: "Начать",
     greeting: "Здравствуйте 👋",
     headline: "Платежи<br>безопасны с биометрией",
     emptyTitle: "Вы ещё не добавили карту",
@@ -678,8 +680,30 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang")));
 });
 
+/* ---------------- splash ---------------- */
+
+let splashDismissed = false;
+
+function dismissSplash() {
+  if (splashDismissed) return;
+  splashDismissed = true;
+  const splash = $("#splash");
+  document.body.classList.remove("splash-active");
+  document.documentElement.classList.remove("splash-active");
+  splash.classList.add("is-leaving");
+  hapticImpact("light");
+  const finish = () => splash.classList.add("is-gone");
+  splash.addEventListener("animationend", finish, { once: true });
+  setTimeout(finish, 600);
+  if (tg && tg.BackButton) tg.BackButton.hide();
+}
+
+$("#btn-start").addEventListener("click", dismissSplash);
+
 /* ---------------- boot ---------------- */
 
+document.body.classList.add("splash-active");
+document.documentElement.classList.add("splash-active");
 initTelegram();
 lang = loadLang();
 loadCards();
@@ -688,3 +712,4 @@ renderHome();
 updatePreview();
 updateValidity();
 applyFaceCopy();
+if (tg && tg.BackButton) tg.BackButton.hide();
